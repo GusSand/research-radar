@@ -3,7 +3,7 @@
 Automated radar for new **mechanistic-interpretability** and **AI/LLM-security** research, written by Claude Code cloud routines and read back locally.
 
 ## Scope
-- **Topics:** mechanistic interpretability (SAEs/features, circuits & attribution, steering/activation engineering, unlearning/concept erasure, interpretability evals) and AI/LLM security (jailbreaks, prompt injection, secure code generation, model/agent security, interpretability-for-security).
+- **Topics:** mechanistic interpretability (SAEs/features, circuits & attribution, steering/activation engineering, unlearning/concept erasure, interpretability evals); AI/LLM security (jailbreaks, prompt injection, secure code generation, model/agent security, AI control, interpretability-for-security); and **text diffusion language models** (diffusion LLMs / dLLMs) — especially their **security and mechanistic interpretability**.
 - **Source priority (highest → lowest):**
   1. **Peer-reviewed** — accepted papers at NeurIPS / ICML / ICLR (OpenReview), ACL / EMNLP / NAACL (ACL Anthology), TMLR, and journals.
   2. **Preprints** — arXiv (cs.CL, cs.LG, cs.CR, cs.AI).
@@ -15,7 +15,8 @@ Automated radar for new **mechanistic-interpretability** and **AI/LLM-security**
 reports/
   daily/      YYYY-MM-DD.md      — top 10 of the day, priority order (Tue–Sun)
   weekly/     YYYY-Www.md        — Monday 6am ET: most important of the week
-  backfill/   2025-06_to_2026-06.md  — one-time catch-up, Jun 2025 → Jun 2026
+  backfill/   2025-06_to_2026-06.md       — one-time catch-up, Jun 2025 → Jun 2026 (mech-interp + AI-security)
+  backfill/   text-diffusion-2024-2026.md — one-time catch-up, Jul 2024 → Jun 2026 (text diffusion LMs: security/interp-first)
 ```
 
 ## Routines that write here
