@@ -1,33 +1,39 @@
 #!/usr/bin/env bash
-# Refresh research-radar so the latest reports show up in Obsidian.
+# Integrate cloud-routine output into main and expose it in Obsidian.
 #
-# Design note (macOS TCC): background launchd/cron jobs cannot WRITE into
-# ~/Documents (where the vault lives) without Full Disk Access. So we never copy
-# into the vault from automation. Instead:
-#   * this script only runs `git pull` inside ~/github/research-radar (not TCC-protected), and
-#   * a one-time symlink  vault/.../research-radar/reports -> repo/reports  exposes the
-#     live files into Obsidian. New pulls appear in Obsidian instantly via the symlink.
+# Cloud routines can only push branches prefixed `claude/` (default permission),
+# so they push reports to `claude/radar`. This script (local, with full write to
+# main) merges claude/radar -> main and pushes, so main stays canonical. The
+# vault reads the reports through a symlink -> repo/reports, so no copy into
+# ~/Documents is needed (avoids the macOS TCC block on background writes).
 #
-# Run manually:   ~/github/research-radar/scripts/sync-to-obsidian.sh
+# Run manually:      ~/github/research-radar/scripts/sync-to-obsidian.sh
 # Daily via launchd: com.gus.research-radar-sync
 set -uo pipefail
 
 REPO="/Users/gus/github/research-radar"
 VAULT_LINK="/Users/gus/Documents/obsidian_global/wiki/sources/research-radar/reports"
+BRANCH="claude/radar"
 
 cd "$REPO" || { echo "repo not found: $REPO"; exit 1; }
 
-# Bring in whatever the cloud routines pushed. Stash any stray local changes so a
-# fast-forward never aborts; tolerate offline.
-git stash --include-untracked --quiet 2>/dev/null || true
-if git pull --ff-only --quiet; then
-  echo "[$(date '+%F %T')] pulled latest"
-else
-  echo "[$(date '+%F %T')] git pull failed (offline or diverged) — keeping current checkout"
-fi
-git stash pop --quiet 2>/dev/null || true
+git fetch origin --quiet || echo "warn: git fetch failed (offline?)"
+git checkout --quiet main 2>/dev/null || true
+git pull --ff-only --quiet origin main 2>/dev/null || true
 
-# Report whether Obsidian will see the files (symlink must exist; created once by setup).
+# Fold the cloud routines' branch into main, if present.
+if git rev-parse --verify --quiet "origin/$BRANCH" >/dev/null; then
+  if git merge --no-edit "origin/$BRANCH" >/dev/null 2>&1; then
+    echo "[$(date '+%F %T')] merged origin/$BRANCH into main"
+    git push --quiet origin main 2>/dev/null && echo "  pushed main" || echo "  warn: push main failed"
+  else
+    echo "[$(date '+%F %T')] merge of origin/$BRANCH hit a conflict — resolve manually (git status)"
+    git merge --abort 2>/dev/null || true
+  fi
+else
+  echo "[$(date '+%F %T')] no origin/$BRANCH yet (routine hasn't pushed)"
+fi
+
 if [ -L "$VAULT_LINK" ] || [ -d "$VAULT_LINK" ]; then
   echo "[$(date '+%F %T')] reports visible in vault via $VAULT_LINK"
 else
