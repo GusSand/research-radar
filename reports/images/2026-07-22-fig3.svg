@@ -1,0 +1,21 @@
+<svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg" aria-label="ACH suppression vs SAH robustness under jailbreak attacks">
+  <rect width="500" height="200" fill="#fff"/>
+  <text x="12" y="100" font-family="Georgia,serif" font-size="11" fill="#888" transform="rotate(-90,12,100)">activation</text>
+  <line x1="40" y1="170" x2="490" y2="170" stroke="#ccc" stroke-width="1"/>
+  <text x="60" y="185" font-family="monospace" font-size="9" fill="#888">early layers</text>
+  <text x="350" y="185" font-family="monospace" font-size="9" fill="#888">mid layers</text>
+  <rect x="40" y="30" width="200" height="130" rx="4" fill="none" stroke="#b02020" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="140" y="22" text-anchor="middle" font-family="monospace" font-size="9" fill="#b02020">ACH (early layers)</text>
+  <rect x="260" y="30" width="220" height="130" rx="4" fill="none" stroke="#0d7377" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="370" y="22" text-anchor="middle" font-family="monospace" font-size="9" fill="#0d7377">SAH (mid layers)</text>
+  <polyline points="60,60 100,55 140,65 180,58 220,62" fill="none" stroke="#1a6e3c" stroke-width="2"/>
+  <polyline points="60,135 100,140 140,132 180,138 220,136" fill="none" stroke="#b02020" stroke-width="2" stroke-dasharray="6,3"/>
+  <polyline points="280,80 320,75 360,78 400,76 440,80 470,77" fill="none" stroke="#1a6e3c" stroke-width="2"/>
+  <polyline points="280,84 320,79 360,82 400,80 440,84 470,81" fill="none" stroke="#b02020" stroke-width="2" stroke-dasharray="6,3"/>
+  <line x1="40" y1="195" x2="60" y2="195" stroke="#1a6e3c" stroke-width="2"/>
+  <text x="64" y="199" font-family="monospace" font-size="9" fill="#1a6e3c">normal</text>
+  <line x1="120" y1="195" x2="140" y2="195" stroke="#b02020" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="144" y="199" font-family="monospace" font-size="9" fill="#b02020">under attack</text>
+  <text x="140" y="110" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#b02020" font-style="italic">suppressed</text>
+  <text x="370" y="110" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#0d7377" font-style="italic">robust → detector</text>
+</svg>

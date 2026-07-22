@@ -1,0 +1,37 @@
+<svg viewBox="0 0 500 210" xmlns="http://www.w3.org/2000/svg" aria-label="ADI attack bypasses defenses by riding metadata and format tokens">
+  <rect width="500" height="210" fill="#fff"/>
+  <text x="10" y="22" font-family="monospace" font-size="10" fill="#1a6e3c">NORMAL FLOW</text>
+  <rect x="10" y="30" width="100" height="36" rx="4" fill="none" stroke="#1a6e3c" stroke-width="1.2"/>
+  <text x="60" y="53" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#1a6e3c">User input</text>
+  <path d="M110 48 H185" stroke="#999" stroke-width="1.2" marker-end="url(#b1)"/>
+  <rect x="186" y="30" width="90" height="36" rx="4" fill="none" stroke="#aaa" stroke-width="1.2"/>
+  <text x="231" y="53" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#555">Defense</text>
+  <path d="M276 48 H335" stroke="#1a6e3c" stroke-width="1.5" marker-end="url(#b1g)"/>
+  <rect x="336" y="30" width="80" height="36" rx="4" fill="none" stroke="#aaa" stroke-width="1.2"/>
+  <text x="376" y="53" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#555">Agent</text>
+  <path d="M416 48 H468" stroke="#aaa" stroke-width="1.2" marker-end="url(#b1)"/>
+  <text x="473" y="53" font-family="monospace" font-size="9" fill="#1a6e3c">safe</text>
+  <text x="10" y="115" font-family="monospace" font-size="10" fill="#b02020">ADI ATTACK</text>
+  <rect x="10" y="123" width="100" height="50" rx="4" fill="none" stroke="#b02020" stroke-width="1.5"/>
+  <text x="60" y="143" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#b02020">Metadata</text>
+  <text x="60" y="158" text-anchor="middle" font-family="monospace" font-size="8.5" fill="#b02020">resource IDs</text>
+  <text x="60" y="170" text-anchor="middle" font-family="monospace" font-size="8.5" fill="#b02020">format tokens</text>
+  <path d="M110 148 H185" stroke="#b02020" stroke-width="1.5" marker-end="url(#b1r)"/>
+  <rect x="186" y="123" width="90" height="50" rx="4" fill="none" stroke="#aaa" stroke-width="1.2"/>
+  <text x="231" y="153" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#555">Defense</text>
+  <line x1="195" y1="132" x2="267" y2="164" stroke="#b02020" stroke-width="2"/>
+  <line x1="267" y1="132" x2="195" y2="164" stroke="#b02020" stroke-width="2"/>
+  <path d="M276 148 H335" stroke="#b02020" stroke-width="1.5" marker-end="url(#b1r)"/>
+  <rect x="336" y="123" width="80" height="50" rx="4" fill="none" stroke="#b02020" stroke-width="1.2"/>
+  <text x="376" y="148" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#b02020">Agent</text>
+  <text x="376" y="163" text-anchor="middle" font-family="monospace" font-size="8.5" fill="#b02020">treats as</text>
+  <text x="376" y="175" text-anchor="middle" font-family="monospace" font-size="8.5" fill="#b02020">trusted ctx</text>
+  <path d="M416 148 H468" stroke="#b02020" stroke-width="1.5" marker-end="url(#b1r)"/>
+  <text x="473" y="143" font-family="monospace" font-size="9" fill="#b02020">RCE</text>
+  <text x="473" y="157" font-family="monospace" font-size="9" fill="#b02020">click</text>
+  <defs>
+    <marker id="b1" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L0,7 L7,3.5 Z" fill="#999"/></marker>
+    <marker id="b1g" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L0,7 L7,3.5 Z" fill="#1a6e3c"/></marker>
+    <marker id="b1r" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L0,7 L7,3.5 Z" fill="#b02020"/></marker>
+  </defs>
+</svg>

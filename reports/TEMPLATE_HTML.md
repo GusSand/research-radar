@@ -227,6 +227,8 @@ Technical detail paragraph (2–4 sentences).
 One-sentence summary.
 ```
 
+SVG files live in `reports/images/` named `YYYY-MM-DD-fig1.svg`, `YYYY-MM-DD-fig2.svg`, etc. (or `YYYY-Www-fig1.svg` for weekly). Reference them from the .md with a relative path: `../images/YYYY-MM-DD-fig1.svg`.
+
 Key constraints for SVG in markdown:
 - GitHub strips `style=` attributes — use only presentational attributes (`fill`, `stroke`, `font-family`, `font-size`, etc.)
 - No CSS custom properties (`var(--x)`) — use hardcoded hex values
