@@ -188,9 +188,55 @@ Place this between the masthead and the first paper entry:
 
 ---
 
+## Markdown (.md) format
+
+The `.md` file uses the same narrative structure as the HTML so it renders well on GitHub:
+
+```markdown
+# Research Radar — July 22, 2026
+
+> **Mech Interp · AI Security · Text Diffusion LMs** | Daily edition
+> **HTML artifact:** https://claude.ai/code/artifact/XXXXXXXX
+
+**Window:** ... **Counts:** 0 peer-reviewed · 10 preprints · 0 forum/blog
+
+---
+
+## 01 · [Paper Title](url)
+
+`tag` `tag` — Authors — Venue, Date
+
+Hook paragraph (1–2 sentences, conversational).
+
+<svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg" aria-label="...">
+  <!-- Use only presentational SVG attributes (fill=, stroke=, font-family=) -->
+  <!-- NO inline style= attributes — GitHub strips them -->
+  <!-- Use dark colors on white: #666, #888 for labels; accent colors for data -->
+</svg>
+
+*Italic figure caption.*
+
+Technical detail paragraph (2–4 sentences).
+
+---
+
+## Items 4–10  (condensed — no SVG)
+
+**04 · [Title](url)**
+`tag` — Authors — Venue, Date
+One-sentence summary.
+```
+
+Key constraints for SVG in markdown:
+- GitHub strips `style=` attributes — use only presentational attributes (`fill`, `stroke`, `font-family`, `font-size`, etc.)
+- No CSS custom properties (`var(--x)`) — use hardcoded hex values
+- Colors should be readable on white (GitHub renders markdown on a light background)
+- Each `<marker id>` must be unique across all SVGs in the file (use `id="a1"`, `id="a2"` etc. per figure)
+
 ## Publishing checklist
 
 1. Write `.html` to `reports/daily/YYYY-MM-DD.html` or `reports/weekly/YYYY-Www.html`
 2. Call `Artifact` tool with `file_path` pointing to that file, `favicon: "📡"`, and a one-sentence `description`
-3. Commit both `.md` and `.html` in the same commit with message `Daily radar YYYY-MM-DD` or `Weekly radar YYYY-Www`
-4. Push to `origin/claude/radar` (never `main`)
+3. Add the artifact URL to the top of the `.md` file (in the blockquote after the title line)
+4. Commit both `.md` and `.html` in the same commit with message `Daily radar YYYY-MM-DD` or `Weekly radar YYYY-Www`
+5. Push to `origin/claude/radar` (never `main`)

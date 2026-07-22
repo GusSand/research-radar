@@ -37,7 +37,9 @@ Every run must publish an HTML artifact. See `reports/TEMPLATE_HTML.md` for the 
 - **Tags:** colored `<span class="tag">` chips for venue and topic (tag-interp, tag-security, tag-dllm, tag-control, tag-peer).
 - **Footer:** artifact URL is the permalink; no external JS or CSS.
 - **Favicon:** 📡
-- **Publishing:** write HTML to `reports/daily/<date>.html` or `reports/weekly/<week>.html`, then call the Artifact tool with that file path. Commit both .md and .html together before pushing.
+- **Markdown format:** the `.md` file uses the same narrative structure as the HTML — hook paragraph → inline SVG figure → technical detail — so it renders well on GitHub. Use only presentational SVG attributes (no `style=`, no CSS variables); colors should be readable on white. Top 3 papers (daily) / top 8 (weekly) get full treatment; remaining items are condensed text entries with no SVG.
+- **Artifact URL in .md:** after publishing the HTML artifact, insert the artifact URL into the `.md` blockquote header before committing, so the GitHub file links directly to the rendered newsletter.
+- **Publishing:** write HTML to `reports/daily/<date>.html` or `reports/weekly/<week>.html`, publish as artifact, add URL to `.md`, then commit both together before pushing.
 
 ## Conventions
 - Priority order = importance to the mech-interp + AI-security research agenda (peer-reviewed and field-shifting results rank above incremental preprints).
