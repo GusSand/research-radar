@@ -1,0 +1,41 @@
+<svg viewBox="0 0 500 210" xmlns="http://www.w3.org/2000/svg" aria-label="Breaking Bad: jailbreak ASR via activation steering across 8 frontier models, Llama-3.3-70B at 91%">
+  <rect width="500" height="210" fill="#fff"/>
+  <text x="10" y="16" font-family="Georgia,serif" font-size="12" fill="#333">Jailbreak ASR via activation steering (adaptive grid search)</text>
+  <!-- axis -->
+  <line x1="170" y1="25" x2="170" y2="175" stroke="#ccc" stroke-width="1"/>
+  <line x1="170" y1="175" x2="470" y2="175" stroke="#ccc" stroke-width="1"/>
+  <text x="320" y="190" text-anchor="middle" font-family="monospace" font-size="8" fill="#aaa">attack success rate (%)</text>
+  <text x="220" y="180" text-anchor="middle" font-family="monospace" font-size="7" fill="#aaa">0</text>
+  <text x="320" y="180" text-anchor="middle" font-family="monospace" font-size="7" fill="#aaa">50</text>
+  <text x="420" y="180" text-anchor="middle" font-family="monospace" font-size="7" fill="#aaa">100</text>
+  <line x1="320" y1="25" x2="320" y2="175" stroke="#eee" stroke-width="1" stroke-dasharray="3,3"/>
+  <!-- bars (8 models, horizontal) -->
+  <!-- GPT-4o ~18% -->
+  <text x="165" y="45"  text-anchor="end" font-family="monospace" font-size="9" fill="#555">GPT-4o</text>
+  <rect x="170" y="33" width="36"  height="16" fill="#1a6e3c" opacity="0.8"/>
+  <text x="210" y="45" font-family="monospace" font-size="8" fill="#1a6e3c">18%</text>
+  <!-- Claude-3.5 ~24% -->
+  <text x="165" y="65"  text-anchor="end" font-family="monospace" font-size="9" fill="#555">Claude 3.5</text>
+  <rect x="170" y="53" width="48"  height="16" fill="#1a6e3c" opacity="0.8"/>
+  <text x="222" y="65" font-family="monospace" font-size="8" fill="#1a6e3c">24%</text>
+  <!-- Gemini-1.5 ~31% -->
+  <text x="165" y="85"  text-anchor="end" font-family="monospace" font-size="9" fill="#555">Gemini 1.5</text>
+  <rect x="170" y="73" width="62"  height="16" fill="#a05c00" opacity="0.8"/>
+  <text x="236" y="85" font-family="monospace" font-size="8" fill="#a05c00">31%</text>
+  <!-- Mistral ~44% -->
+  <text x="165" y="105" text-anchor="end" font-family="monospace" font-size="9" fill="#555">Mistral</text>
+  <rect x="170" y="93" width="88"  height="16" fill="#a05c00" opacity="0.8"/>
+  <text x="262" y="105" font-family="monospace" font-size="8" fill="#a05c00">44%</text>
+  <!-- Qwen2.5 ~55% -->
+  <text x="165" y="125" text-anchor="end" font-family="monospace" font-size="9" fill="#555">Qwen2.5</text>
+  <rect x="170" y="113" width="110" height="16" fill="#a05c00" opacity="0.8"/>
+  <text x="284" y="125" font-family="monospace" font-size="8" fill="#a05c00">55%</text>
+  <!-- Llama-3.1-8B ~67% -->
+  <text x="165" y="145" text-anchor="end" font-family="monospace" font-size="9" fill="#555">Llama-3.1-8B</text>
+  <rect x="170" y="133" width="134" height="16" fill="#b02020" opacity="0.8"/>
+  <text x="308" y="145" font-family="monospace" font-size="8" fill="#b02020">67%</text>
+  <!-- Llama-3.3-70B ~91% (highlighted) -->
+  <text x="165" y="165" text-anchor="end" font-family="Georgia,serif" font-size="10" font-weight="bold" fill="#b02020">Llama-3.3-70B</text>
+  <rect x="170" y="151" width="182" height="18" fill="#b02020"/>
+  <text x="356" y="164" font-family="monospace" font-size="9" font-weight="bold" fill="#b02020">91%</text>
+</svg>

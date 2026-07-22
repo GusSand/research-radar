@@ -1,0 +1,35 @@
+<svg viewBox="0 0 500 210" xmlns="http://www.w3.org/2000/svg" aria-label="Bitter Lesson 2x2: dLLMs fail at causal agentic roles, competitive at non-causal roles">
+  <rect width="500" height="210" fill="#fff"/>
+  <text x="250" y="16" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#333">dLLM capability map: causal × role type</text>
+  <!-- column headers -->
+  <text x="190" y="40" text-anchor="middle" font-family="monospace" font-size="10" fill="#555">AR-LLM</text>
+  <text x="370" y="40" text-anchor="middle" font-family="monospace" font-size="10" fill="#0d7377">dLLM</text>
+  <!-- row headers -->
+  <text x="60" y="95"  text-anchor="middle" font-family="monospace" font-size="9" fill="#555">non-causal</text>
+  <text x="60" y="107" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">roles</text>
+  <text x="60" y="160" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">causal/</text>
+  <text x="60" y="172" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">agentic</text>
+  <!-- cell 1: AR non-causal → good -->
+  <rect x="110" y="55" width="160" height="65" rx="4" fill="#d0f0d8" stroke="#1a6e3c" stroke-width="1.2"/>
+  <text x="190" y="83" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#1a6e3c">✓ strong</text>
+  <text x="190" y="100" text-anchor="middle" font-family="monospace" font-size="8" fill="#1a6e3c">text generation</text>
+  <text x="190" y="112" text-anchor="middle" font-family="monospace" font-size="8" fill="#1a6e3c">summarisation</text>
+  <!-- cell 2: dLLM non-causal → competitive -->
+  <rect x="290" y="55" width="160" height="65" rx="4" fill="#d0f0d8" stroke="#1a6e3c" stroke-width="1.2"/>
+  <text x="370" y="83" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#1a6e3c">✓ competitive</text>
+  <text x="370" y="100" text-anchor="middle" font-family="monospace" font-size="8" fill="#1a6e3c">parallel generation</text>
+  <text x="370" y="112" text-anchor="middle" font-family="monospace" font-size="8" fill="#1a6e3c">non-sequential tasks</text>
+  <!-- cell 3: AR causal → good -->
+  <rect x="110" y="130" width="160" height="65" rx="4" fill="#d0f0d8" stroke="#1a6e3c" stroke-width="1.2"/>
+  <text x="190" y="158" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#1a6e3c">✓ strong</text>
+  <text x="190" y="175" text-anchor="middle" font-family="monospace" font-size="8" fill="#1a6e3c">tool use · code</text>
+  <text x="190" y="187" text-anchor="middle" font-family="monospace" font-size="8" fill="#1a6e3c">multi-step agents</text>
+  <!-- cell 4: dLLM causal → FAILS -->
+  <rect x="290" y="130" width="160" height="65" rx="4" fill="#ffe0e0" stroke="#b02020" stroke-width="2"/>
+  <text x="370" y="158" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#b02020">✗ FAILS</text>
+  <text x="370" y="175" text-anchor="middle" font-family="monospace" font-size="8" fill="#b02020">no sequential</text>
+  <text x="370" y="187" text-anchor="middle" font-family="monospace" font-size="8" fill="#b02020">commitment</text>
+  <!-- grid lines -->
+  <line x1="110" y1="120" x2="450" y2="120" stroke="#ddd" stroke-width="1"/>
+  <line x1="280" y1="55" x2="280" y2="195" stroke="#ddd" stroke-width="1"/>
+</svg>

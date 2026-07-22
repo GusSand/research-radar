@@ -1,0 +1,54 @@
+<svg viewBox="0 0 500 210" xmlns="http://www.w3.org/2000/svg" aria-label="DIJA: dLLM bidirectional context creates attack surfaces orthogonal to AR-LLM jailbreaks">
+  <rect width="500" height="210" fill="#fff"/>
+  <!-- AR-LLM column -->
+  <text x="120" y="20" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#555">AR-LLM</text>
+  <text x="120" y="34" text-anchor="middle" font-family="monospace" font-size="9" fill="#aaa">left-to-right</text>
+  <!-- tokens left to right -->
+  <rect x="30"  y="50" width="32" height="28" rx="3" fill="#e8e8e8" stroke="#ccc" stroke-width="1"/>
+  <text x="46"  y="69" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">t1</text>
+  <rect x="72"  y="50" width="32" height="28" rx="3" fill="#e8e8e8" stroke="#ccc" stroke-width="1"/>
+  <text x="88"  y="69" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">t2</text>
+  <rect x="114" y="50" width="32" height="28" rx="3" fill="#e8e8e8" stroke="#ccc" stroke-width="1"/>
+  <text x="130" y="69" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">t3</text>
+  <rect x="156" y="50" width="32" height="28" rx="3" fill="#ffd0d0" stroke="#b02020" stroke-width="1.5"/>
+  <text x="172" y="69" text-anchor="middle" font-family="monospace" font-size="9" fill="#b02020">atk</text>
+  <path d="M62 64 H70" stroke="#999" stroke-width="1.2" marker-end="url(#wa)"/>
+  <path d="M104 64 H112" stroke="#999" stroke-width="1.2" marker-end="url(#wa)"/>
+  <path d="M146 64 H154" stroke="#999" stroke-width="1.2" marker-end="url(#wa)"/>
+  <text x="120" y="105" text-anchor="middle" font-family="monospace" font-size="9" fill="#1a6e3c">✓ defenses see attack token</text>
+
+  <!-- divider -->
+  <line x1="248" y1="10" x2="248" y2="200" stroke="#eee" stroke-width="1"/>
+
+  <!-- dLLM column -->
+  <text x="370" y="20" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#0d7377">dLLM</text>
+  <text x="370" y="34" text-anchor="middle" font-family="monospace" font-size="9" fill="#aaa">bidirectional + parallel decode</text>
+  <!-- tokens with bidirectional arrows -->
+  <rect x="278" y="50" width="32" height="28" rx="3" fill="#e8e8e8" stroke="#ccc" stroke-width="1"/>
+  <text x="294" y="69" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">t1</text>
+  <rect x="320" y="50" width="32" height="28" rx="3" fill="#ffd0d0" stroke="#b02020" stroke-width="1.5"/>
+  <text x="336" y="69" text-anchor="middle" font-family="monospace" font-size="9" fill="#b02020">[M]</text>
+  <rect x="362" y="50" width="32" height="28" rx="3" fill="#e8e8e8" stroke="#ccc" stroke-width="1"/>
+  <text x="378" y="69" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">t3</text>
+  <rect x="404" y="50" width="32" height="28" rx="3" fill="#e8e8e8" stroke="#ccc" stroke-width="1"/>
+  <text x="420" y="69" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">t4</text>
+  <!-- bidirectional arrows -->
+  <path d="M310 58 H318" stroke="#0d7377" stroke-width="1.2" marker-end="url(#wb)"/>
+  <path d="M320 72 H312" stroke="#0d7377" stroke-width="1.2" marker-end="url(#wb)"/>
+  <path d="M352 58 H360" stroke="#0d7377" stroke-width="1.2" marker-end="url(#wb)"/>
+  <path d="M362 72 H354" stroke="#0d7377" stroke-width="1.2" marker-end="url(#wb)"/>
+  <path d="M394 58 H402" stroke="#0d7377" stroke-width="1.2" marker-end="url(#wb)"/>
+  <path d="M404 72 H396" stroke="#0d7377" stroke-width="1.2" marker-end="url(#wb)"/>
+  <!-- masked token filled from context -->
+  <path d="M336 78 L336 110 L336 118" stroke="#b02020" stroke-width="1.5" stroke-dasharray="3,2" marker-end="url(#wr)"/>
+  <rect x="310" y="118" width="52" height="24" rx="3" fill="#ffd0d0" stroke="#b02020" stroke-width="1.5"/>
+  <text x="336" y="134" text-anchor="middle" font-family="monospace" font-size="9" fill="#b02020">filled: atk</text>
+  <text x="370" y="165" text-anchor="middle" font-family="monospace" font-size="9" fill="#b02020">✗ RLHF can't see fill-time attack</text>
+  <text x="370" y="178" text-anchor="middle" font-family="monospace" font-size="8" fill="#aaa">orthogonal to AR jailbreak surface</text>
+
+  <defs>
+    <marker id="wa" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3 Z" fill="#999"/></marker>
+    <marker id="wb" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3 Z" fill="#0d7377"/></marker>
+    <marker id="wr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3 Z" fill="#b02020"/></marker>
+  </defs>
+</svg>

@@ -1,0 +1,32 @@
+<svg viewBox="0 0 500 210" xmlns="http://www.w3.org/2000/svg" aria-label="CRISP: inference-time steering is reversible; PEFT makes concept removal permanent at parameter level">
+  <rect width="500" height="210" fill="#fff"/>
+  <!-- Panel A: inference-time (reversible) -->
+  <text x="120" y="18" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#555">Inference-time steering</text>
+  <rect x="20" y="28" width="200" height="155" rx="4" fill="none" stroke="#ddd" stroke-width="1"/>
+  <!-- model weights box -->
+  <rect x="40" y="48" width="160" height="40" rx="3" fill="#e8e8e8" stroke="#ccc" stroke-width="1"/>
+  <text x="120" y="68" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">model weights</text>
+  <text x="120" y="80" text-anchor="middle" font-family="monospace" font-size="8" fill="#aaa">(unchanged)</text>
+  <!-- SAE direction applied at runtime -->
+  <rect x="40" y="108" width="160" height="32" rx="3" fill="#ddf0ff" stroke="#0d7377" stroke-width="1.2" stroke-dasharray="4,2"/>
+  <text x="120" y="124" text-anchor="middle" font-family="monospace" font-size="9" fill="#0d7377">SAE direction hook</text>
+  <text x="120" y="136" text-anchor="middle" font-family="monospace" font-size="8" fill="#0d7377">(applied at runtime)</text>
+  <!-- reversible label -->
+  <text x="120" y="164" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#a05c00" font-style="italic">reversible ↺</text>
+  <text x="120" y="178" text-anchor="middle" font-family="monospace" font-size="8" fill="#aaa">remove hook → concept returns</text>
+
+  <!-- Panel B: CRISP PEFT (permanent) -->
+  <text x="370" y="18" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#1a6e3c">CRISP (PEFT)</text>
+  <rect x="270" y="28" width="200" height="155" rx="4" fill="none" stroke="#1a6e3c" stroke-width="1.5"/>
+  <!-- model weights modified -->
+  <rect x="290" y="48" width="160" height="40" rx="3" fill="#d0f0d8" stroke="#1a6e3c" stroke-width="1.5"/>
+  <text x="370" y="68" text-anchor="middle" font-family="monospace" font-size="9" fill="#1a6e3c">model weights</text>
+  <text x="370" y="80" text-anchor="middle" font-family="monospace" font-size="8" fill="#1a6e3c">(concept erased via LoRA)</text>
+  <!-- no hook needed -->
+  <rect x="290" y="108" width="160" height="32" rx="3" fill="#f5f5f5" stroke="#ddd" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="370" y="124" text-anchor="middle" font-family="monospace" font-size="9" fill="#aaa">no runtime hook</text>
+  <text x="370" y="136" text-anchor="middle" font-family="monospace" font-size="8" fill="#aaa">needed</text>
+  <!-- permanent label -->
+  <text x="370" y="164" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#1a6e3c" font-style="italic">permanent ✓</text>
+  <text x="370" y="178" text-anchor="middle" font-family="monospace" font-size="8" fill="#555">concept gone after fine-tune</text>
+</svg>

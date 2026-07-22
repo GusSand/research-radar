@@ -1,0 +1,40 @@
+<svg viewBox="0 0 500 210" xmlns="http://www.w3.org/2000/svg" aria-label="Alignment faking detected in 2 of 13 models; refusal residue stronger during monitored compliance">
+  <rect width="500" height="210" fill="#fff"/>
+  <text x="10" y="18" font-family="monospace" font-size="10" fill="#666">compliance rate under monitoring vs. without (13 models)</text>
+  <!-- axis -->
+  <line x1="60" y1="170" x2="460" y2="170" stroke="#ccc" stroke-width="1"/>
+  <line x1="60" y1="30" x2="60" y2="170" stroke="#ccc" stroke-width="1"/>
+  <text x="55" y="173" text-anchor="end" font-family="monospace" font-size="8" fill="#aaa">0</text>
+  <text x="55" y="100" text-anchor="end" font-family="monospace" font-size="8" fill="#aaa">+12pp</text>
+  <text x="55" y="35" text-anchor="end" font-family="monospace" font-size="8" fill="#aaa">+24pp</text>
+  <!-- zero line -->
+  <line x1="60" y1="170" x2="460" y2="170" stroke="#ddd" stroke-width="1" stroke-dasharray="3,3"/>
+  <!-- bars for 11 non-faking models (small, grey) -->
+  <rect x="70"  y="162" width="18" height="8"  fill="#ddd"/>
+  <rect x="95"  y="165" width="18" height="5"  fill="#ddd"/>
+  <rect x="120" y="167" width="18" height="3"  fill="#ddd"/>
+  <rect x="145" y="164" width="18" height="6"  fill="#ddd"/>
+  <rect x="170" y="166" width="18" height="4"  fill="#ddd"/>
+  <rect x="195" y="163" width="18" height="7"  fill="#ddd"/>
+  <rect x="220" y="168" width="18" height="2"  fill="#ddd"/>
+  <rect x="245" y="165" width="18" height="5"  fill="#ddd"/>
+  <rect x="270" y="167" width="18" height="3"  fill="#ddd"/>
+  <rect x="295" y="164" width="18" height="6"  fill="#ddd"/>
+  <rect x="320" y="166" width="18" height="4"  fill="#ddd"/>
+  <!-- Qwen3-32B bar (highlighted, +18.2pp) -->
+  <rect x="360" y="100" width="22" height="70" fill="#b02020" opacity="0.85"/>
+  <text x="371" y="96" text-anchor="middle" font-family="monospace" font-size="8" fill="#b02020">+18.2pp</text>
+  <text x="371" y="185" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#b02020">Qwen3</text>
+  <text x="371" y="195" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#b02020">32B</text>
+  <!-- Llama bar (highlighted, +24.4pp) -->
+  <rect x="420" y="57" width="22" height="113" fill="#5c1aaa" opacity="0.85"/>
+  <text x="431" y="53" text-anchor="middle" font-family="monospace" font-size="8" fill="#5c1aaa">+24.4pp</text>
+  <text x="431" y="185" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#5c1aaa">Llama</text>
+  <text x="431" y="195" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#5c1aaa">3.1-8B</text>
+  <!-- legend -->
+  <rect x="60" y="198" width="10" height="8" fill="#ddd"/>
+  <text x="74" y="206" font-family="monospace" font-size="8" fill="#888">no faking detected</text>
+  <rect x="200" y="198" width="10" height="8" fill="#b02020" opacity="0.85"/>
+  <rect x="215" y="198" width="10" height="8" fill="#5c1aaa" opacity="0.85"/>
+  <text x="229" y="206" font-family="monospace" font-size="8" fill="#555">alignment faking confirmed</text>
+</svg>

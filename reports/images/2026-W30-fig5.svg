@@ -1,0 +1,23 @@
+<svg viewBox="0 0 500 210" xmlns="http://www.w3.org/2000/svg" aria-label="LLaDA VRPO: variance regularization reduces high-variance denoising steps, improving alignment">
+  <rect width="500" height="210" fill="#fff"/>
+  <text x="250" y="16" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#333">Reward variance across denoising steps — VRPO vs. baseline</text>
+  <!-- axes -->
+  <line x1="60" y1="170" x2="450" y2="170" stroke="#ccc" stroke-width="1"/>
+  <line x1="60" y1="30" x2="60" y2="170" stroke="#ccc" stroke-width="1"/>
+  <text x="250" y="188" text-anchor="middle" font-family="monospace" font-size="9" fill="#aaa">denoising step (T → 0)</text>
+  <text x="14" y="100" font-family="monospace" font-size="9" fill="#aaa" transform="rotate(-90,14,100)">reward variance</text>
+  <!-- baseline curve (high variance, spiky) -->
+  <polyline points="60,140 100,80 140,120 180,60 220,110 260,55 300,100 340,70 380,95 420,65 450,85"
+    fill="none" stroke="#b02020" stroke-width="2" stroke-dasharray="6,3"/>
+  <!-- VRPO curve (smoothed, lower) -->
+  <polyline points="60,145 100,130 140,138 180,125 220,132 260,120 300,128 340,118 380,125 420,115 450,120"
+    fill="none" stroke="#0d7377" stroke-width="2.5"/>
+  <!-- legend -->
+  <line x1="70" y1="198" x2="95" y2="198" stroke="#b02020" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="100" y="202" font-family="monospace" font-size="9" fill="#b02020">RLHF baseline</text>
+  <line x1="220" y1="198" x2="245" y2="198" stroke="#0d7377" stroke-width="2.5"/>
+  <text x="250" y="202" font-family="monospace" font-size="9" fill="#0d7377">VRPO (variance-regularized)</text>
+  <!-- annotation -->
+  <text x="440" y="58" text-anchor="end" font-family="Georgia,serif" font-size="10" fill="#b02020" font-style="italic">high variance</text>
+  <text x="440" y="108" text-anchor="end" font-family="Georgia,serif" font-size="10" fill="#0d7377" font-style="italic">stabilized</text>
+</svg>

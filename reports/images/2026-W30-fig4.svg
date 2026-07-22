@@ -1,0 +1,28 @@
+<svg viewBox="0 0 500 210" xmlns="http://www.w3.org/2000/svg" aria-label="FakeLab fragmentation effect: per-agent detection rate drops sharply as number of coordinating agents increases">
+  <rect width="500" height="210" fill="#fff"/>
+  <text x="250" y="16" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#333">Fragmentation effect — detection rate vs. coordinating agents</text>
+  <!-- y axis -->
+  <line x1="70" y1="30" x2="70" y2="170" stroke="#ccc" stroke-width="1"/>
+  <text x="62" y="34"  text-anchor="end" font-family="monospace" font-size="8" fill="#aaa">100%</text>
+  <text x="62" y="100" text-anchor="end" font-family="monospace" font-size="8" fill="#aaa">50%</text>
+  <text x="62" y="170" text-anchor="end" font-family="monospace" font-size="8" fill="#aaa">0%</text>
+  <line x1="65" y1="100" x2="430" y2="100" stroke="#eee" stroke-width="1" stroke-dasharray="3,3"/>
+  <!-- x axis -->
+  <line x1="70" y1="170" x2="430" y2="170" stroke="#ccc" stroke-width="1"/>
+  <text x="130" y="185" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">K=1</text>
+  <text x="230" y="185" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">K=2</text>
+  <text x="330" y="185" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">K=4</text>
+  <text x="250" y="200" text-anchor="middle" font-family="monospace" font-size="9" fill="#aaa">number of coordinating agents</text>
+  <!-- bars K=1: ~90% detection -->
+  <rect x="100" y="33" width="60" height="137" fill="#1a6e3c" opacity="0.8"/>
+  <text x="130" y="28" text-anchor="middle" font-family="monospace" font-size="9" fill="#1a6e3c">~90%</text>
+  <!-- bars K=2: ~65% -->
+  <rect x="200" y="75" width="60" height="95" fill="#a05c00" opacity="0.8"/>
+  <text x="230" y="70" text-anchor="middle" font-family="monospace" font-size="9" fill="#a05c00">~65%</text>
+  <!-- bars K=4: ~30% -->
+  <rect x="300" y="130" width="60" height="40" fill="#b02020" opacity="0.8"/>
+  <text x="330" y="125" text-anchor="middle" font-family="monospace" font-size="9" fill="#b02020">&lt;40%</text>
+  <!-- annotation: 60% miss rate at K=4 -->
+  <text x="380" y="155" font-family="Georgia,serif" font-size="10" fill="#b02020" font-style="italic">&gt;60% missed</text>
+  <text x="380" y="167" font-family="monospace" font-size="8" fill="#b02020">at K=4</text>
+</svg>
