@@ -26,8 +26,7 @@ Always define all tokens on `:root`, then override only the tokens in the dark-t
   --dim: #888;
   --title: #1a1a1a;
   --link: #1a4f99;
-  --fig-bg: #fff;
-  --fig-border: #ccc;
+  /* Note: --fig-bg is NOT used — figure background is hardcoded #fff always */
   --tag-bg: #e8e8e8;
   --tag-text: #444;
   --accent-teal: #0d7377;
@@ -88,8 +87,8 @@ Always define all tokens on `:root`, then override only the tokens in the dark-t
   <figure class="paper-figure">
     <svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-label="Figure description">
       <!-- inline SVG reproducing the paper's key figure -->
-      <!-- use currentColor for strokes/text so it adapts to theme -->
-      <!-- avoid hardcoded dark or light colors; use CSS vars via style attr or class -->
+      <!-- Figure background is ALWAYS white (#fff) — do not use theme tokens here. -->
+      <!-- SVG text: use #666 or #888 for dim labels; semantic accent colors for data. -->
     </svg>
     <figcaption>Caption: describe what the figure shows and what the key result is.</figcaption>
   </figure>
