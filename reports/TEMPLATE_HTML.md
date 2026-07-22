@@ -235,6 +235,17 @@ Key constraints for SVG in markdown:
 - Colors should be readable on white (GitHub renders markdown on a light background)
 - Each `<marker id>` must be unique across all SVGs in the file (use `id="a1"`, `id="a2"` etc. per figure)
 
+## Same SVG, two delivery formats
+
+The artifact CSP blocks all external URLs, so the `.html` must inline SVG directly (`<svg>…</svg>`). GitHub strips inline SVG from markdown, so the `.md` must reference committed `.svg` files. The SVG artwork is identical — just delivered differently:
+
+| Target | Format | Why |
+|--------|--------|-----|
+| `.md` on GitHub | `![alt](../images/YYYY-MM-DD-figN.svg)` | GitHub renders committed SVG files as images |
+| `.html` artifact | `<svg>…</svg>` inline in the HTML | Artifact CSP blocks all external URL fetches |
+
+**Workflow:** for each figure, (1) write the SVG content to `reports/images/YYYY-MM-DD-figN.svg`, (2) reference it from the `.md` with a relative path, (3) copy the same SVG markup inline into the `.html`.
+
 ## Publishing checklist
 
 1. Write `.html` to `reports/daily/YYYY-MM-DD.html` or `reports/weekly/YYYY-Www.html`
