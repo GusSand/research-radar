@@ -11,6 +11,7 @@
 - **Authors / venue:** <authors> — <venue + peer-review status: e.g. "NeurIPS 2025 (accepted)" / "arXiv preprint" / "TMLR (accepted)">
 - **Link:** <url>
 - **Why it ranks here:** <one line on importance to mech-interp / AI-security>
+- **Figure:** ![<descriptive alt text>](<direct image URL — GitHub raw, paper page figure, or omit field if unavailable>)
 - **Technical summary:** <2-5 sentences: the actual method and the key result/number — NOT the abstract verbatim. What they did, how, what they found.>
 
 ### 2. <Title>
