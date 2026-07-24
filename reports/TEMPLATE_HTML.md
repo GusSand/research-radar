@@ -66,6 +66,40 @@ Always define all tokens on `:root`, then override only the tokens in the dark-t
 
 ---
 
+## Paper figure strategy: real image first, SVG fallback
+
+The artifact CSP blocks all external HTTP fetches, so you cannot use `<img src="https://...">` directly. **Preferred approach: embed the actual paper figure as a base64 data URI.** Fall back to inline SVG only when the image cannot be fetched.
+
+### Step 1 — find the figure URL
+Fetch `https://arxiv.org/html/<arxiv-id>`. Locate the first significant figure (Figure 1 or the method overview diagram). Extract the full `<img src="...">` URL (arXiv HTML paths look like `https://arxiv.org/html/2407.XXXXX/x1.png`).
+
+### Step 2a — embed as base64 data URI (preferred)
+Fetch the image file and base64-encode it. Embed as:
+```html
+<figure class="paper-figure">
+  <img src="data:image/png;base64,<BASE64_DATA>" alt="Figure 1: description" style="width:100%;max-width:500px;display:block;margin:0 auto;">
+  <figcaption>Figure 1: caption text.</figcaption>
+</figure>
+```
+Add this CSS to the `<style>` block if not already present:
+```css
+.paper-figure img { width: 100%; max-width: 500px; display: block; margin: 0 auto; border-radius: 2px; }
+```
+
+### Step 2b — inline SVG fallback (when image is not fetchable)
+Use an inline SVG that faithfully reproduces the paper's key figure concept:
+```html
+<figure class="paper-figure">
+  <svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-label="Figure description">
+    <!-- Figure background is ALWAYS white (#fff). -->
+    <!-- Reproduce the paper's key diagram as accurately as possible. -->
+  </svg>
+  <figcaption>Caption: describe what the figure shows and what the key result is.</figcaption>
+</figure>
+```
+
+---
+
 ## Full paper entry (items 1–3 daily / 1–8 weekly)
 
 ```html
@@ -84,13 +118,17 @@ Always define all tokens on `:root`, then override only the tokens in the dark-t
     One or two conversational sentences explaining the finding in plain language — 
     why a reader should care, what problem it solves, what was surprising.
   </p>
+  <!-- FIGURE: prefer base64 data URI of actual paper image; fall back to inline SVG -->
   <figure class="paper-figure">
+    <!-- Option A: actual paper image as base64 data URI -->
+    <img src="data:image/png;base64,<BASE64>" alt="Figure 1: description" style="width:100%;max-width:500px;display:block;margin:0 auto;">
+    <!-- Option B: inline SVG fallback -->
+    <!--
     <svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-label="Figure description">
-      <!-- inline SVG reproducing the paper's key figure -->
-      <!-- Figure background is ALWAYS white (#fff) — do not use theme tokens here. -->
-      <!-- SVG text: use #666 or #888 for dim labels; semantic accent colors for data. -->
+      ...
     </svg>
-    <figcaption>Caption: describe what the figure shows and what the key result is.</figcaption>
+    -->
+    <figcaption>Figure N: describe what the figure shows and what the key result is.</figcaption>
   </figure>
   <p class="paper-detail">
     Technical paragraph: method, architecture details, key numbers, baselines beaten.
@@ -178,19 +216,21 @@ Place this between the masthead and the first paper entry:
 
 ---
 
-## SVG figure guidelines
+## SVG figure guidelines (fallback only)
+
+Use inline SVG only when the actual paper image cannot be fetched and base64-encoded. When SVG is necessary:
 
 - Use `viewBox="0 0 500 220"` (or adjust height as needed).
 - Use `font-family: Georgia, serif` for labels matching the editorial type.
-- For dark-theme compatibility: use `fill="var(--text)"` or `fill="currentColor"` for text; use explicit hex colors only for semantic data (e.g. `#4ade80` for "good", `#f07070` for "bad").
-- Do **not** fetch external images. Reproduce the paper's key figure concept as an abstract diagram — a scatter plot, bar chart, network diagram, 2×2 matrix, or geometric illustration — that communicates the core result visually.
+- Reproduce the paper's key figure concept faithfully — a scatter plot, bar chart, network diagram, 2×2 matrix, or geometric illustration that communicates the core result visually. Aim to match the paper's actual figure, not a generic placeholder.
+- For dark-theme compatibility: use explicit hex colors only; no CSS custom properties.
 - Add `aria-label` on the `<svg>` for accessibility.
 
 ---
 
 ## Markdown (.md) format
 
-The `.md` file uses the same narrative structure as the HTML so it renders well on GitHub:
+The `.md` file uses the same narrative structure as the HTML. **For figures, use the actual paper image URL** (GitHub markdown renders external URLs — unlike the HTML artifact, which needs base64). Fall back to a committed `.svg` file only when the arXiv HTML page has no accessible figure URL.
 
 ```markdown
 # Research Radar — July 22, 2026
@@ -208,26 +248,30 @@ The `.md` file uses the same narrative structure as the HTML so it renders well 
 
 Hook paragraph (1–2 sentences, conversational).
 
-<svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg" aria-label="...">
-  <!-- Use only presentational SVG attributes (fill=, stroke=, font-family=) -->
-  <!-- NO inline style= attributes — GitHub strips them -->
-  <!-- Use dark colors on white: #666, #888 for labels; accent colors for data -->
-</svg>
+![Figure 1: descriptive alt text](https://arxiv.org/html/XXXX.XXXXX/x1.png)
 
-*Italic figure caption.*
+*Figure 1: one-sentence caption describing the key result shown.*
 
 Technical detail paragraph (2–4 sentences).
 
 ---
 
-## Items 4–10  (condensed — no SVG)
+## Items 4–10  (condensed — no figure)
 
 **04 · [Title](url)**
 `tag` — Authors — Venue, Date
 One-sentence summary.
 ```
 
-SVG files live in `reports/images/` named `YYYY-MM-DD-fig1.svg`, `YYYY-MM-DD-fig2.svg`, etc. (or `YYYY-Www-fig1.svg` for weekly). Reference them from the .md with a relative path: `../images/YYYY-MM-DD-fig1.svg`.
+### Figure URL lookup workflow for .md
+
+1. Fetch `https://arxiv.org/html/<arxiv-id>` with WebFetch.
+2. Find `<img src="...">` tags in the output — arXiv HTML uses paths like `/html/2407.XXXXX/x1.png`.
+3. Prepend `https://arxiv.org` if the src is relative, giving e.g. `https://arxiv.org/html/2407.XXXXX/x1.png`.
+4. Use that URL directly in the `.md` image tag.
+5. If the HTML version doesn't exist or figures aren't accessible, fall back to a committed SVG.
+
+SVG fallback files live in `reports/images/` named `YYYY-MM-DD-fig1.svg`, etc. Reference them from .md with a relative path: `![alt](../images/YYYY-MM-DD-fig1.svg)`. Only commit SVG fallbacks for papers where no arXiv HTML figure URL is available.
 
 Key constraints for SVG in markdown:
 - GitHub strips `style=` attributes — use only presentational attributes (`fill`, `stroke`, `font-family`, `font-size`, etc.)
@@ -235,16 +279,22 @@ Key constraints for SVG in markdown:
 - Colors should be readable on white (GitHub renders markdown on a light background)
 - Each `<marker id>` must be unique across all SVGs in the file (use `id="a1"`, `id="a2"` etc. per figure)
 
-## Same SVG, two delivery formats
+## Figure delivery matrix (updated)
 
-The artifact CSP blocks all external URLs, so the `.html` must inline SVG directly (`<svg>…</svg>`). GitHub strips inline SVG from markdown, so the `.md` must reference committed `.svg` files. The SVG artwork is identical — just delivered differently:
+| Target | Preferred | Fallback |
+|--------|-----------|----------|
+| `.md` on GitHub | `![alt](https://arxiv.org/html/ID/x1.png)` — actual paper image via external URL | `![alt](../images/YYYY-MM-DD-figN.svg)` — committed SVG |
+| `.html` artifact | `<img src="data:image/png;base64,...">` — paper image base64-encoded | `<svg>…</svg>` inline SVG reproduction |
 
-| Target | Format | Why |
-|--------|--------|-----|
-| `.md` on GitHub | `![alt](../images/YYYY-MM-DD-figN.svg)` | GitHub renders committed SVG files as images |
-| `.html` artifact | `<svg>…</svg>` inline in the HTML | Artifact CSP blocks all external URL fetches |
+**Why these differ:** GitHub markdown renders external image URLs freely. The artifact CSP blocks all external fetches — images must be embedded as base64 data URIs or rendered as inline SVG.
 
-**Workflow:** for each figure, (1) write the SVG content to `reports/images/YYYY-MM-DD-figN.svg`, (2) reference it from the `.md` with a relative path, (3) copy the same SVG markup inline into the `.html`.
+**Workflow for each top-3 paper:**
+1. Fetch `https://arxiv.org/html/<id>` → find the main figure `<img src>` URL.
+2. For `.md`: use the external URL directly in `![alt](url)`.
+3. For `.html`: fetch the image file and embed as `data:image/png;base64,...`; if image cannot be fetched, write an inline SVG that accurately reproduces the figure's key concept.
+4. Only commit `.svg` files to `reports/images/` when used as fallback — not when the actual image URL is available.
+
+**SVG fallback only:** SVG files committed to `reports/images/` are fallback-only artifacts for papers whose arXiv HTML has no accessible figure. Do not commit an SVG when an actual figure URL is available.
 
 ## Publishing checklist
 

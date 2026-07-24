@@ -1,0 +1,75 @@
+<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-label="Induction circuits: unidirectional AR (left) vs bidirectional dLLM (right)">
+  <rect width="500" height="220" fill="#fff"/>
+  <text x="250" y="16" font-family="Georgia,serif" font-size="11" fill="#555" text-anchor="middle">Induction circuits: AR (unidirectional) vs masked dLLM (bidirectional)</text>
+
+  <!-- LEFT: AR induction circuit -->
+  <text x="118" y="36" font-family="Courier New,monospace" font-size="9" fill="#888" text-anchor="middle">AUTOREGRESSIVE</text>
+
+  <!-- token sequence: A B A → B -->
+  <rect x="30" y="46" width="22" height="18" fill="#f0f0f0" stroke="#aaa" stroke-width="1" rx="2"/>
+  <text x="41" y="59" font-family="Georgia,serif" font-size="10" fill="#555" text-anchor="middle">A</text>
+  <rect x="60" y="46" width="22" height="18" fill="#f0f0f0" stroke="#aaa" stroke-width="1" rx="2"/>
+  <text x="71" y="59" font-family="Georgia,serif" font-size="10" fill="#555" text-anchor="middle">B</text>
+  <rect x="90" y="46" width="22" height="18" fill="#e8f4ff" stroke="#1a4f99" stroke-width="1.5" rx="2"/>
+  <text x="101" y="59" font-family="Georgia,serif" font-size="10" fill="#1a4f99" text-anchor="middle">A</text>
+  <rect x="120" y="46" width="22" height="18" fill="#fff8e8" stroke="#a05c00" stroke-width="1.5" rx="2" stroke-dasharray="3,2"/>
+  <text x="131" y="59" font-family="Georgia,serif" font-size="10" fill="#a05c00" text-anchor="middle">?</text>
+
+  <!-- Previous-token head (left-to-right only) -->
+  <text x="118" y="90" font-family="Courier New,monospace" font-size="8" fill="#1a4f99" text-anchor="middle">prev-token head</text>
+  <rect x="68" y="95" width="100" height="16" fill="#ddeeff" stroke="#1a4f99" stroke-width="1" rx="2"/>
+  <text x="118" y="107" font-family="Georgia,serif" font-size="8" fill="#1a4f99" text-anchor="middle">← left context only</text>
+
+  <!-- Induction head -->
+  <text x="118" y="130" font-family="Courier New,monospace" font-size="8" fill="#5c1aaa" text-anchor="middle">induction head</text>
+  <rect x="68" y="135" width="100" height="16" fill="#ede8ff" stroke="#5c1aaa" stroke-width="1" rx="2"/>
+  <text x="118" y="147" font-family="Georgia,serif" font-size="8" fill="#5c1aaa" text-anchor="middle">copies B after A match</text>
+
+  <line x1="118" y1="111" x2="118" y2="133" stroke="#888" stroke-width="1"/>
+  <polygon points="115,131 121,131 118,135" fill="#888"/>
+
+  <!-- output arrow -->
+  <line x1="131" y1="151" x2="131" y2="162" stroke="#a05c00" stroke-width="1.5"/>
+  <polygon points="128,160 134,160 131,164" fill="#a05c00"/>
+  <text x="131" y="172" font-family="Georgia,serif" font-size="9" fill="#a05c00" text-anchor="middle">→ B</text>
+
+  <!-- divider -->
+  <line x1="230" y1="28" x2="230" y2="195" stroke="#ddd" stroke-width="1.5"/>
+
+  <!-- RIGHT: dLLM bidirectional induction circuit -->
+  <text x="375" y="36" font-family="Courier New,monospace" font-size="9" fill="#888" text-anchor="middle">MASKED DIFFUSION LM</text>
+
+  <!-- token sequence: A B [M] C A B -->
+  <rect x="255" y="46" width="22" height="18" fill="#f0f0f0" stroke="#aaa" stroke-width="1" rx="2"/>
+  <text x="266" y="59" font-family="Georgia,serif" font-size="10" fill="#555" text-anchor="middle">A</text>
+  <rect x="282" y="46" width="22" height="18" fill="#f0f0f0" stroke="#aaa" stroke-width="1" rx="2"/>
+  <text x="293" y="59" font-family="Georgia,serif" font-size="10" fill="#555" text-anchor="middle">B</text>
+  <rect x="309" y="46" width="22" height="18" fill="#fff3f3" stroke="#b02020" stroke-width="1.5" rx="2" stroke-dasharray="3,2"/>
+  <text x="320" y="59" font-family="Georgia,serif" font-size="9" fill="#b02020" text-anchor="middle">[M]</text>
+  <rect x="336" y="46" width="22" height="18" fill="#f0f0f0" stroke="#aaa" stroke-width="1" rx="2"/>
+  <text x="347" y="59" font-family="Georgia,serif" font-size="10" fill="#555" text-anchor="middle">C</text>
+  <rect x="363" y="46" width="22" height="18" fill="#e8f4ff" stroke="#1a4f99" stroke-width="1.5" rx="2"/>
+  <text x="374" y="59" font-family="Georgia,serif" font-size="10" fill="#1a4f99" text-anchor="middle">A</text>
+  <rect x="390" y="46" width="22" height="18" fill="#e8f4ff" stroke="#1a4f99" stroke-width="1.5" rx="2"/>
+  <text x="401" y="59" font-family="Georgia,serif" font-size="10" fill="#1a4f99" text-anchor="middle">B</text>
+
+  <!-- Both-direction heads -->
+  <text x="368" y="90" font-family="Courier New,monospace" font-size="8" fill="#1a4f99" text-anchor="middle">prev + next token heads</text>
+  <rect x="278" y="95" width="180" height="16" fill="#ddeeff" stroke="#1a4f99" stroke-width="1" rx="2"/>
+  <text x="368" y="107" font-family="Georgia,serif" font-size="8" fill="#1a4f99" text-anchor="middle">← left AND right context →</text>
+
+  <!-- Bidirectional induction head -->
+  <text x="368" y="130" font-family="Courier New,monospace" font-size="8" fill="#5c1aaa" text-anchor="middle">bidirectional induction head</text>
+  <rect x="278" y="135" width="180" height="16" fill="#ede8ff" stroke="#5c1aaa" stroke-width="1" rx="2"/>
+  <text x="368" y="147" font-family="Georgia,serif" font-size="8" fill="#5c1aaa" text-anchor="middle">copies B — match before OR after [M]</text>
+
+  <line x1="368" y1="111" x2="368" y2="133" stroke="#888" stroke-width="1"/>
+  <polygon points="365,131 371,131 368,135" fill="#888"/>
+
+  <!-- output arrow -->
+  <line x1="320" y1="151" x2="320" y2="162" stroke="#b02020" stroke-width="1.5"/>
+  <polygon points="317,160 323,160 320,164" fill="#b02020"/>
+  <text x="320" y="172" font-family="Georgia,serif" font-size="9" fill="#b02020" text-anchor="middle">→ B</text>
+
+  <text x="250" y="205" font-family="Georgia,serif" font-size="10" fill="#888" text-anchor="middle">Direction-symmetric: dLLM finds the repeated source token whether it appears left or right of the mask position.</text>
+</svg>

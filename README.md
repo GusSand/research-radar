@@ -31,7 +31,7 @@ Every run must publish an HTML artifact. See `reports/TEMPLATE_HTML.md` for the 
 
 - **Design:** dark editorial aesthetic. Background `#111111`, body text `#c9c9c9`, title text `#f0f0f0`. Light-theme alternate via `@media (prefers-color-scheme: dark)` + `:root[data-theme]` overrides. Max-width 660 px centered.
 - **Typography:** Georgia (or generic serif) for paper titles — bold, underlined, 26 px. System-UI sans for body text, 17 px. `Courier New` monospace for metadata tags.
-- **Paper structure:** conversational hook paragraph → inline SVG figure in a white-bordered box with `<figcaption>` → technical-detail paragraph. Figures must be **inline SVG** (artifact CSP blocks all external URLs including arXiv images).
+- **Paper structure:** conversational hook paragraph → paper figure → technical-detail paragraph. **Preferred figure approach:** fetch the actual figure from the paper's arXiv HTML page (`https://arxiv.org/html/<id>`) and embed it as a base64 data URI (`<img src="data:image/png;base64,...">`) in the HTML artifact and as a direct external URL in the `.md` file. Fall back to inline SVG only when the image cannot be fetched. Artifact CSP blocks external URL fetches at render time, which is why base64 embedding is required for the HTML — the `.md` on GitHub can use the external URL directly.
 - **Daily:** all items in sequence. Top 3 get full figure + hook + detail treatment; items 4–10 use a condensed 2-column card grid.
 - **Weekly:** top 8 items get full treatment; items 9–15 use a condensed card grid. Include a "Theme of the week" section above the papers.
 - **Tags:** colored `<span class="tag">` chips for venue and topic (tag-interp, tag-security, tag-dllm, tag-control, tag-peer).

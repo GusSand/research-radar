@@ -1,0 +1,41 @@
+<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-label="LLaDA 1.5 VRPO benchmark improvements over SFT baseline">
+  <rect width="500" height="220" fill="#fff"/>
+  <text x="250" y="18" font-family="Georgia,serif" font-size="11" fill="#555" text-anchor="middle">VRPO vs SFT-only — percentage-point gain (LLaDA-8B base)</text>
+
+  <!-- axes -->
+  <line x1="72" y1="160" x2="472" y2="160" stroke="#ccc" stroke-width="1"/>
+  <!-- gridlines -->
+  <line x1="72" y1="120" x2="472" y2="120" stroke="#eee" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="72" y1="80" x2="472" y2="80" stroke="#eee" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="66" y="163" font-family="Courier New,monospace" font-size="9" fill="#888" text-anchor="end">0</text>
+  <text x="66" y="123" font-family="Courier New,monospace" font-size="9" fill="#888" text-anchor="end">+2</text>
+  <text x="66" y="83" font-family="Courier New,monospace" font-size="9" fill="#888" text-anchor="end">+4</text>
+
+  <!-- bar scale: 20px per pp → max +5 pp = 100px; baseline y=160 -->
+  <!-- GSM8K +4.7 → 94px tall; center x=112 -->
+  <rect x="90" y="66" width="44" height="94" fill="#0d7377" rx="2"/>
+  <text x="112" y="62" font-family="Courier New,monospace" font-size="10" fill="#0d7377" text-anchor="middle">+4.7</text>
+  <text x="112" y="178" font-family="Georgia,serif" font-size="10" fill="#555" text-anchor="middle">GSM8K</text>
+
+  <!-- HumanEval +3.0 → 60px; center x=192 -->
+  <rect x="170" y="100" width="44" height="60" fill="#0d7377" rx="2"/>
+  <text x="192" y="96" font-family="Courier New,monospace" font-size="10" fill="#0d7377" text-anchor="middle">+3.0</text>
+  <text x="192" y="178" font-family="Georgia,serif" font-size="10" fill="#555" text-anchor="middle">HumanEval</text>
+
+  <!-- MBPP +1.8 → 36px; center x=272 -->
+  <rect x="250" y="124" width="44" height="36" fill="#0d7377" rx="2"/>
+  <text x="272" y="120" font-family="Courier New,monospace" font-size="10" fill="#0d7377" text-anchor="middle">+1.8</text>
+  <text x="272" y="178" font-family="Georgia,serif" font-size="10" fill="#555" text-anchor="middle">MBPP</text>
+
+  <!-- IFEval +4.0 → 80px; center x=352 -->
+  <rect x="330" y="80" width="44" height="80" fill="#0d7377" rx="2"/>
+  <text x="352" y="76" font-family="Courier New,monospace" font-size="10" fill="#0d7377" text-anchor="middle">+4.0</text>
+  <text x="352" y="178" font-family="Georgia,serif" font-size="10" fill="#555" text-anchor="middle">IFEval</text>
+
+  <!-- Arena-Hard +4.3 → 86px; center x=432 -->
+  <rect x="410" y="74" width="44" height="86" fill="#0d7377" rx="2"/>
+  <text x="432" y="70" font-family="Courier New,monospace" font-size="10" fill="#0d7377" text-anchor="middle">+4.3</text>
+  <text x="432" y="178" font-family="Georgia,serif" font-size="10" fill="#555" text-anchor="middle">Arena-Hard</text>
+
+  <text x="250" y="205" font-family="Georgia,serif" font-size="10" fill="#888" text-anchor="middle">All gains over SFT-only LLaDA-8B; VRPO = Variance-Reduced Preference Optimization (ACL 2026)</text>
+</svg>

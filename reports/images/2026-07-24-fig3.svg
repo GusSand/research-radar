@@ -1,0 +1,67 @@
+<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-label="MaskForge adaptive black-box attack pipeline achieving 79.3% average ASR on 5 dLLMs">
+  <rect width="500" height="220" fill="#fff"/>
+  <text x="250" y="16" font-family="Georgia,serif" font-size="11" fill="#555" text-anchor="middle">MaskForge: UCB-bandit adaptive attack pipeline for masked diffusion LMs</text>
+
+  <!-- Step boxes: Goal → Pattern Library → UCB Select → Apply to dLLM → Score → Update -->
+
+  <!-- 1: Harmful goal -->
+  <rect x="14" y="48" width="68" height="36" fill="#fce8e8" stroke="#b02020" stroke-width="1.5" rx="3"/>
+  <text x="48" y="63" font-family="Georgia,serif" font-size="8" fill="#b02020" text-anchor="middle">Harmful</text>
+  <text x="48" y="75" font-family="Georgia,serif" font-size="8" fill="#b02020" text-anchor="middle">goal</text>
+
+  <!-- arrow -->
+  <line x1="82" y1="66" x2="100" y2="66" stroke="#888" stroke-width="1.5"/>
+  <polygon points="98,62 106,66 98,70" fill="#888"/>
+
+  <!-- 2: Pattern library -->
+  <rect x="100" y="48" width="80" height="36" fill="#fdf5e0" stroke="#a05c00" stroke-width="1.5" rx="3"/>
+  <text x="140" y="60" font-family="Georgia,serif" font-size="8" fill="#a05c00" text-anchor="middle">Structural</text>
+  <text x="140" y="70" font-family="Georgia,serif" font-size="8" fill="#a05c00" text-anchor="middle">attack library</text>
+  <text x="140" y="80" font-family="Courier New,monospace" font-size="7" fill="#a05c00" text-anchor="middle">[mask templates]</text>
+
+  <!-- arrow -->
+  <line x1="180" y1="66" x2="198" y2="66" stroke="#888" stroke-width="1.5"/>
+  <polygon points="196,62 204,66 196,70" fill="#888"/>
+
+  <!-- 3: UCB bandit selects -->
+  <rect x="198" y="48" width="80" height="36" fill="#ede8ff" stroke="#5c1aaa" stroke-width="1.5" rx="3"/>
+  <text x="238" y="60" font-family="Georgia,serif" font-size="8" fill="#5c1aaa" text-anchor="middle">UCB bandit</text>
+  <text x="238" y="70" font-family="Georgia,serif" font-size="8" fill="#5c1aaa" text-anchor="middle">selects pattern</text>
+  <text x="238" y="80" font-family="Courier New,monospace" font-size="7" fill="#5c1aaa" text-anchor="middle">goal-compatible</text>
+
+  <!-- arrow -->
+  <line x1="278" y1="66" x2="296" y2="66" stroke="#888" stroke-width="1.5"/>
+  <polygon points="294,62 302,66 294,70" fill="#888"/>
+
+  <!-- 4: Apply to dLLM -->
+  <rect x="296" y="48" width="80" height="36" fill="#e8f4ff" stroke="#1a4f99" stroke-width="1.5" rx="3"/>
+  <text x="336" y="60" font-family="Georgia,serif" font-size="8" fill="#1a4f99" text-anchor="middle">Masked dLLM</text>
+  <text x="336" y="70" font-family="Georgia,serif" font-size="8" fill="#1a4f99" text-anchor="middle">infills [MASK]</text>
+  <text x="336" y="80" font-family="Courier New,monospace" font-size="7" fill="#1a4f99" text-anchor="middle">bidirectional</text>
+
+  <!-- arrow -->
+  <line x1="376" y1="66" x2="394" y2="66" stroke="#888" stroke-width="1.5"/>
+  <polygon points="392,62 400,66 392,70" fill="#888"/>
+
+  <!-- 5: Score output -->
+  <rect x="394" y="48" width="92" height="36" fill="#e8f7e8" stroke="#1a6e3c" stroke-width="1.5" rx="3"/>
+  <text x="440" y="60" font-family="Georgia,serif" font-size="8" fill="#1a6e3c" text-anchor="middle">Score output</text>
+  <text x="440" y="70" font-family="Georgia,serif" font-size="8" fill="#1a6e3c" text-anchor="middle">ASR judge</text>
+  <text x="440" y="80" font-family="Courier New,monospace" font-size="7" fill="#1a6e3c" text-anchor="middle">success / fail</text>
+
+  <!-- feedback arrow back to library -->
+  <path d="M 440 84 Q 440 130 140 130 Q 140 112 140 84" stroke="#a05c00" stroke-width="1.5" fill="none" stroke-dasharray="4,3"/>
+  <polygon points="136,106 144,108 137,112" fill="#a05c00"/>
+  <text x="300" y="148" font-family="Courier New,monospace" font-size="8" fill="#a05c00" text-anchor="middle">abstract successful pattern → library grows</text>
+
+  <!-- Results bar -->
+  <text x="250" y="170" font-family="Georgia,serif" font-size="10" fill="#555" text-anchor="middle">Average ASR across 5 dLLMs</text>
+  <!-- bar background -->
+  <rect x="70" y="178" width="360" height="14" fill="#f5f5f5" stroke="#ccc" stroke-width="1" rx="2"/>
+  <!-- prior best -->
+  <rect x="70" y="178" width="220" height="14" fill="#ccc" rx="2"/>
+  <text x="180" y="189" font-family="Courier New,monospace" font-size="8" fill="#fff" text-anchor="middle">prior best ~61.7%</text>
+  <!-- MaskForge -->
+  <rect x="70" y="178" width="286" height="14" fill="#b02020" rx="2"/>
+  <text x="210" y="189" font-family="Courier New,monospace" font-size="8" fill="#fff" text-anchor="middle">MaskForge 79.3% (+17.6pp)</text>
+</svg>
