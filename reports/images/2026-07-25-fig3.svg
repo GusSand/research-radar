@@ -1,0 +1,65 @@
+<svg viewBox="0 0 540 180" xmlns="http://www.w3.org/2000/svg" aria-label="CircuitLasso pipeline: scalable circuit learning via sparse regression over SAE features">
+  <!-- Background -->
+  <rect width="540" height="180" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="270" y="18" font-family="Georgia, serif" font-size="11" font-weight="bold" fill="#111111" text-anchor="middle">CircuitLasso — Scalable Circuit Learning via Sparse Regression over SAE Features</text>
+
+  <!-- Stage 1: LLM -->
+  <rect x="16" y="35" width="84" height="50" rx="5" fill="#e8e8f8" stroke="#6666aa" stroke-width="1.5"/>
+  <text x="58" y="57" font-family="Georgia, serif" font-size="10" font-weight="bold" fill="#333366" text-anchor="middle">LLM</text>
+  <text x="58" y="72" font-family="Georgia, serif" font-size="8" fill="#555577" text-anchor="middle">residual</text>
+  <text x="58" y="82" font-family="Georgia, serif" font-size="8" fill="#555577" text-anchor="middle">streams</text>
+
+  <!-- Arrow 1 -->
+  <line x1="100" y1="60" x2="120" y2="60" stroke="#888888" stroke-width="1.5" marker-end="url(#d25)"/>
+  <defs>
+    <marker id="d25" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#888888"/>
+    </marker>
+  </defs>
+
+  <!-- Stage 2: SAE Features -->
+  <rect x="120" y="28" width="110" height="64" rx="5" fill="#e8f4e8" stroke="#44884488" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="175" y="48" font-family="Georgia, serif" font-size="9" font-weight="bold" fill="#1a6e3c" text-anchor="middle">Top-K SAE</text>
+  <text x="175" y="61" font-family="Georgia, serif" font-size="9" font-weight="bold" fill="#1a6e3c" text-anchor="middle">Features</text>
+  <text x="175" y="77" font-family="Georgia, serif" font-size="8" fill="#448844" text-anchor="middle">high-dim, sparse</text>
+  <text x="175" y="87" font-family="Georgia, serif" font-size="8" fill="#448844" text-anchor="middle">(k features)</text>
+
+  <!-- Arrow 2 -->
+  <line x1="230" y1="60" x2="250" y2="60" stroke="#888888" stroke-width="1.5" marker-end="url(#d25)"/>
+
+  <!-- Stage 3: CircuitLasso -->
+  <rect x="250" y="25" width="130" height="70" rx="5" fill="#fff4d4" stroke="#cc8800" stroke-width="2"/>
+  <text x="315" y="46" font-family="Georgia, serif" font-size="10" font-weight="bold" fill="#885500" text-anchor="middle">CircuitLasso</text>
+  <text x="315" y="60" font-family="Georgia, serif" font-size="8.5" fill="#886600" text-anchor="middle">Sparse Linear Regression</text>
+  <text x="315" y="73" font-family="Georgia, serif" font-size="8" fill="#886600" text-anchor="middle">over feature activations</text>
+  <text x="315" y="87" font-family="Georgia, serif" font-size="8" fill="#cc7700" text-anchor="middle" font-weight="bold">O(k log k)  vs  O(k³)</text>
+
+  <!-- Cost annotation box -->
+  <rect x="252" y="102" width="126" height="26" rx="3" fill="#fffbe8" stroke="#ddbb44" stroke-width="1"/>
+  <text x="315" y="114" font-family="Georgia, serif" font-size="8" fill="#886600" text-anchor="middle">intervention-based: O(k³)</text>
+  <text x="315" y="124" font-family="Georgia, serif" font-size="8" fill="#1a6e3c" text-anchor="middle">CircuitLasso: O(k log k) ✓</text>
+
+  <!-- Arrow 3 -->
+  <line x1="380" y1="60" x2="400" y2="60" stroke="#888888" stroke-width="1.5" marker-end="url(#d25)"/>
+
+  <!-- Stage 4: Circuit Graph -->
+  <rect x="400" y="30" width="124" height="60" rx="5" fill="#e8f0ff" stroke="#3355aa" stroke-width="1.5"/>
+  <text x="462" y="50" font-family="Georgia, serif" font-size="10" font-weight="bold" fill="#223388" text-anchor="middle">Circuit Graph</text>
+  <text x="462" y="64" font-family="Georgia, serif" font-size="8" fill="#4455aa" text-anchor="middle">SAE feature → feature</text>
+  <text x="462" y="76" font-family="Georgia, serif" font-size="8" fill="#4455aa" text-anchor="middle">causal edges</text>
+
+  <!-- Domain generalization result -->
+  <rect x="400" y="102" width="124" height="38" rx="3" fill="#eef4ff" stroke="#3355aa" stroke-width="1"/>
+  <text x="462" y="116" font-family="Georgia, serif" font-size="8.5" fill="#223388" text-anchor="middle" font-weight="bold">Domain Generalization</text>
+  <text x="462" y="129" font-family="Georgia, serif" font-size="8" fill="#3355aa" text-anchor="middle">structural accuracy matches</text>
+  <text x="462" y="139" font-family="Georgia, serif" font-size="8" fill="#3355aa" text-anchor="middle">intervention-based methods</text>
+
+  <!-- Downward arrows from Circuit to domain box -->
+  <line x1="462" y1="90" x2="462" y2="102" stroke="#3355aa" stroke-width="1" marker-end="url(#d25)"/>
+
+  <!-- Key result banner -->
+  <rect x="16" y="148" width="508" height="24" rx="3" fill="#f4f9f4" stroke="#ccddcc" stroke-width="1"/>
+  <text x="270" y="164" font-family="Georgia, serif" font-size="8.5" fill="#1a6e3c" text-anchor="middle">Key result: comparable structural accuracy to EAP / path-patching at a fraction of compute — enables circuit learning on large SAEs</text>
+</svg>

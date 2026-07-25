@@ -1,0 +1,87 @@
+<svg viewBox="0 0 540 210" xmlns="http://www.w3.org/2000/svg" aria-label="iLLaDA vs LLaDA vs Qwen2.5-7B benchmark comparison">
+  <!-- Background -->
+  <rect width="540" height="210" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="270" y="18" font-family="Georgia, serif" font-size="11" font-weight="bold" fill="#111111" text-anchor="middle">iLLaDA-8B Base vs LLaDA-8B vs Qwen2.5-7B — Accuracy (%)</text>
+
+  <!-- Y-axis -->
+  <line x1="72" y1="30" x2="72" y2="175" stroke="#aaaaaa" stroke-width="1"/>
+  <!-- X-axis -->
+  <line x1="72" y1="175" x2="510" y2="175" stroke="#aaaaaa" stroke-width="1"/>
+
+  <!-- Y-axis ticks and labels -->
+  <line x1="68" y1="175" x2="72" y2="175" stroke="#aaaaaa" stroke-width="1"/>
+  <text x="64" y="178" font-family="Georgia, serif" font-size="8" fill="#666666" text-anchor="end">45</text>
+  <line x1="68" y1="143" x2="72" y2="143" stroke="#aaaaaa" stroke-width="1"/>
+  <text x="64" y="146" font-family="Georgia, serif" font-size="8" fill="#666666" text-anchor="end">60</text>
+  <line x1="68" y1="111" x2="72" y2="111" stroke="#aaaaaa" stroke-width="1"/>
+  <text x="64" y="114" font-family="Georgia, serif" font-size="8" fill="#666666" text-anchor="end">75</text>
+  <line x1="68" y1="79" x2="72" y2="79" stroke="#aaaaaa" stroke-width="1"/>
+  <text x="64" y="82" font-family="Georgia, serif" font-size="8" fill="#666666" text-anchor="end">90</text>
+
+  <!-- Grid lines -->
+  <line x1="72" y1="143" x2="510" y2="143" stroke="#eeeeee" stroke-width="1"/>
+  <line x1="72" y1="111" x2="510" y2="111" stroke="#eeeeee" stroke-width="1"/>
+  <line x1="72" y1="79" x2="510" y2="79" stroke="#eeeeee" stroke-width="1"/>
+
+  <!-- Scale: 45=175, 90=79, so 1 unit = (175-79)/45 = 2.133px per point -->
+  <!-- Bar groups for 4 benchmarks -->
+
+  <!-- MMLU group: x=90 -->
+  <!-- iLLaDA 74.8: height=(74.8-45)*2.133=63.5, y=175-63.5=111.5 -->
+  <rect x="90" y="112" width="22" height="63" fill="#14b8bd" opacity="0.9"/>
+  <text x="101" y="109" font-family="Georgia, serif" font-size="7.5" fill="#14b8bd" text-anchor="middle">74.8</text>
+  <!-- Qwen2.5 71.9: height=(71.9-45)*2.133=57.4, y=175-57.4=117.6 -->
+  <rect x="115" y="118" width="22" height="57" fill="#e07030" opacity="0.9"/>
+  <text x="126" y="115" font-family="Georgia, serif" font-size="7.5" fill="#e07030" text-anchor="middle">71.9</text>
+  <!-- LLaDA 63.2: height=(63.2-45)*2.133=38.8, y=175-38.8=136.2 -->
+  <rect x="140" y="136" width="22" height="39" fill="#aaaaaa" opacity="0.9"/>
+  <text x="151" y="133" font-family="Georgia, serif" font-size="7.5" fill="#888888" text-anchor="middle">63.2</text>
+  <text x="128" y="191" font-family="Georgia, serif" font-size="9" fill="#444444" text-anchor="middle">MMLU</text>
+
+  <!-- BBH group: x=200 -->
+  <!-- iLLaDA 71.3: h=(71.3-45)*2.133=56.1, y=118.9 -->
+  <rect x="200" y="119" width="22" height="56" fill="#14b8bd" opacity="0.9"/>
+  <text x="211" y="116" font-family="Georgia, serif" font-size="7.5" fill="#14b8bd" text-anchor="middle">71.3</text>
+  <!-- Qwen2.5 63.9: h=(63.9-45)*2.133=40.3, y=134.7 -->
+  <rect x="225" y="135" width="22" height="40" fill="#e07030" opacity="0.9"/>
+  <text x="236" y="132" font-family="Georgia, serif" font-size="7.5" fill="#e07030" text-anchor="middle">63.9</text>
+  <!-- LLaDA 49.7: h=(49.7-45)*2.133=10.0, y=165 -->
+  <rect x="250" y="165" width="22" height="10" fill="#aaaaaa" opacity="0.9"/>
+  <text x="261" y="162" font-family="Georgia, serif" font-size="7.5" fill="#888888" text-anchor="middle">49.7</text>
+  <text x="238" y="191" font-family="Georgia, serif" font-size="9" fill="#444444" text-anchor="middle">BBH</text>
+
+  <!-- GSM8K group: x=310 -->
+  <!-- iLLaDA 81.9: h=(81.9-45)*2.133=78.7, y=96.3 -->
+  <rect x="310" y="96" width="22" height="79" fill="#14b8bd" opacity="0.9"/>
+  <text x="321" y="93" font-family="Georgia, serif" font-size="7.5" fill="#14b8bd" text-anchor="middle">81.9</text>
+  <!-- Qwen2.5 78.9: h=(78.9-45)*2.133=72.3, y=102.7 -->
+  <rect x="335" y="103" width="22" height="72" fill="#e07030" opacity="0.9"/>
+  <text x="346" y="100" font-family="Georgia, serif" font-size="7.5" fill="#e07030" text-anchor="middle">78.9</text>
+  <!-- LLaDA 67.2: h=(67.2-45)*2.133=47.3, y=127.7 -->
+  <rect x="360" y="128" width="22" height="47" fill="#aaaaaa" opacity="0.9"/>
+  <text x="371" y="125" font-family="Georgia, serif" font-size="7.5" fill="#888888" text-anchor="middle">67.2</text>
+  <text x="348" y="191" font-family="Georgia, serif" font-size="9" fill="#444444" text-anchor="middle">GSM8K</text>
+
+  <!-- ARC-C group: x=420 -->
+  <!-- iLLaDA 88.3: h=(88.3-45)*2.133=92.4, y=82.6 -->
+  <rect x="420" y="83" width="22" height="92" fill="#14b8bd" opacity="0.9"/>
+  <text x="431" y="80" font-family="Georgia, serif" font-size="7.5" fill="#14b8bd" text-anchor="middle">88.3</text>
+  <!-- Qwen2.5 85.5: h=(85.5-45)*2.133=86.4, y=88.6 -->
+  <rect x="445" y="89" width="22" height="86" fill="#e07030" opacity="0.9"/>
+  <text x="456" y="86" font-family="Georgia, serif" font-size="7.5" fill="#e07030" text-anchor="middle">85.5</text>
+  <!-- LLaDA 73.8: h=(73.8-45)*2.133=61.4, y=113.6 -->
+  <rect x="470" y="114" width="22" height="61" fill="#aaaaaa" opacity="0.9"/>
+  <text x="481" y="111" font-family="Georgia, serif" font-size="7.5" fill="#888888" text-anchor="middle">73.8</text>
+  <text x="458" y="191" font-family="Georgia, serif" font-size="9" fill="#444444" text-anchor="middle">ARC-C</text>
+
+  <!-- Legend -->
+  <rect x="80" y="197" width="10" height="8" fill="#14b8bd"/>
+  <text x="94" y="205" font-family="Georgia, serif" font-size="8" fill="#333333">iLLaDA-8B</text>
+  <rect x="170" y="197" width="10" height="8" fill="#e07030"/>
+  <text x="184" y="205" font-family="Georgia, serif" font-size="8" fill="#333333">Qwen2.5-7B</text>
+  <rect x="260" y="197" width="10" height="8" fill="#aaaaaa"/>
+  <text x="274" y="205" font-family="Georgia, serif" font-size="8" fill="#333333">LLaDA-8B</text>
+  <text x="380" y="205" font-family="Georgia, serif" font-size="8" fill="#888888" font-style="italic">iLLaDA avg 63.9 vs Qwen 63.3</text>
+</svg>
