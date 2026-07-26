@@ -1,0 +1,42 @@
+<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-label="Robust Harmful Features — ACH vs SAH attention head populations across transformer layers under jailbreak attacks">
+  <!-- Background -->
+  <rect width="500" height="220" fill="#ffffff"/>
+  <!-- Title -->
+  <text x="250" y="20" font-family="Georgia, serif" font-size="11" font-weight="bold" fill="#1a1a1a" text-anchor="middle">Attention Head Specialization Under Jailbreak Attacks</text>
+  <!-- Layer axis -->
+  <text x="35" y="70" font-family="Georgia, serif" font-size="9" fill="#555" text-anchor="middle">Early</text>
+  <text x="35" y="120" font-family="Georgia, serif" font-size="9" fill="#555" text-anchor="middle">Mid</text>
+  <text x="35" y="170" font-family="Georgia, serif" font-size="9" fill="#555" text-anchor="middle">Late</text>
+  <text x="35" y="190" font-family="Georgia, serif" font-size="8" fill="#888" text-anchor="middle">layers</text>
+  <!-- Transformer layer blocks -->
+  <!-- Early layers (1-8): ACH — Adversarially Compromised Heads -->
+  <rect x="55" y="45" width="180" height="45" fill="#b0202015" stroke="#b02020" stroke-width="1.5" rx="4"/>
+  <text x="145" y="62" font-family="Georgia, serif" font-size="10" font-weight="bold" fill="#b02020" text-anchor="middle">ACH — Layers 1–8</text>
+  <text x="145" y="76" font-family="Georgia, serif" font-size="9" fill="#b02020" text-anchor="middle">Adversarially Compromised Heads</text>
+  <text x="145" y="88" font-family="Georgia, serif" font-size="8" fill="#b02020" text-anchor="middle">suppressed under successful attacks</text>
+  <!-- Mid layers (9-18): SAH — Safety-Aligned Heads -->
+  <rect x="55" y="98" width="180" height="45" fill="#1a6e3c15" stroke="#1a6e3c" stroke-width="1.5" rx="4"/>
+  <text x="145" y="115" font-family="Georgia, serif" font-size="10" font-weight="bold" fill="#1a6e3c" text-anchor="middle">SAH — Layers 9–18</text>
+  <text x="145" y="129" font-family="Georgia, serif" font-size="9" fill="#1a6e3c" text-anchor="middle">Safety-Aligned Heads</text>
+  <text x="145" y="141" font-family="Georgia, serif" font-size="8" fill="#1a6e3c" text-anchor="middle">maintain robust activations even when attacked</text>
+  <!-- Late layers (19-28): neutral -->
+  <rect x="55" y="151" width="180" height="35" fill="#88888810" stroke="#aaa" stroke-width="1" rx="4"/>
+  <text x="145" y="168" font-family="Georgia, serif" font-size="9" fill="#666" text-anchor="middle">Layers 19–28</text>
+  <text x="145" y="180" font-family="Georgia, serif" font-size="8" fill="#888" text-anchor="middle">mixed / output-projection</text>
+  <!-- Vertical divider -->
+  <line x1="255" y1="40" x2="255" y2="200" stroke="#ddd" stroke-width="1"/>
+  <!-- Right panel: causal ablation results -->
+  <text x="378" y="48" font-family="Georgia, serif" font-size="10" font-weight="bold" fill="#333" text-anchor="middle">Causal Ablation Evidence</text>
+  <!-- ACH ablation -->
+  <rect x="270" y="60" width="215" height="55" fill="#b0202008" stroke="#b02020" stroke-width="1" rx="4"/>
+  <text x="377" y="76" font-family="Georgia, serif" font-size="9" font-weight="bold" fill="#b02020" text-anchor="middle">Suppressing ACHs on clean input</text>
+  <text x="377" y="90" font-family="Georgia, serif" font-size="9" fill="#333" text-anchor="middle">→ jailbreak-like behavior induced</text>
+  <text x="377" y="104" font-family="Georgia, serif" font-size="8" fill="#555" text-anchor="middle">(even without adversarial prompt)</text>
+  <!-- SAH ablation -->
+  <rect x="270" y="123" width="215" height="55" fill="#1a6e3c08" stroke="#1a6e3c" stroke-width="1" rx="4"/>
+  <text x="377" y="139" font-family="Georgia, serif" font-size="9" font-weight="bold" fill="#1a6e3c" text-anchor="middle">Removing SAHs under attack</text>
+  <text x="377" y="153" font-family="Georgia, serif" font-size="9" fill="#333" text-anchor="middle">→ weakened mid-layer safety</text>
+  <text x="377" y="167" font-family="Georgia, serif" font-size="8" fill="#555" text-anchor="middle">activations; residual safety lost</text>
+  <!-- Key insight -->
+  <text x="250" y="205" font-family="Georgia, serif" font-size="9" fill="#555" text-anchor="middle" font-style="italic">Jailbreaks selectively suppress ACHs — not comprehensive safety elimination</text>
+</svg>

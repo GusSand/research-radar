@@ -1,0 +1,56 @@
+<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-label="Calibration-Family Overfit — off-lineage vs in-lineage monitor detection rates at 1% audit budget">
+  <!-- Background -->
+  <rect width="500" height="220" fill="#ffffff"/>
+  <!-- Title -->
+  <text x="250" y="22" font-family="Georgia, serif" font-size="11" font-weight="bold" fill="#1a1a1a" text-anchor="middle">Calibration-Family Overfit: Monitor Transfer Failure</text>
+  <!-- Left panel: bar chart -->
+  <!-- Y-axis -->
+  <line x1="70" y1="40" x2="70" y2="165" stroke="#ccc" stroke-width="1"/>
+  <line x1="70" y1="165" x2="265" y2="165" stroke="#ccc" stroke-width="1"/>
+  <!-- Y-axis ticks and gridlines -->
+  <line x1="66" y1="165" x2="70" y2="165" stroke="#999" stroke-width="1"/>
+  <text x="64" y="168" font-family="Georgia, serif" font-size="9" fill="#555" text-anchor="end">0%</text>
+  <line x1="66" y1="103" x2="70" y2="103" stroke="#999" stroke-width="1"/>
+  <text x="64" y="106" font-family="Georgia, serif" font-size="9" fill="#555" text-anchor="end">50%</text>
+  <line x1="70" y1="103" x2="265" y2="103" stroke="#eee" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="64" y="75" font-family="Georgia, serif" font-size="9" fill="#555" text-anchor="end">75%</text>
+  <line x1="70" y1="72" x2="265" y2="72" stroke="#eee" stroke-width="1" stroke-dasharray="3,3"/>
+  <!-- In-lineage bar: 41% -->
+  <rect x="90" y="114" width="55" height="51" fill="#1a6e3c" rx="3"/>
+  <text x="117" y="110" font-family="Georgia, serif" font-size="13" font-weight="bold" fill="#1a6e3c" text-anchor="middle">41%</text>
+  <text x="117" y="185" font-family="Georgia, serif" font-size="9" fill="#333" text-anchor="middle">In-lineage</text>
+  <text x="117" y="196" font-family="Georgia, serif" font-size="9" fill="#333" text-anchor="middle">monitor</text>
+  <!-- Off-lineage bar: 19% -->
+  <rect x="185" y="141" width="55" height="24" fill="#b02020" rx="3"/>
+  <text x="212" y="137" font-family="Georgia, serif" font-size="13" font-weight="bold" fill="#b02020" text-anchor="middle">19%</text>
+  <text x="212" y="185" font-family="Georgia, serif" font-size="9" fill="#333" text-anchor="middle">Off-lineage</text>
+  <text x="212" y="196" font-family="Georgia, serif" font-size="9" fill="#333" text-anchor="middle">monitor</text>
+  <text x="167" y="55" font-family="Georgia, serif" font-size="9" fill="#555" text-anchor="middle">Attacks caught at 1% audit budget</text>
+  <!-- Right panel: geometric explanation diagram -->
+  <line x1="295" y1="40" x2="295" y2="195" stroke="#ddd" stroke-width="1"/>
+  <!-- Coordinate axes for geometry -->
+  <line x1="315" y1="165" x2="480" y2="165" stroke="#aaa" stroke-width="1" marker-end="url(#a1)"/>
+  <line x1="315" y1="165" x2="315" y2="50" stroke="#aaa" stroke-width="1" marker-end="url(#a2)"/>
+  <defs>
+    <marker id="a1" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#aaa"/>
+    </marker>
+    <marker id="a2" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#aaa"/>
+    </marker>
+  </defs>
+  <text x="485" y="168" font-family="Georgia, serif" font-size="9" fill="#555">dim 1</text>
+  <text x="317" y="48" font-family="Georgia, serif" font-size="9" fill="#555">dim 2</text>
+  <!-- Sabotage clusters for each lineage -->
+  <ellipse cx="370" cy="100" rx="22" ry="15" fill="#1a4f9922" stroke="#1a4f99" stroke-width="1.5"/>
+  <text x="370" y="84" font-family="Georgia, serif" font-size="8" fill="#1a4f99" text-anchor="middle">Family A</text>
+  <ellipse cx="430" cy="130" rx="18" ry="13" fill="#b0202022" stroke="#b02020" stroke-width="1.5"/>
+  <text x="430" y="115" font-family="Georgia, serif" font-size="8" fill="#b02020" text-anchor="middle">Family B</text>
+  <ellipse cx="345" cy="145" rx="20" ry="12" fill="#0d737722" stroke="#0d7377" stroke-width="1.5"/>
+  <text x="345" y="130" font-family="Georgia, serif" font-size="8" fill="#0d7377" text-anchor="middle">Family C</text>
+  <!-- Monitor scoring direction for Family A -->
+  <line x1="315" y1="165" x2="380" y2="90" stroke="#1a4f99" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="395" y="88" font-family="Georgia, serif" font-size="8" fill="#1a4f99">A's scoring dir.</text>
+  <text x="335" y="205" font-family="Georgia, serif" font-size="9" fill="#444" text-anchor="middle">Each lineage's sabotage occupies</text>
+  <text x="395" y="215" font-family="Georgia, serif" font-size="9" fill="#444" text-anchor="middle">a different geometric direction</text>
+</svg>
