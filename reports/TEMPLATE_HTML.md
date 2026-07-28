@@ -139,26 +139,71 @@ Use an inline SVG that faithfully reproduces the paper's key figure concept:
 
 ---
 
-## Condensed card (items 4–10 daily / 9–15 weekly)
+## Mid-tier entry (items 4–10 daily / 9–15 weekly)
+
+Every entry gets the paper's main figure — no text-only cards. Items 4–10 use a more compact single-column layout than the full top-3 treatment: rank/tags → title → figure → 1–2-sentence summary. No separate hook paragraph; the summary can be lightly conversational but stays brief.
 
 ```html
-<div class="more-grid">
-  <div class="more-card">
-    <div class="more-rank">04</div>
-    <div class="more-body">
-      <div class="more-tags">
-        <span class="tag tag-security">AI security</span>
-      </div>
-      <h3 class="more-title">
-        <a href="https://arxiv.org/abs/XXXX.XXXXX">Paper Title</a>
-      </h3>
-      <p class="more-summary">
-        One sentence: the key finding or contribution.
-      </p>
+<!-- wrap all mid-tier entries in a <section> with a label -->
+<div class="more-section-label">Items 4 – 10 · Also notable</div>
+
+<article class="mid-paper">
+  <header class="paper-header">
+    <div class="paper-rank">04</div>
+    <div class="paper-meta">
+      <span class="tag tag-security">AI security</span>
+      <span class="tag">preprint</span>
     </div>
-  </div>
-  <!-- repeat for each condensed item -->
-</div>
+  </header>
+  <h3 class="mid-title">
+    <a href="https://arxiv.org/abs/XXXX.XXXXX">Paper Title</a>
+  </h3>
+  <!-- FIGURE: same strategy as full entries — base64 preferred, SVG fallback -->
+  <figure class="paper-figure mid-figure">
+    <!-- Option A: base64 data URI of actual paper image -->
+    <img src="data:image/png;base64,<BASE64>" alt="Figure 1: description" style="width:100%;max-width:440px;display:block;margin:0 auto;">
+    <!-- Option B: inline SVG fallback -->
+    <!--
+    <svg viewBox="0 0 440 180" xmlns="http://www.w3.org/2000/svg" aria-label="Figure description">
+      ...
+    </svg>
+    -->
+    <figcaption>Figure N: brief caption of what is shown.</figcaption>
+  </figure>
+  <p class="mid-summary">
+    1–2 sentences: method + key result/number. Enough for a researcher to decide whether to read.
+  </p>
+</article>
+<hr class="section-divider">
+<!-- repeat for each mid-tier item -->
+```
+
+**CSS additions** (add to `<style>` block alongside the existing paper styles):
+
+```css
+/* Mid-tier entries (items 4–10) */
+.mid-paper {
+  margin-bottom: 44px;
+}
+.mid-title {
+  font-family: Georgia, serif;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 14px;
+  text-decoration: underline;
+  text-decoration-color: var(--border);
+  text-underline-offset: 3px;
+}
+.mid-title a { color: var(--title); text-decoration: inherit; }
+.mid-title a:hover { color: var(--link); }
+.mid-figure img { max-width: 440px; }
+.mid-summary {
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.65;
+  margin-top: 14px;
+}
 ```
 
 ---
@@ -256,11 +301,21 @@ Technical detail paragraph (2–4 sentences).
 
 ---
 
-## Items 4–10  (condensed — no figure)
+## Items 4–10  (mid-tier — each gets a figure)
 
-**04 · [Title](url)**
-`tag` — Authors — Venue, Date
-One-sentence summary.
+---
+
+## 04 · [Title](url)
+
+`tag` `tag` — Authors — Venue, Date
+
+1–2-sentence summary: method + key result.
+
+![Figure 1: alt text](https://arxiv.org/html/XXXX.XXXXX/x1.png)
+
+*Figure N: brief caption.*
+
+---
 ```
 
 ### Figure URL lookup workflow for .md
@@ -288,11 +343,12 @@ Key constraints for SVG in markdown:
 
 **Why these differ:** GitHub markdown renders external image URLs freely. The artifact CSP blocks all external fetches — images must be embedded as base64 data URIs or rendered as inline SVG.
 
-**Workflow for each top-3 paper:**
+**Workflow for ALL 10 papers (top-3 full treatment + items 4–10 mid-tier — every entry gets a figure):**
 1. Fetch `https://arxiv.org/html/<id>` → find the main figure `<img src>` URL.
 2. For `.md`: use the external URL directly in `![alt](url)`.
 3. For `.html`: fetch the image file and embed as `data:image/png;base64,...`; if image cannot be fetched, write an inline SVG that accurately reproduces the figure's key concept.
-4. Only commit `.svg` files to `reports/images/` when used as fallback — not when the actual image URL is available.
+4. Items 4–10 use `<article class="mid-paper">` with a slightly smaller figure (`max-width:440px`) and a 1–2-sentence `<p class="mid-summary">` instead of the full hook+detail treatment.
+5. Only commit `.svg` files to `reports/images/` when used as fallback — not when the actual image URL is available.
 
 **SVG fallback only:** SVG files committed to `reports/images/` are fallback-only artifacts for papers whose arXiv HTML has no accessible figure. Do not commit an SVG when an actual figure URL is available.
 

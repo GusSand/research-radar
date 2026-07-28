@@ -21,6 +21,7 @@
 2. Locate the first significant figure (usually Figure 1 or Figure 2 — the one that illustrates the overall method or main result).
 3. Copy the full image URL from the `<img src="...">` tag (arXiv HTML figures are served at paths like `https://arxiv.org/html/<id>/x1.png`).
 4. Embed it below using standard markdown image syntax. If no HTML version exists or the figure URL is not retrievable, fall back to the inline SVG approach used in the `.html` file.
+5. **All 10 items get a figure** — items 4–10 use the same figure workflow but with a 1–2-sentence summary instead of the full hook+detail paragraphs.
 
 ![<Figure N from paper: descriptive alt text>](<actual figure URL from arXiv HTML — e.g. https://arxiv.org/html/XXXX.XXXXX/x1.png>)
 
