@@ -1,0 +1,64 @@
+<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-label="Spectral identifiability: seed-dependent feature directions vs coordinate-free Koopman spectrum">
+  <!-- Background -->
+  <rect width="500" height="220" fill="#fff"/>
+  <text x="250" y="17" font-family="Georgia,serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#1a1a1a">Spectral Identifiability for Mechanistic Interpretability (2608.10172)</text>
+
+  <!-- Left panel: seed-dependent features -->
+  <rect x="25" y="28" width="200" height="155" rx="5" fill="#fafafa" stroke="#ccc" stroke-width="1"/>
+  <text x="125" y="46" font-family="Arial,sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#b02020">SAE Features (method-dependent)</text>
+
+  <!-- Scattered feature vectors -->
+  <line x1="125" y1="120" x2="165" y2="80" stroke="#888" stroke-width="1.5" marker-end="url(#a2)"/>
+  <line x1="125" y1="120" x2="90" y2="75" stroke="#888" stroke-width="1.5" marker-end="url(#a3)"/>
+  <line x1="125" y1="120" x2="155" y2="155" stroke="#aaa" stroke-width="1.5" stroke-dasharray="4,2" marker-end="url(#a4)"/>
+  <line x1="125" y1="120" x2="85" y2="155" stroke="#aaa" stroke-width="1.5" stroke-dasharray="4,2" marker-end="url(#a5)"/>
+
+  <text x="85" y="68" font-family="Arial,sans-serif" font-size="8" fill="#b02020">seed A</text>
+  <text x="158" y="75" font-family="Arial,sans-serif" font-size="8" fill="#888">seed B</text>
+  <text x="85" y="168" font-family="Arial,sans-serif" font-size="8" fill="#aaa">seed C</text>
+  <text x="148" y="168" font-family="Arial,sans-serif" font-size="8" fill="#aaa">seed D</text>
+
+  <text x="125" y="178" font-family="Arial,sans-serif" font-size="9" text-anchor="middle" fill="#b02020">Different seeds → different directions</text>
+
+  <!-- Arrow between panels -->
+  <text x="245" y="108" font-family="Arial,sans-serif" font-size="18" text-anchor="middle" fill="#0d7377">→</text>
+  <text x="245" y="122" font-family="Arial,sans-serif" font-size="8" text-anchor="middle" fill="#0d7377">Koopman</text>
+
+  <!-- Right panel: converging spectrum -->
+  <rect x="275" y="28" width="200" height="155" rx="5" fill="#fafafa" stroke="#ccc" stroke-width="1"/>
+  <text x="375" y="46" font-family="Arial,sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#0d7377">Koopman Spectrum (coordinate-free)</text>
+
+  <!-- Complex plane axes -->
+  <line x1="305" y1="130" x2="455" y2="130" stroke="#ccc" stroke-width="1"/>
+  <line x1="375" y1="58" x2="375" y2="165" stroke="#ccc" stroke-width="1"/>
+  <text x="458" y="133" font-family="Arial,sans-serif" font-size="8" fill="#888">Re</text>
+  <text x="375" y="55" font-family="Arial,sans-serif" font-size="8" text-anchor="middle" fill="#888">Im</text>
+
+  <!-- Converging eigenvalue clusters -->
+  <circle cx="330" cy="95" r="5" fill="#0d7377" fill-opacity="0.9"/>
+  <circle cx="332" cy="97" r="5" fill="#0d7377" fill-opacity="0.7"/>
+  <circle cx="329" cy="93" r="5" fill="#0d7377" fill-opacity="0.5"/>
+
+  <circle cx="415" cy="95" r="5" fill="#0d7377" fill-opacity="0.9"/>
+  <circle cx="417" cy="93" r="5" fill="#0d7377" fill-opacity="0.7"/>
+  <circle cx="414" cy="97" r="5" fill="#0d7377" fill-opacity="0.5"/>
+
+  <circle cx="375" cy="75" r="5" fill="#0d7377" fill-opacity="0.9"/>
+  <circle cx="373" cy="77" r="5" fill="#0d7377" fill-opacity="0.7"/>
+
+  <circle cx="375" cy="158" r="5" fill="#0d7377" fill-opacity="0.9"/>
+  <circle cx="377" cy="156" r="5" fill="#0d7377" fill-opacity="0.7"/>
+
+  <text x="375" y="178" font-family="Arial,sans-serif" font-size="9" text-anchor="middle" fill="#0d7377">Spectrum converges at rate M^{-1/2}</text>
+
+  <!-- Caption -->
+  <text x="250" y="205" font-family="Arial,sans-serif" font-size="9" text-anchor="middle" fill="#666">First identifiability theorem for a mech-interp primitive: Koopman spectrum is coordinate-free and recoverable</text>
+  <text x="250" y="216" font-family="Arial,sans-serif" font-size="9" text-anchor="middle" fill="#666">Verified on GPT-2 small, Gemma-2-2B, Qwen3-8B-Base</text>
+
+  <defs>
+    <marker id="a2" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#888"/></marker>
+    <marker id="a3" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#888"/></marker>
+    <marker id="a4" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#aaa"/></marker>
+    <marker id="a5" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#aaa"/></marker>
+  </defs>
+</svg>

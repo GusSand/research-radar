@@ -1,0 +1,51 @@
+<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-label="Sangam: serving diffusion LLMs with AR stack via deficit token-budget scheduler">
+  <!-- Background -->
+  <rect width="500" height="220" fill="#fff"/>
+  <text x="250" y="16" font-family="Georgia,serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#1a1a1a">Sangam: Serving dLLMs with the AR Stack (2607.04206)</text>
+
+  <!-- Problem: AR KV cache broken for dLLMs -->
+  <rect x="20" y="28" width="195" height="80" rx="5" fill="#fafafa" stroke="#ccc" stroke-width="1"/>
+  <text x="117" y="46" font-family="Arial,sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#b02020">Problem</text>
+  <text x="117" y="62" font-family="Arial,sans-serif" font-size="9" text-anchor="middle" fill="#333">Bidirectional attention in dLLMs</text>
+  <text x="117" y="74" font-family="Arial,sans-serif" font-size="9" text-anchor="middle" fill="#333">→ exact AR KV cache breaks</text>
+  <text x="117" y="86" font-family="Arial,sans-serif" font-size="9" text-anchor="middle" fill="#333">(each position shifts all others)</text>
+  <text x="117" y="98" font-family="Arial,sans-serif" font-size="9" text-anchor="middle" fill="#888">Approx. caching = repeated prefill/decode</text>
+
+  <!-- Arrow -->
+  <line x1="215" y1="68" x2="245" y2="68" stroke="#0d7377" stroke-width="1.5" marker-end="url(#e1)"/>
+
+  <!-- Solution: deficit token-budget scheduler -->
+  <rect x="245" y="28" width="235" height="80" rx="5" fill="#d1fae5" stroke="#0d7377" stroke-width="1.5"/>
+  <text x="362" y="46" font-family="Arial,sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#0d7377">Sangam Solution</text>
+  <text x="362" y="62" font-family="Arial,sans-serif" font-size="9" text-anchor="middle" fill="#333">Deficit token-budget scheduler:</text>
+  <text x="362" y="75" font-family="Arial,sans-serif" font-size="9" text-anchor="middle" fill="#333">admits in-flight decodes first,</text>
+  <text x="362" y="87" font-family="Arial,sans-serif" font-size="9" text-anchor="middle" fill="#333">prefills only when budget allows,</text>
+  <text x="362" y="99" font-family="Arial,sans-serif" font-size="9" text-anchor="middle" fill="#333">carries unused budget forward</text>
+
+  <!-- Architecture diagram -->
+  <rect x="20" y="120" width="460" height="60" rx="5" fill="#fafafa" stroke="#ddd" stroke-width="1"/>
+  <rect x="30" y="130" width="90" height="38" rx="3" fill="#e5edff" stroke="#1a4f99" stroke-width="1"/>
+  <text x="75" y="145" font-family="Arial,sans-serif" font-size="8" text-anchor="middle" fill="#1a4f99">AR Serving</text>
+  <text x="75" y="157" font-family="Arial,sans-serif" font-size="8" text-anchor="middle" fill="#1a4f99">Stack</text>
+  <line x1="120" y1="149" x2="145" y2="149" stroke="#888" stroke-width="1" marker-end="url(#e2)"/>
+  <rect x="145" y="130" width="110" height="38" rx="3" fill="#d1fae5" stroke="#0d7377" stroke-width="1"/>
+  <text x="200" y="145" font-family="Arial,sans-serif" font-size="8" text-anchor="middle" fill="#0d7377">Sangam Scheduler</text>
+  <text x="200" y="157" font-family="Arial,sans-serif" font-size="8" text-anchor="middle" fill="#0d7377">(token-budget)</text>
+  <line x1="255" y1="149" x2="280" y2="149" stroke="#888" stroke-width="1" marker-end="url(#e3)"/>
+  <rect x="280" y="130" width="90" height="38" rx="3" fill="#fde8e8" stroke="#b02020" stroke-width="1"/>
+  <text x="325" y="145" font-family="Arial,sans-serif" font-size="8" text-anchor="middle" fill="#b02020">dLLM (approx.</text>
+  <text x="325" y="157" font-family="Arial,sans-serif" font-size="8" text-anchor="middle" fill="#b02020">KV cache)</text>
+  <line x1="370" y1="149" x2="395" y2="149" stroke="#888" stroke-width="1" marker-end="url(#e4)"/>
+  <text x="435" y="150" font-family="Arial,sans-serif" font-size="9" font-weight="bold" fill="#0d7377">Throughput</text>
+  <text x="435" y="162" font-family="Arial,sans-serif" font-size="9" fill="#0d7377">maximized</text>
+
+  <text x="250" y="205" font-family="Arial,sans-serif" font-size="9" text-anchor="middle" fill="#666">Removes the "custom stack" barrier to dLLM deployment; GPU saturation occurs quickly — scheduler key to efficiency</text>
+  <text x="250" y="216" font-family="Arial,sans-serif" font-size="9" text-anchor="middle" fill="#666">Decode throughput saturates at few concurrent decodes; budget-carry avoids starvation</text>
+
+  <defs>
+    <marker id="e1" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#0d7377"/></marker>
+    <marker id="e2" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#888"/></marker>
+    <marker id="e3" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#888"/></marker>
+    <marker id="e4" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#888"/></marker>
+  </defs>
+</svg>

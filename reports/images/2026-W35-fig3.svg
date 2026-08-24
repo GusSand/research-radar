@@ -1,0 +1,46 @@
+<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-label="Block-Sparse Featurizers: 1D SAE direction vs 2-4D BSF manifold with MDL comparison">
+  <!-- Background -->
+  <rect width="500" height="220" fill="#fff"/>
+  <text x="250" y="17" font-family="Georgia,serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#1a1a1a">Block-Sparse Featurizers (2606.25234) — Goodfire</text>
+
+  <!-- Left panel: SAE 1D direction -->
+  <rect x="25" y="28" width="195" height="145" rx="5" fill="#fafafa" stroke="#ccc" stroke-width="1"/>
+  <text x="122" y="46" font-family="Arial,sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#888">Standard SAE — 1D direction</text>
+
+  <!-- 3D box to represent activation space -->
+  <ellipse cx="122" cy="110" rx="60" ry="40" fill="none" stroke="#ccc" stroke-width="1" stroke-dasharray="4,3"/>
+  <!-- Single direction arrow -->
+  <line x1="82" y1="130" x2="162" y2="90" stroke="#888" stroke-width="2.5" marker-end="url(#b1)"/>
+  <text x="170" y="88" font-family="Arial,sans-serif" font-size="9" fill="#888">1D</text>
+
+  <text x="122" y="162" font-family="Arial,sans-serif" font-size="9" text-anchor="middle" fill="#888">One direction per concept</text>
+
+  <!-- Right panel: BSF manifold -->
+  <rect x="280" y="28" width="195" height="145" rx="5" fill="#fafafa" stroke="#1a4f99" stroke-width="1.5"/>
+  <text x="377" y="46" font-family="Arial,sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#1a4f99">Block-Sparse Featurizer — 2-4D</text>
+
+  <!-- Ellipse activation space -->
+  <ellipse cx="377" cy="110" rx="60" ry="40" fill="#dbeafe" fill-opacity="0.5" stroke="#1a4f99" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <!-- Multiple directions in subspace -->
+  <line x1="340" y1="125" x2="410" y2="95" stroke="#1a4f99" stroke-width="2" marker-end="url(#b2)"/>
+  <line x1="340" y1="105" x2="415" y2="115" stroke="#1a4f99" stroke-width="2" marker-end="url(#b3)"/>
+  <line x1="355" y1="135" x2="395" y2="90" stroke="#1a4f99" stroke-width="1.5" stroke-dasharray="3,2" marker-end="url(#b4)"/>
+  <text x="420" y="95" font-family="Arial,sans-serif" font-size="9" fill="#1a4f99">2-4D</text>
+  <text x="420" y="107" font-family="Arial,sans-serif" font-size="9" fill="#1a4f99">manifold</text>
+
+  <text x="377" y="162" font-family="Arial,sans-serif" font-size="9" text-anchor="middle" fill="#1a4f99">MDL: 2-4× more compact than SAE</text>
+
+  <!-- MDL bar chart -->
+  <rect x="85" y="180" width="30" height="25" fill="#888"/>
+  <rect x="355" y="188" width="30" height="17" fill="#1a4f99"/>
+  <text x="100" y="178" font-family="Arial,sans-serif" font-size="8" text-anchor="middle" fill="#888">SAE MDL</text>
+  <text x="370" y="186" font-family="Arial,sans-serif" font-size="8" text-anchor="middle" fill="#1a4f99">BSF MDL</text>
+  <text x="250" y="217" font-family="Arial,sans-serif" font-size="9" text-anchor="middle" fill="#666">Three BSF variants (Vanilla, Grassmannian, Group Lasso) all outperform 1D SAEs; supports steerable SDXL generation</text>
+
+  <defs>
+    <marker id="b1" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#888"/></marker>
+    <marker id="b2" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#1a4f99"/></marker>
+    <marker id="b3" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#1a4f99"/></marker>
+    <marker id="b4" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#1a4f99"/></marker>
+  </defs>
+</svg>
