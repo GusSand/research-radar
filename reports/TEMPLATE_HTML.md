@@ -237,11 +237,11 @@ Place this between the masthead and the first paper entry:
     <!-- e.g.: --> 3 peer-reviewed · 7 preprints · 0 forum/blog
   </div>
   <div class="masthead-tracks">
+    <span class="track">AI Safety</span>
+    <span class="track-sep">·</span>
+    <span class="track">Alignment</span>
+    <span class="track-sep">·</span>
     <span class="track">Mech Interp</span>
-    <span class="track-sep">·</span>
-    <span class="track">AI Security</span>
-    <span class="track-sep">·</span>
-    <span class="track">Text Diffusion LMs</span>
   </div>
 </header>
 ```
@@ -254,8 +254,8 @@ Place this between the masthead and the first paper entry:
 |-------|-------|---------|
 | `tag-peer` | green | peer-reviewed papers |
 | `tag-interp` | teal | mechanistic interpretability |
-| `tag-security` | red | AI/LLM security |
-| `tag-dllm` | blue | text diffusion LMs |
+| `tag-security` | red | AI/LLM safety & security |
+| `tag-align` | blue | alignment |
 | `tag-control` | violet | AI control |
 | `tag-rank` | amber | "Top pick" or ranking callouts |
 
@@ -280,7 +280,7 @@ The `.md` file uses the same narrative structure as the HTML. **For figures, use
 ```markdown
 # Research Radar — July 22, 2026
 
-> **Mech Interp · AI Security · Text Diffusion LMs** | Daily edition
+> **AI Safety · Alignment · Mech Interp** | Daily edition
 > **HTML artifact:** https://claude.ai/code/artifact/XXXXXXXX
 
 **Window:** ... **Counts:** 0 peer-reviewed · 10 preprints · 0 forum/blog
