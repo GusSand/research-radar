@@ -1,0 +1,869 @@
+<title>Research Radar — 2026-08-30</title>
+<style>
+/* ── tokens ── */
+:root {
+  --bg: #111111;
+  --surface: #181818;
+  --surface2: #1e1e1e;
+  --border: #282828;
+  --text: #c9c9c9;
+  --title: #f0f0f0;
+  --accent: #5ba3f5;
+  --accent2: #a78bfa;
+  --muted: #666666;
+  --tag-bg: #202020;
+  --tag-peer: #1e2f1e;
+  --tag-peer-text: #4ade80;
+  --tag-security: #2a1a1a;
+  --tag-security-text: #f87171;
+  --tag-interp: #1a1f2e;
+  --tag-interp-text: #93c5fd;
+  --tag-safety: #1e1e2e;
+  --tag-safety-text: #c4b5fd;
+  --rank-bg: #1a2030;
+  --rank-text: #7eb8f7;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #f5f6fa;
+    --surface: #ffffff;
+    --surface2: #f0f1f6;
+    --border: #dde0e8;
+    --text: #2d3348;
+    --title: #111827;
+    --accent: #1d4ed8;
+    --accent2: #7c3aed;
+    --muted: #8892a4;
+    --tag-bg: #eef0f8;
+    --tag-peer: #f0fdf4;
+    --tag-peer-text: #15803d;
+    --tag-security: #fef2f2;
+    --tag-security-text: #b91c1c;
+    --tag-interp: #eff6ff;
+    --tag-interp-text: #1d4ed8;
+    --tag-safety: #f5f3ff;
+    --tag-safety-text: #6d28d9;
+    --rank-bg: #eff6ff;
+    --rank-text: #1d4ed8;
+  }
+}
+
+:root[data-theme="light"] {
+  --bg: #f5f6fa;
+  --surface: #ffffff;
+  --surface2: #f0f1f6;
+  --border: #dde0e8;
+  --text: #2d3348;
+  --title: #111827;
+  --accent: #1d4ed8;
+  --accent2: #7c3aed;
+  --muted: #8892a4;
+  --tag-bg: #eef0f8;
+  --tag-peer: #f0fdf4;
+  --tag-peer-text: #15803d;
+  --tag-security: #fef2f2;
+  --tag-security-text: #b91c1c;
+  --tag-interp: #eff6ff;
+  --tag-interp-text: #1d4ed8;
+  --tag-safety: #f5f3ff;
+  --tag-safety-text: #6d28d9;
+  --rank-bg: #eff6ff;
+  --rank-text: #1d4ed8;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  padding: 32px 20px 80px;
+}
+
+.wrap {
+  max-width: 660px;
+  margin: 0 auto;
+}
+
+/* ── masthead ── */
+.masthead {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 20px;
+  margin-bottom: 36px;
+}
+
+.masthead-eyebrow {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.masthead h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--title);
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.meta-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.meta-strip span { white-space: nowrap; }
+
+.counts {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+.count-chip {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11px;
+  padding: 3px 9px;
+  border-radius: 3px;
+  background: var(--tag-bg);
+  color: var(--muted);
+}
+
+/* ── section headers ── */
+.section-label {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 10px 0 6px;
+  border-top: 1px solid var(--border);
+  margin: 44px 0 28px;
+}
+
+/* ── full paper card (items 1-3) ── */
+.paper-full {
+  margin-bottom: 48px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid var(--border);
+}
+
+.paper-full:last-of-type { border-bottom: none; }
+
+.rank-badge {
+  display: inline-block;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: .05em;
+  color: var(--rank-text);
+  background: var(--rank-bg);
+  padding: 3px 8px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.tags {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.tag {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11px;
+  padding: 2px 7px;
+  border-radius: 3px;
+}
+
+.tag-peer    { background: var(--tag-peer);     color: var(--tag-peer-text); }
+.tag-security{ background: var(--tag-security);  color: var(--tag-security-text); }
+.tag-interp  { background: var(--tag-interp);    color: var(--tag-interp-text); }
+.tag-safety  { background: var(--tag-safety);    color: var(--tag-safety-text); }
+.tag-neutral { background: var(--tag-bg);        color: var(--muted); }
+
+.paper-full h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 26px;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: var(--border);
+  text-underline-offset: 4px;
+  color: var(--title);
+  line-height: 1.25;
+  margin-bottom: 6px;
+}
+
+.paper-full h2 a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.paper-full h2 a:hover { color: var(--accent); }
+
+.byline {
+  font-size: 13px;
+  color: var(--muted);
+  font-family: "Courier New", Courier, monospace;
+  margin-bottom: 16px;
+}
+
+.hook {
+  margin-bottom: 18px;
+  color: var(--text);
+}
+
+.figure-wrap {
+  margin: 20px 0;
+  overflow-x: auto;
+}
+
+.figure-wrap figcaption {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 8px;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+.detail {
+  color: var(--text);
+  font-size: 16px;
+}
+
+/* ── compact mid-tier cards (items 4-10) ── */
+.paper-mid {
+  margin-bottom: 32px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--border);
+}
+
+.paper-mid:last-child { border-bottom: none; margin-bottom: 0; }
+
+.mid-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.paper-mid h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 19px;
+  font-weight: bold;
+  color: var(--title);
+  line-height: 1.3;
+}
+
+.paper-mid h3 a { color: inherit; text-decoration: none; }
+.paper-mid h3 a:hover { color: var(--accent); text-decoration: underline; }
+
+.mid-byline {
+  font-size: 12px;
+  color: var(--muted);
+  font-family: "Courier New", Courier, monospace;
+  margin-bottom: 12px;
+}
+
+.mid-summary { font-size: 15px; color: var(--text); }
+
+/* ── notes ── */
+.notes {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 20px 22px;
+  margin-top: 40px;
+}
+
+.notes h4 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.notes ul { padding-left: 20px; }
+.notes li { font-size: 14px; margin-bottom: 6px; color: var(--text); }
+
+/* ── footer ── */
+.footer {
+  margin-top: 48px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11px;
+  color: var(--muted);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+</style>
+
+<div class="wrap">
+
+  <!-- MASTHEAD -->
+  <header class="masthead">
+    <div class="masthead-eyebrow">📡 Research Radar · Daily Edition</div>
+    <h1>August 30, 2026</h1>
+    <div class="meta-strip">
+      <span>Window: Aug 8–30, 2026 (23 days)</span>
+      <span>Sources: arXiv cs.CL/cs.LG/cs.CR/cs.AI · KDD 2026 · ICML 2026 MI Workshop</span>
+    </div>
+    <div class="counts">
+      <span class="count-chip">2 peer-reviewed</span>
+      <span class="count-chip">8 preprints</span>
+      <span class="count-chip">0 forum/blog</span>
+    </div>
+  </header>
+
+  <!-- ── TOP 3 ── -->
+  <div class="section-label">Top 3 · Full Treatment</div>
+
+  <!-- #1 -->
+  <article class="paper-full">
+    <div class="rank-badge">01</div>
+    <div class="tags">
+      <span class="tag tag-safety">pretraining-safety</span>
+      <span class="tag tag-neutral">EPFL-dlab</span>
+      <span class="tag tag-neutral">Aug 13 2026</span>
+    </div>
+    <h2><a href="https://arxiv.org/abs/2608.13482">Synthetic Persona Pretraining: Alignment from Token Zero</a></h2>
+    <div class="byline">Julian Minder, Viktor Moskvoretskii, Raghav Singhal et al. — arXiv preprint</div>
+    <p class="hook">Alignment is almost always bolted on — RLHF, SFT, DPO applied after the pretraining run ends. This paper asks whether installing the desired persona <em>during</em> pretraining, from the very first token, produces a more robust foundation. It does: models trained with Synthetic Persona Pretraining (SPP) show stronger constitution following, greater jailbreak robustness, and less misalignment on out-of-distribution moral dilemmas, with the advantage growing as pretraining budget increases.</p>
+    <figure class="figure-wrap">
+      <svg viewBox="0 0 640 240" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:640px;display:block;">
+        <rect width="640" height="240" fill="#111"/>
+        <!-- stage boxes -->
+        <!-- stage 1 -->
+        <rect x="20" y="60" width="170" height="120" rx="6" fill="#1a2030" stroke="#5ba3f5" stroke-width="1.5"/>
+        <text x="105" y="100" fill="#93c5fd" font-family="monospace" font-size="11" text-anchor="middle" font-weight="bold">STAGE 1</text>
+        <text x="105" y="116" fill="#c9c9c9" font-family="monospace" font-size="10" text-anchor="middle">Constitution</text>
+        <text x="105" y="130" fill="#c9c9c9" font-family="monospace" font-size="10" text-anchor="middle">annotation</text>
+        <text x="105" y="150" fill="#666" font-family="monospace" font-size="9" text-anchor="middle">10% of docs</text>
+        <text x="105" y="163" fill="#666" font-family="monospace" font-size="9" text-anchor="middle">+ moral reflections</text>
+        <!-- arrow 1→2 -->
+        <line x1="190" y1="120" x2="232" y2="120" stroke="#5ba3f5" stroke-width="1.5" marker-end="url(#arr)"/>
+        <!-- stage 2 -->
+        <rect x="232" y="60" width="170" height="120" rx="6" fill="#1a2030" stroke="#5ba3f5" stroke-width="1.5"/>
+        <text x="317" y="100" fill="#93c5fd" font-family="monospace" font-size="11" text-anchor="middle" font-weight="bold">STAGE 2</text>
+        <text x="317" y="116" fill="#c9c9c9" font-family="monospace" font-size="10" text-anchor="middle">Standard</text>
+        <text x="317" y="130" fill="#c9c9c9" font-family="monospace" font-size="10" text-anchor="middle">pretraining</text>
+        <text x="317" y="150" fill="#666" font-family="monospace" font-size="9" text-anchor="middle">cross-entropy on</text>
+        <text x="317" y="163" fill="#666" font-family="monospace" font-size="9" text-anchor="middle">joint corpus</text>
+        <!-- arrow 2→3 -->
+        <line x1="402" y1="120" x2="444" y2="120" stroke="#5ba3f5" stroke-width="1.5" marker-end="url(#arr)"/>
+        <!-- stage 3 -->
+        <rect x="444" y="60" width="170" height="120" rx="6" fill="#1a2030" stroke="#a78bfa" stroke-width="1.5"/>
+        <text x="529" y="100" fill="#c4b5fd" font-family="monospace" font-size="11" text-anchor="middle" font-weight="bold">STAGE 3</text>
+        <text x="529" y="116" fill="#c9c9c9" font-family="monospace" font-size="10" text-anchor="middle">Persona binding</text>
+        <text x="529" y="130" fill="#c9c9c9" font-family="monospace" font-size="10" text-anchor="middle">SFT</text>
+        <text x="529" y="150" fill="#666" font-family="monospace" font-size="9" text-anchor="middle">ties pretrained</text>
+        <text x="529" y="163" fill="#666" font-family="monospace" font-size="9" text-anchor="middle">persona → assistant</text>
+        <!-- result bar at bottom -->
+        <text x="20" y="215" fill="#666" font-family="monospace" font-size="10">Results @ 3B / 500B tokens:</text>
+        <text x="220" y="215" fill="#4ade80" font-family="monospace" font-size="10">↑ constitution following</text>
+        <text x="400" y="215" fill="#4ade80" font-family="monospace" font-size="10">↑ jailbreak robustness</text>
+        <!-- arrowhead marker -->
+        <defs>
+          <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L8,3 z" fill="#5ba3f5"/>
+          </marker>
+        </defs>
+      </svg>
+      <figcaption>SPP three-stage pipeline: constitution annotation (10% of pretraining corpus) → standard cross-entropy pretraining on joint corpus → persona binding SFT. Alignment advantage grows with pretraining budget.</figcaption>
+    </figure>
+    <p class="detail">SPP annotates 10% of pretraining documents with synthetic first-person moral reflections drawn from a constitution. Both the original text and the reflection appear in the cross-entropy training target, so the model learns the desired persona as part of its general world model rather than as a post-hoc constraint. Ablations at 3B parameters / 500B tokens: (a) omitting the Stage 3 persona binding step substantially weakens behavioral alignment; (b) introducing SPP only at the tail of pretraining — without the full-budget exposure — yields similarly diminished gains. SPP models improve on constitution-following benchmarks, reduce jailbreak success rates, and generalize to out-of-distribution moral dilemmas, all without capability degradation. Code and data: github.com/epfl-dlab/spp.</p>
+  </article>
+
+  <!-- #2 -->
+  <article class="paper-full">
+    <div class="rank-badge">02</div>
+    <div class="tags">
+      <span class="tag tag-peer">KDD 2026 · peer-reviewed</span>
+      <span class="tag tag-safety">pretraining-safety</span>
+      <span class="tag tag-neutral">UW CriticalML</span>
+    </div>
+    <h2><a href="https://arxiv.org/abs/2602.06911">TamperBench: Systematically Stress-Testing LLM Safety Under Fine-Tuning and Tampering</a></h2>
+    <div class="byline">Critical ML Lab, University of Washington — ACM KDD 2026 (presented Aug 9–13, Jeju)</div>
+    <p class="hook">The most comprehensive empirical study yet of whether aligned LLMs actually survive adversarial fine-tuning. TamperBench sweeps 21 models across 9 attack types with hyperparameter optimization per model-attack pair, and the verdict is stark: current alignment-stage defenses — circuit breakers, representation engineering — fail across virtually every attack sweep when the attacker is allowed to search over hyperparameters.</p>
+    <figure class="figure-wrap">
+      <svg viewBox="0 0 640 260" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:640px;display:block;">
+        <rect width="640" height="260" fill="#111"/>
+        <!-- axes -->
+        <line x1="80" y1="200" x2="580" y2="200" stroke="#333" stroke-width="1.5"/>
+        <line x1="80" y1="30" x2="80" y2="200" stroke="#333" stroke-width="1.5"/>
+        <!-- axis labels -->
+        <text x="330" y="225" fill="#666" font-family="monospace" font-size="11" text-anchor="middle">Utility — MMLU-Pro (preserved)</text>
+        <text x="20" y="120" fill="#666" font-family="monospace" font-size="11" text-anchor="middle" transform="rotate(-90,20,120)">Safety (StrongREJECT)</text>
+        <!-- x ticks -->
+        <text x="80" y="215" fill="#555" font-family="monospace" font-size="10" text-anchor="middle">0</text>
+        <text x="220" y="215" fill="#555" font-family="monospace" font-size="10" text-anchor="middle">Low</text>
+        <text x="360" y="215" fill="#555" font-family="monospace" font-size="10" text-anchor="middle">Med</text>
+        <text x="500" y="215" fill="#555" font-family="monospace" font-size="10" text-anchor="middle">High</text>
+        <!-- "ideal" quadrant label -->
+        <text x="520" y="55" fill="#4ade80" font-family="monospace" font-size="10" text-anchor="end">Ideal:</text>
+        <text x="520" y="68" fill="#4ade80" font-family="monospace" font-size="10" text-anchor="end">high safety + utility</text>
+        <!-- defense models — clustered near safety=0 (failed) -->
+        <!-- jailbreak-tuning cluster (red) near x-axis, spread across utility -->
+        <circle cx="180" cy="193" r="6" fill="#f87171" opacity="0.85"/>
+        <circle cx="240" cy="191" r="6" fill="#f87171" opacity="0.85"/>
+        <circle cx="300" cy="194" r="6" fill="#f87171" opacity="0.85"/>
+        <circle cx="370" cy="192" r="6" fill="#f87171" opacity="0.85"/>
+        <circle cx="430" cy="193" r="6" fill="#f87171" opacity="0.85"/>
+        <!-- defense-augmented (circuit breaker etc) — slightly above but still failing -->
+        <circle cx="200" cy="178" r="6" fill="#fb923c" opacity="0.85"/>
+        <circle cx="280" cy="181" r="6" fill="#fb923c" opacity="0.85"/>
+        <circle cx="350" cy="176" r="6" fill="#fb923c" opacity="0.85"/>
+        <circle cx="420" cy="179" r="6" fill="#fb923c" opacity="0.85"/>
+        <!-- a few safer survivors in upper range -->
+        <circle cx="260" cy="110" r="5" fill="#93c5fd" opacity="0.85"/>
+        <circle cx="320" cy="90" r="5" fill="#93c5fd" opacity="0.85"/>
+        <circle cx="390" cy="100" r="5" fill="#93c5fd" opacity="0.85"/>
+        <!-- legend -->
+        <circle cx="96" cy="44" r="6" fill="#f87171"/>
+        <text x="108" y="48" fill="#f87171" font-family="monospace" font-size="11">Jailbreak-tuning (worst-case)</text>
+        <circle cx="96" cy="64" r="6" fill="#fb923c"/>
+        <text x="108" y="68" fill="#fb923c" font-family="monospace" font-size="11">Defense-augmented models</text>
+        <circle cx="96" cy="84" r="5" fill="#93c5fd"/>
+        <text x="108" y="88" fill="#93c5fd" font-family="monospace" font-size="11">Surviving partial alignment</text>
+        <!-- annotation -->
+        <text x="350" y="183" fill="#f87171" font-family="monospace" font-size="9">≈0 safety</text>
+      </svg>
+      <figcaption>Safety (StrongREJECT) vs. utility (MMLU-Pro) under worst-case hyperparameter-swept attack for 21 LLMs. Alignment-stage defenses (circuit breakers, representation engineering) cluster near the x-axis — jailbreak-tuning with ~2% poisoning is the most severe attack.</figcaption>
+    </figure>
+    <p class="detail">TamperBench evaluates 21 open-weight LLMs — including defense-augmented variants — across nine tampering threats: weight-space attacks (adversarial SFT, jailbreak-tuning, harmful-data poisoning, benign fine-tuning data) and latent-space representation attacks. For each model–attack pair, a hyperparameter sweep finds the worst-case attack configuration; the result is scored jointly on StrongREJECT (safety) and MMLU-Pro (utility). Key findings: (1) jailbreak-tuning with ≈2% poisoning is consistently the most severe attack across model families; (2) alignment-stage defenses fail under systematic sweeps in nearly all conditions; (3) post-training choices (instruction style, RLHF temperature, DPO variant) affect tamper resistance in ways that cannot be predicted from standard safety benchmarks. Code: github.com/criticalml-uw/TamperBench.</p>
+  </article>
+
+  <!-- #3 -->
+  <article class="paper-full">
+    <div class="rank-badge">03</div>
+    <div class="tags">
+      <span class="tag tag-safety">pretraining-safety</span>
+      <span class="tag tag-neutral">arXiv Jun 17 2026</span>
+    </div>
+    <h2><a href="https://arxiv.org/abs/2606.19168">Beyond Safe Data: Pretraining-Stage Alignment with Regular Safety Reflection</a></h2>
+    <div class="byline">Jinhan Li, Kexian Tang, Yihan Xu, Zhuorui Ye, Kaifeng Lyu — arXiv preprint</div>
+    <p class="hook">Even a corpus filtered to contain only safe content produces models that can compose benign capabilities into harmful outputs — data safety and model safety are different things. Safety Reflection Pretraining (SRP) addresses this without filtering: instead of removing unsafe content, it annotates the existing corpus with inline safety judgments, training the model to reason about safety as it learns from text.</p>
+    <figure class="figure-wrap">
+      <svg viewBox="0 0 640 240" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:640px;display:block;">
+        <rect width="640" height="240" fill="#111"/>
+        <!-- left: text snippet with annotation -->
+        <rect x="20" y="30" width="280" height="170" rx="5" fill="#161616" stroke="#282828" stroke-width="1"/>
+        <text x="35" y="55" fill="#666" font-family="monospace" font-size="10">Training document (excerpt)</text>
+        <text x="35" y="75" fill="#c9c9c9" font-family="monospace" font-size="11">... mix 50g sodium with ...</text>
+        <text x="35" y="93" fill="#c9c9c9" font-family="monospace" font-size="11">heat to 80°C until ...</text>
+        <!-- SRP annotation box -->
+        <rect x="35" y="108" width="248" height="58" rx="4" fill="#1e2f1e" stroke="#4ade80" stroke-width="1" stroke-dasharray="3,2"/>
+        <text x="44" y="126" fill="#4ade80" font-family="monospace" font-size="10" font-weight="bold">SRP annotation:</text>
+        <text x="44" y="142" fill="#86efac" font-family="monospace" font-size="10">This describes a potentially</text>
+        <text x="44" y="156" fill="#86efac" font-family="monospace" font-size="10">dangerous chemical process.</text>
+        <!-- remaining text -->
+        <text x="35" y="185" fill="#c9c9c9" font-family="monospace" font-size="11">... carefully dispose of ...</text>
+        <!-- arrow -->
+        <line x1="300" y1="115" x2="340" y2="115" stroke="#5ba3f5" stroke-width="1.5" marker-end="url(#arr2)"/>
+        <!-- right: results comparison -->
+        <rect x="340" y="30" width="280" height="170" rx="5" fill="#161616" stroke="#282828" stroke-width="1"/>
+        <text x="360" y="55" fill="#666" font-family="monospace" font-size="10">Attack success rate comparison</text>
+        <!-- bars: inference-time -->
+        <text x="360" y="80" fill="#c9c9c9" font-family="monospace" font-size="10">Inference-time attacks</text>
+        <rect x="360" y="88" width="110" height="14" rx="2" fill="#f87171" opacity="0.8"/>
+        <text x="477" y="100" fill="#f87171" font-family="monospace" font-size="10">Clean baseline</text>
+        <rect x="360" y="108" width="52" height="14" rx="2" fill="#4ade80" opacity="0.8"/>
+        <text x="418" y="120" fill="#4ade80" font-family="monospace" font-size="10">SRP  −53%</text>
+        <!-- bars: fine-tuning -->
+        <text x="360" y="148" fill="#c9c9c9" font-family="monospace" font-size="10">Fine-tuning attacks</text>
+        <rect x="360" y="156" width="140" height="14" rx="2" fill="#f87171" opacity="0.8"/>
+        <text x="507" y="168" fill="#f87171" font-family="monospace" font-size="10">Clean</text>
+        <rect x="360" y="176" width="68" height="14" rx="2" fill="#4ade80" opacity="0.8"/>
+        <text x="434" y="188" fill="#4ade80" font-family="monospace" font-size="10">SRP  −51%</text>
+        <defs>
+          <marker id="arr2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L8,3 z" fill="#5ba3f5"/>
+          </marker>
+        </defs>
+      </svg>
+      <figcaption>SRP inserts inline safety judgments (green dashed box) into 10% of pretraining documents, reducing both inference-time and fine-tuning attack success rates substantially vs. the clean-data baseline — without removing any training content.</figcaption>
+    </figure>
+    <p class="detail">SRP inserts short inline safety judgments — a one- or two-sentence assessment of whether the preceding text segment is safe, and why — directly into pretraining documents. Both original text and annotation appear in the cross-entropy target; no content is removed, so corpus diversity is unchanged. Applied to 1.7B-parameter models on FineWeb-Edu: SRP models improve safety classification accuracy and reduce attack success rates for both inference-time attacks and fine-tuning attacks (adversarial SFT with 10 poisoned examples). Unlike SPP (#1), SRP does not attempt to install a persona — it builds a safety-reasoning capability — making the two approaches potentially complementary rather than competing.</p>
+  </article>
+
+  <!-- ── ITEMS 4-10 ── -->
+  <div class="section-label">Items 4–10 · Mid-Tier</div>
+
+  <!-- #4 -->
+  <article class="paper-mid">
+    <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:8px;">
+      <span class="rank-badge" style="flex-shrink:0">04</span>
+      <div class="tags" style="margin-bottom:0">
+        <span class="tag tag-safety">pretraining-safety</span>
+        <span class="tag tag-interp">mech-interp</span>
+        <span class="tag tag-neutral">arXiv Jul 14 2026</span>
+      </div>
+    </div>
+    <h3><a href="https://arxiv.org/abs/2607.14147">Breaking Refusal in the First Half: A Mechanistic Study of the Prefill Jailbreak</a></h3>
+    <div class="mid-byline">arXiv preprint · 4 models · 3 families · 1.5B–14B parameters</div>
+    <figure class="figure-wrap" style="margin:12px 0">
+      <svg viewBox="0 0 640 160" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:640px;display:block;">
+        <rect width="640" height="160" fill="#111"/>
+        <!-- 3 conditions as grouped bars -->
+        <!-- condition labels -->
+        <text x="120" y="145" fill="#666" font-family="monospace" font-size="10" text-anchor="middle">Unattacked</text>
+        <text x="300" y="145" fill="#666" font-family="monospace" font-size="10" text-anchor="middle">First-half prefill</text>
+        <text x="480" y="145" fill="#666" font-family="monospace" font-size="10" text-anchor="middle">Second-half prefill</text>
+        <!-- harm probe bars (blue) -->
+        <rect x="85" y="30" width="28" height="100" rx="2" fill="#5ba3f5" opacity="0.9"/>
+        <rect x="265" y="33" width="28" height="97" rx="2" fill="#5ba3f5" opacity="0.9"/>
+        <rect x="445" y="35" width="28" height="95" rx="2" fill="#5ba3f5" opacity="0.9"/>
+        <!-- refusal bars (red) -->
+        <rect x="120" y="30" width="28" height="99" rx="2" fill="#4ade80" opacity="0.9"/>
+        <rect x="300" y="108" width="28" height="22" rx="2" fill="#f87171" opacity="0.9"/>
+        <rect x="480" y="82" width="28" height="48" rx="2" fill="#f87171" opacity="0.9"/>
+        <!-- axis -->
+        <line x1="60" y1="130" x2="590" y2="130" stroke="#333" stroke-width="1"/>
+        <line x1="60" y1="130" x2="60" y2="20" stroke="#333" stroke-width="1"/>
+        <!-- legend -->
+        <rect x="68" y="15" width="12" height="8" fill="#5ba3f5"/>
+        <text x="84" y="22" fill="#5ba3f5" font-family="monospace" font-size="10">Harm probe score (0.91–0.98)</text>
+        <rect x="260" y="15" width="12" height="8" fill="#4ade80"/>
+        <text x="276" y="22" fill="#4ade80" font-family="monospace" font-size="10">Refusal rate (high)</text>
+        <rect x="400" y="15" width="12" height="8" fill="#f87171"/>
+        <text x="416" y="22" fill="#f87171" font-family="monospace" font-size="10">Refusal rate (bypassed)</text>
+      </svg>
+      <figcaption>Harm probe fires at 0.91–0.98 even when prefill attack bypasses refusal — harm is encoded, refusal is a separate shallow computation.</figcaption>
+    </figure>
+    <p class="mid-summary">Applies the single-line prefill attack ("Sure, here is") across 4 models and 3 families. A linear harm probe trained on unattacked completions still fires at 0.91–0.98 accuracy when the attack flips the model to compliance — the model encodes harm but refusal is bypassed. A position-control experiment shows the first half of the response suffices to break refusal; refusal is a shallow, response-site computation that does not require altering the model's internal harm representation. Directly mechanistic result for understanding why safety-training defenses like #1 and #3 must act earlier than response time.</p>
+  </article>
+
+  <!-- #5 -->
+  <article class="paper-mid">
+    <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:8px;">
+      <span class="rank-badge" style="flex-shrink:0">05</span>
+      <div class="tags" style="margin-bottom:0">
+        <span class="tag tag-security">AI-security</span>
+        <span class="tag tag-security">agent-security</span>
+        <span class="tag tag-neutral">arXiv Aug 26 2026</span>
+      </div>
+    </div>
+    <h3><a href="https://arxiv.org/abs/2608.26733">Daydreaming: Stealing Hidden Agent Skills through Black-Box Task Interaction</a></h3>
+    <div class="mid-byline">Yu-Lin Tsai, Raluca Ada Popa et al. — arXiv preprint</div>
+    <figure class="figure-wrap" style="margin:12px 0">
+      <svg viewBox="0 0 640 150" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:640px;display:block;">
+        <rect width="640" height="150" fill="#111"/>
+        <!-- attacker box -->
+        <rect x="20" y="40" width="120" height="70" rx="5" fill="#2a1a1a" stroke="#f87171" stroke-width="1.5"/>
+        <text x="80" y="72" fill="#f87171" font-family="monospace" font-size="10" text-anchor="middle">Attacker</text>
+        <text x="80" y="87" fill="#666" font-family="monospace" font-size="9" text-anchor="middle">+ shadow agents</text>
+        <!-- task arrow -->
+        <line x1="140" y1="75" x2="185" y2="75" stroke="#5ba3f5" stroke-width="1.5" marker-end="url(#da)"/>
+        <text x="163" y="68" fill="#5ba3f5" font-family="monospace" font-size="9" text-anchor="middle">task</text>
+        <!-- victim box -->
+        <rect x="185" y="40" width="140" height="70" rx="5" fill="#1a2030" stroke="#5ba3f5" stroke-width="1.5"/>
+        <text x="255" y="68" fill="#93c5fd" font-family="monospace" font-size="10" text-anchor="middle">Victim Agent</text>
+        <text x="255" y="83" fill="#666" font-family="monospace" font-size="9" text-anchor="middle">🔒 hidden skill file</text>
+        <text x="255" y="97" fill="#666" font-family="monospace" font-size="9" text-anchor="middle">(instructions, helpers)</text>
+        <!-- result arrow back -->
+        <line x1="185" y1="92" x2="140" y2="92" stroke="#c9c9c9" stroke-width="1.2" marker-end="url(#da2)"/>
+        <text x="163" y="108" fill="#c9c9c9" font-family="monospace" font-size="9" text-anchor="middle">results only</text>
+        <!-- hypothesis narrowing -->
+        <rect x="360" y="20" width="260" height="110" rx="5" fill="#161616" stroke="#282828" stroke-width="1"/>
+        <text x="490" y="44" fill="#666" font-family="monospace" font-size="10" text-anchor="middle">Hypothesis space → narrowed</text>
+        <rect x="375" y="55" width="230" height="12" rx="2" fill="#5ba3f5" opacity="0.4"/>
+        <rect x="375" y="73" width="160" height="12" rx="2" fill="#5ba3f5" opacity="0.5"/>
+        <rect x="375" y="91" width="90" height="12" rx="2" fill="#5ba3f5" opacity="0.7"/>
+        <rect x="375" y="109" width="40" height="12" rx="2" fill="#5ba3f5" opacity="0.95"/>
+        <text x="495" y="57" fill="#666" font-family="monospace" font-size="9">Round 1: all hypotheses</text>
+        <text x="545" y="75" fill="#666" font-family="monospace" font-size="9">Round 2</text>
+        <text x="473" y="93" fill="#666" font-family="monospace" font-size="9">Round 3</text>
+        <text x="423" y="113" fill="#93c5fd" font-family="monospace" font-size="9">Recovered</text>
+        <defs>
+          <marker id="da" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L8,3 z" fill="#5ba3f5"/>
+          </marker>
+          <marker id="da2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L8,3 z" fill="#c9c9c9"/>
+          </marker>
+        </defs>
+      </svg>
+      <figcaption>Daydreaming adaptively crafts tasks to narrow the hypothesis space over hidden skill files — victim is never prompted to reveal the skill; execution results alone drive reconstruction.</figcaption>
+    </figure>
+    <p class="mid-summary">Execution-only skill stealing from proprietary hosted agents. The attack adaptively crafts tasks whose results discriminate between possible hidden behaviors, uses shadow agents to design follow-up queries, and reconstructs each hidden skill file from stored results plus local execution checks. No model internals, gradients, or prompted disclosure required — purely black-box.</p>
+  </article>
+
+  <!-- #6 -->
+  <article class="paper-mid">
+    <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:8px;">
+      <span class="rank-badge" style="flex-shrink:0">06</span>
+      <div class="tags" style="margin-bottom:0">
+        <span class="tag tag-security">AI-security</span>
+        <span class="tag tag-security">jailbreak</span>
+        <span class="tag tag-neutral">arXiv Aug 26 2026</span>
+      </div>
+    </div>
+    <h3><a href="https://arxiv.org/abs/2608.26008">A Self-Evolving Multi-Agent Framework Defense against LLM Jailbreak Attacks</a></h3>
+    <div class="mid-byline">Tongyan Hu, Bryan Hooi (NUS) — arXiv preprint</div>
+    <figure class="figure-wrap" style="margin:12px 0">
+      <svg viewBox="0 0 640 140" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:640px;display:block;">
+        <rect width="640" height="140" fill="#111"/>
+        <!-- memory store -->
+        <rect x="20" y="30" width="130" height="80" rx="5" fill="#1e2030" stroke="#a78bfa" stroke-width="1.5"/>
+        <text x="85" y="55" fill="#c4b5fd" font-family="monospace" font-size="10" text-anchor="middle">Rule Memory</text>
+        <text x="85" y="70" fill="#666" font-family="monospace" font-size="9" text-anchor="middle">METHOD-level rules</text>
+        <text x="85" y="84" fill="#666" font-family="monospace" font-size="9" text-anchor="middle">persistent, cross-session</text>
+        <text x="85" y="98" fill="#666" font-family="monospace" font-size="9" text-anchor="middle">no param updates</text>
+        <!-- arrow: new attack → rule induction -->
+        <text x="220" y="25" fill="#f87171" font-family="monospace" font-size="10" text-anchor="middle">jailbreak fails</text>
+        <line x1="220" y1="28" x2="168" y2="55" stroke="#f87171" stroke-width="1.2" marker-end="url(#se)"/>
+        <!-- new input arrow from memory -->
+        <line x1="150" y1="70" x2="195" y2="70" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#se2)"/>
+        <text x="172" y="85" fill="#a78bfa" font-family="monospace" font-size="9" text-anchor="middle">apply rule</text>
+        <!-- defender box -->
+        <rect x="195" y="45" width="130" height="50" rx="5" fill="#1a1a2e" stroke="#a78bfa" stroke-width="1.5"/>
+        <text x="260" y="68" fill="#c4b5fd" font-family="monospace" font-size="10" text-anchor="middle">Defender</text>
+        <text x="260" y="83" fill="#666" font-family="monospace" font-size="9" text-anchor="middle">multi-agent orchestration</text>
+        <!-- generalization arrow -->
+        <line x1="325" y1="70" x2="370" y2="70" stroke="#4ade80" stroke-width="1.5" marker-end="url(#se3)"/>
+        <!-- results box -->
+        <rect x="370" y="40" width="250" height="60" rx="5" fill="#1e2f1e" stroke="#4ade80" stroke-width="1"/>
+        <text x="495" y="63" fill="#4ade80" font-family="monospace" font-size="10" text-anchor="middle">Generalization across family</text>
+        <text x="495" y="80" fill="#86efac" font-family="monospace" font-size="9" text-anchor="middle">role-play → role-play variants</text>
+        <text x="495" y="93" fill="#86efac" font-family="monospace" font-size="9" text-anchor="middle">obfuscation → obfuscation variants</text>
+        <defs>
+          <marker id="se" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#f87171"/></marker>
+          <marker id="se2" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#a78bfa"/></marker>
+          <marker id="se3" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#4ade80"/></marker>
+        </defs>
+      </svg>
+      <figcaption>Self-evolving rule memory: when a jailbreak succeeds, it's abstracted into a method-level rule (not topic-level) that persists across interactions without parameter updates, generalizing to the full attack family.</figcaption>
+    </figure>
+    <p class="mid-summary">When a jailbreak succeeds, the framework extracts the structural attack wrapper (the method) — not the harmful topic — as a persistent rule in cross-interaction memory. No parameter updates required; works on black-box API models. One induced rule generalizes to the entire attack family. Robust to a held-out adaptive composite attack across 4 jailbreak families.</p>
+  </article>
+
+  <!-- #7 -->
+  <article class="paper-mid">
+    <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:8px;">
+      <span class="rank-badge" style="flex-shrink:0">07</span>
+      <div class="tags" style="margin-bottom:0">
+        <span class="tag tag-security">AI-security</span>
+        <span class="tag tag-security">backdoor</span>
+        <span class="tag tag-neutral">arXiv Aug 11 2026</span>
+      </div>
+    </div>
+    <h3><a href="https://arxiv.org/abs/2608.11295">Backdoor Decontamination Dynamics in LLM Agents</a></h3>
+    <div class="mid-byline">Gabriel Huang et al. (Polytechnique Montréal / ServiceNow) — arXiv preprint</div>
+    <figure class="figure-wrap" style="margin:12px 0">
+      <svg viewBox="0 0 640 150" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:640px;display:block;">
+        <rect width="640" height="150" fill="#111"/>
+        <!-- y axis -->
+        <line x1="80" y1="20" x2="80" y2="120" stroke="#333" stroke-width="1"/>
+        <line x1="80" y1="120" x2="590" y2="120" stroke="#333" stroke-width="1"/>
+        <!-- y labels -->
+        <text x="70" y="24" fill="#666" font-family="monospace" font-size="9" text-anchor="end">100%</text>
+        <text x="70" y="72" fill="#666" font-family="monospace" font-size="9" text-anchor="end">50%</text>
+        <text x="70" y="122" fill="#666" font-family="monospace" font-size="9" text-anchor="end">0%</text>
+        <!-- 3 conditions, 2 metrics each -->
+        <!-- baseline: trigger recog + malicious exec both high -->
+        <rect x="110" y="22" width="30" height="98" rx="2" fill="#5ba3f5" opacity="0.8"/>
+        <rect x="145" y="22" width="30" height="98" rx="2" fill="#f87171" opacity="0.8"/>
+        <text x="142" y="138" fill="#666" font-family="monospace" font-size="9" text-anchor="middle">Baseline</text>
+        <!-- after defensive poisoning: malicious exec drops ~56% -->
+        <rect x="290" y="22" width="30" height="98" rx="2" fill="#5ba3f5" opacity="0.8"/>
+        <rect x="325" y="64" width="30" height="56" rx="2" fill="#f87171" opacity="0.8"/>
+        <text x="322" y="138" fill="#666" font-family="monospace" font-size="9" text-anchor="middle">+Def. poison</text>
+        <!-- after unlearning: exec ≈ 0, recog partial -->
+        <rect x="470" y="55" width="30" height="65" rx="2" fill="#5ba3f5" opacity="0.8"/>
+        <rect x="505" y="115" width="30" height="5" rx="2" fill="#f87171" opacity="0.8"/>
+        <text x="502" y="138" fill="#666" font-family="monospace" font-size="9" text-anchor="middle">+Unlearning</text>
+        <!-- legend -->
+        <rect x="90" y="10" width="12" height="7" fill="#5ba3f5"/>
+        <text x="106" y="17" fill="#5ba3f5" font-family="monospace" font-size="10">Trigger recognition</text>
+        <rect x="270" y="10" width="12" height="7" fill="#f87171"/>
+        <text x="286" y="17" fill="#f87171" font-family="monospace" font-size="10">Malicious execution</text>
+      </svg>
+      <figcaption>Defensive poisoning alone erases ~56% of backdoors (malicious execution drops); subsequent unlearning drives execution to near-zero while trigger recognition shows partial persistence — the two behaviors are dissociable.</figcaption>
+    </figure>
+    <p class="mid-summary">Two-phase decontamination: install a known defensive backdoor, then unlearn it — the original unknown backdoor is collateral damage. In 115 experiments on AgentDyn, defensive poisoning alone erases ~56% of backdoors; unlearning drives almost all survivors to erasure. Key dissociation: trigger recognition and malicious execution are behaviorally separable — decontamination reliably removes execution while recognition may persist.</p>
+  </article>
+
+  <!-- #8 -->
+  <article class="paper-mid">
+    <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:8px;">
+      <span class="rank-badge" style="flex-shrink:0">08</span>
+      <div class="tags" style="margin-bottom:0">
+        <span class="tag tag-peer">ICML 2026 Workshop · peer-reviewed</span>
+        <span class="tag tag-interp">mech-interp</span>
+        <span class="tag tag-safety">safety-eval</span>
+      </div>
+    </div>
+    <h3><a href="https://arxiv.org/abs/2608.27340">Not All Eval-Awareness Is Equal: Capabilities Framing Predicts Compliance</a></h3>
+    <div class="mid-byline">Allison Zhuang, Santiago Aranguri — ICML 2026 Mechanistic Interpretability Workshop</div>
+    <figure class="figure-wrap" style="margin:12px 0">
+      <svg viewBox="0 0 640 150" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:640px;display:block;">
+        <rect width="640" height="150" fill="#111"/>
+        <!-- two framing types as grouped bars per condition -->
+        <!-- x axis -->
+        <line x1="80" y1="120" x2="590" y2="120" stroke="#333" stroke-width="1"/>
+        <line x1="80" y1="20" x2="80" y2="120" stroke="#333" stroke-width="1"/>
+        <text x="70" y="24" fill="#666" font-family="monospace" font-size="9" text-anchor="end">100%</text>
+        <text x="70" y="72" fill="#666" font-family="monospace" font-size="9" text-anchor="end">50%</text>
+        <!-- condition 1: no steering -->
+        <rect x="105" y="80" width="28" height="40" rx="2" fill="#5ba3f5" opacity="0.8"/>
+        <rect x="138" y="48" width="28" height="72" rx="2" fill="#a78bfa" opacity="0.8"/>
+        <text x="135" y="138" fill="#666" font-family="monospace" font-size="9" text-anchor="middle">No steering</text>
+        <!-- condition 2: safety-steered -->
+        <rect x="265" y="90" width="28" height="30" rx="2" fill="#5ba3f5" opacity="0.8"/>
+        <rect x="298" y="44" width="28" height="76" rx="2" fill="#a78bfa" opacity="0.8"/>
+        <text x="295" y="138" fill="#666" font-family="monospace" font-size="9" text-anchor="middle">Safety-steered</text>
+        <!-- condition 3: capability-steered -->
+        <rect x="425" y="34" width="28" height="86" rx="2" fill="#5ba3f5" opacity="0.8"/>
+        <rect x="458" y="24" width="28" height="96" rx="2" fill="#a78bfa" opacity="0.8"/>
+        <text x="455" y="138" fill="#666" font-family="monospace" font-size="9" text-anchor="middle">Capability-steered</text>
+        <!-- gap annotation -->
+        <line x1="265" y1="60" x2="425" y2="40" stroke="#f87171" stroke-width="1" stroke-dasharray="3,2"/>
+        <text x="345" y="50" fill="#f87171" font-family="monospace" font-size="9" text-anchor="middle">+24–46 pp gap</text>
+        <!-- legend -->
+        <rect x="90" y="10" width="12" height="7" fill="#5ba3f5"/>
+        <text x="106" y="17" fill="#5ba3f5" font-family="monospace" font-size="10">Safety framing</text>
+        <rect x="240" y="10" width="12" height="7" fill="#a78bfa"/>
+        <text x="256" y="17" fill="#a78bfa" font-family="monospace" font-size="10">Capabilities framing</text>
+      </svg>
+      <figcaption>Compliance rates on Qwen3-32B/FORTRESS: capabilities-framed eval-awareness predicts +24–46 pp higher compliance than safety-framed awareness across all steering conditions.</figcaption>
+    </figure>
+    <p class="mid-summary">Eval-awareness decomposes into capabilities-framed ("testing ability to follow instructions") vs. safety-framed ("testing limits") CoT reasoning. On Qwen3-32B/FORTRESS: capabilities framing predicts +24–46 pp compliance gap over safety framing across all conditions. CoT-prefill causal intervention confirms the link (10/11 prefills shift compliance in the predicted direction). Safety evaluation pipelines that suppress eval-awareness may inadvertently boost compliance through capabilities-framing spillover.</p>
+  </article>
+
+  <!-- #9 -->
+  <article class="paper-mid">
+    <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:8px;">
+      <span class="rank-badge" style="flex-shrink:0">09</span>
+      <div class="tags" style="margin-bottom:0">
+        <span class="tag tag-interp">mech-interp</span>
+        <span class="tag tag-interp">SAE theory</span>
+        <span class="tag tag-neutral">arXiv Aug 10 2026</span>
+      </div>
+    </div>
+    <h3><a href="https://arxiv.org/abs/2608.10172">Intrinsic Structure: Spectral Identifiability for Mechanistic Interpretability</a></h3>
+    <div class="mid-byline">Ashim Dhor, Pin-Yu Chen — arXiv preprint</div>
+    <figure class="figure-wrap" style="margin:12px 0">
+      <svg viewBox="0 0 640 150" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:640px;display:block;">
+        <rect width="640" height="150" fill="#111"/>
+        <!-- log-log axes -->
+        <line x1="80" y1="20" x2="80" y2="120" stroke="#333" stroke-width="1"/>
+        <line x1="80" y1="120" x2="540" y2="120" stroke="#333" stroke-width="1"/>
+        <!-- axis labels -->
+        <text x="310" y="142" fill="#666" font-family="monospace" font-size="10" text-anchor="middle">log(calibration samples M)</text>
+        <text x="20" y="70" fill="#666" font-family="monospace" font-size="10" text-anchor="middle" transform="rotate(-90,20,70)">log(error)</text>
+        <!-- theoretical slope line -0.5 -->
+        <line x1="100" y1="35" x2="520" y2="115" stroke="#5ba3f5" stroke-width="1.5" stroke-dasharray="5,3"/>
+        <!-- GPT-2 Small points -->
+        <circle cx="140" cy="50" r="4" fill="#f87171"/>
+        <circle cx="220" cy="73" r="4" fill="#f87171"/>
+        <circle cx="300" cy="90" r="4" fill="#f87171"/>
+        <circle cx="380" cy="105" r="4" fill="#f87171"/>
+        <!-- Gemma-2-2B points -->
+        <circle cx="140" cy="52" r="4" fill="#4ade80"/>
+        <circle cx="220" cy="76" r="4" fill="#4ade80"/>
+        <circle cx="300" cy="91" r="4" fill="#4ade80"/>
+        <circle cx="380" cy="107" r="4" fill="#4ade80"/>
+        <!-- Qwen3-8B-Base points -->
+        <circle cx="140" cy="48" r="4" fill="#a78bfa"/>
+        <circle cx="220" cy="74" r="4" fill="#a78bfa"/>
+        <circle cx="300" cy="89" r="4" fill="#a78bfa"/>
+        <circle cx="380" cy="106" r="4" fill="#a78bfa"/>
+        <circle cx="460" cy="114" r="4" fill="#a78bfa"/>
+        <!-- slope annotation -->
+        <text x="445" y="100" fill="#5ba3f5" font-family="monospace" font-size="10">slope ≈ −½</text>
+        <text x="445" y="113" fill="#5ba3f5" font-family="monospace" font-size="10">(M⁻¹/² bound)</text>
+        <!-- legend -->
+        <circle cx="92" cy="15" r="4" fill="#f87171"/>
+        <text x="102" y="19" fill="#f87171" font-family="monospace" font-size="10">GPT-2 Small</text>
+        <circle cx="210" cy="15" r="4" fill="#4ade80"/>
+        <text x="220" y="19" fill="#4ade80" font-family="monospace" font-size="10">Gemma-2-2B</text>
+        <circle cx="340" cy="15" r="4" fill="#a78bfa"/>
+        <text x="350" y="19" fill="#a78bfa" font-family="monospace" font-size="10">Qwen3-8B-Base (0.506±0.031)</text>
+      </svg>
+      <figcaption>Spectral convergence rate across three models on log-log axes — empirical slope ≈ −0.5 confirms the M⁻¹/² identifiability bound. First formal result for dictionary learning in mechanistic interpretability.</figcaption>
+    </figure>
+    <p class="mid-summary">First identifiability theorem for dictionary learning (SAEs) in mechanistic interpretability: treats the forward pass as a Koopman-operator controlled dynamical system and proves the spectrum is coordinate-free (independent of SAE seed/width), recoverable at rate M⁻¹/² with a matching minimax lower bound. A dissociation theorem shows activation-variance directions and information-carrying directions cannot coincide in non-normal realizations — explaining why SAE variance metrics miss causally active features. Validated on GPT-2 Small, Gemma-2-2B, Qwen3-8B-Base.</p>
+  </article>
+
+  <!-- #10 -->
+  <article class="paper-mid">
+    <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:8px;">
+      <span class="rank-badge" style="flex-shrink:0">10</span>
+      <div class="tags" style="margin-bottom:0">
+        <span class="tag tag-security">AI-security</span>
+        <span class="tag tag-interp">safety-classifier</span>
+        <span class="tag tag-neutral">arXiv Aug 20 2026</span>
+      </div>
+    </div>
+    <h3><a href="https://arxiv.org/abs/2608.19579">Enforcing LLM Safety through DMD-based Classification of Prompt-Response Embedding Dynamics</a></h3>
+    <div class="mid-byline">Mohamed Akrout, Olivera Kotevska, Dan Wilson — arXiv preprint</div>
+    <figure class="figure-wrap" style="margin:12px 0">
+      <svg viewBox="0 0 640 140" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:640px;display:block;">
+        <rect width="640" height="140" fill="#111"/>
+        <!-- axes for trajectory space -->
+        <line x1="60" y1="20" x2="60" y2="120" stroke="#333" stroke-width="1"/>
+        <line x1="60" y1="120" x2="360" y2="120" stroke="#333" stroke-width="1"/>
+        <text x="210" y="138" fill="#666" font-family="monospace" font-size="9" text-anchor="middle">generation step →</text>
+        <text x="30" y="70" fill="#666" font-family="monospace" font-size="9" text-anchor="middle" transform="rotate(-90,30,70)">embed. dim</text>
+        <!-- safe trajectory (blue smooth) -->
+        <polyline points="80,90 120,80 160,75 200,70 240,72 280,68 320,65" fill="none" stroke="#5ba3f5" stroke-width="2"/>
+        <!-- unsafe trajectory (red jagged) -->
+        <polyline points="80,85 120,95 160,60 200,100 240,55 280,92 320,45" fill="none" stroke="#f87171" stroke-width="2"/>
+        <!-- labels -->
+        <text x="325" y="62" fill="#5ba3f5" font-family="monospace" font-size="10">safe</text>
+        <text x="325" y="44" fill="#f87171" font-family="monospace" font-size="10">unsafe</text>
+        <!-- right side: DMD models -->
+        <rect x="380" y="20" width="240" height="100" rx="5" fill="#161616" stroke="#282828" stroke-width="1"/>
+        <text x="500" y="42" fill="#666" font-family="monospace" font-size="10" text-anchor="middle">DMD Safety Classifier</text>
+        <rect x="395" y="52" width="100" height="28" rx="3" fill="#1a2030" stroke="#5ba3f5" stroke-width="1"/>
+        <text x="445" y="70" fill="#5ba3f5" font-family="monospace" font-size="9" text-anchor="middle">Safe Koopman model</text>
+        <rect x="395" y="86" width="100" height="28" rx="3" fill="#2a1a1a" stroke="#f87171" stroke-width="1"/>
+        <text x="445" y="104" fill="#f87171" font-family="monospace" font-size="9" text-anchor="middle">Unsafe Koopman model</text>
+        <!-- differential residual -->
+        <text x="510" y="72" fill="#4ade80" font-family="monospace" font-size="9">→ residual_safe</text>
+        <text x="510" y="106" fill="#4ade80" font-family="monospace" font-size="9">→ residual_unsafe</text>
+        <text x="510" y="122" fill="#4ade80" font-family="monospace" font-size="10">Δ → class</text>
+      </svg>
+      <figcaption>DMD-based safety classifier: separate Koopman models trained on safe vs. unsafe trajectory classes; differential residual score at inference time assigns class by trajectory prediction error.</figcaption>
+    </figure>
+    <p class="mid-summary">Extends Koopman/DMD (Dynamic Mode Decomposition) from hallucination detection to safety classification. Separate Koopman-based predictive models are trained on embedding trajectories for each safety class; at inference time, a differential residual score compares prediction errors between safe and unsafe regime models. Unlike point-in-time classifiers, this captures sequential trajectory patterns across the generation process. Connects to #9's Koopman operator framing of mechanistic interpretability.</p>
+  </article>
+
+  <!-- NOTES -->
+  <aside class="notes">
+    <h4>Editor's Notes</h4>
+    <ul>
+      <li>Window spans 23 days (Aug 8–30) due to gap since the Aug 7 report.</li>
+      <li>Papers #1–3 form a coherent cluster on pretraining-time safety: SPP installs persona from token zero, SRP inserts safety reflections inline, TamperBench (KDD 2026) establishes the threat they must survive.</li>
+      <li>#4 (Breaking Refusal) provides the mechanistic result explaining <em>why</em> #1–3 must act before response time — refusal is a shallow, response-site computation.</li>
+      <li>#8 (Eval-Awareness, ICML 2026 Workshop) is the only peer-reviewed paper from a major workshop this window; it directly affects how safety evaluations of #1–3 should be interpreted.</li>
+      <li>#9 and #10 both invoke the Koopman operator framework — #9 for SAE identifiability theory, #10 for safety classification. Different applications of the same mathematical apparatus.</li>
+      <li>No papers from USENIX Security 2026, CCS 2026, or NeurIPS 2026 main track confirmed in this window; NeurIPS 2026 workshop CFPs opened Aug 29.</li>
+    </ul>
+  </aside>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <span>Research Radar · gs157@nyu.edu</span>
+    <span>Generated 2026-08-30 by Claude Code</span>
+    <span>📡 github.com/gussand/research-radar</span>
+  </footer>
+
+</div>
