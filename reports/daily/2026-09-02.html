@@ -1,0 +1,885 @@
+<title>Research Radar — Sep 2, 2026</title>
+<style>
+/* ── Token system ─────────────────────────────────────────────────────────── */
+:root {
+  --bg: #faf9f7;
+  --surface: #f0ede8;
+  --border: #ddd;
+  --text: #3a3a3a;
+  --dim: #888;
+  --title: #1a1a1a;
+  --link: #1a4f99;
+  --tag-bg: #e8e8e8;
+  --tag-text: #444;
+  --accent-teal: #0d7377;
+  --accent-blue: #1a4f99;
+  --accent-red: #b02020;
+  --accent-amber: #a05c00;
+  --accent-violet: #5c1aaa;
+  --accent-green: #1a6e3c;
+  --theme-band: #e8f4e8;
+  --fig-bg: #fff;
+  --fig-border: #e0e0e0;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #111111;
+    --surface: #1a1a1a;
+    --border: #2a2a2a;
+    --text: #c9c9c9;
+    --dim: #666;
+    --title: #f0f0f0;
+    --link: #7eb8ff;
+    --tag-bg: #252525;
+    --tag-text: #aaa;
+    --accent-teal: #14b8bd;
+    --accent-blue: #7eb8ff;
+    --accent-red: #f07070;
+    --accent-amber: #f0a030;
+    --accent-violet: #c084fc;
+    --accent-green: #4ade80;
+    --theme-band: #1a2a1a;
+    --fig-bg: #1e1e1e;
+    --fig-border: #333;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #111111;
+  --surface: #1a1a1a;
+  --border: #2a2a2a;
+  --text: #c9c9c9;
+  --dim: #666;
+  --title: #f0f0f0;
+  --link: #7eb8ff;
+  --tag-bg: #252525;
+  --tag-text: #aaa;
+  --accent-teal: #14b8bd;
+  --accent-blue: #7eb8ff;
+  --accent-red: #f07070;
+  --accent-amber: #f0a030;
+  --accent-violet: #c084fc;
+  --accent-green: #4ade80;
+  --theme-band: #1a2a1a;
+  --fig-bg: #1e1e1e;
+  --fig-border: #333;
+}
+:root[data-theme="light"] {
+  --bg: #faf9f7;
+  --surface: #f0ede8;
+  --border: #ddd;
+  --text: #3a3a3a;
+  --dim: #888;
+  --title: #1a1a1a;
+  --link: #1a4f99;
+  --tag-bg: #e8e8e8;
+  --tag-text: #444;
+  --accent-teal: #0d7377;
+  --accent-blue: #1a4f99;
+  --accent-red: #b02020;
+  --accent-amber: #a05c00;
+  --accent-violet: #5c1aaa;
+  --accent-green: #1a6e3c;
+  --theme-band: #e8f4e8;
+  --fig-bg: #fff;
+  --fig-border: #e0e0e0;
+}
+
+/* ── Reset & base ────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+html { font-size: 16px; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  max-width: 660px;
+  margin: 0 auto;
+  padding: 32px 20px 80px;
+}
+a { color: var(--link); }
+a:hover { opacity: 0.8; }
+
+/* ── Masthead ────────────────────────────────────────────────────────────── */
+.masthead {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 20px;
+  margin-bottom: 44px;
+}
+.masthead-eyebrow {
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin-bottom: 6px;
+}
+.masthead-issue {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--title);
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+.masthead-counts {
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  color: var(--dim);
+  margin-bottom: 10px;
+}
+.masthead-tracks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 0;
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--dim);
+}
+.track { color: var(--accent-teal); }
+.track-sep { margin: 0 6px; }
+
+/* ── Tags ────────────────────────────────────────────────────────────────── */
+.tag {
+  display: inline-block;
+  font-family: "Courier New", monospace;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  margin-right: 4px;
+}
+.tag-peer   { background: #d4edda; color: #1a6e3c; }
+.tag-interp { background: #d0f0f0; color: #0d7377; }
+.tag-security { background: #fce8e8; color: #b02020; }
+.tag-control  { background: #ede0f8; color: #5c1aaa; }
+.tag-rank     { background: #fff3cd; color: #a05c00; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .tag-peer     { background: #1a3320; color: #4ade80; }
+  :root:not([data-theme="light"]) .tag-interp   { background: #0e2c2c; color: #14b8bd; }
+  :root:not([data-theme="light"]) .tag-security { background: #2c1010; color: #f07070; }
+  :root:not([data-theme="light"]) .tag-control  { background: #20102c; color: #c084fc; }
+  :root:not([data-theme="light"]) .tag-rank     { background: #2c2000; color: #f0a030; }
+}
+:root[data-theme="dark"] .tag-peer     { background: #1a3320; color: #4ade80; }
+:root[data-theme="dark"] .tag-interp   { background: #0e2c2c; color: #14b8bd; }
+:root[data-theme="dark"] .tag-security { background: #2c1010; color: #f07070; }
+:root[data-theme="dark"] .tag-control  { background: #20102c; color: #c084fc; }
+:root[data-theme="dark"] .tag-rank     { background: #2c2000; color: #f0a030; }
+
+/* ── Full paper (items 1–3) ─────────────────────────────────────────────── */
+.paper { margin-bottom: 60px; }
+.paper-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.paper-rank {
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--dim);
+  min-width: 28px;
+  padding-top: 2px;
+}
+.paper-meta { display: flex; flex-wrap: wrap; gap: 4px; }
+.paper-title {
+  font-family: Georgia, serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-wrap: balance;
+  margin: 0 0 14px;
+  text-decoration: underline;
+  text-decoration-color: var(--border);
+  text-underline-offset: 3px;
+}
+.paper-title a { color: var(--title); text-decoration: inherit; }
+.paper-title a:hover { color: var(--link); }
+.paper-hook {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+.paper-figure {
+  background: #fff;
+  border: 1px solid var(--fig-border);
+  border-radius: 4px;
+  padding: 16px;
+  margin: 0 0 20px;
+  overflow-x: auto;
+  text-align: center;
+}
+.paper-figure svg { display: block; margin: 0 auto; }
+.paper-figure img { width: 100%; max-width: 500px; display: block; margin: 0 auto; border-radius: 2px; }
+figcaption {
+  font-size: 12px;
+  color: var(--dim);
+  font-family: "Courier New", monospace;
+  margin-top: 10px;
+  text-align: left;
+  line-height: 1.5;
+}
+.paper-detail {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text);
+  border-left: 2px solid var(--border);
+  padding-left: 14px;
+}
+.paper-authors {
+  font-size: 13px;
+  color: var(--dim);
+  font-family: "Courier New", monospace;
+  margin-bottom: 10px;
+}
+hr.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 44px 0;
+}
+
+/* ── Mid-tier (items 4–10) ──────────────────────────────────────────────── */
+.more-section-label {
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dim);
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+  margin-bottom: 32px;
+}
+.mid-paper { margin-bottom: 44px; }
+.mid-title {
+  font-family: Georgia, serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 14px;
+  text-decoration: underline;
+  text-decoration-color: var(--border);
+  text-underline-offset: 3px;
+}
+.mid-title a { color: var(--title); text-decoration: inherit; }
+.mid-title a:hover { color: var(--link); }
+.mid-figure img { max-width: 440px; }
+.mid-summary {
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.65;
+  margin-top: 14px;
+}
+.section-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 36px 0;
+}
+</style>
+
+<header class="masthead">
+  <div class="masthead-eyebrow">Research Radar</div>
+  <div class="masthead-issue">Daily · September 2, 2026</div>
+  <div class="masthead-counts">1 peer-reviewed · 9 preprints · 0 forum/blog</div>
+  <div class="masthead-tracks">
+    <span class="track">Pretraining Safety</span>
+    <span class="track-sep">·</span>
+    <span class="track">AI Security</span>
+    <span class="track-sep">·</span>
+    <span class="track">Mech Interp</span>
+  </div>
+</header>
+
+<!-- ═══ ITEM 1 ═══════════════════════════════════════════════════════════ -->
+<article class="paper">
+  <header class="paper-header">
+    <div class="paper-rank">01</div>
+    <div class="paper-meta">
+      <span class="tag tag-rank">Top pick</span>
+      <span class="tag" style="background:var(--theme-band);color:var(--accent-green);">pretraining-safety</span>
+      <span class="tag">preprint</span>
+    </div>
+  </header>
+  <h2 class="paper-title">
+    <a href="https://arxiv.org/abs/2508.06601">Deep Ignorance: Filtering Pretraining Data Builds Tamper-Resistant Safeguards into Open-Weight LLMs</a>
+  </h2>
+  <div class="paper-authors">O'Brien et al. — arXiv 2508.06601, Aug 2026</div>
+  <p class="paper-hook">
+    Post-training safety measures for open-weight LLMs can be erased in dozens of fine-tuning steps.
+    This paper shows that filtering dual-use knowledge from the pretraining corpus itself produces models
+    that resist adversarial fine-tuning by orders of magnitude longer — and without sacrificing capability.
+  </p>
+  <figure class="paper-figure">
+    <svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg" aria-label="Deep Ignorance pipeline and tamper-resistance comparison">
+      <!-- Background -->
+      <rect width="500" height="200" fill="#fff"/>
+      <!-- Pipeline boxes -->
+      <rect x="10" y="30" width="80" height="36" rx="4" fill="#e8f4e8" stroke="#1a6e3c" stroke-width="1.2"/>
+      <text x="50" y="50" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#1a6e3c">Raw Corpus</text>
+      <text x="50" y="62" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#555">web text</text>
+      <polygon points="94,48 102,44 102,52" fill="#888"/>
+      <rect x="106" y="30" width="88" height="36" rx="4" fill="#fff3cd" stroke="#a05c00" stroke-width="1.2"/>
+      <text x="150" y="50" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#a05c00">Topic Filter</text>
+      <text x="150" y="62" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#555">classifier + heuristic</text>
+      <polygon points="198,48 206,44 206,52" fill="#888"/>
+      <rect x="210" y="30" width="80" height="36" rx="4" fill="#e8f4e8" stroke="#1a6e3c" stroke-width="1.2"/>
+      <text x="250" y="50" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#1a6e3c">Filtered Data</text>
+      <text x="250" y="62" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#555">biothreat removed</text>
+      <polygon points="294,48 302,44 302,52" fill="#888"/>
+      <rect x="306" y="30" width="80" height="36" rx="4" fill="#e8eaf8" stroke="#1a4f99" stroke-width="1.2"/>
+      <text x="346" y="50" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#1a4f99">6.9B Model</text>
+      <text x="346" y="62" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#555">pretrained fresh</text>
+      <!-- Bar chart comparison -->
+      <text x="250" y="108" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#333" font-weight="bold">Adversarial Fine-tuning Steps to Break Safety</text>
+      <!-- Baseline bar -->
+      <rect x="60" y="118" width="40" height="12" fill="#f07070"/>
+      <text x="104" y="128" font-family="Georgia,serif" font-size="10" fill="#b02020">Baseline (post-training): ~100 steps</text>
+      <!-- Deep Ignorance bar -->
+      <rect x="60" y="140" width="340" height="12" fill="#4ade80"/>
+      <text x="404" y="150" font-family="Georgia,serif" font-size="10" fill="#1a6e3c">Deep Ignorance: ≥10,000 steps · 300M tokens</text>
+      <!-- Axis -->
+      <line x1="58" y1="115" x2="58" y2="155" stroke="#aaa" stroke-width="1"/>
+      <line x1="58" y1="155" x2="460" y2="155" stroke="#aaa" stroke-width="1"/>
+      <text x="58" y="170" font-family="Georgia,serif" font-size="9" fill="#888">0</text>
+      <text x="390" y="170" font-family="Georgia,serif" font-size="9" fill="#888">steps ──────────&gt;</text>
+      <!-- Label: 10k -->
+      <line x1="398" y1="114" x2="398" y2="156" stroke="#ccc" stroke-width="0.8" stroke-dasharray="3,2"/>
+      <text x="398" y="112" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#888">10k</text>
+      <!-- Legend axis note -->
+      <text x="250" y="192" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#aaa">Order-of-magnitude improvement over post-training baselines</text>
+    </svg>
+    <figcaption>Figure 1: Multi-stage pretraining data filtering pipeline (top) and resistance to adversarial fine-tuning (bottom). Post-training baselines break in ~100 steps; Deep Ignorance-trained models resist ≥10,000 steps and 300M tokens of biothreat fine-tuning.</figcaption>
+  </figure>
+  <p class="paper-detail">
+    The authors pretrain multiple 6.9B-parameter models from scratch using a multi-stage pipeline that identifies and removes biothreat-relevant documents via topic classifiers and heuristic contamination filters. Resulting models score near-zero on biothreat proxy benchmarks and sustain that behavior under up to <strong>10,000 steps and 300M tokens</strong> of adversarial fine-tuning — exceeding post-training RLHF/DPO baselines by over an order of magnitude. Crucially, no degradation in unrelated capabilities (coding, math, general QA) was observed, resolving the key concern that data filtering degrades model quality.
+  </p>
+</article>
+<hr class="divider">
+
+<!-- ═══ ITEM 2 ═══════════════════════════════════════════════════════════ -->
+<article class="paper">
+  <header class="paper-header">
+    <div class="paper-rank">02</div>
+    <div class="paper-meta">
+      <span class="tag" style="background:var(--theme-band);color:var(--accent-green);">pretraining-safety</span>
+      <span class="tag" style="background:#ede0f8;color:#5c1aaa;">spec-driven</span>
+      <span class="tag">preprint</span>
+    </div>
+  </header>
+  <h2 class="paper-title">
+    <a href="https://arxiv.org/abs/2608.13482">Synthetic Persona Pretraining: Alignment from Token Zero</a>
+  </h2>
+  <div class="paper-authors">Julian Minder, Viktor Moskvoretskii, Raghav Singhal et al. (EPFL dlab) — arXiv 2608.13482, Aug 13, 2026</div>
+  <p class="paper-hook">
+    What if the assistant persona specified in a normative constitution were baked in from the very first token
+    of pretraining — not grafted on through RLHF afterward? SPP does exactly that, and shows a 63% jailbreak
+    reduction, but only if the intervention starts at the beginning of training, not the end.
+  </p>
+  <figure class="paper-figure">
+    <svg viewBox="0 0 500 210" xmlns="http://www.w3.org/2000/svg" aria-label="Synthetic Persona Pretraining method and timing comparison">
+      <rect width="500" height="210" fill="#fff"/>
+      <!-- Constitution box -->
+      <rect x="10" y="10" width="90" height="40" rx="4" fill="#ede0f8" stroke="#5c1aaa" stroke-width="1.2"/>
+      <text x="55" y="26" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#5c1aaa" font-weight="bold">Value</text>
+      <text x="55" y="39" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#5c1aaa">Constitution</text>
+      <!-- Arrow down to annotator -->
+      <line x1="55" y1="50" x2="55" y2="66" stroke="#aaa" stroke-width="1.2"/>
+      <polygon points="51,64 55,72 59,64" fill="#aaa"/>
+      <!-- Annotator box -->
+      <rect x="10" y="72" width="90" height="36" rx="4" fill="#fff3cd" stroke="#a05c00" stroke-width="1.2"/>
+      <text x="55" y="88" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#a05c00">Reflection</text>
+      <text x="55" y="100" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#a05c00">Annotator LLM</text>
+      <!-- Document annotation arrows -->
+      <rect x="130" y="72" width="80" height="36" rx="4" fill="#e8eaf8" stroke="#1a4f99" stroke-width="1.2"/>
+      <text x="170" y="88" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#1a4f99">Document</text>
+      <text x="170" y="100" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1a4f99">+Reflection (~10%)</text>
+      <line x1="100" y1="90" x2="128" y2="90" stroke="#aaa" stroke-width="1.2"/>
+      <polygon points="124,86 132,90 124,94" fill="#aaa"/>
+      <!-- Pretraining -->
+      <line x1="210" y1="90" x2="236" y2="90" stroke="#aaa" stroke-width="1.2"/>
+      <polygon points="232,86 240,90 232,94" fill="#aaa"/>
+      <rect x="240" y="72" width="80" height="36" rx="4" fill="#d0f0f0" stroke="#0d7377" stroke-width="1.2"/>
+      <text x="280" y="88" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#0d7377">Pretraining</text>
+      <text x="280" y="100" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#0d7377">CE loss · 3B params</text>
+      <!-- Post-training bind -->
+      <line x1="320" y1="90" x2="346" y2="90" stroke="#aaa" stroke-width="1.2"/>
+      <polygon points="342,86 350,90 342,94" fill="#aaa"/>
+      <rect x="350" y="72" width="80" height="36" rx="4" fill="#e8f4e8" stroke="#1a6e3c" stroke-width="1.2"/>
+      <text x="390" y="88" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#1a6e3c">Aligned</text>
+      <text x="390" y="100" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1a6e3c">Assistant Model</text>
+      <!-- Timing comparison chart -->
+      <text x="250" y="130" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#333" font-weight="bold">Attack Success Rate vs. Injection Timing</text>
+      <!-- Y-axis labels -->
+      <text x="42" y="148" text-anchor="end" font-family="Georgia,serif" font-size="9" fill="#888">~4.6%</text>
+      <text x="42" y="165" text-anchor="end" font-family="Georgia,serif" font-size="9" fill="#888">~2.5%</text>
+      <text x="42" y="182" text-anchor="end" font-family="Georgia,serif" font-size="9" fill="#888">1.7%</text>
+      <!-- Bars -->
+      <rect x="60" y="138" width="80" height="14" fill="#f07070"/>
+      <text x="145" y="149" font-family="Georgia,serif" font-size="9" fill="#b02020">Baseline (no SPP)</text>
+      <rect x="60" y="156" width="43" height="14" fill="#f0a030"/>
+      <text x="145" y="167" font-family="Georgia,serif" font-size="9" fill="#a05c00">Late-stage SPP</text>
+      <rect x="60" y="174" width="30" height="14" fill="#4ade80"/>
+      <text x="145" y="185" font-family="Georgia,serif" font-size="9" fill="#1a6e3c">Token-zero SPP (1.7% ASR, −63%)</text>
+      <!-- Axes -->
+      <line x1="58" y1="136" x2="58" y2="192" stroke="#aaa" stroke-width="1"/>
+      <line x1="58" y1="192" x2="300" y2="192" stroke="#aaa" stroke-width="1"/>
+      <text x="350" y="200" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#aaa">500B-token pretraining on FineWeb · 3B params</text>
+    </svg>
+    <figcaption>Figure 1: SPP annotates 10% of pretraining documents with first-person moral reflections derived from a normative constitution. Token-zero injection achieves 1.7% mean attack success rate — a 63% reduction over baseline — while late-stage injection is substantially weaker.</figcaption>
+  </figure>
+  <p class="paper-detail">
+    SPP annotates pretraining documents with first-person moral reflections derived from a normative value constitution, then pretrains via standard cross-entropy on both original and annotated text. Models trained to <strong>3B parameters on 500B tokens</strong> achieve <strong>1.7% mean attack success rate</strong> vs ~4.6% baseline — a 63% reduction. The critical finding is temporal: alignment injected from token zero substantially outperforms late-stage SPP injection in both constitution adherence and choice alignment on out-of-distribution moral dilemmas, while preserving downstream capabilities.
+  </p>
+</article>
+<hr class="divider">
+
+<!-- ═══ ITEM 3 ═══════════════════════════════════════════════════════════ -->
+<article class="paper">
+  <header class="paper-header">
+    <div class="paper-rank">03</div>
+    <div class="paper-meta">
+      <span class="tag" style="background:var(--theme-band);color:var(--accent-green);">pretraining-safety</span>
+      <span class="tag">preprint</span>
+    </div>
+  </header>
+  <h2 class="paper-title">
+    <a href="https://arxiv.org/abs/2606.19168">Beyond Safe Data: Pretraining-Stage Alignment with Regular Safety Reflection</a>
+  </h2>
+  <div class="paper-authors">Jinhan Li, Kexian Tang, Yihan Xu, Zhuorui Ye, Kaifeng Lyu — arXiv 2606.19168, Jun 17, 2026</div>
+  <p class="paper-hook">
+    Even a corpus scrubbed of harmful content can produce unsafe models — models can compose benign knowledge
+    into dangerous behaviors. This paper argues the fix must happen at pretraining: inserting short safety
+    reflection passages regularly through the corpus builds self-monitoring into the model before fine-tuning begins.
+  </p>
+  <figure class="paper-figure">
+    <svg viewBox="0 0 500 190" xmlns="http://www.w3.org/2000/svg" aria-label="Safety Reflection Pretraining: corpus insertion and improvement over baseline">
+      <rect width="500" height="190" fill="#fff"/>
+      <!-- Corpus timeline -->
+      <rect x="10" y="30" width="450" height="30" rx="4" fill="#e8eaf8" stroke="#1a4f99" stroke-width="1"/>
+      <text x="235" y="50" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#1a4f99">Standard Pretraining Corpus (FineWeb-Edu)</text>
+      <!-- Safety reflection inserts -->
+      <rect x="80"  y="22" width="24" height="46" rx="3" fill="#d0f0f0" stroke="#0d7377" stroke-width="1.4"/>
+      <text x="92" y="46" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#0d7377">SR</text>
+      <rect x="170" y="22" width="24" height="46" rx="3" fill="#d0f0f0" stroke="#0d7377" stroke-width="1.4"/>
+      <text x="182" y="46" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#0d7377">SR</text>
+      <rect x="265" y="22" width="24" height="46" rx="3" fill="#d0f0f0" stroke="#0d7377" stroke-width="1.4"/>
+      <text x="277" y="46" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#0d7377">SR</text>
+      <rect x="360" y="22" width="24" height="46" rx="3" fill="#d0f0f0" stroke="#0d7377" stroke-width="1.4"/>
+      <text x="372" y="46" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#0d7377">SR</text>
+      <text x="235" y="82" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#888">SR = Safety Reflection passage inserted at regular intervals</text>
+      <!-- Results comparison -->
+      <text x="250" y="105" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#333" font-weight="bold">1.7B Models · FineWeb-Edu · Attack Success Rate</text>
+      <!-- Grouped bars: inference-stage and fine-tuning attacks -->
+      <text x="100" y="120" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#888">Inference-stage</text>
+      <text x="320" y="120" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#888">Fine-tuning attack</text>
+      <!-- Baseline bars -->
+      <rect x="60"  y="124" width="52" height="36" fill="#f07070" opacity="0.85"/>
+      <rect x="276" y="124" width="52" height="36" fill="#f07070" opacity="0.85"/>
+      <!-- SRP bars -->
+      <rect x="120" y="138" width="52" height="22" fill="#4ade80" opacity="0.9"/>
+      <rect x="336" y="135" width="52" height="25" fill="#4ade80" opacity="0.9"/>
+      <!-- Labels -->
+      <text x="86"  y="166" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#b02020">Baseline</text>
+      <text x="146" y="166" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1a6e3c">+SRP</text>
+      <text x="302" y="166" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#b02020">Baseline</text>
+      <text x="362" y="166" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1a6e3c">+SRP</text>
+      <!-- Axes -->
+      <line x1="50" y1="122" x2="50" y2="168" stroke="#ccc" stroke-width="0.8"/>
+      <line x1="50" y1="168" x2="210" y2="168" stroke="#ccc" stroke-width="0.8"/>
+      <line x1="265" y1="122" x2="265" y2="168" stroke="#ccc" stroke-width="0.8"/>
+      <line x1="265" y1="168" x2="430" y2="168" stroke="#ccc" stroke-width="0.8"/>
+      <text x="250" y="186" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#aaa">SRP reduces attack success on both inference-stage and fine-tuning attacks</text>
+    </svg>
+    <figcaption>Figure 1: Safety Reflection Pretraining inserts short self-reflective safety passages (SR) at regular intervals in the pretraining corpus. On 1.7B models trained on FineWeb-Edu, SRP reduces attack success rates for both inference-stage jailbreaks and fine-tuning attacks versus a safe-data-only baseline.</figcaption>
+  </figure>
+  <p class="paper-detail">
+    Safety Reflection Pretraining inserts short self-reflective safety passages at regular intervals in the pretraining corpus, training the model to reason about harm while learning language. Experiments with <strong>1.7B models on FineWeb-Edu</strong> show improved safety classification accuracy and substantially reduced success rates for both inference-stage jailbreaks and fine-tuning attacks versus a safe-data-only baseline. The core argument is that data curation addresses what is in the corpus, but not how capable-but-benign knowledge can be composed into harmful outputs — which requires building a self-monitoring prior directly into the pretraining objective.
+  </p>
+</article>
+
+<hr class="divider">
+
+<!-- ═══ ITEMS 4–10 mid-tier ═══════════════════════════════════════════════ -->
+<div class="more-section-label">Items 4 – 10 · Also notable</div>
+
+<!-- 4 -->
+<article class="mid-paper">
+  <header class="paper-header">
+    <div class="paper-rank">04</div>
+    <div class="paper-meta">
+      <span class="tag tag-interp">refusal-interp</span>
+      <span class="tag">preprint · Aug 26</span>
+    </div>
+  </header>
+  <h3 class="mid-title">
+    <a href="https://arxiv.org/abs/2608.25390">Refusal geometry reflects refusal training: diverse refusal prefixes can raise stable rank and weaken refusal vector ablation attacks</a>
+  </h3>
+  <figure class="paper-figure mid-figure">
+    <svg viewBox="0 0 440 170" xmlns="http://www.w3.org/2000/svg" aria-label="Refusal subspace stable rank vs prefix diversity">
+      <rect width="440" height="170" fill="#fff"/>
+      <text x="220" y="20" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#333" font-weight="bold">Refusal Subspace Stable Rank vs. Prefix Diversity</text>
+      <!-- Repetitive side -->
+      <rect x="20" y="36" width="180" height="110" rx="4" fill="#fce8e8" stroke="#b02020" stroke-width="1"/>
+      <text x="110" y="56" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#b02020" font-weight="bold">Repetitive Prefixes</text>
+      <text x="110" y="70" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#888">"I cannot …" (always same)</text>
+      <!-- Low rank ellipse -->
+      <ellipse cx="110" cy="108" rx="55" ry="16" fill="none" stroke="#b02020" stroke-width="1.5"/>
+      <ellipse cx="110" cy="108" rx="8" ry="16" fill="#f07070" opacity="0.4"/>
+      <text x="110" y="140" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#b02020">Low stable rank → ablatable</text>
+      <!-- Diverse side -->
+      <rect x="240" y="36" width="180" height="110" rx="4" fill="#e8f4e8" stroke="#1a6e3c" stroke-width="1"/>
+      <text x="330" y="56" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#1a6e3c" font-weight="bold">Diverse Prefixes</text>
+      <text x="330" y="70" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#888">"I can't", "That's harmful", …</text>
+      <!-- High rank ellipse -->
+      <ellipse cx="330" cy="108" rx="55" ry="28" fill="none" stroke="#1a6e3c" stroke-width="1.5"/>
+      <ellipse cx="330" cy="108" rx="30" ry="28" fill="#4ade80" opacity="0.25"/>
+      <ellipse cx="330" cy="108" rx="10" ry="18" fill="#4ade80" opacity="0.3"/>
+      <text x="330" y="140" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1a6e3c">High stable rank → ablation-resistant</text>
+      <!-- Divider arrow -->
+      <text x="220" y="112" text-anchor="middle" font-family="Georgia,serif" font-size="18" fill="#ccc">↔</text>
+    </svg>
+    <figcaption>Figure 1: Refusal training with repetitive prefixes (e.g., "I cannot") collapses the refusal subspace to low rank — easily ablated. Diverse refusal prefixes raise stable rank, hardening against abliteration attacks. (OLMo-2-0425-1B-Instruct case study.)</figcaption>
+  </figure>
+  <p class="mid-summary">
+    Andrey Labunets (UC San Diego) studies OLMo-2 refusal geometry through training dynamics, showing that activation updates from refusal-completion first-token losses explain the resulting refusal direction. Datasets with repetitive refusal starts produce a low-rank, easy-to-ablate refusal direction; diverse prefixes raise stable rank and resist vector ablation attacks — a simple data-side intervention to harden refusal against abliteration.
+  </p>
+</article>
+<hr class="section-divider">
+
+<!-- 5 -->
+<article class="mid-paper">
+  <header class="paper-header">
+    <div class="paper-rank">05</div>
+    <div class="paper-meta">
+      <span class="tag tag-peer">EACL 2026</span>
+      <span class="tag tag-security">AI security</span>
+      <span class="tag tag-interp">interp</span>
+    </div>
+  </header>
+  <h3 class="mid-title">
+    <a href="https://arxiv.org/abs/2509.01631">Unraveling LLM Jailbreaks Through Safety Knowledge Neurons</a>
+  </h3>
+  <figure class="paper-figure mid-figure">
+    <svg viewBox="0 0 440 155" xmlns="http://www.w3.org/2000/svg" aria-label="Safety knowledge neuron identification and SafeTuning defense">
+      <rect width="440" height="155" fill="#fff"/>
+      <!-- Left: harmful input -->
+      <rect x="10" y="20" width="90" height="32" rx="3" fill="#fce8e8" stroke="#b02020" stroke-width="1"/>
+      <text x="55" y="35" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#b02020" font-weight="bold">Harmful Prompt</text>
+      <text x="55" y="47" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#888">"How to …"</text>
+      <!-- Arrow -->
+      <line x1="100" y1="36" x2="128" y2="36" stroke="#aaa" stroke-width="1"/>
+      <polygon points="124,32 132,36 124,40" fill="#aaa"/>
+      <!-- Model box -->
+      <rect x="132" y="10" width="100" height="110" rx="4" fill="#e8eaf8" stroke="#1a4f99" stroke-width="1.2"/>
+      <text x="182" y="30" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#1a4f99" font-weight="bold">LLM Hidden</text>
+      <text x="182" y="42" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#1a4f99" font-weight="bold">States</text>
+      <!-- Neurons highlighted -->
+      <circle cx="160" cy="68" r="8" fill="#f07070"/>
+      <circle cx="182" cy="72" r="8" fill="#f07070"/>
+      <circle cx="204" cy="66" r="8" fill="#f07070"/>
+      <circle cx="164" cy="90" r="5" fill="#ccc"/>
+      <circle cx="192" cy="94" r="5" fill="#ccc"/>
+      <text x="182" y="112" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#b02020">Safety neurons active</text>
+      <!-- Projection arrow -->
+      <line x1="232" y1="68" x2="258" y2="68" stroke="#aaa" stroke-width="1"/>
+      <polygon points="254,64 262,68 254,72" fill="#aaa"/>
+      <!-- Vocab space -->
+      <rect x="262" y="20" width="90" height="70" rx="3" fill="#d0f0f0" stroke="#0d7377" stroke-width="1"/>
+      <text x="307" y="36" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#0d7377">Vocab Space</text>
+      <text x="307" y="50" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#b02020" font-weight="bold">→ "Rejection"</text>
+      <text x="307" y="64" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#888">tokens activated</text>
+      <text x="307" y="78" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#888">ASR &gt;97% if ablated</text>
+      <!-- SafeTuning badge -->
+      <rect x="262" y="106" width="90" height="28" rx="3" fill="#e8f4e8" stroke="#1a6e3c" stroke-width="1"/>
+      <text x="307" y="120" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1a6e3c" font-weight="bold">SafeTuning</text>
+      <text x="307" y="130" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#1a6e3c">reinforces safety neurons</text>
+      <!-- Performance text -->
+      <text x="220" y="148" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#888">Outperforms 4 baseline defenses across multiple LLMs</text>
+    </svg>
+    <figcaption>Figure 1: Safety knowledge neurons are identified by projecting LLM hidden states into vocabulary space, revealing Rejection-related token activations for harmful inputs. SafeTuning reinforces these neurons during fine-tuning, reducing attack success rates and outperforming four baselines.</figcaption>
+  </figure>
+  <p class="mid-summary">
+    Peer-reviewed at EACL 2026 (long paper), freshly posted Sep 1. The method projects internal representations into vocabulary space to identify safety knowledge neurons — those activating Rejection tokens for harmful inputs. Selectively ablating them raises attack success rates above 97%, confirming causal role. SafeTuning, which reinforces these neurons, consistently reduces attack success rates across multiple LLMs and outperforms all four baseline defense strategies.
+  </p>
+</article>
+<hr class="section-divider">
+
+<!-- 6 -->
+<article class="mid-paper">
+  <header class="paper-header">
+    <div class="paper-rank">06</div>
+    <div class="paper-meta">
+      <span class="tag tag-security">AI security</span>
+      <span class="tag tag-interp">neuron-defense</span>
+      <span class="tag">preprint · Aug 2026</span>
+    </div>
+  </header>
+  <h3 class="mid-title">
+    <a href="https://arxiv.org/abs/2608.14392">Tripwire: Triggering Aligned Refusal via Statistically Certified Safety Neurons</a>
+  </h3>
+  <figure class="paper-figure mid-figure">
+    <svg viewBox="0 0 440 150" xmlns="http://www.w3.org/2000/svg" aria-label="Tripwire three-stage funnel pipeline">
+      <rect width="440" height="150" fill="#fff"/>
+      <!-- Stage 1 -->
+      <rect x="10" y="30" width="90" height="50" rx="4" fill="#fff3cd" stroke="#a05c00" stroke-width="1.2"/>
+      <text x="55" y="50" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#a05c00" font-weight="bold">Stage 1</text>
+      <text x="55" y="63" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#555">Direction</text>
+      <text x="55" y="73" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#555">Filtering</text>
+      <!-- Arrow -->
+      <line x1="100" y1="55" x2="118" y2="55" stroke="#aaa" stroke-width="1.2"/>
+      <polygon points="114,51 122,55 114,59" fill="#aaa"/>
+      <!-- Stage 2 -->
+      <rect x="122" y="30" width="100" height="50" rx="4" fill="#e8eaf8" stroke="#1a4f99" stroke-width="1.2"/>
+      <text x="172" y="50" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1a4f99" font-weight="bold">Stage 2</text>
+      <text x="172" y="63" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#555">Welch t-test</text>
+      <text x="172" y="73" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#555">+ BH FDR control</text>
+      <!-- Arrow -->
+      <line x1="222" y1="55" x2="240" y2="55" stroke="#aaa" stroke-width="1.2"/>
+      <polygon points="236,51 244,55 236,59" fill="#aaa"/>
+      <!-- Stage 3 -->
+      <rect x="244" y="30" width="100" height="50" rx="4" fill="#d0f0f0" stroke="#0d7377" stroke-width="1.2"/>
+      <text x="294" y="50" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#0d7377" font-weight="bold">Stage 3</text>
+      <text x="294" y="63" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#555">Utility-specificity</text>
+      <text x="294" y="73" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#555">Filter</text>
+      <!-- Arrow -->
+      <line x1="344" y1="55" x2="362" y2="55" stroke="#aaa" stroke-width="1.2"/>
+      <polygon points="358,51 366,55 358,59" fill="#aaa"/>
+      <!-- Clamp box -->
+      <rect x="366" y="22" width="66" height="66" rx="4" fill="#e8f4e8" stroke="#1a6e3c" stroke-width="1.5"/>
+      <text x="399" y="46" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1a6e3c" font-weight="bold">Inference</text>
+      <text x="399" y="58" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#1a6e3c">Neuron</text>
+      <text x="399" y="69" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#1a6e3c">Clamp</text>
+      <text x="399" y="80" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#888">(no retrain)</text>
+      <!-- Result text -->
+      <text x="220" y="108" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#1a6e3c" font-weight="bold">98% jailbreak mitigation · minimal utility loss · training-free</text>
+      <text x="220" y="124" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#888">Holds safety neurons at harmful-conditional mean activation at inference time</text>
+      <text x="220" y="138" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#888">Authors: Wei Zhao, Zhe Li, Peixin Zhang, Jun Sun</text>
+    </svg>
+    <figcaption>Figure 1: Tripwire's three-stage statistical funnel (direction filtering → Welch t-test + BH FDR control → utility-specificity filter) identifies certified safety neurons; a trigger-style clamp at inference achieves 98% jailbreak mitigation without model retraining.</figcaption>
+  </figure>
+  <p class="mid-summary">
+    Tripwire identifies safety neurons through a three-stage funnel — direction filtering, per-neuron Welch t-tests under Benjamini-Hochberg false-discovery-rate control, and a utility-specificity filter. At runtime, selected neurons are clamped to their harmful-conditional mean activations, injecting an internal "this input is harmful" signal without retraining. Achieves <strong>98% jailbreak mitigation</strong> with minimal utility loss; training-free and inference-time only.
+  </p>
+</article>
+<hr class="section-divider">
+
+<!-- 7 -->
+<article class="mid-paper">
+  <header class="paper-header">
+    <div class="paper-rank">07</div>
+    <div class="paper-meta">
+      <span class="tag tag-control">AI control</span>
+      <span class="tag tag-security">multi-agent</span>
+      <span class="tag">preprint · NeurIPS sub. Jul 2026</span>
+    </div>
+  </header>
+  <h3 class="mid-title">
+    <a href="https://arxiv.org/abs/2607.07368">Multi-Agent AI Control: Distributed Attacks Hamper Per-Instance Monitors</a>
+  </h3>
+  <figure class="paper-figure mid-figure">
+    <svg viewBox="0 0 440 155" xmlns="http://www.w3.org/2000/svg" aria-label="Fragmentation effect: per-agent detection probability drops as agent count rises">
+      <rect width="440" height="155" fill="#fff"/>
+      <text x="220" y="18" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#333" font-weight="bold">Fragmentation Effect in Multi-Agent AI Control</text>
+      <!-- Axes -->
+      <line x1="50" y1="120" x2="400" y2="120" stroke="#999" stroke-width="1.2"/>
+      <line x1="50" y1="30" x2="50" y2="120" stroke="#999" stroke-width="1.2"/>
+      <!-- Y-axis label -->
+      <text x="28" y="80" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#888" transform="rotate(-90,28,80)">Detection Prob</text>
+      <!-- X-axis label -->
+      <text x="225" y="138" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#888">Number of coordinating agents</text>
+      <!-- X ticks -->
+      <text x="80" y="130" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#888">1</text>
+      <text x="150" y="130" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#888">2</text>
+      <text x="225" y="130" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#888">4</text>
+      <text x="300" y="130" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#888">8</text>
+      <text x="370" y="130" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#888">16</text>
+      <!-- Y ticks -->
+      <text x="44" y="123" text-anchor="end" font-family="Georgia,serif" font-size="9" fill="#888">0</text>
+      <text x="44" y="88" text-anchor="end" font-family="Georgia,serif" font-size="9" fill="#888">0.5</text>
+      <text x="44" y="34" text-anchor="end" font-family="Georgia,serif" font-size="9" fill="#888">1.0</text>
+      <!-- Falling curve (per-agent detection) -->
+      <polyline points="80,45 150,65 225,85 300,102 370,115" fill="none" stroke="#b02020" stroke-width="2"/>
+      <!-- Flat collective attack line -->
+      <polyline points="80,45 150,43 225,42 300,41 370,40" fill="none" stroke="#f07070" stroke-width="1.5" stroke-dasharray="5,3"/>
+      <!-- Legend -->
+      <line x1="200" y1="148" x2="220" y2="148" stroke="#b02020" stroke-width="2"/>
+      <text x="224" y="152" font-family="Georgia,serif" font-size="9" fill="#b02020">Per-agent detection (falls)</text>
+      <line x1="60" y1="148" x2="80" y2="148" stroke="#f07070" stroke-width="1.5" stroke-dasharray="5,3"/>
+      <text x="84" y="152" font-family="Georgia,serif" font-size="9" fill="#888">Collective impact (stable)</text>
+    </svg>
+    <figcaption>Figure 1: Fragmentation effect — as the number of coordinating agents increases, per-agent monitoring detection probability falls sharply, while collective attack severity remains high. (FakeLab: 9 services, 86 tasks, 4 attack objectives.)</figcaption>
+  </figure>
+  <p class="mid-summary">
+    Oliver Makins et al. develop FakeLab (a synthetic AI-lab environment with 9 services, 86 benign tasks, 4 attack objectives) and demonstrate the fragmentation effect: as more agents coordinate on a distributed attack, the per-agent signal drops below monitor detection thresholds even as collective attack severity grows. First empirical study of AI control in multi-agent settings; submitted to NeurIPS 2026.
+  </p>
+</article>
+<hr class="section-divider">
+
+<!-- 8 -->
+<article class="mid-paper">
+  <header class="paper-header">
+    <div class="paper-rank">08</div>
+    <div class="paper-meta">
+      <span class="tag tag-interp">applied-interp</span>
+      <span class="tag tag-security">AI security</span>
+      <span class="tag">preprint · Jul 2026</span>
+    </div>
+  </header>
+  <h3 class="mid-title">
+    <a href="https://arxiv.org/abs/2607.07903">Mechanistic Interpretability of LLM Jailbreaks via Internal Attribution Graphs</a>
+  </h3>
+  <figure class="paper-figure mid-figure">
+    <svg viewBox="0 0 440 150" xmlns="http://www.w3.org/2000/svg" aria-label="Paired attribution graphs for clean vs jailbroken prompts showing vulnerability motifs">
+      <rect width="440" height="150" fill="#fff"/>
+      <!-- Clean graph (left) -->
+      <rect x="10" y="20" width="170" height="100" rx="4" fill="#e8f4e8" stroke="#1a6e3c" stroke-width="1"/>
+      <text x="95" y="36" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#1a6e3c" font-weight="bold">Clean Prompt Graph</text>
+      <!-- Nodes -->
+      <circle cx="50" cy="65" r="10" fill="#4ade80" stroke="#1a6e3c" stroke-width="1"/>
+      <text x="50" y="69" text-anchor="middle" font-family="Georgia,serif" font-size="7" fill="#1a6e3c">Safety</text>
+      <circle cx="95" cy="55" r="10" fill="#d0f0f0" stroke="#0d7377" stroke-width="1"/>
+      <text x="95" y="59" text-anchor="middle" font-family="Georgia,serif" font-size="7" fill="#0d7377">Content</text>
+      <circle cx="140" cy="65" r="10" fill="#e8eaf8" stroke="#1a4f99" stroke-width="1"/>
+      <text x="140" y="69" text-anchor="middle" font-family="Georgia,serif" font-size="7" fill="#1a4f99">Refusal</text>
+      <line x1="60" y1="65" x2="85" y2="57" stroke="#aaa" stroke-width="1.2"/>
+      <line x1="105" y1="57" x2="130" y2="63" stroke="#aaa" stroke-width="1.2"/>
+      <line x1="50" y1="75" x2="140" y2="73" stroke="#4ade80" stroke-width="1.5"/>
+      <text x="95" y="110" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#1a6e3c">Safety route active</text>
+      <!-- Jailbroken graph (right) -->
+      <rect x="250" y="20" width="180" height="100" rx="4" fill="#fce8e8" stroke="#b02020" stroke-width="1"/>
+      <text x="340" y="36" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#b02020" font-weight="bold">Jailbroken Graph (motifs)</text>
+      <!-- Nodes with motifs -->
+      <circle cx="280" cy="65" r="10" fill="#ccc" stroke="#aaa" stroke-width="1"/>
+      <text x="280" y="69" text-anchor="middle" font-family="Georgia,serif" font-size="7" fill="#888">Safety↓</text>
+      <circle cx="325" cy="55" r="10" fill="#f07070" stroke="#b02020" stroke-width="1"/>
+      <text x="325" y="59" text-anchor="middle" font-family="Georgia,serif" font-size="7" fill="#b02020">Attack↑</text>
+      <circle cx="370" cy="65" r="10" fill="#fce8e8" stroke="#b02020" stroke-width="1"/>
+      <text x="370" y="69" text-anchor="middle" font-family="Georgia,serif" font-size="7" fill="#b02020">Reroute</text>
+      <!-- Disrupted lines -->
+      <line x1="290" y1="65" x2="315" y2="57" stroke="#f07070" stroke-width="1.5"/>
+      <line x1="335" y1="57" x2="360" y2="63" stroke="#f07070" stroke-width="1.5"/>
+      <line x1="280" y1="75" x2="370" y2="73" stroke="#f07070" stroke-width="1.5" stroke-dasharray="4,2"/>
+      <text x="340" y="110" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#b02020">Suppression · Emergence · Rerouting</text>
+      <!-- Align arrow in middle -->
+      <line x1="182" y1="70" x2="246" y2="70" stroke="#ccc" stroke-width="1.5"/>
+      <polygon points="242,66 250,70 242,74" fill="#ccc"/>
+      <text x="215" y="64" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#888">align</text>
+      <!-- Bottom label -->
+      <text x="220" y="140" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#aaa">Paired graph alignment reveals vulnerability motifs (Anupam Wagle et al., Jul 2026)</text>
+    </svg>
+    <figcaption>Figure 1: Paired attribution graphs for clean vs. jailbroken prompts. Three vulnerability motifs emerge: safety suppression (safety nodes attenuated), attack emergence (attack-related features appear), and computation rerouting (inference bypasses safety-relevant components).</figcaption>
+  </figure>
+  <p class="mid-summary">
+    Builds internal computation graphs for clean and jailbroken prompts using attribution/SAE techniques, then aligns them pairwise to expose attack-induced deviations. Identifies three recurring vulnerability motifs: safety suppression, attack emergence, and computation rerouting — providing mechanistic vocabulary for diagnosing and potentially patching jailbreak vulnerabilities.
+  </p>
+</article>
+<hr class="section-divider">
+
+<!-- 9 -->
+<article class="mid-paper">
+  <header class="paper-header">
+    <div class="paper-rank">09</div>
+    <div class="paper-meta">
+      <span class="tag tag-interp">SAE · applied-interp</span>
+      <span class="tag">preprint · Jun 2026</span>
+    </div>
+  </header>
+  <h3 class="mid-title">
+    <a href="https://arxiv.org/abs/2606.26620">Discovering Millions of Interpretable Features with Sparse Autoencoders</a>
+  </h3>
+  <figure class="paper-figure mid-figure">
+    <svg viewBox="0 0 440 148" xmlns="http://www.w3.org/2000/svg" aria-label="Qwen3 SAE suite: sparsity-fidelity tradeoff curves and refusal-steering application">
+      <rect width="440" height="148" fill="#fff"/>
+      <text x="220" y="16" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#333" font-weight="bold">Qwen3-Instruct SAE Suite: Sparsity–Fidelity Trade-off</text>
+      <!-- Axes -->
+      <line x1="50" y1="115" x2="330" y2="115" stroke="#aaa" stroke-width="1"/>
+      <line x1="50" y1="25" x2="50" y2="115" stroke="#aaa" stroke-width="1"/>
+      <text x="190" y="132" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#888">Sparsity (L0) →</text>
+      <text x="28" y="72" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#888" transform="rotate(-90,28,72)">Fidelity</text>
+      <!-- 1.7B curve -->
+      <polyline points="70,40 120,60 180,80 240,96 300,108" fill="none" stroke="#0d7377" stroke-width="2"/>
+      <!-- 4B curve -->
+      <polyline points="70,38 120,55 180,74 240,92 300,104" fill="none" stroke="#1a4f99" stroke-width="2"/>
+      <!-- 8B curve -->
+      <polyline points="70,35 120,50 180,68 240,88 300,100" fill="none" stroke="#5c1aaa" stroke-width="2"/>
+      <!-- Legend -->
+      <line x1="340" y1="50" x2="360" y2="50" stroke="#0d7377" stroke-width="2"/>
+      <text x="364" y="54" font-family="Georgia,serif" font-size="9" fill="#0d7377">1.7B</text>
+      <line x1="340" y1="65" x2="360" y2="65" stroke="#1a4f99" stroke-width="2"/>
+      <text x="364" y="69" font-family="Georgia,serif" font-size="9" fill="#1a4f99">4B</text>
+      <line x1="340" y1="80" x2="360" y2="80" stroke="#5c1aaa" stroke-width="2"/>
+      <text x="364" y="84" font-family="Georgia,serif" font-size="9" fill="#5c1aaa">8B</text>
+      <!-- Refusal steering callout -->
+      <rect x="52" y="122" width="320" height="20" rx="2" fill="#d0f0f0" stroke="#0d7377" stroke-width="0.8"/>
+      <text x="212" y="136" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#0d7377">Case study: SAE features causally steer Qwen3 toward refusal behavior</text>
+    </svg>
+    <figcaption>Figure 1: Sparsity-fidelity trade-off curves for layer-wise SAEs across Qwen3-1.7B/4B/8B at residual streams, MLP outputs, and attention outputs. A downstream refusal-steering case study validates causal interpretability of discovered features.</figcaption>
+  </figure>
+  <p class="mid-summary">
+    Trains layer-wise SAEs on Qwen3-1.7B, 4B, and 8B at residual streams, MLP outputs, and attention outputs, evaluating both activation-level reconstruction metrics and model-level recovery metrics. A refusal-steering case study demonstrates that specific SAE features causally control refusal behavior, providing an open-source interpretability toolchain for a leading open-weight model family.
+  </p>
+</article>
+<hr class="section-divider">
+
+<!-- 10 -->
+<article class="mid-paper">
+  <header class="paper-header">
+    <div class="paper-rank">10</div>
+    <div class="paper-meta">
+      <span class="tag tag-interp">circuit-tracing · applied-interp</span>
+      <span class="tag">preprint · Aug 2026</span>
+    </div>
+  </header>
+  <h3 class="mid-title">
+    <a href="https://arxiv.org/abs/2608.02632">LLMs Can Annotate Attribution Graphs</a>
+  </h3>
+  <figure class="paper-figure mid-figure">
+    <svg viewBox="0 0 440 140" xmlns="http://www.w3.org/2000/svg" aria-label="LLM-automated attribution graph supernode annotation pipeline and accuracy">
+      <rect width="440" height="140" fill="#fff"/>
+      <!-- Individual features -->
+      <rect x="10" y="20" width="80" height="80" rx="4" fill="#f0ede8" stroke="#aaa" stroke-width="1"/>
+      <text x="50" y="38" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#888">Features</text>
+      <circle cx="30" cy="58" r="6" fill="#d0f0f0" stroke="#0d7377" stroke-width="1"/>
+      <circle cx="50" cy="52" r="6" fill="#d0f0f0" stroke="#0d7377" stroke-width="1"/>
+      <circle cx="70" cy="60" r="6" fill="#d0f0f0" stroke="#0d7377" stroke-width="1"/>
+      <circle cx="30" cy="78" r="6" fill="#d0f0f0" stroke="#0d7377" stroke-width="1"/>
+      <circle cx="62" cy="80" r="6" fill="#d0f0f0" stroke="#0d7377" stroke-width="1"/>
+      <!-- Arrow to LLM annotator -->
+      <line x1="92" y1="60" x2="118" y2="60" stroke="#aaa" stroke-width="1.2"/>
+      <polygon points="114,56 122,60 114,64" fill="#aaa"/>
+      <!-- LLM annotator box -->
+      <rect x="122" y="30" width="90" height="60" rx="4" fill="#ede0f8" stroke="#5c1aaa" stroke-width="1.2"/>
+      <text x="167" y="52" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#5c1aaa" font-weight="bold">LLM</text>
+      <text x="167" y="64" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#5c1aaa">Groups feature</text>
+      <text x="167" y="76" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#5c1aaa">descriptions</text>
+      <!-- Arrow to supernodes -->
+      <line x1="214" y1="60" x2="240" y2="60" stroke="#aaa" stroke-width="1.2"/>
+      <polygon points="236,56 244,60 236,64" fill="#aaa"/>
+      <!-- Supernodes -->
+      <rect x="244" y="28" width="80" height="64" rx="4" fill="#d0f0f0" stroke="#0d7377" stroke-width="1.2"/>
+      <text x="284" y="46" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#0d7377">Supernodes</text>
+      <ellipse cx="270" cy="68" rx="14" ry="10" fill="#4ade80" stroke="#1a6e3c" stroke-width="1"/>
+      <text x="270" y="71" text-anchor="middle" font-family="Georgia,serif" font-size="7" fill="#1a6e3c">Paris</text>
+      <ellipse cx="298" cy="72" rx="14" ry="10" fill="#7eb8ff" stroke="#1a4f99" stroke-width="1"/>
+      <text x="298" y="75" text-anchor="middle" font-family="Georgia,serif" font-size="7" fill="#1a4f99">Capital</text>
+      <!-- Result badge -->
+      <rect x="344" y="20" width="88" height="82" rx="4" fill="#e8f4e8" stroke="#1a6e3c" stroke-width="1.2"/>
+      <text x="388" y="44" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1a6e3c" font-weight="bold">97/100</text>
+      <text x="388" y="57" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#1a6e3c">prompts:</text>
+      <text x="388" y="68" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#1a6e3c">intermediate</text>
+      <text x="388" y="79" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#1a6e3c">hop recovered</text>
+      <text x="388" y="90" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#888">(Capitals task)</text>
+      <!-- Bottom text -->
+      <text x="220" y="118" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#888">Proof-of-concept: 1,000 Wikipedia attribution graphs annotated automatically</text>
+      <text x="220" y="130" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#888">Patel, Zhang, Hu — Stanford University</text>
+    </svg>
+    <figcaption>Figure 1: LLM-automated supernode annotation pipeline for attribution graphs. The LLM groups feature descriptions into semantically coherent supernodes, recovering the two-hop Capitals intermediate in 97/100 prompts, matching human annotator quality.</figcaption>
+  </figure>
+  <p class="mid-summary">
+    Ameen Patel, Max Zhang, Nathan Hu (Stanford) present a pipeline where an LLM groups feature descriptions into attribution graph supernodes — the most time-intensive step in manual circuit tracing. On the two-hop Capitals task, automated supernodes recover the intermediate-hop in <strong>97/100 prompts</strong> and match human annotation quality on automated interpretability metrics. A proof-of-concept scales to 1,000 Wikipedia attribution graphs, removing the human bottleneck in circuit-level analysis.
+  </p>
+</article>
