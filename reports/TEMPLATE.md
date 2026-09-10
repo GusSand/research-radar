@@ -1,7 +1,9 @@
 # <Daily | Weekly> Radar — <YYYY-MM-DD>
 
-> **Mech Interp · AI Security · Text Diffusion LMs** | <Daily / Weekly> edition
+> **Pretraining Safety · AI Security · Mech Interp** | <Daily / Weekly> edition
 > **HTML artifact:** <artifact URL — fill in after publishing>
+
+<!-- Before writing: scripts/radar-preflight.sh. Before committing: python3 scripts/radar_index.py --check <this file> must print OK. Never list a paper the ledger already contains. -->
 
 **Window:** <date range searched> · **Sources swept:** OpenReview, ACL Anthology, TMLR, arXiv (cs.CL/cs.LG/cs.CR/cs.AI), LessWrong/Alignment Forum, lab blogs
 **Counts:** N peer-reviewed · N preprints · N forum/blog

@@ -1,0 +1,342 @@
+arxiv_id	first_date	first_file	appearances	title
+2602.05859	2026-07-01	reports/daily/2026-07-01.md	2	DLM-Scope: Mechanistic Interpretability of Diffusion Language Models via Sparse Autoencoders
+2602.16823	2026-07-01	reports/daily/2026-07-01.md	2	Formal Mechanistic Interpretability: Automated Circuit Discovery with Provable Guarantees
+2603.23268	2026-07-01	reports/daily/2026-07-01.md	2	SafeSeek: Universal Attribution of Safety Circuits in Language Models
+2605.10971	2026-07-01	reports/daily/2026-07-01.md	1	Steering Without Breaking: Mechanistically Informed Interventions for Discrete Diffusion Language Models
+2606.16939	2026-07-01	reports/daily/2026-07-01.md	2	Scalable Circuit Learning for Interpreting Large Language Models
+2606.20560	2026-07-01	reports/daily/2026-07-01.md	2	How Transparent is DiffusionGemma?
+2606.24716	2026-07-01	reports/daily/2026-07-01.md	2	Evaluating the Interpretability of Sparse Autoencoders with Concept Annotations
+2606.25331	2026-07-01	reports/daily/2026-07-01.md	2	Improved Large Language Diffusion Models (iLLaDA)
+2606.28153	2026-07-01	reports/daily/2026-07-01.md	2	Robust Harmful Features Under Jailbreak Attacks: Mechanistic Evidence from Attention Head Specialization
+2606.30783	2026-07-01	reports/daily/2026-07-01.md	2	Security–Fidelity Tradeoffs: No Universal Defense Against Prompt Injection
+2510.02917	2026-07-02	reports/daily/2026-07-02.md	2	Mechanistic Interpretability of Code Correctness in LLMs via Sparse Autoencoders
+2605.03378	2026-07-02	reports/daily/2026-07-02.md	1	ARGUS: Defending LLM Agents Against Context-Aware Prompt Injection
+2606.04027	2026-07-02	reports/daily/2026-07-02.md	2	MaskForge: Structure-Aware Adaptive Attacks for Jailbreaking Diffusion Large Language Models
+2606.06333	2026-07-02	reports/daily/2026-07-02.md	2	Subspace-Aware Sparse Autoencoders (SASA) for Effective Mechanistic Interpretability
+2606.12138	2026-07-02	reports/daily/2026-07-02.md	1	Unstable Features, Reproducible Subspaces: Understanding Seed Dependence in Sparse Autoencoders
+2606.19946	2026-07-02	reports/daily/2026-07-02.md	1	GEMS: Geometric Constraints Enable Multi-Semantic Superposition in LLMs
+2606.22673	2026-07-02	reports/daily/2026-07-02.md	2	AgentLens: Interpretable Safety Steering via Mechanistic Subspaces for Multi-Turn Coding Agents
+2606.24026	2026-07-02	reports/daily/2026-07-02.md	1	Can Language Model Agents be Helpful Circuit Explainers in Mechanistic Interpretability?
+2606.26620	2026-07-02	reports/daily/2026-07-02.md	1	Discovering Millions of Interpretable Features with Sparse Autoencoders (Qwen3-Instruct SAE)
+2603.14278	2026-07-03	reports/daily/2026-07-03.md	1	Activation Surgery: Jailbreaking White-box LLMs without Touching the Prompt
+2605.19262	2026-07-03	reports/daily/2026-07-03.md	2	Backdooring Masked Diffusion Language Models
+2606.09701	2026-07-03	reports/daily/2026-07-03.md	1	Learning to Attack and Defend: Adaptive Red Teaming of Language Models via GRPO (AdvGRPO)
+2606.10525	2026-07-03	reports/daily/2026-07-03.md	1	Assessing Automated Prompt Injection Attacks in Agentic Environments
+2606.12232	2026-07-03	reports/daily/2026-07-03.md	1	Re-evaluating Confidence Remasking in Masked Diffusion Language Models
+2606.15441	2026-07-03	reports/daily/2026-07-03.md	1	Defending against Adaptive Prompt Injection Attacks via Reasoning-enabled Task Alignment (RETA)
+2606.15796	2026-07-03	reports/daily/2026-07-03.md	1	DifFRACT: Diffusion Feature Reconstruction and Attribution for Circuit Tracing
+2606.17999	2026-07-03	reports/daily/2026-07-03.md	1	VoidPadding: Let [VOID] Handle Padding in Masked Diffusion Language Models so that [EOS] Can Focus on Semantic Termination
+2607.01208	2026-07-03	reports/daily/2026-07-03.md	1	Distill to Detect: Exposing Stealth Biases in LLMs through Cartridge Distillation
+2607.02396	2026-07-03	reports/daily/2026-07-03.md	1	Fast Multi-dimensional Refusal Subspaces via RFM-AGOP
+2605.26343	2026-07-04	reports/daily/2026-07-04.md	1	MechRL: Reinforcement Learning Agents Perform Circuit Discovery for Mechanistic Interpretability
+2606.07007	2026-07-04	reports/daily/2026-07-04.md	1	A Geometric View for Understanding Concept Learning and Neuron Interpretation in Sparse Autoencoders
+2606.08496	2026-07-04	reports/daily/2026-07-04.md	1	SAEExplainer: Interpreting SAE Features with Activation-Guided Preference Optimization
+2606.10080	2026-07-04	reports/daily/2026-07-04.md	1	VFUSE: Virulent Feature Understanding with Sparse AutoEncoders
+2607.00397	2026-07-04	reports/daily/2026-07-04.md	1	NeuroCogMap Reveals Cognitive Organization of Large Language Models
+2607.00481	2026-07-04	reports/daily/2026-07-04.md	1	Beyond the Prompt: Jailbreaking Function-Calling LLMs via Simulated Moderation Traces
+2607.01047	2026-07-04	reports/daily/2026-07-04.md	1	Conversable Complexity: Agentic LLM Collectives as Interpretable Substrates
+2607.01153	2026-07-04	reports/daily/2026-07-04.md	1	Adversarial Pragmatics for AI Safety Evaluation: A Benchmark for Instruction Conflict, Embedded Commands, and Policy Ambiguity
+2607.02389	2026-07-04	reports/daily/2026-07-04.md	1	Steerability via Constraints: A Substrate for Scalable Oversight of Coding Agents
+2607.02494	2026-07-04	reports/daily/2026-07-04.md	1	Towards Robustness against Typographic Attack with Training-free Concept Localization
+2605.18253	2026-07-05	reports/daily/2026-07-05.md	2	Machine Unlearning for Masked Diffusion Language Models
+2605.31245	2026-07-05	reports/daily/2026-07-05.md	1	Toward Identifiable Sparse Autoencoders
+2512.23260	2026-07-06	reports/weekly/2026-W28.md	1	Interpretable Safety Alignment via SAE-Constructed Low-Rank Subspace Adaptation (SAILS)
+2507.08802	2026-07-07	reports/daily/2026-07-07.md	2	The Non-Linear Representation Dilemma: Is Causal Abstraction Enough for Mechanistic Interpretability?
+2507.11097	2026-07-07	reports/daily/2026-07-07.md	2	The Devil behind the mask: An emergent safety vulnerability of Diffusion LLMs (DIJA)
+2507.19227	2026-07-07	reports/daily/2026-07-07.md	2	Jailbreaking Large Language Diffusion Models: Revealing Hidden Safety Flaws in Diffusion-Based Text Generation (PAD)
+2602.00388	2026-07-07	reports/daily/2026-07-07.md	1	A Fragile Guardrail: Diffusion LLM's Safety Blessing and Its Failure Mode
+2602.02600	2026-07-07	reports/daily/2026-07-07.md	1	Step-Wise Refusal Dynamics in Autoregressive and Diffusion Language Models
+2602.11495	2026-07-07	reports/daily/2026-07-07.md	1	Jailbreaking Leaves a Trace: Understanding and Detecting Jailbreak Attacks from Internal Representations
+2604.20945	2026-07-07	reports/daily/2026-07-07.md	2	Breaking Bad: Interpretability-Based Safety Audits of State-of-the-Art LLMs
+2604.23130	2026-07-07	reports/daily/2026-07-07.md	1	Mechanistic Steering of LLMs Reveals Layer-wise Feature Vulnerabilities in Adversarial Settings
+2605.13043	2026-07-07	reports/daily/2026-07-07.md	1	Adaptive Steering and Remasking for Safe Generation in Diffusion Language Models
+2607.01793	2026-07-07	reports/daily/2026-07-07.md	1	Safety Testing LLM Agents at Scale: From Risk Discovery to Evidence-Grounded Verification
+2511.05797	2026-07-08	reports/daily/2026-07-08.md	2	When AI Meets the Web: Prompt Injection Risks in Third-Party AI Chatbot Plugins
+2601.21996	2026-07-08	reports/daily/2026-07-08.md	2	Mechanistic Data Attribution: Tracing the Training Origins of Interpretable LLM Units
+2605.15737	2026-07-08	reports/daily/2026-07-08.md	1	BARRIER: Bounded Activation Regions for Robust Information Erasure
+2606.06267	2026-07-08	reports/daily/2026-07-08.md	1	Many Circuits, One Mechanism: Input Variation and Evaluation Granularity in Circuit Discovery
+2606.11998	2026-07-08	reports/daily/2026-07-08.md	2	Bootstrapped Monitoring: Leveraging Transparent Reasoning to Oversee Stronger AI Agents
+2606.19594	2026-07-08	reports/daily/2026-07-08.md	1	Unsupervised Causal Abstractions Discovery
+2606.26479	2026-07-08	reports/daily/2026-07-08.md	2	Adaptive Evaluation of Out-of-Band Defenses Against Prompt Injection in LLM Agents
+2607.00267	2026-07-08	reports/daily/2026-07-08.md	1	Validating Causal Abstraction Metrics on Simulated Complex Systems
+2607.05029	2026-07-08	reports/daily/2026-07-08.md	1	Your Agent's Memories Are Not Its Own: Forged Reasoning Attacks on LLM Agent Memory and Defenses
+2607.05120	2026-07-08	reports/daily/2026-07-08.md	1	Agent Data Injection Attacks are Realistic Threats to AI Agents
+2606.17168	2026-07-09	reports/daily/2026-07-09.md	1	RepSelect: Robust LLM Unlearning via Representation Selectivity
+2605.00842	2026-07-10	reports/daily/2026-07-10.md	2	Understanding Emergent Misalignment via Feature Superposition Geometry
+2605.03228	2026-07-10	reports/daily/2026-07-10.md	1	MAGE: Safeguarding LLM Agents against Long-Horizon Threats via Shadow Memory
+2605.08934	2026-07-10	reports/daily/2026-07-10.md	2	From Mechanistic to Compositional Interpretability
+2605.17634	2026-07-10	reports/daily/2026-07-10.md	2	AI Agents May Always Fall for Prompt Injections
+2606.00023	2026-07-10	reports/daily/2026-07-10.md	2	TrustLDM: Benchmarking Trustworthiness in Language Diffusion Models
+2606.07335	2026-07-10	reports/daily/2026-07-10.md	2	Defending Jailbreak Attacks on Large Language Models via Manifold Trajectory Kinetics
+2606.08292	2026-07-10	reports/daily/2026-07-10.md	1	Ablation-Reversible Heads Don't Transfer: A Stress Test for Mechanistic Role Claims in Transformers
+2506.09047	2026-07-11	reports/daily/2026-07-11.md	2	Same Task, Different Circuits: Disentangling Modality-Specific Mechanisms in VLMs
+2506.18141	2026-07-11	reports/daily/2026-07-11.md	1	Sparse Feature Coactivation Reveals Causal Semantic Modules in Large Language Models
+2605.02812	2026-07-11	reports/daily/2026-07-11.md	1	Autonomous LLM Agent Worms: Cross-Platform Propagation, Automated Discovery and Temporal Re-Entry Defense
+2605.24614	2026-07-11	reports/daily/2026-07-11.md	1	Measuring the Depth of LLM Unlearning via Activation Patching
+2605.28388	2026-07-11	reports/daily/2026-07-11.md	1	Mechanistically Interpreting the Role of Sample Difficulty in RLVR for LLMs
+2606.05378	2026-07-11	reports/daily/2026-07-11.md	1	Pattern Selectivity is Not Task-Causal Structure: A Cross-Architecture Mechanistic Study of Composed-Task Circuits in 1B-Class Language Models
+2606.14517	2026-07-11	reports/daily/2026-07-11.md	1	From Shield to Target: Denial-of-Service Attacks on LLM-Based Agent Guardrails
+2607.05722	2026-07-11	reports/daily/2026-07-11.md	2	Nemotron-Labs-Diffusion: A Tri-Mode Language Model Unifying Autoregressive, Diffusion, and Self-Speculation Decoding
+2607.07003	2026-07-11	reports/daily/2026-07-11.md	1	Dissociating the Internal Representations of Sycophancy in LLMs
+2412.05232	2026-07-12	reports/daily/2026-07-12.md	1	Jailbreaks as Inference-Time Alignment: A Framework for Understanding Safety Failures in LLMs
+2507.04365	2026-07-12	reports/daily/2026-07-12.md	1	Attention Slipping: A Mechanistic Understanding of Jailbreak Attacks and Defenses in LLMs
+2507.05248	2026-07-12	reports/daily/2026-07-12.md	1	Response Attack: Exploiting Contextual Priming to Jailbreak Large Language Models
+2507.08473	2026-07-12	reports/daily/2026-07-12.md	1	Evaluating SAE Interpretability without Explanations
+2507.22171	2026-07-12	reports/daily/2026-07-12.md	1	Enhancing Jailbreak Attacks on LLMs via Persona Prompts
+2509.01631	2026-07-12	reports/daily/2026-07-12.md	1	Unraveling LLM Jailbreaks Through Safety Knowledge Neurons
+2603.08234	2026-07-12	reports/daily/2026-07-12.md	1	The Struggle Between Continuation and Refusal: A Mechanistic Analysis of the Continuation-Triggered Jailbreak in LLMs
+2605.22902	2026-07-12	reports/daily/2026-07-12.md	1	Transcoders Trace Visual Grounding and Hallucinations in Vision-Language Models
+2606.19755	2026-07-12	reports/daily/2026-07-12.md	1	SafeSpec: Fast and Safe LLM via Dynamic Reflective Sampling
+2607.07903	2026-07-12	reports/daily/2026-07-12.md	2	Mechanistic Interpretability of LLM Jailbreaks via Internal Attribution Graphs
+2505.16004	2026-07-14	reports/daily/2026-07-14.md	1	Evaluating Adversarial Robustness of Concept Representations in Sparse Autoencoders
+2506.04250	2026-07-14	reports/daily/2026-07-14.md	1	SafeSteer: Interpretable Safety Steering with Refusal-Evasion in LLMs
+2508.16325	2026-07-14	reports/daily/2026-07-14.md	1	ConceptGuard: Neuro-Symbolic Safety Guardrails via Sparse Interpretable Jailbreak Concepts
+2509.25843	2026-07-14	reports/daily/2026-07-14.md	1	ASGuard: Activation-Scaling Guard to Mitigate Targeted Jailbreaking Attacks
+2512.06655	2026-07-14	reports/daily/2026-07-14.md	1	GSAE: Graph-Regularized Sparse Autoencoders for Robust LLM Safety Steering
+2604.08524	2026-07-14	reports/daily/2026-07-14.md	1	What Drives Representation Steering? A Mechanistic Case Study on Steering Refusal
+2604.10326	2026-07-14	reports/daily/2026-07-14.md	1	Jailbreaking the Matrix: Nullspace Steering for Controlled Model Subversion
+2605.18229	2026-07-14	reports/daily/2026-07-14.md	1	Are Sparse Autoencoder Benchmarks Reliable?
+2606.06529	2026-07-14	reports/daily/2026-07-14.md	1	Attack Selection in Agentic AI Control Evaluations Meaningfully Decreases Safety
+2606.26396	2026-07-14	reports/daily/2026-07-14.md	1	At the Edge of Understanding: Sparse Autoencoders Trace The Limits of Transformer Generalization
+2505.19223	2026-07-15	reports/daily/2026-07-15.md	1	LLaDA 1.5: Variance-Reduced Preference Optimization for Large Language Diffusion Models
+2507.11473	2026-07-15	reports/daily/2026-07-15.md	1	Chain of Thought Monitorability: A New and Fragile Opportunity for AI Safety
+2602.19215	2026-07-15	reports/daily/2026-07-15.md	1	Understanding Empirical Unlearning with Combinatorial Interpretability
+2605.16023	2026-07-15	reports/daily/2026-07-15.md	1	Judge Circuits
+2606.27510	2026-07-15	reports/daily/2026-07-15.md	1	The Curse of Multiple Mediators: Hidden Interaction Effects in Activation Patching
+2607.03236	2026-07-15	reports/daily/2026-07-15.md	1	TACG: Trajectory-Aware Commit Gating for Diffusion Language Model Decoding
+2607.04206	2026-07-15	reports/daily/2026-07-15.md	2	Sangam: Efficiently Serving Diffusion LLMs with the AR Stack
+2607.07316	2026-07-15	reports/daily/2026-07-15.md	1	Mechanistic Interpretability for Neural Networks: Circuits, Sparse Features and Symbolic Reasoning
+2605.21392	2026-07-16	reports/daily/2026-07-16.md	1	VIPER-MCP: Detecting and Exploiting Taint-Style Vulnerabilities in Model Context Protocol Servers
+2607.01774	2026-07-16	reports/daily/2026-07-16.md	1	Subliminal Clocks: Latent Time Modelling in Diffusion Language Models
+2607.07066	2026-07-16	reports/daily/2026-07-16.md	1	Multiplication Beyond Groups: Stratified Fourier Mechanisms in Transformer Circuits
+2607.07461	2026-07-16	reports/daily/2026-07-16.md	1	Mitigating Taint-Style Vulnerabilities in MCP Servers via Security-Aware Tool Descriptions (SPELLSMITH)
+2607.08605	2026-07-16	reports/daily/2026-07-16.md	1	When Structured Sparse Autoencoders Learn Consistent Concepts Across Modalities
+2607.11698	2026-07-16	reports/daily/2026-07-16.md	1	Agent Hacks Agent: Autoresearch for Production-Agent Red-Teaming
+2607.12829	2026-07-16	reports/daily/2026-07-16.md	1	Accelerating Masked Diffusion Large Language Models: A Survey of Efficient Inference Techniques
+2606.08365	2026-07-17	reports/daily/2026-07-17.md	1	Pre-Intervention Prediction of Sparse Autoencoder Steering Side Effects
+2607.02514	2026-07-17	reports/daily/2026-07-17.md	2	Distributed Attacks in Persistent-State AI Control
+2607.05355	2026-07-17	reports/daily/2026-07-17.md	1	Faithfulness to Refusal: A Causal Audit of Neuron Selectors
+2607.06596	2026-07-17	reports/daily/2026-07-17.md	2	Calibration-Family Overfit: Why Trusted Sabotage Monitors Don't Transfer Across Lineages
+2607.07368	2026-07-17	reports/daily/2026-07-17.md	2	Multi-Agent AI Control: Distributed Attacks Hamper Per-Instance Monitors
+2607.08056	2026-07-17	reports/daily/2026-07-17.md	1	Reinforcing the Generation Order of Multimodal Masked Diffusion Models
+2607.08400	2026-07-17	reports/daily/2026-07-17.md	1	TRACE: A Two-Channel Robust Attribution Watermark via Complementary Embeddings for LLM-Agent Trajectories
+2607.11475	2026-07-17	reports/daily/2026-07-17.md	1	HyperSafe: Inference-Time Safety Recovery for Fine-Tuned Language Models
+2607.13346	2026-07-17	reports/daily/2026-07-17.md	2	The Refusal Residue: When Probes Catch Alignment Faking and When They Don't
+2607.13899	2026-07-17	reports/daily/2026-07-17.md	1	AIMO Interpretability Challenge
+2507.16795	2026-07-18	reports/daily/2026-07-18.md	1	Steering Out-of-Distribution Generalization with Concept Ablation Fine-Tuning
+2507.20333	2026-07-18	reports/daily/2026-07-18.md	1	The Blessing and Curse of Dimensionality in Safety Alignment
+2605.17413	2026-07-18	reports/daily/2026-07-18.md	1	Ablating Safety: Mechanisms for Removing Alignment in Language Models for Security Applications
+2606.22357	2026-07-18	reports/daily/2026-07-18.md	1	ORBIT: Training-Free Multi-Attribute Behavioral Steering via Orthogonal Subspace Rotation
+2607.00572	2026-07-18	reports/daily/2026-07-18.md	1	HARC: Coupling Harmfulness and Refusal Directions for Robust Safety Alignment
+2607.07474	2026-07-18	reports/daily/2026-07-18.md	1	Beyond Attack-Success Rate: Action-Graded Severity Scale for Tool-Using AI Agents
+2607.07774	2026-07-18	reports/daily/2026-07-18.md	2	ScopeJudge: Cost-Aware Pre-Execution Gating for Offensive Security Agents
+2607.14943	2026-07-18	reports/daily/2026-07-18.md	1	Steering Robustness into World Action Models via Mechanistic Interpretability and Optimal Control
+2607.15143	2026-07-18	reports/daily/2026-07-18.md	1	Setup Complete, Now You Are Compromised: Weaponizing Setup Instructions Against AI Coding Agents
+2607.15263	2026-07-18	reports/daily/2026-07-18.md	1	Beyond Success Rate: Cost-Aware Evaluation of Offensive and Defensive Security Agents
+2505.20254	2026-07-19	reports/daily/2026-07-19.md	1	Mechanistic Interpretability Should Prioritize Feature Consistency in SAEs
+2508.13650	2026-07-19	reports/daily/2026-07-19.md	1	CRISP: Persistent Concept Unlearning via Sparse Autoencoders
+2510.18165	2026-07-19	reports/daily/2026-07-19.md	1	Saber: Efficient Sampling with Adaptive Acceleration and Backtracking Enhanced Remasking for Diffusion Language Model in Code Generation
+2601.03005	2026-07-19	reports/daily/2026-07-19.md	1	JPU: Bridging Jailbreak Defense and Unlearning via On-Policy Path Rectification
+2607.07097	2026-07-19	reports/daily/2026-07-19.md	1	Operational Reframing and Approval-Framed Delegation in Multi-Agent LLM Safety
+2607.08147	2026-07-19	reports/daily/2026-07-19.md	1	Prismata: Confining Cross-Site Prompt Injection in Web Agents
+2505.04842	2026-07-20	reports/weekly/2026-W30.md	1	LLaDA: Large Language Diffusion with Masking Alignment via VRPO
+2506.02185	2026-07-20	reports/weekly/2026-W30.md	1	CRISP: Concept Removal via Iterative Sparse-autoencoder-based Pruning
+2506.17071	2026-07-20	reports/weekly/2026-W30.md	1	Harvesting the Nullspace: Mechanistic Interpretability-Based Jailbreaks
+2506.17831	2026-07-20	reports/weekly/2026-W30.md	1	Breaking Bad: Evaluating Activation Steering on Frontier LLMs
+2506.18642	2026-07-20	reports/weekly/2026-W30.md	1	Feature Consistency as a Safety Metric for Sparse Autoencoders
+2507.02983	2026-07-20	reports/weekly/2026-W30.md	1	The Devil in the Mask: Jailbreak Attacks on Discrete Diffusion Language Models
+2507.06857	2026-07-20	reports/weekly/2026-W30.md	1	The Bitter Lesson for dLLMs: Causal Reasoning Requires Sequential Commitment
+2507.09467	2026-07-20	reports/weekly/2026-W30.md	1	Induction in Both Directions: Mechanistic Interpretability of Masked Diffusion LMs
+2507.11899	2026-07-20	reports/weekly/2026-W30.md	1	VIPER-MCP: Automated Taint Analysis for MCP Security Vulnerabilities
+2607.19317	2026-07-20	reports/weekly/2026-W30.md	1	CircuitKIT: Circuit Discovery, Evaluation, and Application Toolkit
+2607.02513	2026-07-21	reports/daily/2026-07-21.md	1	LACUNA: A Testbed for Evaluating Localization Precision for LLM Unlearning
+2607.15893	2026-07-21	reports/daily/2026-07-21.md	1	Induction in Both Directions: A Mechanistic Analysis of In-Context Learning in Masked Diffusion Language Models
+2607.16693	2026-07-21	reports/daily/2026-07-21.md	1	Are Arithmetic Heuristic Neurons Form-Invariant? A Mechanistic Analysis of Symbols, Text, and Code in LLMs
+2607.05743	2026-07-22	reports/daily/2026-07-22.md	1	The Balkanization of Execution-Security Research for AI Coding Agents
+2606.19475	2026-07-23	reports/daily/2026-07-23.md	1	Diffusion Language Models: An Experimental Analysis
+2607.02714	2026-07-23	reports/daily/2026-07-23.md	2	Not All Refusals Are Equal: How Safety Alignment Fails Cybersecurity at Scale
+2607.05381	2026-07-23	reports/daily/2026-07-23.md	1	What Does a Discrete Diffusion Model Learn?
+2607.13431	2026-07-23	reports/daily/2026-07-23.md	1	Discrete Diffusion Models: A Unified Framework from Tokenization to Generation
+2607.15200	2026-07-23	reports/daily/2026-07-23.md	1	Mask-Aware Policy Gradients for Diffusion Language Models
+2607.16872	2026-07-23	reports/daily/2026-07-23.md	1	Trace-Based On-Policy Distillation for Masked Diffusion Language Models
+2607.17117	2026-07-23	reports/daily/2026-07-23.md	1	Persistent Sparse Autoencoders: Learning Feature Timescales
+2607.17425	2026-07-23	reports/daily/2026-07-23.md	1	Decoder-Preserving Sparse Autoencoders: Which Readouts Survive Sparse Compression?
+2607.19686	2026-07-23	reports/daily/2026-07-23.md	1	Multi-Mask Diffusion Language Models for Few-Step Generation
+2607.20286	2026-07-23	reports/daily/2026-07-23.md	1	Sound Probabilistic Safety Bounds for Large Language Models
+2602.12418	2026-07-24	reports/daily/2026-07-24.md	1	Sparse Autoencoders are Capable LLM Jailbreak Mitigators
+2607.19364	2026-07-24	reports/daily/2026-07-24.md	1	Statistically Grounded Sparse-Feature Interventions for Activation-Space Control in Large Language Models
+2607.04469	2026-07-25	reports/daily/2026-07-25.md	1	Don't Commit Alone: Joint Token Commitment in Diffusion Large Language Models
+2604.09839	2026-07-26	reports/daily/2026-07-26.md	1	Steered LLM Activations are Non-Surjective
+2607.11070	2026-07-26	reports/daily/2026-07-26.md	1	MJ: Multi-turn LLM Jailbreaking via Decomposed Credit Assignment
+2607.20596	2026-07-26	reports/daily/2026-07-26.md	1	Are Single-Token Sparse Autoencoder Features Causally Necessary? Layer-Depth and SAE-Family Effects
+2607.14493	2026-07-28	reports/daily/2026-07-28.md	1	LogInject: Passive Prompt Injection via Security Operations Log Context
+2607.15937	2026-07-28	reports/daily/2026-07-28.md	1	The Language of Security: How Prompt Syntax Shapes Code Vulnerability in LLMs
+2607.20652	2026-07-28	reports/daily/2026-07-28.md	1	ParityTransformer: Interpretability by Design via the Deep Parity Bottleneck
+2607.23710	2026-07-28	reports/daily/2026-07-28.md	1	The Illusion of Secure LLM Code: How Iterative Reprompting Undermines Security
+2606.00801	2026-07-29	reports/daily/2026-07-29.md	1	Quality-Diversity Evolution for Discovering Diverse Vulnerabilities in LLM Safety
+2606.15054	2026-07-29	reports/daily/2026-07-29.md	1	Size Doesn't Matter: Cosine-Scored Sparse Autoencoders
+2606.27732	2026-07-29	reports/daily/2026-07-29.md	1	Bifocal Diffusion Language Models: Asymmetric Bidirectional Context for Parallel Generation
+2607.19386	2026-07-29	reports/daily/2026-07-29.md	1	Building Fast, Evaluating Slow: Pipeline Choices Dominate Autointerpretability Score Variance
+2601.17958	2026-07-31	reports/daily/2026-07-31.md	1	TensorLens: End-to-End Transformer Analysis via High-Order Attention Tensors
+2607.25379	2026-07-31	reports/daily/2026-07-31.md	1	Cyber-Capable AI Agents: Vulnerabilities, Evaluation Containment, and Defensive Response
+2607.25880	2026-07-31	reports/daily/2026-07-31.md	1	Stemma: Induced Decision Regions Reveal LLM Provenance
+2607.25907	2026-07-31	reports/daily/2026-07-31.md	1	Minimizing Targeted Activations: Input-Only Suppression of Evaluation-Awareness Latents in Large Language Models
+2607.26069	2026-07-31	reports/daily/2026-07-31.md	1	AI Security Priorities: A Field-Wide Agenda
+2607.26791	2026-07-31	reports/daily/2026-07-31.md	1	SecRespond: Benchmarking AI Agents for Real-World Post-Compromise Incident Response
+2607.26820	2026-07-31	reports/daily/2026-07-31.md	1	Forecasting Trajectory-Level Safety Risks in Black-Box Multi-Turn Interactions
+2607.27081	2026-07-31	reports/daily/2026-07-31.md	1	On-Policy Distillation for LLM Safety: A Routing Approach to Template-Robust Realignment
+2607.27386	2026-07-31	reports/daily/2026-07-31.md	1	Beyond the Bidirectional Promise: Re-evaluating the Robustness of Diffusion Language Models
+2607.28617	2026-07-31	reports/daily/2026-07-31.md	1	AISPA: User-Centric System Prompt Auditing for Large Language Model Applications
+2605.09397	2026-08-01	reports/daily/2026-08-01.md	1	BadDLM: Backdooring Diffusion Language Models with Diverse Targets
+2607.11871	2026-08-01	reports/daily/2026-08-01.md	1	Inside the Unfair Judge: A Mechanistic Interpretability Account of LLM-as-Judge Bias
+2607.12166	2026-08-01	reports/daily/2026-08-01.md	1	From Geometric Recovery to Causal Validation: A Reproducible Audit of Sparse Autoencoder Features, from Superposition Geometry to Causal Inertness
+2607.24645	2026-08-02	reports/daily/2026-08-02.md	1	Sparse Autoencoders Encode Both Concepts and Functions: The Downstream Geometry of Feature Effects
+2607.24964	2026-08-02	reports/daily/2026-08-02.md	1	ALIBI: Adaptive Agentic Attacks on LLM-Based Vulnerability Detectors via Adversarial Code Comments
+2607.25270	2026-08-02	reports/daily/2026-08-02.md	1	Where Steering Signals Come From: Activation Source Selection in Activation Steering
+2607.26849	2026-08-02	reports/daily/2026-08-02.md	1	ToxScreen: Detecting Whether an LLM Has Been Poisoned
+2607.28165	2026-08-02	reports/daily/2026-08-02.md	1	Piggybacking on Perception: Stealthy Concurrent Audio Prompt Injections against Multimodal LLM Agents
+2607.28166	2026-08-02	reports/daily/2026-08-02.md	1	Where and When to Commit: Candidate-Aware Decoding for Diffusion Language Models
+2601.14004	2026-08-04	reports/daily/2026-08-04.md	1	Locate, Steer, and Improve: A Practical Survey of Actionable Mechanistic Interpretability in Large Language Models
+2605.29901	2026-08-04	reports/daily/2026-08-04.md	1	Dissecting the Black Box: Circuit-Level Analysis of LLM Vulnerability Detection
+2606.09607	2026-08-04	reports/daily/2026-08-04.md	1	Closure-Validated Circuit Discovery in Attention Heads: Co-activation Proposes, Ablation Disposes
+2606.18383	2026-08-04	reports/daily/2026-08-04.md	2	From Sparse Features to Trustworthy Proxies: Certifying SAE-Based Interpretability
+2606.20408	2026-08-04	reports/daily/2026-08-04.md	1	NRT-Bench: Benchmarking Multi-Turn Red-Teaming of LLM Operator Agents in Safety-Critical Control Rooms
+2607.08349	2026-08-04	reports/daily/2026-08-04.md	1	Certified Interventional Fidelity: Anytime-Valid, Adaptive Evaluation of Causal Claims in Mechanistic Interpretability
+2607.08393	2026-08-04	reports/daily/2026-08-04.md	1	Towards Mechanistically Understanding Why Memorized Knowledge Fails to Generalize in LLM Finetuning
+2607.12094	2026-08-04	reports/daily/2026-08-04.md	1	Sparse Autoencoders for Interpretable Out-of-Distribution Detection
+2607.25479	2026-08-04	reports/daily/2026-08-04.md	1	Architectural Backdoors in Vision-Language Model Supply Chains via Representation Steering
+2607.09156	2026-08-05	reports/daily/2026-08-05.md	1	Present but Rescaled: Chat-to-Agent Transfer of Additive Activation Steering
+2509.23286	2026-08-06	reports/daily/2026-08-06.md	1	A2D: Any-Order, Any-Step Safety Alignment for Diffusion Language Models
+2607.23970	2026-08-06	reports/daily/2026-08-06.md	1	Understanding Machine Unlearning Through the Lens of Mode Connectivity
+2604.18756	2026-08-07	reports/daily/2026-08-07.md	1	Towards Understanding the Robustness of Sparse Autoencoders
+2608.02632	2026-08-07	reports/daily/2026-08-07.md	1	LLMs Can Annotate Attribution Graphs
+2608.02683	2026-08-07	reports/daily/2026-08-07.md	1	S³: Improving Agent Safety through Multi-Stage Defense
+2605.08878	2026-08-08	reports/daily/2026-08-08.md	1	Why Do Aligned LLMs Remain Jailbreakable: Refusal-Escape Directions, Operator-Level Sources, and Safety-Utility Trade-off
+2606.11817	2026-08-08	reports/daily/2026-08-08.md	1	Grammar-Constrained Decoding Can Jailbreak LLMs into Generating Malicious Code
+2607.17890	2026-08-09	reports/daily/2026-08-09.md	1	Stress Testing Concept Erasure with Large Language Model Agents
+2608.05578	2026-08-09	reports/daily/2026-08-09.md	1	Detecting Safety Training Modification in Language Models via Activation Analysis
+2608.05695	2026-08-09	reports/daily/2026-08-09.md	1	DreamGuard: Efficient Runtime Guardrail for LLM Agents via Risk-Aware World Model
+2608.02602	2026-08-11	reports/daily/2026-08-11.md	1	AURORA-LM: Autoencoding Unified Representation for Continuous-Latent Diffusion Language Modeling
+2608.02674	2026-08-11	reports/daily/2026-08-11.md	1	Moving the Safety Barrier: Dynamic Routing Adaptive Alignment Against White-Box Attacks
+2608.02879	2026-08-11	reports/daily/2026-08-11.md	1	Interpreting Black-Box Large Language Models with Sentence-Level Energy Landscapes
+2608.04018	2026-08-11	reports/daily/2026-08-11.md	1	Governing Execution Risk in Agentic AI Systems: A Trajectory-Guided Framework for Red Teaming
+2608.05108	2026-08-11	reports/daily/2026-08-11.md	1	Agent Against Agent: An Agentic System for Automatic Prompt Injection Red Teaming
+2608.05409	2026-08-11	reports/daily/2026-08-11.md	1	Mood Matters: How Syntactic Sensitivity Undermines Safety Alignment
+2608.06400	2026-08-11	reports/daily/2026-08-11.md	1	Beyond Routing Weights: Faithful Response-Level Interpretation of Mixture-of-Experts Reward Models via Contribution Contrast
+2608.06638	2026-08-11	reports/daily/2026-08-11.md	1	MI-MIDI: Mechanistic Interpretability of Text-to-MIDI Generation Models via Probing, Lenses and Steering
+2608.06690	2026-08-11	reports/daily/2026-08-11.md	1	Policy-Masked Private Experts: Auditable and Reversible Capability Access Control in Sparse MoE Models
+2608.07430	2026-08-11	reports/daily/2026-08-11.md	2	Diffusion LLMs as Targets and Adversaries: Mechanistic Safety Exploits
+2608.08168	2026-08-13	reports/daily/2026-08-13.md	1	Thinking vs. NoThinking: Towards Interpreting Reasoning Mechanisms of Large Language Models via Sparse Autoencoders
+2608.09867	2026-08-13	reports/daily/2026-08-13.md	1	Stealing Reasoning Traces from Proprietary LLM APIs
+2608.10172	2026-08-13	reports/daily/2026-08-13.md	2	Intrinsic Structure: Spectral Identifiability for Mechanistic Interpretability
+2608.10530	2026-08-13	reports/daily/2026-08-13.md	1	On Understanding, Identifying, and Mitigating Vulnerabilities in Agentic Large Language Models
+2608.10669	2026-08-13	reports/daily/2026-08-13.md	1	REDAgentBench: Executable Red Teaming and Faithful Measurement of LLM Agent Systems
+2608.11171	2026-08-13	reports/daily/2026-08-13.md	2	From Interpretability to Control: Insights from Six Years of the TrustNLP Workshop
+2608.11878	2026-08-13	reports/daily/2026-08-13.md	1	ToolHazard: Scaling Adversarial Environments for Security Evaluation and Alignment of LLM-based Agents
+2608.12273	2026-08-13	reports/daily/2026-08-13.md	1	Convergent Detour Hijacking: Task-Preserving Resource Amplification in Skill-Based LLM Agents
+2606.22686	2026-08-18	reports/daily/2026-08-18.md	1	The Geometry of Refusal: Linear Instability in Safety-Aligned LLMs
+2608.05152	2026-08-18	reports/daily/2026-08-18.md	1	Mean-Field Dynamics of Chain-of-Thought Reasoning in Large Language Models
+2608.08082	2026-08-18	reports/daily/2026-08-18.md	1	Commitment Before Realization: When Classifier-Free Guidance Becomes Unnecessary in Masked Diffusion Language Models
+2608.11408	2026-08-18	reports/daily/2026-08-18.md	1	Measure, Don't Optimize: Forecasting Recovery in LLM Unlearning
+2608.11025	2026-08-20	reports/daily/2026-08-20.md	1	Data Attribution of Emergent Misalignment with Persona Features
+2608.11197	2026-08-20	reports/daily/2026-08-20.md	1	Beyond a Bag of Features: Set-Level Instability in Sparse Autoencoders
+2608.12036	2026-08-20	reports/daily/2026-08-20.md	1	Mechanist: AI as a Scientific Instrument for Discovering the Mechanisms of Intelligence
+2608.14590	2026-08-20	reports/daily/2026-08-20.md	1	Toward Safe LLM Agents: A Survey of Specification, Verification, and Enforcement
+2608.18164	2026-08-21	reports/daily/2026-08-21.md	1	Are LLMs Safe Beyond Text: Do Emojis Expose Gaps in Safety Evaluation
+2608.18628	2026-08-21	reports/daily/2026-08-21.md	1	When Safety Overrides Vision: Exploring Dynamics between Vision Influence and Safety Alignment in Vision-Language Models
+2608.13538	2026-08-22	reports/daily/2026-08-22.md	1	SAEVerbalizer: Generating Explanations for Sparse Autoencoder Features via Representation Verbalization
+2608.14632	2026-08-22	reports/daily/2026-08-22.md	1	DeMTS: Denoising Trajectories as Multivariate Time Series for Hallucination Detection in Diffusion Language Models
+2608.14649	2026-08-22	reports/daily/2026-08-22.md	1	Discrete Diffusion Language Models Are Training-Free Multi-Label Classifiers
+2608.14929	2026-08-22	reports/daily/2026-08-22.md	1	Training Leaves Traces: Centered Residual Signatures for Language Model Lineage Verification
+2608.15888	2026-08-22	reports/daily/2026-08-22.md	1	Bounded Agents: Delegation Security for Multi-Agent AI Systems
+2608.16393	2026-08-22	reports/daily/2026-08-22.md	1	Security Assessment of DeepSeek Harness with A.I.G: Evaluating Resistance to Indirect Prompt Injection
+2608.17597	2026-08-22	reports/daily/2026-08-22.md	1	HarnessRisk: A Lifecycle-Oriented Benchmark for Agent Harness Safety
+2608.18419	2026-08-22	reports/daily/2026-08-22.md	1	Mechanistic Interpretability of Structure-Aware Numerical Reasoning in LLaMA 3.1 8B
+2608.19861	2026-08-22	reports/daily/2026-08-22.md	1	PolicyGuide: From Guarding One Action to Guiding the Whole Workflow for Policy-Compliant LLM Agents
+2608.20202	2026-08-22	reports/daily/2026-08-22.md	1	MemTrapBench: Benchmarking Cognitive Traps in LLM Memory Use
+2608.01849	2026-08-23	reports/daily/2026-08-23.md	1	Exploring and Bridging Knowledge Holes in Unlearned Multimodal LLMs
+2608.02657	2026-08-23	reports/daily/2026-08-23.md	1	Your Agentic LLMs Secretly Encode Latent Signals of Indirect Prompt-Injection Exposure
+2608.04053	2026-08-23	reports/daily/2026-08-23.md	1	AgentAntibody: An Adaptive Immune System for Defending LLM Agents against Prompt Injection
+2608.05086	2026-08-23	reports/daily/2026-08-23.md	1	Item Response Theory for AI Safety
+2608.05158	2026-08-23	reports/daily/2026-08-23.md	1	Safe Evolution with Circuit Anchors
+2608.06202	2026-08-23	reports/daily/2026-08-23.md	1	What Current AI Benchmarks Leave Unmeasured
+2608.07594	2026-08-23	reports/daily/2026-08-23.md	1	Scaling Inherently Interpretable Language Models
+2608.19579	2026-08-23	reports/daily/2026-08-23.md	1	Enforcing LLM Safety through DMD-based Classification of Prompt-Response Embedding Dynamics
+2605.27681	2026-08-24	reports/weekly/2026-W35.md	1	Behavioural Analysis of Alignment Faking
+2606.00611	2026-08-24	reports/weekly/2026-W35.md	1	TRACE: Trajectory Risk-Aware Compression for Long-Horizon Agent Safety
+2606.10749	2026-08-24	reports/weekly/2026-W35.md	1	Toward Secure LLM Agents: Threat Surfaces, Attacks, Defenses, and Evaluation
+2606.17478	2026-08-24	reports/weekly/2026-W35.md	1	Decoding Hidden Deception in Reasoning LLMs: Activation Explainers for Deception Auditing
+2606.25234	2026-08-24	reports/weekly/2026-W35.md	1	Structuring Sparsity: Block-Sparse Featurizers Capture Visual Concept Manifolds
+2607.15495	2026-08-24	reports/weekly/2026-W35.md	1	Verbalizable Representations Form a Global Workspace in Language Models
+2608.16843	2026-08-24	reports/weekly/2026-W35.md	1	Security of Foundation-Model-Powered Embodied Agents: Attack Surfaces, Attacks, Defenses, and Evaluation
+2607.14791	2026-08-25	reports/daily/2026-08-25.md	1	Transcoders for Investigating Deception in Language Models
+2608.21236	2026-08-25	reports/daily/2026-08-25.md	1	RARE: Decoupling Representation Steering from Expert Routing in Mixture-of-Experts Language Models
+2608.03070	2026-08-26	reports/daily/2026-08-26.md	1	AI Security Leaderboard: Methodology, Results and Minimal Standard
+2608.19347	2026-08-26	reports/daily/2026-08-26.md	1	Mechanistic Tomography: Designed Measurement for Control-Oriented Interpretability
+2608.22332	2026-08-26	reports/daily/2026-08-26.md	1	Mechanistic Interpretability of Chain-of-Thought Reasoning via Sequential Activation Patching
+2608.19338	2026-08-27	reports/daily/2026-08-27.md	1	Mechanistic Tomography: Designed Measurement for Control-Oriented Interpretability
+2608.21544	2026-08-27	reports/daily/2026-08-27.md	1	Forgotten in Weights, Recovered by Tools: Agentic Tool Unlearning for LLM Agents
+2608.22557	2026-08-27	reports/daily/2026-08-27.md	1	BLADE: Bilevel Low-rank Augmented-Lagrangian Erasure for LLM Unlearning
+2608.24065	2026-08-27	reports/daily/2026-08-27.md	1	Mechanistic Circuit Identification for Controllable Data Generation
+2608.24482	2026-08-27	reports/daily/2026-08-27.md	1	Beyond Static Interpretability: Anticipating Post-SFT Mechanisms from Pre-SFT Parameters for Better Tuning
+2601.21571	2026-08-28	reports/daily/2026-08-28.md	1	Shaping Capabilities with Token-Level Data Filtering
+2602.06911	2026-08-28	reports/daily/2026-08-28.md	1	TamperBench: Systematically Stress-Testing LLM Safety Under Fine-Tuning and Tampering
+2605.26526	2026-08-28	reports/daily/2026-08-28.md	2	Open-Weight LLM Fine-Tuning Defenses are Susceptible to Simple Attacks
+2606.19168	2026-08-28	reports/daily/2026-08-28.md	2	Beyond Safe Data: Pretraining-Stage Alignment with Regular Safety Reflection
+2608.03210	2026-08-28	reports/daily/2026-08-28.md	1	ICO: Enhancing Semantic-Shift Jailbreaks via Iterative Context Optimization
+2608.04347	2026-08-28	reports/daily/2026-08-28.md	1	Looking in the Mirror: Introspecting Side-Effect Misalignments Induced by Fine-Tuning
+2608.08383	2026-08-28	reports/daily/2026-08-28.md	1	Safety Cost of Steering Vectors Is Separable and Reducible
+2608.11295	2026-08-28	reports/daily/2026-08-28.md	1	Backdoor Decontamination Dynamics in LLM Agents
+2608.24988	2026-08-28	reports/daily/2026-08-28.md	1	Does Fine-Tuning Undo Activation Steering? Behavioural Recovery Without Weight-Edit Reversal
+2608.26008	2026-08-28	reports/daily/2026-08-28.md	2	A Self-Evolving Multi-Agent Framework Defense against LLM Jailbreak Attacks
+2508.11290	2026-08-29	reports/daily/2026-08-29.md	1	SafeConstellations: Mitigating Over-Refusals in LLMs Through Task-Aware Representation Steering
+2608.14392	2026-08-29	reports/daily/2026-08-29.md	2	Tripwire: Triggering Aligned Refusal via Statistically Certified Safety Neurons
+2608.18093	2026-08-29	reports/daily/2026-08-29.md	3	Abliteration Mitigation via Refusal Aliases (AMRA)
+2608.19729	2026-08-29	reports/daily/2026-08-29.md	1	SafeBranch: Branch-Pair Safety Alignment for Embodied Agents
+2608.22490	2026-08-29	reports/daily/2026-08-29.md	1	Who Pays More for Safety? Measuring the Disparate Cost of Safety Alignment across Languages
+2608.25390	2026-08-29	reports/daily/2026-08-29.md	2	Refusal Geometry Reflects Refusal Training: Diverse Refusal Prefixes Can Raise Stable Rank and Weaken Refusal Vector Ablation Attacks
+2607.14147	2026-08-30	reports/daily/2026-08-30.md	1	Breaking Refusal in the First Half: A Mechanistic Study of the Prefill Jailbreak
+2608.13482	2026-08-30	reports/daily/2026-08-30.md	2	Synthetic Persona Pretraining: Alignment from Token Zero
+2608.26733	2026-08-30	reports/daily/2026-08-30.md	1	Daydreaming: Stealing Hidden Agent Skills through Black-Box Task Interaction
+2608.27340	2026-08-30	reports/daily/2026-08-30.md	2	Not All Eval-Awareness Is Equal: Capabilities Framing Predicts Compliance
+2607.17427	2026-08-31	reports/weekly/2026-W36.md	1	Abliteration Is Not a Scalpel: Off-Target Effects of Refusal Removal on Decision Disposition Across Model Families
+2608.03745	2026-08-31	reports/weekly/2026-W36.md	1	Risky Business: Measuring The Faithfulness-Safety Tension
+2608.08032	2026-08-31	reports/weekly/2026-W36.md	1	Decided Upstream, Written Late: Locating and Pricing the Cross-Lingual Refusal Circuit of a Multilingual MoE
+2608.26222	2026-08-31	reports/weekly/2026-W36.md	1	NeuronFuzz: Safety Neuron Guided Fuzzing for LLM Safety Evaluation
+2608.28490	2026-08-31	reports/weekly/2026-W36.md	1	LLM-Based Agents for Software and Systems Security: Approaches, Applications, and Assessment
+2605.02087	2026-09-01	reports/daily/2026-09-01.md	2	Model Spec Midtraining: Improving How Alignment Training Generalizes
+2607.26654	2026-09-01	reports/daily/2026-09-01.md	1	Constitutional Midtraining: Content Presence Drives Alignment Gains
+2608.27504	2026-09-01	reports/daily/2026-09-01.md	1	Circuit Discovery Helps Detect LLM Jailbreaking: A Mechanistic Interpretability Study
+2508.06601	2026-09-02	reports/daily/2026-09-02.md	2	Deep Ignorance: Filtering Pretraining Data Builds Tamper-Resistant Safeguards into Open-Weight LLMs
+2608.01558	2026-09-03	reports/daily/2026-09-03.md	1	Securing Agentic AI: From Per-Action Checks to Trajectory Assurance
+2608.09542	2026-09-03	reports/daily/2026-09-03.md	1	Dual-Adversarial Safety Alignment: Cultivating Intrinsic Threat Comprehension in LRMs
+2609.00051	2026-09-03	reports/daily/2026-09-03.md	1	From Detection to Refusal: Safer LLMs via Circuit-Guided Weight Scaling
+2609.01455	2026-09-03	reports/daily/2026-09-03.md	2	When Safety Routing Breaks: Understanding Alignment Fragility under Benign Fine-Tuning
+2609.02082	2026-09-03	reports/daily/2026-09-03.md	1	Transfer Safety Awareness for Cross-Modal Safety Drift in Multimodal Large Language Models
+2608.12851	2026-09-05	reports/daily/2026-09-05.md	1	Practice Makes Unsafe: Skill Misevolution in Self-Improving LLM Agents
+2608.14855	2026-09-05	reports/daily/2026-09-05.md	1	What to Forget in Unlearning? Forget Set Curation for Language Models
+2608.17202	2026-09-05	reports/daily/2026-09-05.md	1	Fool's Gold: Defensive Deception Against Safety-Removal Attacks on Open-Weight Models
+2608.21606	2026-09-05	reports/daily/2026-09-05.md	1	Can LLMs Truly Forget? Revealing Unlearning Gaps Through Adversarial Evaluation
+2608.23020	2026-09-05	reports/daily/2026-09-05.md	1	Unlearning Is Not Just Erasing: Temporal Decoupling via Generation Inequality
+2609.02293	2026-09-05	reports/daily/2026-09-05.md	1	SEAL: Reinforcing Global Safety in Mixture-of-Experts through Shared Expert ALignment
+2609.02786	2026-09-05	reports/daily/2026-09-05.md	1	SafeEvolve: Harness-Policy Co-Evolution from Agent Experience for Safety Alignment
+2605.15030	2026-09-06	reports/daily/2026-09-06.md	1	WARD: Adversarially Robust Defense of Web Agents Against Prompt Injections
+2609.00498	2026-09-06	reports/daily/2026-09-06.md	1	Validity-Aware Jailbreak Evaluation for Large Language Models
+2606.16276	2026-09-07	reports/weekly/2026-W37.md	1	SpecAlign: Efficient Specification-Grounded Alignment of Large Language Models via Synthetic Data
+2608.20554	2026-09-07	reports/weekly/2026-W37.md	1	aiXamine: Unified Black-Box Evaluation of Cross-Dimensional Trade-offs in LLM Safety, Security, and Privacy
+2609.02852	2026-09-08	reports/daily/2026-09-08.md	1	The Implications of Linguistic Illegibility for LLM Security
+2609.03026	2026-09-08	reports/daily/2026-09-08.md	1	ObserverBench: Testing Mechanistic Estimates for Intervention and Control
+2609.03629	2026-09-08	reports/daily/2026-09-08.md	1	EraseSAE: Surgical Concept Erasure in Text-to-Video Diffusion Models via Sparse Autoencoders
+2609.03887	2026-09-08	reports/daily/2026-09-08.md	1	Beyond Shallow Alignment: How Post-Training Methods Determine Refusal Circuits And Steering Robustness
+2609.04022	2026-09-08	reports/daily/2026-09-08.md	1	Representational Alignment Yields Generalizable Safety in Language Models
+2609.04721	2026-09-08	reports/daily/2026-09-08.md	1	Locating and Steering Refusal Beyond Attention
+2609.05241	2026-09-08	reports/daily/2026-09-08.md	1	Uncensored Open-weight Models: Redistribution as the Persistence Layer
+2608.25697	2026-09-10	reports/daily/2026-09-10.md	1	LMSM: LLM Security Framework Inspired by Linux Security Modules
+2608.28233	2026-09-10	reports/daily/2026-09-10.md	1	REINS: Refusal-Enhanced Inhibitory Steering with Sparse Autoencoder Features
+2608.29936	2026-09-10	reports/daily/2026-09-10.md	1	When Safety Speaks a Language: A Mechanistic Analysis of Safety-Language Identity Entanglement in LLMs
+2608.30197	2026-09-10	reports/daily/2026-09-10.md	1	ALTSTEER: Selective Safety Steering for Moving Beyond Hard Refusals to Constructive Alternatives
+2608.30403	2026-09-10	reports/daily/2026-09-10.md	1	Why Are LLM Backdoor Defenses Fragmented? A Feature-Level Explanation with Sparse Autoencoders
+2609.05117	2026-09-10	reports/daily/2026-09-10.md	1	TIER: Threat Implicitness Benchmark for Evaluating LLM Safety Behaviors
+2609.07746	2026-09-10	reports/daily/2026-09-10.md	1	LLM Forensics: Where Do Backdoors Hide? Localizing and Controlling Trigger Mechanisms with Sparse Autoencoders
+2609.08373	2026-09-10	reports/daily/2026-09-10.md	1	Structural Jailbreaks Generalize but Do Not Compound: A Cross-Provider and Multilingual Study of Involuntary In-Context Learning
+2609.09553	2026-09-10	reports/daily/2026-09-10.md	1	Arbitrary Cipher Attacks Against Large Language Models Do Not Require Fine-Tuning

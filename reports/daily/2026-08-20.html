@@ -331,7 +331,7 @@ body {
   <div class="mast-eyebrow">Research Radar</div>
   <h1 class="mast-title">Daily Digest — August 20, 2026</h1>
   <div class="mast-date">Daily · August 14–20, 2026 · sources: arXiv cs.CL/cs.LG/cs.CR/cs.AI</div>
-  <div class="mast-counts">0 peer-reviewed · 8 preprints · 0 forum/blog · 8 genuinely new items found</div>
+  <div class="mast-counts">0 peer-reviewed · 4 preprints · 0 forum/blog · 8 genuinely new items found</div>
   <div class="mast-tracks">
     <span class="track track-interp">Mech Interp</span>
     <span class="track track-sec">AI Security</span>
@@ -344,97 +344,6 @@ body {
      ══════════════════════════════════════════ -->
 
 <!-- Paper 01 — dLLM Mechanistic Safety Exploits -->
-<article class="paper-card">
-  <div class="card-header">
-    <span class="rank-ghost">01</span>
-    <div class="tags">
-      <span class="tag tag-dllm">text-diffusion</span>
-      <span class="tag tag-interp">mech-interp</span>
-      <span class="tag tag-security">AI security</span>
-      <span class="tag tag-preprint">preprint</span>
-    </div>
-    <h2 class="card-title"><a href="https://arxiv.org/abs/2608.07430">Diffusion LLMs as Targets and Adversaries: Mechanistic Safety Exploits</a></h2>
-    <div class="card-meta">Elena Dumitrescu, Gert Lek, Lydia Y. Chen, Jérémie Decouchant · arXiv preprint · August 2026</div>
-  </div>
-
-  <!-- Cover figure — ASR before/after pruning across dLLM models -->
-  <figure class="cover-figure" aria-label="Bar chart: jailbreak ASR before and after mechanistic pruning on LLaDA and Dream 7B">
-    <svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Attack success rate before and after pruning-based jailbreak on diffusion LLMs">
-      <rect width="680" height="260" fill="#fff"/>
-      <text x="340" y="22" font-family="Courier New, monospace" font-size="10" fill="#888" text-anchor="middle" letter-spacing=".1em">JAILBREAK ATTACK SUCCESS RATE — BEFORE vs. AFTER MECHANISTIC PRUNING</text>
-
-      <!-- Y axis: ASR 0–100%, from y=210 to y=44 -->
-      <!-- X axis: models at x=140, 260, 380, 500 -->
-      <line x1="70" y1="44" x2="70" y2="215" stroke="#c8d3e2" stroke-width="1.2"/>
-      <line x1="65" y1="215" x2="610" y2="215" stroke="#c8d3e2" stroke-width="1.2"/>
-
-      <!-- Y axis labels and gridlines -->
-      <text x="62" y="219" font-family="Courier New, monospace" font-size="9" fill="#8a97a8" text-anchor="end">0%</text>
-      <text x="62" y="175" font-family="Courier New, monospace" font-size="9" fill="#8a97a8" text-anchor="end">25%</text>
-      <line x1="70" y1="171" x2="610" y2="171" stroke="#e8ecf2" stroke-width=".8"/>
-      <text x="62" y="130" font-family="Courier New, monospace" font-size="9" fill="#8a97a8" text-anchor="end">50%</text>
-      <line x1="70" y1="126" x2="610" y2="126" stroke="#e8ecf2" stroke-width=".8"/>
-      <text x="62" y="85" font-family="Courier New, monospace" font-size="9" fill="#8a97a8" text-anchor="end">75%</text>
-      <line x1="70" y1="81" x2="610" y2="81" stroke="#e8ecf2" stroke-width=".8"/>
-      <text x="62" y="48" font-family="Courier New, monospace" font-size="9" fill="#8a97a8" text-anchor="end">100%</text>
-      <line x1="70" y1="44" x2="610" y2="44" stroke="#e8ecf2" stroke-width=".8"/>
-
-      <!-- LLaDA — Self-Pruning: before=2.6%, after=73.8% -->
-      <!-- y_before = 215 - (2.6/100)*171 = 215 - 4.4 = 210.6 -->
-      <!-- y_after  = 215 - (73.8/100)*171 = 215 - 126.2 = 88.8 -->
-      <rect x="100" y="211" width="44" height="4" fill="#084f80" opacity=".4" rx="2"/>
-      <rect x="155" y="89" width="44" height="126" fill="#8b1a1a" opacity=".8" rx="2"/>
-      <text x="122" y="208" font-family="Courier New, monospace" font-size="8" fill="#084f80" text-anchor="middle">2.6%</text>
-      <text x="177" y="85" font-family="Courier New, monospace" font-size="8" fill="#8b1a1a" text-anchor="middle">73.8%</text>
-      <text x="149" y="232" font-family="Courier New, monospace" font-size="8.5" fill="#5b6b82" text-anchor="middle">LLaDA</text>
-      <text x="149" y="243" font-family="Courier New, monospace" font-size="7.5" fill="#8a97a8" text-anchor="middle">Self-Pruning</text>
-
-      <!-- Dream 7B — Self-Pruning: before=1.9%, after=86.6% -->
-      <!-- y_before = 215 - (1.9/100)*171 = 215 - 3.2 = 211.8 -->
-      <!-- y_after  = 215 - (86.6/100)*171 = 215 - 148.1 = 66.9 -->
-      <rect x="240" y="212" width="44" height="3" fill="#084f80" opacity=".4" rx="2"/>
-      <rect x="295" y="67" width="44" height="148" fill="#8b1a1a" opacity=".8" rx="2"/>
-      <text x="262" y="209" font-family="Courier New, monospace" font-size="8" fill="#084f80" text-anchor="middle">1.9%</text>
-      <text x="317" y="63" font-family="Courier New, monospace" font-size="8" fill="#8b1a1a" text-anchor="middle">86.6%</text>
-      <text x="289" y="232" font-family="Courier New, monospace" font-size="8.5" fill="#5b6b82" text-anchor="middle">Dream 7B</text>
-      <text x="289" y="243" font-family="Courier New, monospace" font-size="7.5" fill="#8a97a8" text-anchor="middle">Self-Pruning</text>
-
-      <!-- Dream 7B — Transfer Pruning from Qwen2.5: before=1.9%, after=73.2% -->
-      <!-- y_after = 215 - (73.2/100)*171 = 215 - 125.2 = 89.8 -->
-      <rect x="380" y="212" width="44" height="3" fill="#084f80" opacity=".4" rx="2"/>
-      <rect x="435" y="90" width="44" height="125" fill="#46189a" opacity=".75" rx="2"/>
-      <text x="402" y="209" font-family="Courier New, monospace" font-size="8" fill="#084f80" text-anchor="middle">1.9%</text>
-      <text x="457" y="86" font-family="Courier New, monospace" font-size="8" fill="#46189a" text-anchor="middle">73.2%</text>
-      <text x="429" y="232" font-family="Courier New, monospace" font-size="8.5" fill="#5b6b82" text-anchor="middle">Dream 7B</text>
-      <text x="429" y="243" font-family="Courier New, monospace" font-size="7.5" fill="#8a97a8" text-anchor="middle">Transfer (Qwen2.5)</text>
-
-      <!-- Fast-dLLM — Transfer Pruning: before=7.0%, after=86.3% -->
-      <!-- y_before = 215 - (7.0/100)*171 = 215 - 12.0 = 203 -->
-      <!-- y_after = 215 - (86.3/100)*171 = 215 - 147.6 = 67.4 -->
-      <rect x="520" y="203" width="44" height="12" fill="#084f80" opacity=".4" rx="2"/>
-      <rect x="565" y="67" width="44" height="148" fill="#46189a" opacity=".75" rx="2"/>
-      <text x="542" y="199" font-family="Courier New, monospace" font-size="8" fill="#084f80" text-anchor="middle">7.0%</text>
-      <text x="587" y="63" font-family="Courier New, monospace" font-size="8" fill="#46189a" text-anchor="middle">86.3%</text>
-      <text x="554" y="232" font-family="Courier New, monospace" font-size="8.5" fill="#5b6b82" text-anchor="middle">Fast-dLLM</text>
-      <text x="554" y="243" font-family="Courier New, monospace" font-size="7.5" fill="#8a97a8" text-anchor="middle">Transfer (Qwen2.5)</text>
-
-      <!-- Legend -->
-      <rect x="80" y="250" width="12" height="7" fill="#084f80" opacity=".5" rx="1"/>
-      <text x="96" y="258" font-family="Courier New, monospace" font-size="8" fill="#5b6b82">Baseline ASR</text>
-      <rect x="185" y="250" width="12" height="7" fill="#8b1a1a" opacity=".8" rx="1"/>
-      <text x="201" y="258" font-family="Courier New, monospace" font-size="8" fill="#5b6b82">Self-Pruning Attack</text>
-      <rect x="330" y="250" width="12" height="7" fill="#46189a" opacity=".75" rx="1"/>
-      <text x="346" y="258" font-family="Courier New, monospace" font-size="8" fill="#5b6b82">Transfer-Pruning Attack</text>
-    </svg>
-    <figcaption class="cover-figcap">Figure 1: Jailbreak attack success rate on diffusion LLMs before (blue, near-zero) and after mechanistic pruning of safety-critical attention heads. Self-pruning raises ASR from 2.6%→73.8% on LLaDA and 1.9%→86.6% on Dream 7B; transfer-pruning from Qwen2.5 achieves 73.2% on Dream 7B and 86.3% on Fast-dLLM.</figcaption>
-  </figure>
-
-  <div class="card-body">
-    <p class="hook">Safety alignment in diffusion LLMs is structurally brittle: a small number of attention heads carry the entire safety load, and removing them via activation-space pruning — without any fine-tuning — elevates jailbreak success rates from under 10% to over 73–86%. The attack transfers across model families, and a black-box variant requires no internal access at all.</p>
-    <p class="detail">The paper identifies "safety-critical" attention heads in LLaDA and Dream 7B through mechanistic causal tracing. Self-pruning (zeroing identified heads within the target model) raises ASR from 2.6%→73.8% on LLaDA and 1.9%→86.6% on Dream 7B. Transfer-pruning (locating critical heads in Qwen2.5 and applying the same structural intervention to Dream 7B and Fast-dLLM) achieves 73.2% and 86.3% respectively, showing the mechanism generalises across model families. A complementary black-box attack — SN-Guided Diffusion — manipulates the score function during inference without any internal access. The finding establishes that dLLM safety is concentrated in a small identifiable subgraph, making dLLMs particularly vulnerable to mechanistic extraction of safety circuits.</p>
-  </div>
-</article>
-
 <!-- Paper 02 — Emergent Misalignment Persona Features -->
 <article class="paper-card">
   <div class="card-header">
@@ -527,90 +436,6 @@ body {
 </article>
 
 <!-- Paper 03 — Spectral Identifiability -->
-<article class="paper-card">
-  <div class="card-header">
-    <span class="rank-ghost">03</span>
-    <div class="tags">
-      <span class="tag tag-interp">mech-interp</span>
-      <span class="tag tag-preprint">preprint</span>
-    </div>
-    <h2 class="card-title"><a href="https://arxiv.org/abs/2608.10172">Intrinsic Structure: Spectral Identifiability for Mechanistic Interpretability</a></h2>
-    <div class="card-meta">Ashim Dhor (IISER Bhopal), Pin-Yu Chen (IBM Research) · arXiv preprint · August 10, 2026</div>
-  </div>
-
-  <!-- Cover figure — Koopman lifting diagram with recovery rate -->
-  <figure class="cover-figure" aria-label="Koopman operator diagram: from activation space to coordinate-free spectrum for mechanistic interpretability identifiability">
-    <svg viewBox="0 0 680 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Spectral identifiability via Koopman lifting: coordinate-free spectrum recoverable at rate M to the minus one half">
-      <rect width="680" height="230" fill="#fff"/>
-      <text x="340" y="20" font-family="Courier New, monospace" font-size="10" fill="#888" text-anchor="middle" letter-spacing=".1em">SPECTRAL IDENTIFIABILITY VIA KOOPMAN LIFTING</text>
-
-      <!-- Stage 1: Model activations -->
-      <rect x="24" y="50" width="120" height="80" rx="6" fill="#d8ecfc" stroke="#084f80" stroke-width="1.2"/>
-      <text x="84" y="72" font-family="Georgia, serif" font-size="11" fill="#084f80" text-anchor="middle" font-weight="bold">Activation</text>
-      <text x="84" y="87" font-family="Georgia, serif" font-size="11" fill="#084f80" text-anchor="middle">Space</text>
-      <text x="84" y="105" font-family="Courier New, monospace" font-size="8.5" fill="#5b6b82" text-anchor="middle">GPT-2 / Gemma</text>
-      <text x="84" y="118" font-family="Courier New, monospace" font-size="8.5" fill="#5b6b82" text-anchor="middle">Qwen3-8B-Base</text>
-
-      <!-- Arrow: Koopman lifting -->
-      <line x1="144" y1="90" x2="198" y2="90" stroke="#5b6b82" stroke-width="1.5"/>
-      <polygon points="198,86 208,90 198,94" fill="#5b6b82"/>
-      <text x="171" y="82" font-family="Courier New, monospace" font-size="8" fill="#5b6b82" text-anchor="middle">Koopman</text>
-      <text x="171" y="72" font-family="Courier New, monospace" font-size="8" fill="#5b6b82" text-anchor="middle">lifting</text>
-
-      <!-- Stage 2: Latent space -->
-      <rect x="208" y="50" width="120" height="80" rx="6" fill="#ece4fb" stroke="#46189a" stroke-width="1.2"/>
-      <text x="268" y="72" font-family="Georgia, serif" font-size="11" fill="#46189a" text-anchor="middle" font-weight="bold">Latent</text>
-      <text x="268" y="87" font-family="Georgia, serif" font-size="11" fill="#46189a" text-anchor="middle">Space</text>
-      <text x="268" y="105" font-family="Courier New, monospace" font-size="8.5" fill="#5b6b82" text-anchor="middle">coordinate-free</text>
-      <text x="268" y="118" font-family="Courier New, monospace" font-size="8.5" fill="#5b6b82" text-anchor="middle">representation</text>
-
-      <!-- Arrow: Spectral decomposition -->
-      <line x1="328" y1="90" x2="382" y2="90" stroke="#5b6b82" stroke-width="1.5"/>
-      <polygon points="382,86 392,90 382,94" fill="#5b6b82"/>
-      <text x="355" y="82" font-family="Courier New, monospace" font-size="8" fill="#5b6b82" text-anchor="middle">spectral</text>
-      <text x="355" y="72" font-family="Courier New, monospace" font-size="8" fill="#5b6b82" text-anchor="middle">decomp.</text>
-
-      <!-- Stage 3: Spectrum -->
-      <rect x="392" y="50" width="120" height="80" rx="6" fill="#d0f5e5" stroke="#065742" stroke-width="1.2"/>
-      <text x="452" y="72" font-family="Georgia, serif" font-size="11" fill="#065742" text-anchor="middle" font-weight="bold">Intrinsic</text>
-      <text x="452" y="87" font-family="Georgia, serif" font-size="11" fill="#065742" text-anchor="middle">Spectrum</text>
-      <text x="452" y="106" font-family="Courier New, monospace" font-size="8.5" fill="#5b6b82" text-anchor="middle">invariant to</text>
-      <text x="452" y="118" font-family="Courier New, monospace" font-size="8.5" fill="#5b6b82" text-anchor="middle">basis choice</text>
-
-      <!-- Recovery rate box -->
-      <rect x="540" y="42" width="130" height="96" rx="6" fill="#fff3e0" stroke="#a05c00" stroke-width="1.5"/>
-      <text x="605" y="64" font-family="Courier New, monospace" font-size="9" fill="#a05c00" text-anchor="middle" letter-spacing=".04em">RECOVERY RATE</text>
-      <text x="605" y="88" font-family="Georgia, serif" font-size="22" fill="#a05c00" text-anchor="middle" font-weight="bold">M⁻¹/²</text>
-      <text x="605" y="106" font-family="Courier New, monospace" font-size="8" fill="#5b6b82" text-anchor="middle">minimax optimal</text>
-      <text x="605" y="119" font-family="Courier New, monospace" font-size="8" fill="#5b6b82" text-anchor="middle">lower bound matched</text>
-
-      <!-- Empirical validation row -->
-      <line x1="40" y1="155" x2="640" y2="155" stroke="#e8ecf2" stroke-width="1"/>
-      <text x="340" y="148" font-family="Courier New, monospace" font-size="9" fill="#8a97a8" text-anchor="middle" letter-spacing=".06em">EMPIRICAL VALIDATION</text>
-
-      <rect x="50" y="162" width="170" height="38" rx="4" fill="#d8ecfc" stroke="#084f80" stroke-width=".8"/>
-      <text x="135" y="177" font-family="Courier New, monospace" font-size="8.5" fill="#084f80" text-anchor="middle" font-weight="bold">GPT-2 Small</text>
-      <text x="135" y="191" font-family="Courier New, monospace" font-size="8" fill="#5b6b82" text-anchor="middle">exponent: 0.506 ± 0.031</text>
-
-      <rect x="240" y="162" width="200" height="38" rx="4" fill="#ece4fb" stroke="#46189a" stroke-width=".8"/>
-      <text x="340" y="177" font-family="Courier New, monospace" font-size="8.5" fill="#46189a" text-anchor="middle" font-weight="bold">Gemma-2-2B</text>
-      <text x="340" y="191" font-family="Courier New, monospace" font-size="8" fill="#5b6b82" text-anchor="middle">exponent: 0.506 ± 0.031</text>
-
-      <rect x="460" y="162" width="180" height="38" rx="4" fill="#d0f5e5" stroke="#065742" stroke-width=".8"/>
-      <text x="550" y="177" font-family="Courier New, monospace" font-size="8.5" fill="#065742" text-anchor="middle" font-weight="bold">Qwen3-8B-Base</text>
-      <text x="550" y="191" font-family="Courier New, monospace" font-size="8" fill="#5b6b82" text-anchor="middle">exponent: 0.506 ± 0.031</text>
-
-      <text x="340" y="222" font-family="Courier New, monospace" font-size="8" fill="#8a97a8" text-anchor="middle">Non-normality dissociation theorem rules out coordinate-dependent artefacts</text>
-    </svg>
-    <figcaption class="cover-figcap">Figure 1: Spectral identifiability via Koopman lifting — activation space is mapped to a coordinate-free latent space; the intrinsic spectrum is recoverable at rate M⁻¹/² (first identifiability theorem with matching minimax lower bound for a mech-interp primitive). Validated on GPT-2 Small, Gemma-2-2B, and Qwen3-8B-Base (exponent 0.506 ± 0.031 across all).</figcaption>
-  </figure>
-
-  <div class="card-body">
-    <p class="hook">For the first time, a core mechanistic interpretability primitive — learning a linear representation of a model's computational structure — has a formal identifiability theorem: you can provably recover the intrinsic spectrum at a rate of M<sup>−1/2</sup>, and no method can do better.</p>
-    <p class="detail">The paper frames linear representation learning through Koopman operator theory, lifting activations to a coordinate-free latent space whose spectrum is intrinsic to the model rather than an artefact of the chosen basis. The authors prove an M<sup>−1/2</sup> convergence rate for recovering this spectrum and establish a matching minimax lower bound, confirming optimality. A non-normality dissociation theorem rules out coordinate-dependent confounds. Empirical validation on GPT-2 Small, Gemma-2-2B, and Qwen3-8B-Base recovers the predicted 0.506 ± 0.031 scaling exponent across all three, consistent with the theory. This result provides mech interp with its first formal foundation for asking when a learned feature representation is genuinely recovering model-internal structure vs. a basis artefact.</p>
-  </div>
-</article>
-
 <!-- ══════════════════════════════════════════
      ITEMS 4–8 — MID-TIER
      ══════════════════════════════════════════ -->
@@ -678,66 +503,6 @@ body {
 </article>
 
 <!-- Paper 05 — DLM Robustness Re-evaluation -->
-<article class="mid-card">
-  <div class="mid-header">
-    <span class="mid-rank-ghost">05</span>
-    <div class="tags">
-      <span class="tag tag-dllm">text-diffusion</span>
-      <span class="tag tag-security">AI security</span>
-      <span class="tag tag-preprint">preprint</span>
-    </div>
-    <h3 class="mid-title"><a href="https://arxiv.org/abs/2607.27386">Beyond the Bidirectional Promise: Re-evaluating the Robustness of Diffusion Language Models</a></h3>
-    <div class="mid-meta">Saurabh Yadav, Badri Narayana Patro, Vijay Srinivas Agneeswaran (Microsoft) · arXiv preprint · late July 2026</div>
-  </div>
-  <figure class="mid-figure" aria-label="Robustness comparison across 32 perturbations: DLM vs LLM architectural vs natural robustness">
-    <svg viewBox="0 0 680 175" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="DLM robustness: architectural resistance to adversarial suffixes but weight-dependent natural robustness">
-      <rect width="680" height="175" fill="#fff"/>
-      <text x="340" y="18" font-family="Courier New, monospace" font-size="9.5" fill="#888" text-anchor="middle" letter-spacing=".1em">DLM vs. LLM ROBUSTNESS ACROSS 32 PERTURBATION CONDITIONS</text>
-
-      <!-- Two-column layout -->
-      <!-- Left: Adversarial (gradient-based) -->
-      <rect x="30" y="30" width="290" height="130" rx="5" fill="#d0f5e5" stroke="#065742" stroke-width="1"/>
-      <text x="175" y="50" font-family="Georgia, serif" font-size="12" fill="#065742" text-anchor="middle" font-weight="bold">Adversarial Suffix Attack</text>
-      <text x="175" y="65" font-family="Courier New, monospace" font-size="8.5" fill="#5b6b82" text-anchor="middle">(gradient-based, e.g. GCG)</text>
-
-      <!-- DLM: high robustness -->
-      <text x="55" y="90" font-family="Courier New, monospace" font-size="8.5" fill="#065742">LLaDA-8B / Dream-7B</text>
-      <rect x="55" y="97" width="240" height="13" rx="2" fill="#d0f5e5" stroke="#065742" stroke-width=".8"/>
-      <text x="305" y="108" font-family="Courier New, monospace" font-size="8.5" fill="#065742"> HIGH</text>
-      <text x="60" y="110" font-family="Courier New, monospace" font-size="8" fill="#065742">████████████████████████</text>
-
-      <!-- LLM: low robustness -->
-      <text x="55" y="126" font-family="Courier New, monospace" font-size="8.5" fill="#8b1a1a">LLaMA-3-8B / Qwen2.5-7B</text>
-      <rect x="55" y="133" width="100" height="13" rx="2" fill="#fde0e0" stroke="#8b1a1a" stroke-width=".8"/>
-      <text x="165" y="143" font-family="Courier New, monospace" font-size="8.5" fill="#8b1a1a"> LOW</text>
-      <text x="60" y="146" font-family="Courier New, monospace" font-size="8" fill="#8b1a1a">█████████</text>
-
-      <text x="175" y="168" font-family="Courier New, monospace" font-size="7.5" fill="#065742" text-anchor="middle">Architectural: stochastic loss landscape resists gradient attack</text>
-
-      <!-- Right: Natural perturbations -->
-      <rect x="360" y="30" width="290" height="130" rx="5" fill="#fdf2d0" stroke="#a05c00" stroke-width="1"/>
-      <text x="505" y="50" font-family="Georgia, serif" font-size="12" fill="#a05c00" text-anchor="middle" font-weight="bold">Natural Perturbations</text>
-      <text x="505" y="65" font-family="Courier New, monospace" font-size="8.5" fill="#5b6b82" text-anchor="middle">(noise, typos, paraphrase)</text>
-
-      <!-- DLM: varies -->
-      <text x="385" y="90" font-family="Courier New, monospace" font-size="8.5" fill="#a05c00">LLaDA-8B / Dream-7B</text>
-      <rect x="385" y="97" width="160" height="13" rx="2" fill="#fdf2d0" stroke="#a05c00" stroke-width=".8"/>
-      <text x="555" y="108" font-family="Courier New, monospace" font-size="8.5" fill="#a05c00"> VARIES</text>
-      <text x="390" y="110" font-family="Courier New, monospace" font-size="8" fill="#a05c00">████████████████</text>
-
-      <!-- LLM: varies -->
-      <text x="385" y="126" font-family="Courier New, monospace" font-size="8.5" fill="#5b6b82">LLaMA-3-8B / Qwen2.5-7B</text>
-      <rect x="385" y="133" width="160" height="13" rx="2" fill="#fdf2d0" stroke="#a05c00" stroke-width=".8"/>
-      <text x="555" y="143" font-family="Courier New, monospace" font-size="8.5" fill="#5b6b82"> VARIES</text>
-      <text x="390" y="146" font-family="Courier New, monospace" font-size="8" fill="#5b6b82">████████████████</text>
-
-      <text x="505" y="168" font-family="Courier New, monospace" font-size="7.5" fill="#a05c00" text-anchor="middle">Weight-dependent: no consistent advantage for DLMs</text>
-    </svg>
-    <figcaption class="mid-figcap">Figure 1: DLMs (LLaDA-8B, Dream-7B) show architectural robustness against gradient-based adversarial suffix attacks (stochastic loss landscape prevents clean gradients), but natural perturbation robustness is weight-dependent with no consistent advantage over matched LLMs across 32 conditions.</figcaption>
-  </figure>
-  <p class="mid-summary">A 32-condition robustness evaluation of paired DLMs and LLMs (LLaDA-8B vs. LLaMA-3-8B; Dream-7B vs. Qwen2.5-7B) reveals that DLMs are architecturally robust to gradient-based adversarial suffix attacks — the stochastic masked-diffusion loss landscape prevents clean gradients from forming — but their natural-language robustness (noise, typos, paraphrase) is weight-dependent and offers no consistent advantage over equivalently-sized LLMs. The "bidirectional context" promise does not translate into general robustness.</p>
-</article>
-
 <!-- Paper 06 — SAE Set-Level Instability -->
 <article class="mid-card">
   <div class="mid-header">
@@ -846,61 +611,6 @@ body {
 </article>
 
 <!-- Paper 08 — TrustNLP Six-Year Meta-analysis -->
-<article class="mid-card">
-  <div class="mid-header">
-    <span class="mid-rank-ghost">08</span>
-    <div class="tags">
-      <span class="tag tag-interp">mech-interp</span>
-      <span class="tag tag-preprint">preprint</span>
-    </div>
-    <h3 class="mid-title"><a href="https://arxiv.org/abs/2608.11171">From Interpretability to Control: Insights from Six Years of the TrustNLP Workshop</a></h3>
-    <div class="mid-meta">arXiv preprint · August 11, 2026</div>
-  </div>
-  <figure class="mid-figure" aria-label="Timeline of 144 TrustNLP papers showing field transition from post-hoc interpretability to mechanistic understanding and proactive control">
-    <svg viewBox="0 0 680 155" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Six-year TrustNLP meta-analysis: post-hoc interpretability to mechanistic to proactive control transition">
-      <rect width="680" height="155" fill="#fff"/>
-      <text x="340" y="17" font-family="Courier New, monospace" font-size="9.5" fill="#888" text-anchor="middle" letter-spacing=".1em">6 YEARS OF TRUSTNLP — 144 PAPERS — FIELD EVOLUTION</text>
-
-      <!-- Timeline axis -->
-      <line x1="60" y1="75" x2="630" y2="75" stroke="#c8d3e2" stroke-width="2"/>
-      <!-- Year marks -->
-      <line x1="90"  y1="70" x2="90"  y2="80" stroke="#8a97a8" stroke-width="1"/>
-      <line x1="185" y1="70" x2="185" y2="80" stroke="#8a97a8" stroke-width="1"/>
-      <line x1="280" y1="70" x2="280" y2="80" stroke="#8a97a8" stroke-width="1"/>
-      <line x1="375" y1="70" x2="375" y2="80" stroke="#8a97a8" stroke-width="1"/>
-      <line x1="470" y1="70" x2="470" y2="80" stroke="#8a97a8" stroke-width="1"/>
-      <line x1="565" y1="70" x2="565" y2="80" stroke="#8a97a8" stroke-width="1"/>
-      <text x="90"  y="92" font-family="Courier New, monospace" font-size="9" fill="#8a97a8" text-anchor="middle">2019</text>
-      <text x="185" y="92" font-family="Courier New, monospace" font-size="9" fill="#8a97a8" text-anchor="middle">2020</text>
-      <text x="280" y="92" font-family="Courier New, monospace" font-size="9" fill="#8a97a8" text-anchor="middle">2021</text>
-      <text x="375" y="92" font-family="Courier New, monospace" font-size="9" fill="#8a97a8" text-anchor="middle">2022</text>
-      <text x="470" y="92" font-family="Courier New, monospace" font-size="9" fill="#8a97a8" text-anchor="middle">2023</text>
-      <text x="565" y="92" font-family="Courier New, monospace" font-size="9" fill="#8a97a8" text-anchor="middle">2024</text>
-
-      <!-- Phase 1: Post-hoc interpretability (2019-2021) -->
-      <rect x="70" y="40" width="225" height="28" rx="3" fill="#d8ecfc" stroke="#084f80" stroke-width=".8" opacity=".85"/>
-      <text x="182" y="59" font-family="Courier New, monospace" font-size="9" fill="#084f80" text-anchor="middle" font-weight="bold">Post-hoc interpretability of static models</text>
-
-      <!-- Phase 2: Mechanistic (2021-2023) -->
-      <rect x="260" y="40" width="230" height="28" rx="3" fill="#ece4fb" stroke="#46189a" stroke-width=".8" opacity=".85"/>
-      <text x="375" y="59" font-family="Courier New, monospace" font-size="9" fill="#46189a" text-anchor="middle" font-weight="bold">Mechanistic understanding</text>
-
-      <!-- Phase 3: Proactive control (2023-2024) -->
-      <rect x="450" y="40" width="155" height="28" rx="3" fill="#d0f5e5" stroke="#065742" stroke-width=".8" opacity=".85"/>
-      <text x="527" y="59" font-family="Courier New, monospace" font-size="9" fill="#065742" text-anchor="middle" font-weight="bold">Proactive control</text>
-
-      <!-- Arrow showing trend -->
-      <path d="M 70 75 Q 340 50 630 75" stroke="#a05c00" stroke-width="1.5" fill="none" stroke-dasharray="6,3" opacity=".6"/>
-      <polygon points="626,71 634,75 626,79" fill="#a05c00" opacity=".6"/>
-
-      <text x="340" y="118" font-family="Courier New, monospace" font-size="9" fill="#5b6b82" text-anchor="middle">144 papers across 6 workshop editions · trend: explanations → mechanisms → interventions</text>
-      <text x="340" y="134" font-family="Courier New, monospace" font-size="8.5" fill="#8a97a8" text-anchor="middle">post-hoc ─────────────────────────────────────────────────→ proactive</text>
-    </svg>
-    <figcaption class="mid-figcap">Figure 1: Six-year TrustNLP evolution across 144 papers — the field transitions from post-hoc interpretability of static trained models (2019–2021) through mechanistic understanding of representations (2021–2023) to proactive control during training and deployment (2023–2024).</figcaption>
-  </figure>
-  <p class="mid-summary">A meta-analysis of 144 papers across six TrustNLP workshop editions traces the field's trajectory from post-hoc explanation of static model decisions, through mechanistic understanding of internal representations, to proactive control over model behavior during training and inference. The analysis identifies the shift as driven by the failure of explanation-only approaches to generalize and the rise of causal interventions as the dominant methodology.</p>
-</article>
-
 <!-- ── Footer ── -->
 <footer class="footer">
   <p>Research Radar · Daily · August 20, 2026</p>
@@ -909,4 +619,5 @@ body {
   <p style="margin-top:6px;color:var(--accent);">Figures: inline SVG (arXiv egress blocked in this environment)</p>
 </footer>
 
+<p style="margin-top:32px;font-size:13px;opacity:.7">4 entries removed on 2026-09-10 as repeats of earlier reports: 2608.07430 (first covered 2026-08-11), 2608.10172 (first covered 2026-08-13), 2607.27386 (first covered 2026-07-31), 2608.11171 (first covered 2026-08-13).</p>
 </div>

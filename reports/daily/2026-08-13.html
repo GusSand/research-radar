@@ -331,7 +331,7 @@ body {
   <div class="mast-eyebrow">Research Radar</div>
   <h1 class="mast-title">Daily Digest — August 13, 2026</h1>
   <div class="mast-date">Daily · August 8–13, 2026 · sources: arXiv cs.CL/cs.LG/cs.CR/cs.AI · IEEE Access · alphaXiv/HN trending</div>
-  <div class="mast-counts">1 peer-reviewed · 9 preprints · 0 forum/blog</div>
+  <div class="mast-counts">0 peer-reviewed · 8 preprints · 0 forum/blog</div>
   <div class="mast-tracks">
     <span class="track track-interp">Mech Interp</span>
     <span class="track track-sec">AI Security</span>
@@ -420,87 +420,6 @@ body {
 </article>
 
 <!-- Paper 02 — Diffusion LLMs mechanistic safety exploits -->
-<article class="paper-card">
-  <div class="card-header">
-    <span class="rank-ghost">02</span>
-    <div class="tags">
-      <span class="tag tag-dllm">text diffusion</span>
-      <span class="tag tag-interp">mech-interp</span>
-      <span class="tag tag-security">AI security</span>
-      <span class="tag tag-preprint">preprint</span>
-    </div>
-    <h2 class="card-title"><a href="https://arxiv.org/abs/2608.07430">Diffusion LLMs as Targets and Adversaries: Mechanistic Safety Exploits</a></h2>
-    <div class="card-meta">Elena Dumitrescu, Gert Lek, Lydia Y. Chen, Jérémie Decouchant · arXiv preprint · August 7, 2026</div>
-  </div>
-
-  <figure class="cover-figure" aria-label="Safety neuron transfer from autoregressive predecessor to derived diffusion LLM — pruning raises ASR from 2% to 87%">
-    <svg viewBox="0 0 680 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="DLLM safety neuron inheritance and pruning attack">
-      <rect width="680" height="230" fill="#fff"/>
-      <text x="340" y="22" font-family="Courier New, monospace" font-size="10" fill="#888" text-anchor="middle" letter-spacing=".1em">DLLM INHERITS AR PREDECESSOR'S SAFETY NEURON FOOTPRINT</text>
-
-      <!-- AR Model -->
-      <rect x="20" y="38" width="160" height="90" rx="5" fill="#d8ecfc" stroke="#084f80" stroke-width="1.5"/>
-      <text x="100" y="58" font-family="Courier New, monospace" font-size="10" fill="#084f80" text-anchor="middle" font-weight="bold">AR MODEL</text>
-      <text x="100" y="74" font-family="Courier New, monospace" font-size="9" fill="#5b6b82" text-anchor="middle">Qwen2.5 / Llama-3</text>
-      <!-- Safety neuron representation -->
-      <rect x="36" y="84" width="128" height="34" rx="3" fill="#d0f5e5" stroke="#065742" stroke-width="1"/>
-      <text x="100" y="99" font-family="Courier New, monospace" font-size="8.5" fill="#065742" text-anchor="middle" font-weight="bold">Safety neurons</text>
-      <text x="100" y="111" font-family="Courier New, monospace" font-size="8" fill="#065742" text-anchor="middle">(sparse subset, localized)</text>
-
-      <!-- Inheritance arrow -->
-      <defs>
-        <marker id="b1" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#084f80"/></marker>
-        <marker id="b2" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#8b1a1a"/></marker>
-        <marker id="b3" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#46189a"/></marker>
-      </defs>
-      <line x1="180" y1="83" x2="230" y2="83" stroke="#084f80" stroke-width="1.5" marker-end="url(#b1)"/>
-      <text x="205" y="76" font-family="Courier New, monospace" font-size="8" fill="#5b6b82" text-anchor="middle">initialized from</text>
-
-      <!-- DLLM box -->
-      <rect x="232" y="38" width="160" height="90" rx="5" fill="#ece4fb" stroke="#46189a" stroke-width="1.5"/>
-      <text x="312" y="58" font-family="Courier New, monospace" font-size="10" fill="#46189a" text-anchor="middle" font-weight="bold">DLLM</text>
-      <text x="312" y="74" font-family="Courier New, monospace" font-size="9" fill="#5b6b82" text-anchor="middle">LLaDA / Dream / Fast-dLLM</text>
-      <rect x="248" y="84" width="128" height="34" rx="3" fill="#d0f5e5" stroke="#065742" stroke-width="1"/>
-      <text x="312" y="99" font-family="Courier New, monospace" font-size="8.5" fill="#065742" text-anchor="middle" font-weight="bold">Same safety neurons</text>
-      <text x="312" y="111" font-family="Courier New, monospace" font-size="8" fill="#065742" text-anchor="middle">(inherited, equally sparse)</text>
-
-      <!-- Prune arrow -->
-      <line x1="392" y1="83" x2="440" y2="83" stroke="#8b1a1a" stroke-width="1.5" marker-end="url(#b2)"/>
-      <text x="416" y="76" font-family="Courier New, monospace" font-size="8" fill="#8b1a1a" text-anchor="middle">prune neurons</text>
-
-      <!-- Broken DLLM -->
-      <rect x="442" y="38" width="160" height="90" rx="5" fill="#fde0e0" stroke="#8b1a1a" stroke-width="1.5"/>
-      <text x="522" y="58" font-family="Courier New, monospace" font-size="10" fill="#8b1a1a" text-anchor="middle" font-weight="bold">DLLM (unsafe)</text>
-      <rect x="458" y="84" width="128" height="34" rx="3" fill="#fde0e0" stroke="#8b1a1a" stroke-width="1" stroke-dasharray="4,3"/>
-      <text x="522" y="99" font-family="Courier New, monospace" font-size="8.5" fill="#8b1a1a" text-anchor="middle" font-weight="bold">Safety neurons pruned</text>
-      <text x="522" y="111" font-family="Courier New, monospace" font-size="8" fill="#8b1a1a" text-anchor="middle">alignment collapsed</text>
-
-      <!-- ASR results table -->
-      <rect x="20" y="148" width="640" height="72" rx="4" fill="#fdf2d0" stroke="#a07830" stroke-width="1"/>
-      <text x="340" y="164" font-family="Courier New, monospace" font-size="9.5" fill="#5a4000" text-anchor="middle" font-weight="bold">ATTACK SUCCESS RATES (ASR)</text>
-      <!-- Row 1 -->
-      <text x="30" y="180" font-family="Courier New, monospace" font-size="8.5" fill="#5b6b82">Self-pruning:</text>
-      <text x="130" y="180" font-family="Courier New, monospace" font-size="8.5" fill="#8b1a1a" font-weight="bold">LLaDA 2.6%→73.8%</text>
-      <text x="285" y="180" font-family="Courier New, monospace" font-size="8.5" fill="#8b1a1a" font-weight="bold">Dream 1.9%→86.6%</text>
-      <!-- Row 2 -->
-      <text x="30" y="196" font-family="Courier New, monospace" font-size="8.5" fill="#5b6b82">Transfer pruning (Qwen2.5→):</text>
-      <text x="215" y="196" font-family="Courier New, monospace" font-size="8.5" fill="#8b1a1a" font-weight="bold">Dream 73.2%</text>
-      <text x="310" y="196" font-family="Courier New, monospace" font-size="8.5" fill="#8b1a1a" font-weight="bold">Fast-dLLM 86.3%</text>
-      <!-- Row 3 -->
-      <text x="30" y="212" font-family="Courier New, monospace" font-size="8.5" fill="#5b6b82">SN-Guided Diffusion (black-box):</text>
-      <text x="228" y="212" font-family="Courier New, monospace" font-size="8.5" fill="#8b1a1a" font-weight="bold">Llama-3 77.1%</text>
-      <text x="315" y="212" font-family="Courier New, monospace" font-size="8.5" fill="#8b1a1a" font-weight="bold">Qwen2.5 86.9%</text>
-      <text x="400" y="212" font-family="Courier New, monospace" font-size="8.5" fill="#8b1a1a" font-weight="bold">Gemini-2.5-Flash 74.3%</text>
-    </svg>
-    <figcaption class="cover-figcap">Figure 1 · DLLMs initialized from AR predecessors inherit the same sparse safety-neuron subset. Self-pruning those neurons raises ASR from &lt;3% to &gt;86%; transfer pruning from the AR source achieves equivalent results with zero DLLM calibration data.</figcaption>
-  </figure>
-
-  <div class="card-body">
-    <p class="hook">Safety alignment in autoregressive LLMs concentrates in a sparse set of "safety neurons." This paper shows that diffusion LLMs initialized from those same AR models inherit the identical mechanistic safety footprint — and pruning or steering those neurons dismantles DLLM alignment as cleanly as it dismantles the original.</p>
-    <p class="detail">Safety neurons identified in Qwen2.5 or Llama-3 transfer directly to derived DLLMs (Dream, Fast-dLLM, LLaDA) with no DLLM-specific calibration. Self-pruning attack (identify and prune neurons from DLLM activations alone): ASR 2.6%→73.8% on LLaDA, 1.9%→86.6% on Dream. Transfer pruning (map AR safety neurons to DLLM without any DLLM data): Qwen2.5→Dream 73.2%, Qwen2.5→Fast-dLLM 86.3%. SN-Guided Diffusion — a fully offline black-box jailbreak — steers the iterative denoising process away from safety-triggering subspaces using a weighted safety-neuron loss, achieving transfer ASR of 77.1% on Llama-3-8B-Instruct, 86.9% on Qwen2.5-7B-Instruct, and 74.3% against Gemini-2.5-Flash-Lite.</p>
-  </div>
-</article>
-
 <!-- Paper 03 — Spectral identifiability -->
 <article class="paper-card">
   <div class="card-header">
@@ -584,62 +503,6 @@ body {
 <div class="section-label">Items 4 – 10 · Also notable</div>
 
 <!-- Paper 04 — Detecting safety modification -->
-<article class="mid-card">
-  <div class="mid-header">
-    <span class="mid-rank-ghost">04</span>
-    <div class="tags">
-      <span class="tag tag-interp">mech-interp</span>
-      <span class="tag tag-security">AI security</span>
-      <span class="tag tag-peer">IEEE Access 2026</span>
-    </div>
-    <h3 class="mid-title"><a href="https://arxiv.org/abs/2608.05578">Detecting Safety Training Modification in Language Models via Activation Analysis</a></h3>
-    <div class="mid-meta">Glen Messenger (Google Cloud) · IEEE Access vol. 14, pp. 91723–91737, 2026 · peer-reviewed</div>
-  </div>
-  <figure class="mid-figure" aria-label="AMS activation geometry — safety-modified models show characteristic geometric collapse">
-    <svg viewBox="0 0 680 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AMS safety modification detection">
-      <rect width="680" height="170" fill="#fff"/>
-      <text x="340" y="18" font-family="Courier New, monospace" font-size="9.5" fill="#888" text-anchor="middle" letter-spacing=".1em">AMS: ACTIVATION GEOMETRY BY SAFETY MODIFICATION CATEGORY</text>
-
-      <!-- 4 model category columns -->
-      <!-- Instruction-tuned (separated geometry) -->
-      <rect x="20" y="28" width="140" height="120" rx="4" fill="#d0f5e5" stroke="#065742" stroke-width="1.2"/>
-      <text x="90" y="45" font-family="Courier New, monospace" font-size="8.5" fill="#065742" text-anchor="middle" font-weight="bold">INSTRUCTION-TUNED</text>
-      <!-- Two separated clusters -->
-      <ellipse cx="70" cy="95" rx="22" ry="14" fill="#065742" opacity=".25"/>
-      <ellipse cx="110" cy="75" rx="22" ry="14" fill="#8b1a1a" opacity=".25"/>
-      <text x="70" y="115" font-family="Courier New, monospace" font-size="7.5" fill="#065742" text-anchor="middle">benign</text>
-      <text x="110" y="115" font-family="Courier New, monospace" font-size="7.5" fill="#8b1a1a" text-anchor="middle">harmful</text>
-      <text x="90" y="138" font-family="Courier New, monospace" font-size="8" fill="#065742" text-anchor="middle" font-weight="bold">SEPARATED ✓</text>
-
-      <!-- Base model -->
-      <rect x="175" y="28" width="140" height="120" rx="4" fill="#d8ecfc" stroke="#084f80" stroke-width="1.2"/>
-      <text x="245" y="45" font-family="Courier New, monospace" font-size="8.5" fill="#084f80" text-anchor="middle" font-weight="bold">BASE MODEL</text>
-      <ellipse cx="245" cy="90" rx="30" ry="18" fill="#5b6b82" opacity=".25"/>
-      <text x="245" y="118" font-family="Courier New, monospace" font-size="7.5" fill="#5b6b82" text-anchor="middle">clusters mixed</text>
-      <text x="245" y="138" font-family="Courier New, monospace" font-size="8" fill="#084f80" text-anchor="middle" font-weight="bold">DIFFUSE</text>
-
-      <!-- Abliterated model -->
-      <rect x="330" y="28" width="140" height="120" rx="4" fill="#fde0e0" stroke="#8b1a1a" stroke-width="1.2"/>
-      <text x="400" y="45" font-family="Courier New, monospace" font-size="8.5" fill="#8b1a1a" text-anchor="middle" font-weight="bold">ABLITERATED</text>
-      <ellipse cx="400" cy="90" rx="32" ry="12" fill="#8b1a1a" opacity=".2"/>
-      <line x1="375" y1="85" x2="425" y2="95" stroke="#8b1a1a" stroke-width="1.2" stroke-dasharray="3,2"/>
-      <text x="400" y="118" font-family="Courier New, monospace" font-size="7.5" fill="#8b1a1a" text-anchor="middle">geometry collapsed</text>
-      <text x="400" y="138" font-family="Courier New, monospace" font-size="8" fill="#8b1a1a" text-anchor="middle" font-weight="bold">COLLAPSED ✗</text>
-
-      <!-- Uncensored fine-tune -->
-      <rect x="485" y="28" width="180" height="120" rx="4" fill="#fdf2d0" stroke="#a07830" stroke-width="1.2"/>
-      <text x="575" y="45" font-family="Courier New, monospace" font-size="8.5" fill="#5a4000" text-anchor="middle" font-weight="bold">UNCENSORED FT</text>
-      <ellipse cx="560" cy="90" rx="20" ry="14" fill="#8b1a1a" opacity=".2"/>
-      <ellipse cx="600" cy="90" rx="20" ry="14" fill="#065742" opacity=".2"/>
-      <line x1="555" y1="83" x2="595" y2="97" stroke="#a07830" stroke-width="1.2" stroke-dasharray="3,2"/>
-      <text x="575" y="118" font-family="Courier New, monospace" font-size="7.5" fill="#5a4000" text-anchor="middle">partially rotated</text>
-      <text x="575" y="138" font-family="Courier New, monospace" font-size="8" fill="#5a4000" text-anchor="middle" font-weight="bold">ROTATED / PARTIAL ✗</text>
-    </svg>
-    <figcaption class="mid-figcap">Figure 1 · AMS geometric separation of activation clusters across 4 safety-modification categories; instruction-tuned models show clear harmful/benign separation while abliterated and uncensored models exhibit characteristic geometric collapse or rotation — enabling classification across 4 architecture families.</figcaption>
-  </figure>
-  <p class="mid-summary">AMS measures geometric separation between harmful and benign activation clusters, detecting when safety training has been removed (abliterated), never applied (base model), or replaced (uncensored fine-tune). Validated across 14 configurations spanning Llama, Gemma, Qwen, and Mistral; leave-one-out CV achieves 71% accuracy, with 95% bootstrap CIs of median width 3.4σ. First peer-reviewed activation-based safety modification scanner published in IEEE Access.</p>
-</article>
-
 <!-- Paper 05 — Thinking vs. NoThinking -->
 <article class="mid-card">
   <div class="mid-header">
@@ -988,4 +851,5 @@ body {
   Mech Interp · AI Security · Text Diffusion LMs
 </footer>
 
+<p style="margin-top:32px;font-size:13px;opacity:.7">2 entries removed on 2026-09-10 as repeats of earlier reports: 2608.07430 (first covered 2026-08-11), 2608.05578 (first covered 2026-08-09).</p>
 </div>

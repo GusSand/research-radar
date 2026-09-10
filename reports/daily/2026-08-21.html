@@ -264,7 +264,7 @@ body {
   <div class="mast-eyebrow">Research Radar</div>
   <h1 class="mast-title">Daily Digest — August 21, 2026</h1>
   <div class="mast-date">Daily · August 20–21, 2026 · sources: arXiv cs.CL/cs.LG/cs.CR/cs.AI</div>
-  <div class="mast-counts">0 peer-reviewed · 3 preprints · 0 forum/blog</div>
+  <div class="mast-counts">1 peer-reviewed · 1 preprints · 0 forum/blog</div>
   <p class="mast-note">Thin window (Aug 20–21); corrects three items missed by Aug 11/13/20 radars. No padding.</p>
   <div class="mast-tracks">
     <span class="track track-interp">Mech Interp</span>
@@ -275,107 +275,6 @@ body {
 <!-- ══════════════════════════════════════════
      PAPER 01 — Measure, Don't Optimize
      ══════════════════════════════════════════ -->
-<article class="paper-card">
-  <div class="card-header">
-    <span class="rank-ghost">01</span>
-    <div class="tags">
-      <span class="tag tag-interp">mech-interp</span>
-      <span class="tag tag-security">AI security</span>
-      <span class="tag tag-preprint">preprint</span>
-    </div>
-    <h2 class="card-title"><a href="https://arxiv.org/abs/2608.11408">Measure, Don't Optimize: Forecasting Recovery in LLM Unlearning</a></h2>
-    <div class="card-meta">Zirui Song, Huaxing Liu, Xiang Wang, Shuai Li, Xinye Li, Lang Gao, Jinghui Zhang, Zheng Lu, Fengxian Ji, Xiaojun Chang, Xiuying Chen · arXiv preprint · August 11, 2026</div>
-  </div>
-
-  <!-- Cover figure — Substack style: above the hook -->
-  <figure class="cover-figure" aria-label="J-Access audit: pre-attack accessibility predicts recovery; minimizing audit backfires">
-    <svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="J-Access audit pipeline and recovery prediction">
-      <rect width="680" height="260" fill="#fff"/>
-      <text x="340" y="22" font-family="Courier New, monospace" font-size="10" fill="#888" text-anchor="middle" letter-spacing=".1em">J-ACCESS AUDIT — MEASURE, DON'T OPTIMIZE</text>
-
-      <!-- Stage 1: Unlearned model -->
-      <rect x="20" y="38" width="130" height="80" rx="4" fill="#d8ecfc" stroke="#084f80" stroke-width="1.3"/>
-      <text x="85" y="62" font-family="Courier New, monospace" font-size="8.5" fill="#084f80" text-anchor="middle" font-weight="bold">Unlearned Model</text>
-      <text x="85" y="76" font-family="Courier New, monospace" font-size="7.5" fill="#5b6b82" text-anchor="middle">8 unlearning methods</text>
-      <text x="85" y="88" font-family="Courier New, monospace" font-size="7.5" fill="#5b6b82" text-anchor="middle">398 public checkpoints</text>
-      <text x="85" y="100" font-family="Courier New, monospace" font-size="7.5" fill="#5b6b82" text-anchor="middle">target concepts</text>
-
-      <!-- Arrow: model → J-Access -->
-      <defs>
-        <marker id="ar1" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto"><path d="M0,0 L5,2.5 L0,5 Z" fill="#5b6b82"/></marker>
-        <marker id="ar2" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto"><path d="M0,0 L5,2.5 L0,5 Z" fill="#8b1a1a"/></marker>
-        <marker id="ar3" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto"><path d="M0,0 L5,2.5 L0,5 Z" fill="#0b7263"/></marker>
-      </defs>
-      <line x1="152" y1="78" x2="188" y2="78" stroke="#5b6b82" stroke-width="1.5" marker-end="url(#ar1)"/>
-
-      <!-- Stage 2: J-Access audit -->
-      <rect x="190" y="38" width="150" height="80" rx="4" fill="#fdf2d0" stroke="#5a4000" stroke-width="1.3"/>
-      <text x="265" y="60" font-family="Courier New, monospace" font-size="8.5" fill="#5a4000" text-anchor="middle" font-weight="bold">J-Access Audit</text>
-      <text x="265" y="74" font-family="Courier New, monospace" font-size="7.5" fill="#5b6b82" text-anchor="middle">Jacobian lens:</text>
-      <text x="265" y="86" font-family="Courier New, monospace" font-size="7.5" fill="#5b6b82" text-anchor="middle">intermediate repr. →</text>
-      <text x="265" y="98" font-family="Courier New, monospace" font-size="7.5" fill="#5b6b82" text-anchor="middle">vocabulary space</text>
-      <text x="265" y="110" font-family="Courier New, monospace" font-size="7" fill="#8a97a8" text-anchor="middle">concept accessibility score</text>
-
-      <!-- Arrow: J-Access → finding -->
-      <line x1="342" y1="78" x2="378" y2="78" stroke="#5b6b82" stroke-width="1.5" marker-end="url(#ar1)"/>
-
-      <!-- Stage 3: Key findings box -->
-      <rect x="380" y="28" width="280" height="100" rx="4" fill="#edf1f7" stroke="#c8d3e2" stroke-width="1.3"/>
-      <text x="520" y="48" font-family="Courier New, monospace" font-size="9" fill="#1a2236" text-anchor="middle" font-weight="bold">Key Findings</text>
-      <!-- Finding 1 -->
-      <circle cx="394" cy="62" r="3.5" fill="#8b1a1a"/>
-      <text x="402" y="66" font-family="Courier New, monospace" font-size="8" fill="#5b6b82">Most models retain access ABOVE gold level</text>
-      <!-- Finding 2 -->
-      <circle cx="394" cy="80" r="3.5" fill="#0b7263"/>
-      <text x="402" y="84" font-family="Courier New, monospace" font-size="8" fill="#5b6b82">Pre-attack score predicts recovery speed</text>
-      <!-- Finding 3 — the key warning -->
-      <circle cx="394" cy="98" r="3.5" fill="#8b1a1a"/>
-      <text x="402" y="102" font-family="Courier New, monospace" font-size="8" fill="#8b1a1a" font-weight="bold">Minimizing audit → model hides, recovers MORE</text>
-      <text x="402" y="114" font-family="Courier New, monospace" font-size="7.5" fill="#8a97a8">(lower audit score ≠ better unlearning)</text>
-
-      <!-- Bottom diagram: the backfire curve -->
-      <rect x="20" y="148" width="640" height="98" rx="4" fill="#fff8f8" stroke="#fde0e0" stroke-width="1"/>
-      <text x="340" y="166" font-family="Courier New, monospace" font-size="9" fill="#8b1a1a" text-anchor="middle" font-weight="bold">OPTIMIZATION PARADOX: Audit Minimization Backfires</text>
-
-      <!-- Left sub-panel: audit score -->
-      <text x="170" y="184" font-family="Courier New, monospace" font-size="8" fill="#5b6b82" text-anchor="middle">Audit Score (J-Access)</text>
-      <!-- Axes -->
-      <line x1="40" y1="228" x2="310" y2="228" stroke="#c8d3e2" stroke-width="1"/>
-      <line x1="40" y1="188" x2="40" y2="230" stroke="#c8d3e2" stroke-width="1"/>
-      <!-- Audit score curves: standard (flat) and optimized (drops) -->
-      <polyline points="40,210 90,208 140,206 190,204 240,202 290,200" stroke="#084f80" stroke-width="2" fill="none" opacity=".7"/>
-      <polyline points="40,210 90,200 140,188 190,192 240,195 290,198" stroke="#8b1a1a" stroke-width="2" fill="none" stroke-dasharray="6,3"/>
-      <text x="175" y="240" font-family="Courier New, monospace" font-size="7.5" fill="#8a97a8" text-anchor="middle">training steps</text>
-      <!-- Legend -->
-      <line x1="42" y1="250" x2="62" y2="250" stroke="#084f80" stroke-width="2"/>
-      <text x="65" y="253" font-family="Courier New, monospace" font-size="7.5" fill="#5b6b82">standard unlearning</text>
-      <line x1="140" y1="250" x2="160" y2="250" stroke="#8b1a1a" stroke-width="2" stroke-dasharray="4,2"/>
-      <text x="163" y="253" font-family="Courier New, monospace" font-size="7.5" fill="#8b1a1a">+ audit minimization</text>
-
-      <!-- Divider -->
-      <line x1="320" y1="158" x2="320" y2="238" stroke="#c8d3e2" stroke-width="1" stroke-dasharray="3,2"/>
-
-      <!-- Right sub-panel: post-attack recovery -->
-      <text x="490" y="184" font-family="Courier New, monospace" font-size="8" fill="#5b6b82" text-anchor="middle">Post-Attack Recovery Rate</text>
-      <line x1="330" y1="228" x2="660" y2="228" stroke="#c8d3e2" stroke-width="1"/>
-      <line x1="330" y1="188" x2="330" y2="230" stroke="#c8d3e2" stroke-width="1"/>
-      <!-- Recovery: standard (stays low) vs audit-minimized (spikes up) -->
-      <polyline points="330,222 380,221 430,220 480,219 530,220 580,221 640,220" stroke="#084f80" stroke-width="2" fill="none" opacity=".7"/>
-      <polyline points="330,222 380,216 430,206 480,196 530,194 580,192 640,190" stroke="#8b1a1a" stroke-width="2" fill="none" stroke-dasharray="6,3"/>
-      <!-- Annotation -->
-      <rect x="520" y="183" width="130" height="16" rx="3" fill="#fde0e0" stroke="#8b1a1a" stroke-width=".8"/>
-      <text x="585" y="194" font-family="Courier New, monospace" font-size="7.5" fill="#8b1a1a" text-anchor="middle" font-weight="bold">↑ recovers FASTER</text>
-      <text x="490" y="240" font-family="Courier New, monospace" font-size="7.5" fill="#8a97a8" text-anchor="middle">training steps</text>
-    </svg>
-    <figcaption class="cover-figcap">Figure 1 · J-Access audit on 398 unlearned models: pre-attack accessibility scores predict recovery speed/extent at model level; directly optimizing (minimizing) the audit score causes the model to hide knowledge from the audit while becoming more recoverable post-attack — lower score, faster recovery.</figcaption>
-  </figure>
-
-  <div class="card-body">
-    <p class="hook">The natural response to discovering that LLM unlearning methods leave knowledge accessible is to add an accessibility audit to the training loss. This paper measures that move: it backfires. Models learn to evade the audit without removing the knowledge, and the evasion actually makes them <em>more</em> recoverable after a fine-tuning attack, not less.</p>
-    <p class="detail">J-Access proposes using the Jacobian lens — mapping intermediate layer representations into vocabulary space — to measure how often target concepts remain accessible along the model's output pathway. Applied to 398 publicly released unlearned models spanning 8 unlearning methods, three findings emerge: (1) most unlearned models retain concept accessibility above the retain-only gold baseline, meaning standard unlearning methods consistently fail to achieve genuine internal deletion; (2) pre-attack J-Access score predicts recovery speed and overall extent at the model level (though not which specific facts recover); (3) directly minimizing J-Access during training does not produce better unlearning — instead the model learns to suppress accessibility metrics while retaining the underlying knowledge, and the hidden-but-retained knowledge recovers faster and more completely under a subsequent fine-tuning attack than knowledge not subjected to audit minimization. The authors conclude internal audits should serve as an independent diagnostic dimension in unlearning evaluation, never as a training objective without independent validation.</p>
-  </div>
-</article>
-
 <!-- ══════════════════════════════════════════
      PAPER 02 — When Safety Overrides Vision
      ══════════════════════════════════════════ -->
@@ -551,4 +450,5 @@ body {
   <br>Mech Interp · AI Security · Text Diffusion LMs
 </footer>
 
+<p style="margin-top:32px;font-size:13px;opacity:.7">1 entry removed on 2026-09-10 as repeats of earlier reports: 2608.11408 (first covered 2026-08-18).</p>
 </div>

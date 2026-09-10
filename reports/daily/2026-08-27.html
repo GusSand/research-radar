@@ -383,92 +383,11 @@ a:hover { text-decoration-color: var(--link); }
   </div>
   <div>
     <div class="masthead-tracks">Mech Interp · AI Security · Text Diffusion LMs</div>
-    <div class="masthead-counts">0 peer-reviewed · 10 preprints · 0 forum/blog</div>
+    <div class="masthead-counts">0 peer-reviewed · 5 preprints · 0 forum/blog</div>
   </div>
 </header>
 
 <!-- ══════════════  01  ══════════════ -->
-<article class="paper">
-  <div class="paper-rank-row">
-    <span class="rank-badge">01</span>
-    <div class="tags">
-      <span class="tag tag-dllm">text diffusion</span>
-      <span class="tag tag-security">AI security</span>
-      <span class="tag tag-interp">mech-interp</span>
-      <span class="tag">preprint</span>
-    </div>
-  </div>
-
-  <!-- Figure leads -->
-  <figure class="paper-figure">
-    <svg viewBox="0 0 632 260" xmlns="http://www.w3.org/2000/svg" aria-label="Bar chart comparing attack success rate before and after safety-neuron pruning on LLaDA, Dream, and Fast-dLLM">
-      <rect width="632" height="260" fill="#fff"/>
-      <!-- Title -->
-      <text x="316" y="28" font-family="Georgia,serif" font-size="13" font-weight="bold" fill="#111" text-anchor="middle">Attack Success Rate: Safety-Neuron Pruning on DLLMs</text>
-
-      <!-- Y axis -->
-      <line x1="72" y1="45" x2="72" y2="205" stroke="#333" stroke-width="1.5"/>
-      <line x1="72" y1="205" x2="600" y2="205" stroke="#333" stroke-width="1.5"/>
-
-      <!-- Gridlines -->
-      <line x1="72" y1="45" x2="600" y2="45" stroke="#eee" stroke-width="1"/>
-      <line x1="72" y1="85" x2="600" y2="85" stroke="#eee" stroke-width="1"/>
-      <line x1="72" y1="125" x2="600" y2="125" stroke="#eee" stroke-width="1"/>
-      <line x1="72" y1="165" x2="600" y2="165" stroke="#eee" stroke-width="1"/>
-      <text x="66" y="48" font-family="Georgia,serif" font-size="10" fill="#777" text-anchor="end">100%</text>
-      <text x="66" y="88" font-family="Georgia,serif" font-size="10" fill="#777" text-anchor="end">75%</text>
-      <text x="66" y="128" font-family="Georgia,serif" font-size="10" fill="#777" text-anchor="end">50%</text>
-      <text x="66" y="168" font-family="Georgia,serif" font-size="10" fill="#777" text-anchor="end">25%</text>
-      <text x="66" y="208" font-family="Georgia,serif" font-size="10" fill="#777" text-anchor="end">0%</text>
-
-      <!-- GROUP 1: LLaDA -->
-      <!-- Baseline 2.6% → h=3.1 -->
-      <rect x="100" y="201" width="40" height="4" fill="#ccc"/>
-      <text x="120" y="198" font-family="Georgia,serif" font-size="9" fill="#999" text-anchor="middle">2.6%</text>
-      <!-- Self-prune 73.8% → h=128 -->
-      <rect x="150" y="77" width="40" height="128" fill="#b7291e"/>
-      <text x="170" y="73" font-family="Georgia,serif" font-size="10" fill="#b7291e" text-anchor="middle" font-weight="bold">73.8%</text>
-      <!-- Group label -->
-      <text x="145" y="225" font-family="Georgia,serif" font-size="11" fill="#333" text-anchor="middle">LLaDA</text>
-
-      <!-- GROUP 2: Dream -->
-      <rect x="250" y="201" width="40" height="4" fill="#ccc"/>
-      <text x="270" y="198" font-family="Georgia,serif" font-size="9" fill="#999" text-anchor="middle">1.9%</text>
-      <!-- Self-prune 86.6% → h=150 -->
-      <rect x="300" y="55" width="40" height="150" fill="#b7291e"/>
-      <text x="320" y="51" font-family="Georgia,serif" font-size="10" fill="#b7291e" text-anchor="middle" font-weight="bold">86.6%</text>
-      <!-- Transfer 73.2% → h=127 -->
-      <rect x="348" y="78" width="40" height="127" fill="#d9503f" opacity="0.85"/>
-      <text x="368" y="74" font-family="Georgia,serif" font-size="10" fill="#d9503f" text-anchor="middle">73.2%</text>
-      <text x="330" y="225" font-family="Georgia,serif" font-size="11" fill="#333" text-anchor="middle">Dream</text>
-
-      <!-- GROUP 3: Fast-dLLM -->
-      <rect x="430" y="193" width="40" height="12" fill="#ccc"/>
-      <text x="450" y="189" font-family="Georgia,serif" font-size="9" fill="#999" text-anchor="middle">7.0%</text>
-      <!-- Transfer 86.3% → h=149 -->
-      <rect x="480" y="56" width="40" height="149" fill="#d9503f" opacity="0.85"/>
-      <text x="500" y="52" font-family="Georgia,serif" font-size="10" fill="#d9503f" text-anchor="middle">86.3%</text>
-      <text x="470" y="225" font-family="Georgia,serif" font-size="11" fill="#333" text-anchor="middle">Fast-dLLM</text>
-
-      <!-- Legend -->
-      <rect x="80" y="242" width="14" height="10" fill="#ccc"/>
-      <text x="98" y="251" font-family="Georgia,serif" font-size="10" fill="#555">Baseline</text>
-      <rect x="165" y="242" width="14" height="10" fill="#b7291e"/>
-      <text x="183" y="251" font-family="Georgia,serif" font-size="10" fill="#555">Self-pruning</text>
-      <rect x="275" y="242" width="14" height="10" fill="#d9503f" opacity="0.85"/>
-      <text x="293" y="251" font-family="Georgia,serif" font-size="10" fill="#555">Transfer pruning (Qwen2.5 → DLLM)</text>
-    </svg>
-    <figcaption>Fig. 1 — Attack success rate before and after safety-neuron pruning. Baseline ≤3%; self-pruning reaches 73.8–86.6% on LLaDA and Dream; transfer pruning from Qwen2.5 achieves 73–86% on Dream and Fast-dLLM.</figcaption>
-  </figure>
-
-  <h2 class="paper-title"><a href="https://arxiv.org/abs/2608.07430">Diffusion LLMs as Targets and Adversaries: Mechanistic Safety Exploits</a></h2>
-  <div class="paper-authors">Elena Dumitrescu, Gert Lek, Lydia Y. Chen, Jérémie Decouchant — arXiv preprint, August 7, 2026</div>
-
-  <p class="paper-hook">Safety alignment in diffusion LLMs turns out to be a thin, inherited veneer: a compact cluster of safety-critical neurons, mapped directly from autoregressive predecessors, can be identified, pruned, and even transferred across architectures — raising attack success rates from under 3% to over 73%.</p>
-
-  <p class="paper-detail">The authors apply activation patching and linear probing to locate safety-critical neurons in LLaDA (trained from scratch) and Dream / Fast-dLLM (initialized from Qwen2.5). Self-pruning those neurons raises ASR from 2.6% → 73.8% on LLaDA and 1.9% → 86.6% on Dream. Transfer pruning — extracting the safety-neuron map from Qwen2.5 and pruning it out of the derived DLLMs — achieves 73.2% on Dream and 86.3% on Fast-dLLM without any DLLM-specific analysis. A black-box offline jailbreak ("SN-Guided Diffusion") steers the diffusion sampling trajectory away from safety mechanisms without white-box access. The core finding: DLLM safety is mechanistically sparse and inherited from the AR source model, providing no architectural safety benefit over the AR baseline.</p>
-</article>
-
 <hr class="divider">
 
 <!-- ══════════════  02  ══════════════ -->
@@ -532,83 +451,6 @@ a:hover { text-decoration-color: var(--link); }
 <hr class="divider">
 
 <!-- ══════════════  03  ══════════════ -->
-<article class="paper">
-  <div class="paper-rank-row">
-    <span class="rank-badge">03</span>
-    <div class="tags">
-      <span class="tag tag-interp">mech-interp</span>
-      <span class="tag">preprint</span>
-    </div>
-  </div>
-
-  <figure class="paper-figure">
-    <svg viewBox="0 0 632 255" xmlns="http://www.w3.org/2000/svg" aria-label="Scatter plot: SAE feature activation sparsity vs intensity in Thinking (CoT) and NoThinking mode across math difficulty levels">
-      <rect width="632" height="255" fill="#fff"/>
-      <text x="316" y="26" font-family="Georgia,serif" font-size="13" font-weight="bold" fill="#111" text-anchor="middle">SAE Feature Activation: Thinking vs. NoThinking Mode</text>
-
-      <!-- Axes -->
-      <line x1="70" y1="195" x2="580" y2="195" stroke="#333" stroke-width="1.5"/>
-      <line x1="70" y1="45" x2="70" y2="195" stroke="#333" stroke-width="1.5"/>
-
-      <!-- Axis labels -->
-      <text x="325" y="220" font-family="Georgia,serif" font-size="11" fill="#555" text-anchor="middle">Feature Activation Sparsity (→ fewer active features)</text>
-      <text x="22" y="125" font-family="Georgia,serif" font-size="11" fill="#555" text-anchor="middle" transform="rotate(-90,22,125)">Feature Intensity</text>
-
-      <!-- Tick labels -->
-      <text x="70" y="212" font-family="Georgia,serif" font-size="10" fill="#999" text-anchor="middle">Dense</text>
-      <text x="580" y="212" font-family="Georgia,serif" font-size="10" fill="#999" text-anchor="middle">Sparse</text>
-      <text x="58" y="198" font-family="Georgia,serif" font-size="10" fill="#999" text-anchor="end">Low</text>
-      <text x="58" y="50" font-family="Georgia,serif" font-size="10" fill="#999" text-anchor="end">High</text>
-
-      <!-- Grid -->
-      <line x1="70" y1="120" x2="580" y2="120" stroke="#f0f0f0" stroke-width="1"/>
-      <line x1="325" y1="45" x2="325" y2="195" stroke="#f0f0f0" stroke-width="1"/>
-
-      <!-- Thinking (CoT) region: sparse + high-intensity (upper right) -->
-      <ellipse cx="440" cy="80" rx="85" ry="38" fill="#b7291e10" stroke="#b7291e" stroke-width="1.5" stroke-dasharray="5,3"/>
-      <circle cx="400" cy="78" r="8" fill="#b7291e" opacity="0.8"/>
-      <circle cx="432" cy="64" r="11" fill="#b7291e" opacity="0.85"/>
-      <circle cx="464" cy="82" r="7" fill="#b7291e" opacity="0.75"/>
-      <circle cx="490" cy="70" r="9" fill="#b7291e" opacity="0.8"/>
-      <circle cx="418" cy="90" r="6" fill="#b7291e" opacity="0.7"/>
-      <text x="445" y="50" font-family="Georgia,serif" font-size="13" font-weight="bold" fill="#b7291e" text-anchor="middle">Thinking (CoT)</text>
-      <text x="445" y="64" font-family="Georgia,serif" font-size="10" fill="#b7291e" text-anchor="middle">sparse · high-intensity · difficulty-invariant</text>
-
-      <!-- Difficulty annotation for Thinking -->
-      <text x="396" y="100" font-family="Georgia,serif" font-size="9" fill="#b7291e" text-anchor="middle">Easy</text>
-      <text x="428" y="100" font-family="Georgia,serif" font-size="9" fill="#b7291e" text-anchor="middle">Med</text>
-      <text x="460" y="100" font-family="Georgia,serif" font-size="9" fill="#b7291e" text-anchor="middle">Hard</text>
-
-      <!-- NoThinking region: dense + lower, adaptive -->
-      <ellipse cx="210" cy="155" rx="100" ry="28" fill="#2255b810" stroke="#2255b8" stroke-width="1.5" stroke-dasharray="5,3"/>
-      <circle cx="142" cy="148" r="5" fill="#2255b8" opacity="0.65"/>
-      <circle cx="172" cy="158" r="6" fill="#2255b8" opacity="0.6"/>
-      <circle cx="206" cy="152" r="7" fill="#2255b8" opacity="0.65"/>
-      <circle cx="240" cy="162" r="8" fill="#2255b8" opacity="0.7"/>
-      <circle cx="278" cy="155" r="10" fill="#2255b8" opacity="0.75"/>
-      <text x="210" y="138" font-family="Georgia,serif" font-size="13" font-weight="bold" fill="#2255b8" text-anchor="middle">NoThinking</text>
-      <text x="210" y="152" font-family="Georgia,serif" font-size="10" fill="#2255b8" text-anchor="middle">dense · lower-intensity · difficulty-adaptive</text>
-
-      <!-- Difficulty annotation for NoThinking -->
-      <text x="142" y="176" font-family="Georgia,serif" font-size="9" fill="#2255b8" text-anchor="middle">Easy</text>
-      <text x="206" y="176" font-family="Georgia,serif" font-size="9" fill="#2255b8" text-anchor="middle">Med</text>
-      <text x="274" y="176" font-family="Georgia,serif" font-size="9" fill="#2255b8" text-anchor="middle">Hard →</text>
-
-      <!-- Arrow showing NoThinking scaling with difficulty -->
-      <line x1="155" y1="160" x2="268" y2="157" stroke="#2255b8" stroke-width="1" stroke-dasharray="3,2"/>
-      <polygon points="265,153 272,157 265,161" fill="#2255b8"/>
-    </svg>
-    <figcaption>Fig. 1 — SAE feature activations in Thinking (CoT) vs. NoThinking mode. Thinking: sparse, high-intensity verbal deduction features, stable across difficulty levels. NoThinking: dense, lower-intensity symbolic features that scale with task difficulty.</figcaption>
-  </figure>
-
-  <h2 class="paper-title"><a href="https://arxiv.org/abs/2608.08168">Thinking vs. NoThinking: Towards Interpreting Reasoning Mechanisms of Large Language Models via Sparse Autoencoders</a></h2>
-  <div class="paper-authors">arXiv preprint, August 2026 · Model: DeepSeek-R1-Distill-Qwen-7B</div>
-
-  <p class="paper-hook">Chain-of-Thought reasoning demonstrably outperforms direct-answer generation — but until now the internal mechanism behind that advantage has been opaque. Applying SAEs to a live reasoning model shows that Thinking and NoThinking modes are not just behaviorally different: they operate from mechanistically distinct feature subspaces.</p>
-
-  <p class="paper-detail">Top-K SAEs are applied to the residual stream of DeepSeek-R1-Distill-Qwen-7B during math-solving tasks at three difficulty levels. Thinking (CoT) mode activates a sparse, high-intensity cluster of verbal-deduction features that remain stable regardless of problem difficulty. NoThinking (direct answer) mode exhibits an adaptive, diffuse pattern centered on symbolic manipulation features whose density scales with task difficulty. The two modes are cleanly separable at the feature level, suggesting that CoT's quality advantage is mechanistically anchored in an identifiable, steer-able feature subspace.</p>
-</article>
-
 <hr class="divider">
 
 <!-- ══════════════  ITEMS 4–10  ══════════════ -->
@@ -659,93 +501,9 @@ a:hover { text-decoration-color: var(--link); }
 <hr class="mid-divider">
 
 <!-- 05 -->
-<article class="mid-paper">
-  <div class="mid-paper-header">
-    <span class="rank-badge">05</span>
-    <div class="tags">
-      <span class="tag tag-interp">mech-interp</span>
-      <span class="tag tag-security">AI security</span>
-      <span class="tag">preprint</span>
-    </div>
-  </div>
-  <figure class="mid-figure">
-    <svg viewBox="0 0 632 185" xmlns="http://www.w3.org/2000/svg" aria-label="Diagram: J-Access Jacobian audit maps intermediate representations to vocabulary space and forecasts recovery risk">
-      <rect width="632" height="185" fill="#fff"/>
-      <text x="316" y="24" font-family="Georgia,serif" font-size="12" font-weight="bold" fill="#111" text-anchor="middle">J-Access: Jacobian Lens for Unlearning Audit</text>
-      <!-- Box 1 -->
-      <rect x="28" y="55" width="130" height="70" rx="4" fill="#dde8f8" stroke="#2255b8" stroke-width="1.5"/>
-      <text x="93" y="84" font-family="Georgia,serif" font-size="11" font-weight="bold" fill="#1a3672" text-anchor="middle">Post-Unlearning</text>
-      <text x="93" y="100" font-family="Georgia,serif" font-size="11" fill="#1a3672" text-anchor="middle">Layer L rep</text>
-      <!-- Arrow + label -->
-      <line x1="158" y1="90" x2="210" y2="90" stroke="#333" stroke-width="1.5"/>
-      <polygon points="208,85 214,90 208,95" fill="#333"/>
-      <text x="184" y="80" font-family="Georgia,serif" font-size="10" fill="#555" text-anchor="middle">Jacobian</text>
-      <!-- Box 2 -->
-      <rect x="214" y="45" width="130" height="90" rx="4" fill="#ece3f5" stroke="#3d1666" stroke-width="1.5"/>
-      <text x="279" y="74" font-family="Georgia,serif" font-size="11" font-weight="bold" fill="#3d1666" text-anchor="middle">Vocabulary Space</text>
-      <text x="279" y="92" font-family="Georgia,serif" font-size="11" fill="#3d1666" text-anchor="middle">J-Access score</text>
-      <text x="279" y="110" font-family="Georgia,serif" font-size="10" fill="#666" text-anchor="middle">accessibility measure</text>
-      <!-- Arrow -->
-      <line x1="344" y1="90" x2="396" y2="90" stroke="#333" stroke-width="1.5"/>
-      <polygon points="394,85 400,90 394,95" fill="#333"/>
-      <!-- Box 3 -->
-      <rect x="400" y="55" width="200" height="70" rx="4" fill="#fde8e6" stroke="#b7291e" stroke-width="1.5"/>
-      <text x="500" y="82" font-family="Georgia,serif" font-size="11" font-weight="bold" fill="#7a1f18" text-anchor="middle">Recovery Risk Forecast</text>
-      <text x="500" y="100" font-family="Georgia,serif" font-size="10" fill="#7a1f18" text-anchor="middle">↑ J-Access → faster recovery</text>
-      <!-- Hypothesis text -->
-      <text x="316" y="162" font-family="Georgia,serif" font-size="11" fill="#555" text-anchor="middle" font-style="italic">Hypothesis: residual accessibility ↔ recovery susceptibility</text>
-    </svg>
-    <figcaption>Fig. 1 — J-Access audit pipeline: Jacobian maps post-unlearning intermediate representations into vocabulary space; the resulting accessibility score predicts how quickly target concepts recover under continued fine-tuning.</figcaption>
-  </figure>
-  <h3 class="mid-title"><a href="https://arxiv.org/abs/2608.11408">Measure, Don't Optimize: Forecasting Recovery in LLM Unlearning</a></h3>
-  <div class="mid-authors">arXiv, August 11, 2026</div>
-  <p class="mid-summary">J-Access is an inference-time audit that uses the Jacobian lens to project post-unlearning intermediate representations into vocabulary space and quantifies how often target concepts remain accessible along the output pathway. The central hypothesis — residual accessibility predicts recovery susceptibility — enables proactive risk monitoring: concepts scoring high on J-Access require less continued training to recover, allowing practitioners to flag insufficiently erased knowledge before it resurfaces under fine-tuning pressure.</p>
-</article>
 <hr class="mid-divider">
 
 <!-- 06 -->
-<article class="mid-paper">
-  <div class="mid-paper-header">
-    <span class="rank-badge">06</span>
-    <div class="tags">
-      <span class="tag tag-interp">mech-interp</span>
-      <span class="tag">preprint</span>
-    </div>
-  </div>
-  <figure class="mid-figure">
-    <svg viewBox="0 0 632 178" xmlns="http://www.w3.org/2000/svg" aria-label="SAEVerbalizer pipeline: decoder direction injected into LLM to generate natural-language feature explanations without activation maximization">
-      <rect width="632" height="178" fill="#fff"/>
-      <text x="316" y="24" font-family="Georgia,serif" font-size="12" font-weight="bold" fill="#111" text-anchor="middle">SAEVerbalizer: From Decoder Direction to Natural Language</text>
-      <!-- Box 1 -->
-      <rect x="20" y="55" width="120" height="65" rx="4" fill="#d4edf0" stroke="#0a4a50" stroke-width="1.5"/>
-      <text x="80" y="82" font-family="Georgia,serif" font-size="11" font-weight="bold" fill="#0a4a50" text-anchor="middle">SAE Decoder</text>
-      <text x="80" y="98" font-family="Georgia,serif" font-size="11" fill="#0a4a50" text-anchor="middle">Direction d</text>
-      <!-- Arrow -->
-      <line x1="140" y1="87" x2="178" y2="87" stroke="#333" stroke-width="1.5"/>
-      <polygon points="176,82 182,87 176,92" fill="#333"/>
-      <text x="159" y="78" font-family="Georgia,serif" font-size="9" fill="#555" text-anchor="middle">inject</text>
-      <!-- Box 2 -->
-      <rect x="182" y="45" width="160" height="85" rx="4" fill="#dde8f8" stroke="#2255b8" stroke-width="1.5"/>
-      <text x="262" y="72" font-family="Georgia,serif" font-size="11" font-weight="bold" fill="#1a3672" text-anchor="middle">LLM Residual Stream</text>
-      <text x="262" y="89" font-family="Georgia,serif" font-size="10" fill="#1a3672" text-anchor="middle">(fine-tuned downstream</text>
-      <text x="262" y="104" font-family="Georgia,serif" font-size="10" fill="#1a3672" text-anchor="middle">layers)</text>
-      <!-- Arrow -->
-      <line x1="342" y1="87" x2="380" y2="87" stroke="#333" stroke-width="1.5"/>
-      <polygon points="378,82 384,87 378,92" fill="#333"/>
-      <text x="361" y="78" font-family="Georgia,serif" font-size="9" fill="#555" text-anchor="middle">generate</text>
-      <!-- Box 3 -->
-      <rect x="384" y="55" width="220" height="65" rx="4" fill="#d8eedd" stroke="#1a4a28" stroke-width="1.5"/>
-      <text x="494" y="78" font-family="Georgia,serif" font-size="11" font-weight="bold" fill="#1a4a28" text-anchor="middle">Natural Language Explanation</text>
-      <text x="494" y="96" font-family="Georgia,serif" font-size="10" fill="#1a4a28" text-anchor="middle">"This feature detects…"</text>
-      <!-- Transfer note -->
-      <text x="316" y="155" font-family="Georgia,serif" font-size="10" fill="#777" text-anchor="middle">Transfers across SAE dictionaries · extends to other LLMs via lightweight adapter</text>
-    </svg>
-    <figcaption>Fig. 1 — SAEVerbalizer: decoder directions are injected into the LLM's residual stream; fine-tuned downstream layers generate natural-language explanations without activation-maximization sampling.</figcaption>
-  </figure>
-  <h3 class="mid-title"><a href="https://arxiv.org/abs/2608.13538">SAEVerbalizer: Generating Explanations for Sparse Autoencoder Features via Representation Verbalization</a></h3>
-  <div class="mid-authors">Weihan Meng et al. (Tsinghua, PKU, Fudan) — arXiv, August 13, 2026</div>
-  <p class="mid-summary">Injects SAE decoder directions into the LLM's residual stream and fine-tunes downstream layers to generate natural-language explanations from the geometric structure of the feature — no expensive activation-maximization sampling required. Verbalization generalizes to unseen features, transfers across separately trained SAE dictionaries, and extends to features from different LLMs via a lightweight adapter, resolving a key scalability bottleneck in SAE auto-interpretability.</p>
-</article>
 <hr class="mid-divider">
 
 <!-- 07 -->
@@ -895,54 +653,6 @@ a:hover { text-decoration-color: var(--link); }
 <hr class="mid-divider">
 
 <!-- 10 -->
-<article class="mid-paper">
-  <div class="mid-paper-header">
-    <span class="rank-badge">10</span>
-    <div class="tags">
-      <span class="tag tag-security">AI security</span>
-      <span class="tag">preprint</span>
-    </div>
-  </div>
-  <figure class="mid-figure">
-    <svg viewBox="0 0 632 195" xmlns="http://www.w3.org/2000/svg" aria-label="Two-panel chart: attack surface distribution pie and attack vs defense paper ratio bar">
-      <rect width="632" height="195" fill="#fff"/>
-      <text x="316" y="22" font-family="Georgia,serif" font-size="12" font-weight="bold" fill="#111" text-anchor="middle">Agentic LLM Security: Landscape across 85 Papers</text>
-
-      <!-- Left panel: donut chart -->
-      <!-- Perception 66% arc -->
-      <path d="M 160 110 L 160 60 A 50 50 0 1 1 116.4 134.8 Z" fill="#b7291e" opacity="0.85"/>
-      <!-- Action 34% arc -->
-      <path d="M 160 110 L 116.4 134.8 A 50 50 0 0 1 160 60 Z" fill="#2255b8" opacity="0.8"/>
-      <!-- Donut hole -->
-      <circle cx="160" cy="110" r="28" fill="#fff"/>
-      <text x="160" y="106" font-family="Georgia,serif" font-size="10" fill="#333" text-anchor="middle" font-weight="bold">n=85</text>
-      <text x="160" y="120" font-family="Georgia,serif" font-size="9" fill="#555" text-anchor="middle">papers</text>
-      <!-- Labels -->
-      <text x="192" y="80" font-family="Georgia,serif" font-size="12" fill="#b7291e" font-weight="bold">66%</text>
-      <text x="192" y="94" font-family="Georgia,serif" font-size="10" fill="#b7291e">Perception</text>
-      <text x="100" y="152" font-family="Georgia,serif" font-size="10" fill="#2255b8">34% Action</text>
-      <text x="160" y="178" font-family="Georgia,serif" font-size="10" fill="#777" text-anchor="middle">Attack surface distribution</text>
-
-      <!-- Right panel: bar chart attack vs defense ratio -->
-      <line x1="320" y1="155" x2="600" y2="155" stroke="#333" stroke-width="1.2"/>
-      <line x1="320" y1="40" x2="320" y2="155" stroke="#333" stroke-width="1.2"/>
-      <!-- Attack bar: 3.9 units, normalized to max=4 → 115*3.9/4 = 112 -->
-      <rect x="345" y="43" width="100" height="112" fill="#b7291e" opacity="0.85"/>
-      <text x="395" y="39" font-family="Georgia,serif" font-size="11" fill="#b7291e" text-anchor="middle" font-weight="bold">3.9×</text>
-      <text x="395" y="172" font-family="Georgia,serif" font-size="10" fill="#333" text-anchor="middle">Attack</text>
-      <!-- Defense bar: 1 unit → 115*1/4 = 29 -->
-      <rect x="475" y="126" width="100" height="29" fill="#2255b8" opacity="0.8"/>
-      <text x="525" y="122" font-family="Georgia,serif" font-size="11" fill="#2255b8" text-anchor="middle">1×</text>
-      <text x="525" y="172" font-family="Georgia,serif" font-size="10" fill="#333" text-anchor="middle">Defense</text>
-      <text x="460" y="23" font-family="Georgia,serif" font-size="10" fill="#555" text-anchor="middle">Attack : Defense paper ratio</text>
-    </svg>
-    <figcaption>Fig. 1 — 85 agentic LLM security papers: 66% address perception-layer attacks (prompt injection, jailbreaking); 34% action-layer. Attack research outpaces defense work 3.9:1.</figcaption>
-  </figure>
-  <h3 class="mid-title"><a href="https://arxiv.org/abs/2608.10530">On Understanding, Identifying, and Mitigating Vulnerabilities in Agentic Large Language Models</a></h3>
-  <div class="mid-authors">arXiv, August 2026</div>
-  <p class="mid-summary">Systematic literature review (PRISMA 2020): 743 records screened, 85 papers retained (2023–2025). Perception-layer vulnerabilities (prompt injection, jailbreaking) dominate at 66% of papers; action-layer vulnerabilities (tool misuse, code execution abuse) are significant but underrepresented. Attack research outpaces defense work 3.9:1. Provides a structured taxonomy of attack surfaces across the agent lifecycle and identifies the most underdeveloped defense categories as research priorities.</p>
-</article>
-
 <!-- Notes -->
 <div class="notes">
   <div class="notes-label">Notes · August 8–27, 2026</div>
@@ -953,6 +663,7 @@ a:hover { text-decoration-color: var(--link); }
     <li>#2 and #7 together suggest a shift from interpretability-as-explanation to interpretability-as-control: using circuits/features to guide SFT targeting (#2) and data synthesis (#7).</li>
     <li>Text diffusion LMs: 1 direct entry (#1); dLLM track remains dominated by the safety-vulnerability story.</li>
   </ul>
+<p style="margin-top:32px;font-size:13px;opacity:.7">5 entries removed on 2026-09-10 as repeats of earlier reports: 2608.07430 (first covered 2026-08-11), 2608.08168 (first covered 2026-08-13), 2608.11408 (first covered 2026-08-18), 2608.13538 (first covered 2026-08-22), 2608.10530 (first covered 2026-08-13).</p>
 </div>
 
 <footer class="footer">

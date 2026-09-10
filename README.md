@@ -19,9 +19,24 @@ Automated radar for new **AI/LLM safety**, **alignment**, and **pragmatic mechan
 reports/
   daily/      YYYY-MM-DD.md      — top 10 of the day, priority order (Tue–Sun)
   weekly/     YYYY-Www.md        — Monday 6am ET: most important of the week
+  index/      seen.tsv           — ledger of every paper ever covered (generated; commit it with each report)
   backfill/   2025-06_to_2026-06.md       — one-time catch-up, Jun 2025 → Jun 2026 (mech-interp + AI-security)
   backfill/   text-diffusion-2024-2026.md — one-time catch-up, Jul 2024 → Jun 2026 (text diffusion LMs; topic since dropped)
+scripts/
+  radar-preflight.sh   — run FIRST in every routine: checks out claude/radar, rebuilds the ledger, prints recent coverage
+  radar_index.py       — builds reports/index/seen.tsv; `--check FILE` fails if FILE re-lists an already-covered paper
+  radar_dedupe.py      — one-off retroactive cleanup that stripped repeats from past dailies (Sep 10, 2026)
+  sync-to-obsidian.sh  — local (launchd): merges claude/radar → main, pushes, exposes reports in the Obsidian vault
 ```
+
+## Duplicate prevention — mandatory in every run
+
+Each cloud run starts from a fresh clone of `main`, which lags `claude/radar` until the local sync merges. Sweeping against that stale checkout is how the same papers were re-listed for weeks (one paper appeared in 9 dailies; 212 repeated entries were stripped on 2026-09-10). The rules:
+
+1. **Before searching:** run `scripts/radar-preflight.sh`. It moves the checkout onto `claude/radar` (so every prior report is present), rebuilds `reports/index/seen.tsv`, and prints everything covered in the last 45 days. Treat that list as excluded.
+2. **While selecting:** `python3 scripts/radar_index.py --seen <arxiv-id> ...` says where a candidate has appeared. A paper that has been covered is not "new" no matter how relevant — do not re-rank it or re-summarize it. A weekly may re-use its own week's dailies; nothing else may repeat.
+3. **Before committing:** `python3 scripts/radar_index.py --check reports/daily/<DATE>.md` must print `OK`. If it lists repeats, replace them or ship fewer than 10 and say so — never commit a report that fails the check.
+4. Rebuild the ledger (`python3 scripts/radar_index.py`) and commit `reports/index/seen.tsv` with the report, so the next run sees today's papers even if `main` still lags.
 
 ## Routines that write here
 - **Daily radar** — runs Tue–Sun ~6am ET; searches the sources, writes `reports/daily/<date>.md` **and** `reports/daily/<date>.html`, commits & pushes, then publishes the HTML as a Claude artifact.

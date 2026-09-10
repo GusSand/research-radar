@@ -318,62 +318,6 @@ img { max-width: 100%; display: block; }
   </header>
 
   <!-- ═══ PAPER 1 ═══ -->
-  <article class="paper">
-    <header class="paper-header">
-      <div class="paper-rank">01</div>
-      <div class="paper-meta">
-        <span class="tag tag-safety">pretraining safety</span>
-        <span class="tag tag-preprint">preprint</span>
-      </div>
-    </header>
-    <h2 class="paper-title">
-      <a href="https://arxiv.org/abs/2606.19168">Beyond Safe Data: Pretraining-Stage Alignment with Regular Safety Reflection</a>
-    </h2>
-    <p class="paper-hook">
-      Data filtering removes dangerous knowledge before the model sees it — but what about harmful behaviors that emerge from combining benign knowledge at inference time? This paper proposes embedding active safety self-monitoring directly into the pretraining objective, before any RLHF, by inserting short safety reflection sequences at regular corpus intervals.
-    </p>
-    <figure class="paper-figure">
-      <svg viewBox="0 0 520 160" xmlns="http://www.w3.org/2000/svg" aria-label="Safety Reflection Pretraining corpus pipeline">
-        <!-- corpus bar background -->
-        <rect x="20" y="60" width="480" height="40" rx="3" fill="#e8e8e8"/>
-        <!-- gray blocks = normal tokens -->
-        <rect x="20"  y="60" width="62" height="40" rx="2" fill="#c5c5c5"/>
-        <rect x="106" y="60" width="62" height="40" rx="2" fill="#c5c5c5"/>
-        <rect x="192" y="60" width="62" height="40" rx="2" fill="#c5c5c5"/>
-        <rect x="278" y="60" width="62" height="40" rx="2" fill="#c5c5c5"/>
-        <rect x="364" y="60" width="62" height="40" rx="2" fill="#c5c5c5"/>
-        <rect x="450" y="60" width="50" height="40" rx="2" fill="#c5c5c5"/>
-        <!-- orange blocks = safety reflections -->
-        <rect x="84"  y="58" width="20" height="44" rx="2" fill="#e07020"/>
-        <rect x="170" y="58" width="20" height="44" rx="2" fill="#e07020"/>
-        <rect x="256" y="58" width="20" height="44" rx="2" fill="#e07020"/>
-        <rect x="342" y="58" width="20" height="44" rx="2" fill="#e07020"/>
-        <rect x="428" y="58" width="20" height="44" rx="2" fill="#e07020"/>
-        <!-- labels above -->
-        <text x="50"  y="52" text-anchor="middle" font-family="Courier New,monospace" font-size="10" fill="#666">tokens</text>
-        <text x="94"  y="48" text-anchor="middle" font-family="Courier New,monospace" font-size="10" fill="#e07020">reflect</text>
-        <!-- arrows -->
-        <line x1="260" y1="108" x2="260" y2="128" stroke="#aaa" stroke-width="1.5" marker-end="url(#arr)"/>
-        <!-- output label -->
-        <text x="260" y="142" text-anchor="middle" font-family="Courier New,monospace" font-size="10" fill="#555">1.7B model learns safety self-monitoring at pretraining time</text>
-        <!-- legend -->
-        <rect x="20" y="14" width="12" height="10" fill="#c5c5c5" rx="1"/>
-        <text x="36" y="23" font-family="Courier New,monospace" font-size="10" fill="#666">normal tokens</text>
-        <rect x="140" y="14" width="12" height="10" fill="#e07020" rx="1"/>
-        <text x="156" y="23" font-family="Courier New,monospace" font-size="10" fill="#e07020">safety reflections (SRP)</text>
-        <defs>
-          <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
-            <path d="M0,0 L6,3 L0,6 Z" fill="#aaa"/>
-          </marker>
-        </defs>
-      </svg>
-      <figcaption>Figure 1: Safety Reflection Pretraining (SRP) inserts short safety-reflection sequences (orange) at regular intervals throughout the standard corpus (gray). The model learns to self-monitor at pretraining time — reducing inference-stage and fine-tuning attack success rates on 1.7B models.</figcaption>
-    </figure>
-    <p class="paper-detail">
-      SRP inserts curated short sequences that model the act of recognizing and refusing harmful compositional reasoning, interleaved at a fixed stride into the pretraining corpus (FineWeb-Edu). This differs from data filtering: instead of removing dangerous documents, it teaches the model to reason about harm during the forward pass of standard language modeling. At 1.7B scale, SRP improves safety classification accuracy on held-out harmful prompts and substantially reduces success rates of both inference-stage and adversarial fine-tuning attacks, compared to identically-scaled baselines with only post-training alignment. The authors show that the pretraining safety capability compounds with subsequent RLHF rather than competing with it.
-    </p>
-  </article>
-
   <!-- ═══ PAPER 2 ═══ -->
   <article class="paper">
     <header class="paper-header">
@@ -580,139 +524,8 @@ img { max-width: 100%; display: block; }
   </article>
 
   <!-- 06 Safety Cost of Steering Vectors -->
-  <article class="mid-paper">
-    <header class="paper-header">
-      <div class="paper-rank">06</div>
-      <div class="paper-meta">
-        <span class="tag tag-interp">mech-interp</span>
-        <span class="tag tag-safety">steering safety</span>
-        <span class="tag tag-preprint">COLM 2026 (sub.) · Aug 9</span>
-      </div>
-    </header>
-    <h3 class="mid-title">
-      <a href="https://arxiv.org/abs/2608.08383">Safety Cost of Steering Vectors Is Separable and Reducible</a>
-    </h3>
-    <figure class="paper-figure mid-figure">
-      <svg viewBox="0 0 480 110" xmlns="http://www.w3.org/2000/svg" aria-label="Steering vector decomposition into steering-effective and safety-degrading components">
-        <!-- full vector -->
-        <rect x="20" y="40" width="160" height="30" rx="3" fill="#c5c5c5" stroke="#aaa" stroke-width="1"/>
-        <text x="100" y="60" text-anchor="middle" font-family="Courier New,monospace" font-size="10" fill="#444">steering vector v</text>
-        <!-- decompose arrow -->
-        <text x="200" y="58" text-anchor="middle" font-family="Courier New,monospace" font-size="14" fill="#aaa">=</text>
-        <!-- steering-effective component -->
-        <rect x="215" y="40" width="100" height="30" rx="3" fill="rgba(91,155,213,0.2)" stroke="#5b9bd5" stroke-width="1.5"/>
-        <text x="265" y="58" text-anchor="middle" font-family="Courier New,monospace" font-size="9" fill="#5b9bd5">steering</text>
-        <!-- plus -->
-        <text x="325" y="60" text-anchor="middle" font-family="Courier New,monospace" font-size="14" fill="#aaa">+</text>
-        <!-- safety-degrading component -->
-        <rect x="340" y="40" width="120" height="30" rx="3" fill="rgba(224,112,32,0.15)" stroke="#e07020" stroke-width="1.5"/>
-        <text x="400" y="55" text-anchor="middle" font-family="Courier New,monospace" font-size="9" fill="#e07020">safety-degrading</text>
-        <text x="400" y="67" text-anchor="middle" font-family="Courier New,monospace" font-size="8" fill="#e07020">(separable — remove!)</text>
-        <!-- removal annotation -->
-        <line x1="400" y1="70" x2="400" y2="90" stroke="#e07020" stroke-width="1.5" stroke-dasharray="3,2"/>
-        <text x="400" y="100" text-anchor="middle" font-family="Courier New,monospace" font-size="9" fill="#888">constrained opt (primal-dual) → removed</text>
-      </svg>
-      <figcaption>Figure 6: Steering vector decomposed into a steering-effective component (blue) and a safety-degrading component (orange). The safety-degrading component contributes little to the steering objective but disrupts safety mechanisms; constrained optimization removes it via primal-dual updates.</figcaption>
-    </figure>
-    <p class="mid-summary">
-      Steering vectors that modify LLM behavior can unintentionally increase harmful-request compliance. This paper shows the safety cost arises from a separable subcomponent that disrupts safety mechanisms while contributing little to the steering objective. Formulating its removal as a constrained optimization (primal-dual) subject to preserving steering effectiveness and bounding false-refusal increase eliminates the safety cost without sacrificing steering quality.
-    </p>
-  </article>
-
   <!-- 07 Self-Evolving Multi-Agent -->
-  <article class="mid-paper">
-    <header class="paper-header">
-      <div class="paper-rank">07</div>
-      <div class="paper-meta">
-        <span class="tag tag-security">AI security</span>
-        <span class="tag tag-preprint">preprint · Aug 26</span>
-      </div>
-    </header>
-    <h3 class="mid-title">
-      <a href="https://arxiv.org/abs/2608.26008">A Self-Evolving Multi-Agent Framework Defense against LLM Jailbreak Attacks</a>
-    </h3>
-    <figure class="paper-figure mid-figure">
-      <svg viewBox="0 0 480 120" xmlns="http://www.w3.org/2000/svg" aria-label="Self-evolving rule memory for jailbreak defense">
-        <!-- attack inputs -->
-        <rect x="10" y="40" width="90" height="40" rx="3" fill="#e8e8e8" stroke="#bbb" stroke-width="1"/>
-        <text x="55" y="58" text-anchor="middle" font-family="Courier New,monospace" font-size="9" fill="#555">jailbreak</text>
-        <text x="55" y="70" text-anchor="middle" font-family="Courier New,monospace" font-size="9" fill="#555">attempts</text>
-        <!-- arrow -->
-        <line x1="100" y1="60" x2="135" y2="60" stroke="#aaa" stroke-width="1.5" marker-end="url(#a5)"/>
-        <!-- rule memory -->
-        <rect x="135" y="25" width="140" height="70" rx="3" fill="rgba(91,155,213,0.12)" stroke="#5b9bd5" stroke-width="1.5"/>
-        <text x="205" y="48" text-anchor="middle" font-family="Courier New,monospace" font-size="10" fill="#5b9bd5">Rule Memory</text>
-        <text x="205" y="62" text-anchor="middle" font-family="Courier New,monospace" font-size="9" fill="#5b9bd5">structural wrappers</text>
-        <text x="205" y="74" text-anchor="middle" font-family="Courier New,monospace" font-size="9" fill="#888">(role-play, obfusc…)</text>
-        <text x="205" y="87" text-anchor="middle" font-family="Courier New,monospace" font-size="8" fill="#5b9bd5">← evolves cross-interaction</text>
-        <!-- arrow -->
-        <line x1="275" y1="60" x2="310" y2="60" stroke="#aaa" stroke-width="1.5" marker-end="url(#a5)"/>
-        <!-- defense output -->
-        <rect x="310" y="40" width="90" height="40" rx="3" fill="rgba(26,110,60,0.12)" stroke="#1a6e3c" stroke-width="1.5"/>
-        <text x="355" y="58" text-anchor="middle" font-family="Courier New,monospace" font-size="9" fill="#1a6e3c">generalized</text>
-        <text x="355" y="70" text-anchor="middle" font-family="Courier New,monospace" font-size="9" fill="#1a6e3c">defense ✓</text>
-        <!-- unseen attack arrow -->
-        <line x1="355" y1="80" x2="355" y2="100" stroke="#aaa" stroke-width="1" stroke-dasharray="3,2"/>
-        <text x="355" y="112" text-anchor="middle" font-family="Courier New,monospace" font-size="8" fill="#888">generalizes to unseen attack variants</text>
-        <defs>
-          <marker id="a5" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
-            <path d="M0,0 L6,3 L0,6 Z" fill="#aaa"/>
-          </marker>
-        </defs>
-      </svg>
-      <figcaption>Figure 7: Persistent cross-interaction rule memory abstracts jailbreak structural wrappers (not harmful topics) across deployment encounters; accumulated rules generalize defense to unseen attack variants without retraining.</figcaption>
-    </figure>
-    <p class="mid-summary">
-      Static defenses fail against novel jailbreak variants because they encode specific harmful content patterns. This framework maintains a persistent cross-interaction rule memory that abstracts successful attack method-level structural patterns (role-playing, obfuscation, code transformation, multi-step indirection) — enabling generalization to unseen attack variants as the rule base accumulates across deployment encounters, with improving defense as deployment duration grows.
-    </p>
-  </article>
-
   <!-- 08 Moving the Safety Barrier -->
-  <article class="mid-paper">
-    <header class="paper-header">
-      <div class="paper-rank">08</div>
-      <div class="paper-meta">
-        <span class="tag tag-security">AI security</span>
-        <span class="tag tag-interp">mech-interp</span>
-        <span class="tag tag-preprint">preprint · Aug 2</span>
-      </div>
-    </header>
-    <h3 class="mid-title">
-      <a href="https://arxiv.org/abs/2608.02674">Moving the Safety Barrier: Dynamic Routing Adaptive Alignment Against White-Box Attacks</a>
-    </h3>
-    <figure class="paper-figure mid-figure">
-      <svg viewBox="0 0 480 120" xmlns="http://www.w3.org/2000/svg" aria-label="DRAA dynamic routing pipeline">
-        <!-- primary route -->
-        <rect x="10" y="25" width="100" height="35" rx="3" fill="rgba(176,32,32,0.1)" stroke="#e07070" stroke-width="1.5"/>
-        <text x="60" y="40" text-anchor="middle" font-family="Courier New,monospace" font-size="9" fill="#e07070">safety route</text>
-        <text x="60" y="52" text-anchor="middle" font-family="Courier New,monospace" font-size="8" fill="#e07070">(masked = attacked)</text>
-        <!-- arrow to failure pairs -->
-        <line x1="110" y1="43" x2="145" y2="43" stroke="#aaa" stroke-width="1.5" marker-end="url(#a6)"/>
-        <!-- failure-aware pairs -->
-        <rect x="145" y="25" width="115" height="35" rx="3" fill="#e8e8e8" stroke="#bbb" stroke-width="1"/>
-        <text x="202" y="40" text-anchor="middle" font-family="Courier New,monospace" font-size="9" fill="#555">failure-aware</text>
-        <text x="202" y="52" text-anchor="middle" font-family="Courier New,monospace" font-size="9" fill="#555">preference pairs</text>
-        <!-- arrow to DPO -->
-        <line x1="260" y1="43" x2="295" y2="43" stroke="#aaa" stroke-width="1.5" marker-end="url(#a6)"/>
-        <!-- compensatory routes -->
-        <rect x="295" y="25" width="120" height="35" rx="3" fill="rgba(91,155,213,0.15)" stroke="#5b9bd5" stroke-width="1.5"/>
-        <text x="355" y="40" text-anchor="middle" font-family="Courier New,monospace" font-size="9" fill="#5b9bd5">compensatory routes</text>
-        <text x="355" y="52" text-anchor="middle" font-family="Courier New,monospace" font-size="9" fill="#5b9bd5">activated via DPO</text>
-        <!-- bottom annotation -->
-        <text x="240" y="90" text-anchor="middle" font-family="Courier New,monospace" font-size="9" fill="#888">When primary safety route is disabled → latent routes preserve refusal</text>
-        <defs>
-          <marker id="a6" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
-            <path d="M0,0 L6,3 L0,6 Z" fill="#aaa"/>
-          </marker>
-        </defs>
-      </svg>
-      <figcaption>Figure 8: DRAA — primary safety route localized via contrastive activation, then masked to induce failure cases; DPO on failure-aware preference pairs activates compensatory latent routes. Robust refusal survives white-box attacks on internal safety neurons.</figcaption>
-    </figure>
-    <p class="mid-summary">
-      White-box attacks increasingly target and disable internal safety routes rather than crafting adversarial inputs. DRAA (Dynamic Routing Adaptive Alignment) localizes the model's primary safety route via contrastive activations, masks it to construct failure-aware preference pairs, then applies DPO to activate compensatory latent routes — providing refusal redundancy when the primary route is compromised.
-    </p>
-  </article>
-
   <!-- 09 SafeBranch -->
   <article class="mid-paper">
     <header class="paper-header">
@@ -813,4 +626,5 @@ img { max-width: 100%; display: block; }
     Research Radar · research-radar/reports/daily/2026-08-29.md · pushed to claude/radar
   </footer>
 
+<p style="margin-top:32px;font-size:13px;opacity:.7">4 entries removed on 2026-09-10 as repeats of earlier reports: 2606.19168 (first covered 2026-08-28), 2608.08383 (first covered 2026-08-28), 2608.26008 (first covered 2026-08-28), 2608.02674 (first covered 2026-08-11).</p>
 </div>

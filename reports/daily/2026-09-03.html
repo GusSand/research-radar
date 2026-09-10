@@ -440,27 +440,6 @@
 </article>
 
 <!-- RANK 2 -->
-<article class="paper-featured">
-  <div class="paper-rank">02 &nbsp;·&nbsp; Pretraining Safety · AI Security</div>
-  <h2 class="paper-title">
-    <a href="https://arxiv.org/abs/2608.18093" target="_blank" rel="noopener">Abliteration Mitigation via Refusal Aliases</a>
-  </h2>
-  <div class="paper-byline">Nathan Truong &nbsp;·&nbsp; arXiv:2608.18093 &nbsp;·&nbsp; August 2026</div>
-  <p class="paper-why">Addresses the root cause of abliteration's tractability: the refusal direction is trivially extracted as a mean difference of harmful/harmless hidden states. Rank-k alias updates make that extraction fail, with minimal capability cost.</p>
-  <p class="paper-summary">Existing abliteration defenses harden the effects of weight projection, but the refusal direction itself remains easy to compute from a small contrastive set. AMRA applies rank-k updates to residual stream writer matrices that replace refusal-inducing activations with randomly chosen aliases, then corrects downstream reader matrices to preserve original model behavior. On Llama-3-8B, AMRA improves post-abliteration refusal scores by 2.16 points over the undefended baseline with under 0.5pp MMLU degradation. The approach is model-agnostic (weight-space edit) and requires no retraining.</p>
-  <div class="paper-figure">
-    <img src="https://arxiv.org/html/2608.18093/x1.png" alt="AMRA weight-editing: residual stream writer matrices receive rank-k alias updates so contrastive probing cannot extract the true refusal direction" loading="lazy">
-    <div class="paper-figure-caption">Fig. 1 · AMRA — rank-k updates replace true refusal activations with aliases in writer matrices; reader corrections preserve behavior. Abliteration via contrastive extraction fails because the direction no longer exists in this form.</div>
-  </div>
-  <div class="paper-tags">
-    <span class="tag">abliteration-defense</span>
-    <span class="tag">refusal-direction</span>
-    <span class="tag">weight-edit</span>
-    <span class="tag">rank-k</span>
-    <span class="tag">arXiv:2608.18093</span>
-  </div>
-</article>
-
 <!-- RANK 3 -->
 <article class="paper-featured">
   <div class="paper-rank">03 &nbsp;·&nbsp; AI Security · Multimodal</div>
@@ -532,72 +511,8 @@
 </article>
 
 <!-- RANK 6 -->
-<article class="paper-compact">
-  <div class="compact-header">
-    <span class="compact-rank">06</span>
-    <h3 class="compact-title">
-      <a href="https://arxiv.org/abs/2608.08383" target="_blank" rel="noopener">Safety Cost of Steering Vectors Is Separable and Reducible</a>
-    </h3>
-    <span class="peer-badge">COLM 2026</span>
-  </div>
-  <div class="compact-byline">Yuxiao Li, Gjergji Kasneci &nbsp;·&nbsp; arXiv:2608.08383 &nbsp;·&nbsp; COLM 2026 (peer-reviewed)</div>
-  <div class="compact-figure">
-    <img src="https://arxiv.org/html/2608.08383/x1.png" alt="Steering vector decomposed into steering-effective and safety-degrading components via primal-dual constrained optimization" loading="lazy">
-    <div class="compact-figure-caption">Fig. 1 · Steering vector = safety-neutral component + separable safety-degrading component; constrained optimization removes the latter while bounding false-refusal increase.</div>
-  </div>
-  <p class="compact-summary">Steering vectors silently compromise safety via a separable sub-component that disrupts safety mechanisms while contributing minimally to the steering objective. Primal-dual constrained optimization removes this component, recovering a safety-neutral steering vector while preserving the intended behavioral change — training-free, applied as post-hoc surgery to any existing steering vector.</p>
-  <div class="paper-tags">
-    <span class="tag">mech-interp-applied</span>
-    <span class="tag">activation-steering</span>
-    <span class="tag">peer-reviewed</span>
-    <span class="tag">COLM-2026</span>
-  </div>
-</article>
-
 <!-- RANK 7 -->
-<article class="paper-compact">
-  <div class="compact-header">
-    <span class="compact-rank">07</span>
-    <h3 class="compact-title">
-      <a href="https://arxiv.org/abs/2608.11025" target="_blank" rel="noopener">Data Attribution of Emergent Misalignment with Persona Features</a>
-    </h3>
-  </div>
-  <div class="compact-byline">Bonn-Aachen ICT / Lamarr Institute &nbsp;·&nbsp; arXiv:2608.11025 &nbsp;·&nbsp; Aug 11, 2026</div>
-  <div class="compact-figure">
-    <img src="https://arxiv.org/html/2608.11025/x1.png" alt="SAE model diff: jailbreak-persona and deception features amplified, assistant-identity features suppressed by misalignment fine-tuning" loading="lazy">
-    <div class="compact-figure-caption">Fig. 1 · SAE model diff (aligned vs. misaligned); feature steering induces 62% EM in aligned models and re-aligns misaligned ones bidirectionally.</div>
-  </div>
-  <p class="compact-summary">SAE-based model diffing across four open-weight models traces emergent misalignment to specific pretraining documents activating jailbreak-persona, deception, and manipulation features (amplified by misalignment fine-tuning) while assistant-identity features are suppressed. Steering identified features induces EM at up to 62% rate — exceeding 35% from misalignment fine-tuning itself — and re-aligns misaligned models bidirectionally.</p>
-  <div class="paper-tags">
-    <span class="tag">mech-interp-applied</span>
-    <span class="tag">SAE</span>
-    <span class="tag">emergent-misalignment</span>
-    <span class="tag">preprint</span>
-  </div>
-</article>
-
 <!-- RANK 8 -->
-<article class="paper-compact">
-  <div class="compact-header">
-    <span class="compact-rank">08</span>
-    <h3 class="compact-title">
-      <a href="https://arxiv.org/abs/2608.10172" target="_blank" rel="noopener">Intrinsic Structure: Spectral Identifiability for Mechanistic Interpretability</a>
-    </h3>
-  </div>
-  <div class="compact-byline">Ashim Dhor, Pin-Yu Chen &nbsp;·&nbsp; arXiv:2608.10172 &nbsp;·&nbsp; Aug 10, 2026</div>
-  <div class="compact-figure">
-    <img src="https://arxiv.org/html/2608.10172/x1.png" alt="Spectrum recovery rate across GPT-2 Small, Gemma-2-2B, Qwen3-8B-Base following the M^(-1/2) predicted rate" loading="lazy">
-    <div class="compact-figure-caption">Fig. 1 · Empirical spectrum recovery exponents; Qwen3-8B-Base converges at 0.506 ± 0.031, matching the minimax lower bound prediction.</div>
-  </div>
-  <p class="compact-summary">First identifiability theorem for a mechanistic interpretability primitive: treats the transformer forward pass as a controlled dynamical system, lifts it with the Koopman operator, and proves the spectrum is recoverable at rate M<sup>−1/2</sup> from M calibration samples (matching minimax lower bound). A dissociation theorem directly challenges variance-based feature metrics. Validated on GPT-2 Small, Gemma-2-2B, Qwen3-8B-Base.</p>
-  <div class="paper-tags">
-    <span class="tag">mech-interp-theory</span>
-    <span class="tag">identifiability</span>
-    <span class="tag">Koopman</span>
-    <span class="tag">preprint</span>
-  </div>
-</article>
-
 <!-- RANK 9 -->
 <article class="paper-compact">
   <div class="compact-header">
@@ -621,27 +536,6 @@
 </article>
 
 <!-- RANK 10 -->
-<article class="paper-compact">
-  <div class="compact-header">
-    <span class="compact-rank">10</span>
-    <h3 class="compact-title">
-      <a href="https://arxiv.org/abs/2608.19579" target="_blank" rel="noopener">Enforcing LLM Safety through DMD-based Classification of Prompt-Response Embedding Dynamics</a>
-    </h3>
-  </div>
-  <div class="compact-byline">arXiv:2608.19579 &nbsp;·&nbsp; August 2026</div>
-  <div class="compact-figure">
-    <img src="https://arxiv.org/html/2608.19579/x1.png" alt="DMD-based safety classification: hidden-state dynamics across generation for safe vs unsafe prompts showing separable trajectory structure" loading="lazy">
-    <div class="compact-figure-caption">Fig. 1 · DMD decomposition of prompt-response embedding dynamics; safe and unsafe generation trajectories are linearly separable in the DMD feature space.</div>
-  </div>
-  <p class="compact-summary">Applies Dynamic Mode Decomposition — originally developed for hallucination detection via activation trajectory analysis — to LLM safety classification. Rather than probing static representations, DMD characterizes the dynamics of hidden-state evolution across generation; unsafe prompts produce recognizably different embedding trajectories that a linear DMD classifier separates. Provides a training-free safety monitor applicable at inference time.</p>
-  <div class="paper-tags">
-    <span class="tag">AI-security</span>
-    <span class="tag">safety-monitor</span>
-    <span class="tag">dynamical-systems</span>
-    <span class="tag">preprint</span>
-  </div>
-</article>
-
 <!-- ── NOTES ── -->
 <div class="notes-block">
   <div class="notes-heading">Notes</div>
@@ -655,5 +549,6 @@
 
 <footer class="radar-footer">
   <div>research-radar &nbsp;·&nbsp; reports/daily/2026-09-03 &nbsp;·&nbsp; claude/radar branch</div>
-  <div style="margin-top:0.3rem;">gs157@nyu.edu &nbsp;·&nbsp; Generated 2026-09-03</div>
+  <div style="margin-top:0.3rem;">gs157@nyu.edu &nbsp;·&nbsp; Generated 2026-09-03<p style="margin-top:32px;font-size:13px;opacity:.7">5 entries removed on 2026-09-10 as repeats of earlier reports: 2608.18093 (first covered 2026-08-29), 2608.08383 (first covered 2026-08-28), 2608.11025 (first covered 2026-08-20), 2608.10172 (first covered 2026-08-13), 2608.19579 (first covered 2026-08-23).</p>
+</div>
 </footer>

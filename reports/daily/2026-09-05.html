@@ -411,92 +411,6 @@
   </article>
 
   <!-- ── 02 Circuit-Guided Weight Scaling ── -->
-  <article class="paper-full">
-    <p class="paper-rank">02 · APPLIED MECH INTERP × SAFETY · PEER-REVIEWED</p>
-    <div class="tags">
-      <span class="tag tag-interp">mech-interp</span>
-      <span class="tag tag-sec">AI security</span>
-      <span class="tag tag-peer">EMNLP 2026 Findings</span>
-    </div>
-    <a class="paper-title" href="https://arxiv.org/abs/2609.00051" target="_blank" rel="noopener">
-      From Detection to Refusal: Safer LLMs via Circuit-Guided Weight Scaling
-    </a>
-    <p class="venue-line">Kuan-Lin Chu, Chung-En Sun, Tsui-Wei Weng — EMNLP 2026 Findings (accepted)</p>
-
-    <p class="hook-p">
-      Most safety improvements are evaluated as black boxes: change the training procedure, measure ASR.
-      This paper takes the reverse path — map the internal circuit that produces refusal, prove causally that
-      each stage is necessary, and then scale up only those weights — achieving a 26.5 pp safety improvement
-      under adversarial attacks at the cost of 1.7% accuracy, without any retraining.
-    </p>
-
-    <div class="tech-summary">
-      The paper characterises a three-stage safety circuit via targeted causal interventions:
-      <strong>Harmful Detection Heads</strong> (attention heads whose activations rise on harmful inputs),
-      <strong>Safety Neurons</strong> (MLP neurons that amplify and stabilise the signal in the residual stream),
-      and <strong>Refusal Heads</strong> (attention heads that translate the accumulated signal into refusal token
-      probabilities). Zero-ablation of each component class provides causal evidence for necessity.
-      Guided by this circuit map, the authors apply targeted weight scaling — amplifying safety-relevant
-      components only — without retraining. Across six LLMs under adversarial attacks: +26.5 pp safety rate,
-      −1.7% on standard benchmarks.
-    </div>
-
-    <div class="fig-wrap">
-      <svg viewBox="0 0 620 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="3-stage safety circuit diagram">
-        <!-- Stage 1: Detection Heads -->
-        <rect x="10" y="60" width="130" height="70" rx="5" fill="#4b1111" stroke="#ef4444" stroke-width="1.5"/>
-        <text x="75" y="82" text-anchor="middle" fill="#fca5a5" class="svg-title">Detection Heads</text>
-        <text x="75" y="97" text-anchor="middle" fill="#fca5a5" class="svg-label" font-size="10">Attention heads ↑</text>
-        <text x="75" y="110" text-anchor="middle" fill="#fca5a5" class="svg-label" font-size="10">on harmful input</text>
-        <text x="75" y="123" text-anchor="middle" fill="#f87171" class="svg-label" font-size="10">→ initiates signal</text>
-
-        <!-- Harmful input -->
-        <rect x="10" y="10" width="130" height="30" rx="3" fill="#292524" stroke="#6b7280" stroke-width="1"/>
-        <text x="75" y="29" text-anchor="middle" fill="#9ca3af" class="svg-label">Harmful prompt</text>
-        <line x1="75" y1="40" x2="75" y2="60" stroke="#ef4444" stroke-width="1.5" marker-end="url(#arr2-r)"/>
-
-        <!-- Arrow 1→2 -->
-        <line x1="140" y1="95" x2="175" y2="95" stroke="#f59e0b" stroke-width="2" marker-end="url(#arr2-y)"/>
-
-        <!-- Stage 2: Safety Neurons -->
-        <rect x="175" y="60" width="130" height="70" rx="5" fill="#451a03" stroke="#f59e0b" stroke-width="1.5"/>
-        <text x="240" y="82" text-anchor="middle" fill="#fcd34d" class="svg-title">Safety Neurons</text>
-        <text x="240" y="97" text-anchor="middle" fill="#fcd34d" class="svg-label" font-size="10">MLP neurons</text>
-        <text x="240" y="110" text-anchor="middle" fill="#fcd34d" class="svg-label" font-size="10">amplify + stabilise</text>
-        <text x="240" y="123" text-anchor="middle" fill="#fbbf24" class="svg-label" font-size="10">residual stream</text>
-
-        <!-- Arrow 2→3 -->
-        <line x1="305" y1="95" x2="340" y2="95" stroke="#22c55e" stroke-width="2" marker-end="url(#arr2-g)"/>
-
-        <!-- Stage 3: Refusal Heads -->
-        <rect x="340" y="60" width="130" height="70" rx="5" fill="#064e3b" stroke="#22c55e" stroke-width="1.5"/>
-        <text x="405" y="82" text-anchor="middle" fill="#6ee7b7" class="svg-title">Refusal Heads</text>
-        <text x="405" y="97" text-anchor="middle" fill="#6ee7b7" class="svg-label" font-size="10">Attention heads</text>
-        <text x="405" y="110" text-anchor="middle" fill="#6ee7b7" class="svg-label" font-size="10">translate signal</text>
-        <text x="405" y="123" text-anchor="middle" fill="#4ade80" class="svg-label" font-size="10">→ refusal tokens</text>
-
-        <!-- Arrow 3→ output -->
-        <line x1="470" y1="95" x2="505" y2="95" stroke="#22c55e" stroke-width="2" marker-end="url(#arr2-g)"/>
-
-        <!-- Output -->
-        <rect x="505" y="70" width="105" height="50" rx="4" fill="#064e3b" stroke="#22c55e" stroke-width="1.5"/>
-        <text x="557" y="91" text-anchor="middle" fill="#6ee7b7" class="svg-title">Safe response</text>
-        <text x="557" y="107" text-anchor="middle" fill="#6ee7b7" class="svg-label" font-size="10">+26.5 pp safety</text>
-
-        <!-- Weight scaling annotation -->
-        <rect x="10" y="150" width="600" height="30" rx="3" fill="#1c1b19" stroke="#374151" stroke-width="1"/>
-        <text x="310" y="163" text-anchor="middle" fill="#9ca3af" class="svg-label" font-size="10">Circuit-guided weight scaling: amplify identified components only · no retraining · −1.7% benchmark cost across 6 LLMs</text>
-
-        <defs>
-          <marker id="arr2-r" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ef4444"/></marker>
-          <marker id="arr2-y" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#f59e0b"/></marker>
-          <marker id="arr2-g" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#22c55e"/></marker>
-        </defs>
-      </svg>
-    </div>
-    <p class="fig-caption">Fig. 2 — Three-stage refusal circuit: Harmful Detection Heads → Safety Neurons → Refusal Heads. Circuit-guided weight scaling amplifies each stage without retraining; +26.5 pp safety under attacks, −1.7% benchmark cost.</p>
-  </article>
-
   <!-- ── 03 Fool's Gold ── -->
   <article class="paper-full">
     <p class="paper-rank">03 · AI SECURITY · PREPRINT</p>
@@ -675,50 +589,6 @@
   </article>
 
   <!-- ── 06 Abliteration Mitigation ── -->
-  <article class="paper-compact">
-    <div class="compact-rank">06</div>
-    <div class="compact-body">
-      <div class="tags">
-        <span class="tag tag-sec">AI security</span>
-        <span class="tag tag-interp">mech-interp</span>
-      </div>
-      <a class="compact-title" href="https://arxiv.org/abs/2608.18093" target="_blank" rel="noopener">
-        Abliteration Mitigation via Refusal Aliases
-      </a>
-      <p class="compact-meta">arXiv, August 2026</p>
-      <p class="compact-summary">
-        Abliteration succeeds because the refusal direction is easy to extract from a small contrastive set.
-        AMRA applies rank-<em>k</em> updates to residual-stream writer matrices, replacing refusal-inducing
-        activations with random aliases, and corrects downstream reader matrices to preserve clean-state
-        behaviour. On Llama-3-8B: +2.16 pts post-abliteration refusal over undefended baseline,
-        &lt;0.5 pp MMLU degradation.
-      </p>
-      <div class="compact-fig">
-        <svg viewBox="0 0 500 90" xmlns="http://www.w3.org/2000/svg">
-          <rect x="5" y="20" width="120" height="50" rx="3" fill="#4b1111" stroke="#ef4444" stroke-width="1.2"/>
-          <text x="65" y="42" text-anchor="middle" fill="#fca5a5" class="svg-label">Refusal direction</text>
-          <text x="65" y="56" text-anchor="middle" fill="#fca5a5" class="svg-label" font-size="10">easy to extract</text>
-          <text x="65" y="68" text-anchor="middle" fill="#f87171" class="svg-label" font-size="10">→ abliteration ✗</text>
-          <line x1="125" y1="45" x2="165" y2="45" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#arr6-y)"/>
-          <rect x="165" y="20" width="150" height="50" rx="3" fill="#451a03" stroke="#f59e0b" stroke-width="1.5"/>
-          <text x="240" y="38" text-anchor="middle" fill="#fcd34d" class="svg-label">AMRA: rank-k update</text>
-          <text x="240" y="51" text-anchor="middle" fill="#fcd34d" class="svg-label" font-size="10">replace refusal activations</text>
-          <text x="240" y="64" text-anchor="middle" fill="#fcd34d" class="svg-label" font-size="10">with random aliases</text>
-          <line x1="315" y1="45" x2="355" y2="45" stroke="#22c55e" stroke-width="1.5" marker-end="url(#arr6-g)"/>
-          <rect x="355" y="20" width="135" height="50" rx="3" fill="#064e3b" stroke="#22c55e" stroke-width="1.5"/>
-          <text x="422" y="38" text-anchor="middle" fill="#6ee7b7" class="svg-label">Refusal hidden</text>
-          <text x="422" y="51" text-anchor="middle" fill="#6ee7b7" class="svg-label" font-size="10">+2.16 pts post-abliteration</text>
-          <text x="422" y="64" text-anchor="middle" fill="#4ade80" class="svg-label" font-size="10">&lt;0.5 pp MMLU loss</text>
-          <defs>
-            <marker id="arr6-y" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#f59e0b"/></marker>
-            <marker id="arr6-g" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#22c55e"/></marker>
-          </defs>
-        </svg>
-        <p class="compact-caption">AMRA: random aliases obscure the refusal direction in residual-stream writer matrices; reader correction preserves clean-state behaviour.</p>
-      </div>
-    </div>
-  </article>
-
   <!-- ── 07 Unlearning Is Not Just Erasing ── -->
   <article class="paper-compact">
     <div class="compact-rank">07</div>
@@ -859,51 +729,6 @@
   </article>
 
   <!-- ── 10 Forgotten in Weights ── -->
-  <article class="paper-compact">
-    <div class="compact-rank">10</div>
-    <div class="compact-body">
-      <div class="tags">
-        <span class="tag tag-sec">AI security</span>
-        <span class="tag tag-unlearn">concept erasure</span>
-        <span class="tag tag-interp">mech-interp</span>
-      </div>
-      <a class="compact-title" href="https://arxiv.org/abs/2608.21544" target="_blank" rel="noopener">
-        Forgotten in Weights, Recovered by Tools: Agentic Tool Unlearning for LLM Agents
-      </a>
-      <p class="compact-meta">Baicheng Chen, Zheyuan Liu, Jingyu Zhang, Kaize Ding, Ningshan Ma, Yue Huang, Meng Jiang · arXiv, August 21, 2026</p>
-      <p class="compact-summary">
-        Parametric unlearning suppresses direct recall but a tool-augmented agent can recover the same
-        information via web search, retrieval, or database lookup — <strong>tool-mediated recovery</strong>.
-        ATU addresses this with two stages: (1) parametric unlearning for direct recall; (2) trajectory-level
-        RL in simulated tool-augmented environments penalising target-seeking tool behaviour and
-        final-answer leakage while preserving normal tool use for retained knowledge.
-      </p>
-      <div class="compact-fig">
-        <svg viewBox="0 0 520 100" xmlns="http://www.w3.org/2000/svg">
-          <rect x="5" y="25" width="110" height="50" rx="3" fill="#064e3b" stroke="#22c55e" stroke-width="1.2"/>
-          <text x="60" y="45" text-anchor="middle" fill="#6ee7b7" class="svg-label">Stage 1</text>
-          <text x="60" y="58" text-anchor="middle" fill="#6ee7b7" class="svg-label" font-size="10">Parametric</text>
-          <text x="60" y="70" text-anchor="middle" fill="#4ade80" class="svg-label" font-size="10">unlearning</text>
-          <line x1="115" y1="50" x2="150" y2="50" stroke="#6b7280" stroke-width="1" marker-end="url(#arr10)"/>
-          <rect x="150" y="25" width="130" height="50" rx="3" fill="#451a03" stroke="#f59e0b" stroke-width="1.5"/>
-          <text x="215" y="45" text-anchor="middle" fill="#fcd34d" class="svg-label">Stage 2: traj-RL</text>
-          <text x="215" y="58" text-anchor="middle" fill="#fcd34d" class="svg-label" font-size="10">penalise tool-mediated</text>
-          <text x="215" y="70" text-anchor="middle" fill="#fbbf24" class="svg-label" font-size="10">recovery attempts</text>
-          <line x1="280" y1="50" x2="315" y2="50" stroke="#22c55e" stroke-width="1.2" marker-end="url(#arr10-g)"/>
-          <rect x="315" y="25" width="195" height="50" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.2"/>
-          <text x="412" y="45" text-anchor="middle" fill="#93c5fd" class="svg-label">ATU agent</text>
-          <text x="412" y="58" text-anchor="middle" fill="#60a5fa" class="svg-label" font-size="10">direct + tool-mediated recall blocked</text>
-          <text x="412" y="70" text-anchor="middle" fill="#60a5fa" class="svg-label" font-size="10">normal tool use for retain-set OK</text>
-          <defs>
-            <marker id="arr10" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#6b7280"/></marker>
-            <marker id="arr10-g" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#22c55e"/></marker>
-          </defs>
-        </svg>
-        <p class="compact-caption">ATU: two-stage framework blocks both parametric recall and tool-mediated recovery; normal tool use for retained knowledge is preserved.</p>
-      </div>
-    </div>
-  </article>
-
   <!-- ── Notes ── -->
   <div class="notes">
     <h3>Notes</h3>
@@ -919,4 +744,5 @@
     📡 research-radar · automated daily sweep · claude/radar branch · 2026-09-05
   </footer>
 
+<p style="margin-top:32px;font-size:13px;opacity:.7">3 entries removed on 2026-09-10 as repeats of earlier reports: 2609.00051 (first covered 2026-09-03), 2608.18093 (first covered 2026-08-29), 2608.21544 (first covered 2026-08-27).</p>
 </div>
