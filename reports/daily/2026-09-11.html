@@ -1,0 +1,848 @@
+<title>Research Radar · Sep 11 2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,600;1,8..60,300&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+  :root {
+    --bg: #faf9f7;
+    --surface: #f0ede8;
+    --border: #ddd;
+    --text: #3a3a3a;
+    --dim: #888;
+    --title: #1a1a1a;
+    --link: #1a4f99;
+    --tag-bg: #e8e8e8;
+    --tag-text: #444;
+    --accent-teal: #0d7377;
+    --accent-blue: #1a4f99;
+    --accent-red: #b02020;
+    --accent-amber: #a05c00;
+    --accent-violet: #5c1aaa;
+    --accent-green: #1a6e3c;
+    --fig-bg: #fff;
+    --fig-border: #e0dbd4;
+    --divider: #e0dbd4;
+    --rank-bg: #1a1a1a;
+    --rank-text: #f0f0f0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #111111;
+      --surface: #1a1a1a;
+      --border: #2a2a2a;
+      --text: #c9c9c9;
+      --dim: #666;
+      --title: #f0f0f0;
+      --link: #7eb8ff;
+      --tag-bg: #252525;
+      --tag-text: #aaa;
+      --accent-teal: #14b8bd;
+      --accent-blue: #7eb8ff;
+      --accent-red: #f07070;
+      --accent-amber: #f0a030;
+      --accent-violet: #c084fc;
+      --accent-green: #4ade80;
+      --fig-bg: #1a1a1a;
+      --fig-border: #2a2a2a;
+      --divider: #2a2a2a;
+      --rank-bg: #f0f0f0;
+      --rank-text: #111;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #111111;
+    --surface: #1a1a1a;
+    --border: #2a2a2a;
+    --text: #c9c9c9;
+    --dim: #666;
+    --title: #f0f0f0;
+    --link: #7eb8ff;
+    --tag-bg: #252525;
+    --tag-text: #aaa;
+    --accent-teal: #14b8bd;
+    --accent-blue: #7eb8ff;
+    --accent-red: #f07070;
+    --accent-amber: #f0a030;
+    --accent-violet: #c084fc;
+    --accent-green: #4ade80;
+    --fig-bg: #1a1a1a;
+    --fig-border: #2a2a2a;
+    --divider: #2a2a2a;
+    --rank-bg: #f0f0f0;
+    --rank-text: #111;
+  }
+  :root[data-theme="light"] {
+    --bg: #faf9f7;
+    --surface: #f0ede8;
+    --border: #ddd;
+    --text: #3a3a3a;
+    --dim: #888;
+    --title: #1a1a1a;
+    --link: #1a4f99;
+    --tag-bg: #e8e8e8;
+    --tag-text: #444;
+    --accent-teal: #0d7377;
+    --accent-blue: #1a4f99;
+    --accent-red: #b02020;
+    --accent-amber: #a05c00;
+    --accent-violet: #5c1aaa;
+    --accent-green: #1a6e3c;
+    --fig-bg: #fff;
+    --fig-border: #e0dbd4;
+    --divider: #e0dbd4;
+    --rank-bg: #1a1a1a;
+    --rank-text: #f0f0f0;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    line-height: 1.7;
+    padding: 0 20px;
+    padding-block: 40px;
+    max-width: 660px;
+    margin: 0 auto;
+  }
+
+  /* Masthead */
+  .masthead {
+    border-bottom: 2px solid var(--title);
+    padding-bottom: 20px;
+    margin-bottom: 36px;
+  }
+  .masthead-eyebrow {
+    font-family: 'IBM Plex Mono', 'Courier New', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--dim);
+    margin-bottom: 6px;
+  }
+  .masthead-issue {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--title);
+    line-height: 1.2;
+    margin-bottom: 10px;
+    text-wrap: balance;
+  }
+  .masthead-counts {
+    font-family: 'IBM Plex Mono', 'Courier New', monospace;
+    font-size: 12px;
+    color: var(--dim);
+    letter-spacing: 0.04em;
+    margin-bottom: 12px;
+  }
+  .masthead-tracks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+  }
+  .track {
+    font-family: 'IBM Plex Mono', 'Courier New', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--dim);
+  }
+  .track-sep { color: var(--border); }
+
+  /* Tags */
+  .tag {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', 'Courier New', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    padding: 2px 7px;
+    border-radius: 2px;
+    margin-right: 4px;
+    margin-bottom: 2px;
+  }
+  .tag-peer { background: #d4edda; color: #155724; }
+  .tag-interp { background: #d1f0f0; color: #0a5a5c; }
+  .tag-security { background: #f8d7da; color: #721c24; }
+  .tag-align { background: #cfe2ff; color: #0a3166; }
+  .tag-control { background: #e8d5f8; color: #4a0e7a; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .tag-peer { background: #0d2e18; color: #4ade80; }
+    :root:not([data-theme="light"]) .tag-interp { background: #0a2a2a; color: #14b8bd; }
+    :root:not([data-theme="light"]) .tag-security { background: #2e0d0d; color: #f07070; }
+    :root:not([data-theme="light"]) .tag-align { background: #0d1e3a; color: #7eb8ff; }
+    :root:not([data-theme="light"]) .tag-control { background: #1e0e3a; color: #c084fc; }
+  }
+  :root[data-theme="dark"] .tag-peer { background: #0d2e18; color: #4ade80; }
+  :root[data-theme="dark"] .tag-interp { background: #0a2a2a; color: #14b8bd; }
+  :root[data-theme="dark"] .tag-security { background: #2e0d0d; color: #f07070; }
+  :root[data-theme="dark"] .tag-align { background: #0d1e3a; color: #7eb8ff; }
+  :root[data-theme="dark"] .tag-control { background: #1e0e3a; color: #c084fc; }
+
+  /* Full paper entries (top 3) */
+  .paper {
+    margin-bottom: 52px;
+  }
+  .paper-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .paper-rank {
+    font-family: 'IBM Plex Mono', 'Courier New', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    background: var(--rank-bg);
+    color: var(--rank-text);
+    padding: 2px 8px;
+    border-radius: 2px;
+    letter-spacing: 0.08em;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .paper-meta { display: flex; flex-wrap: wrap; gap: 4px; }
+  .paper-title {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 14px;
+    text-wrap: balance;
+  }
+  .paper-title a {
+    color: var(--title);
+    text-decoration: underline;
+    text-decoration-color: var(--border);
+    text-underline-offset: 3px;
+  }
+  .paper-title a:hover { color: var(--link); }
+  .paper-hook {
+    font-size: 16px;
+    color: var(--text);
+    line-height: 1.7;
+    margin-bottom: 18px;
+  }
+  .paper-detail {
+    font-size: 15px;
+    color: var(--text);
+    line-height: 1.7;
+    margin-top: 14px;
+  }
+  .paper-figure {
+    background: var(--fig-bg);
+    border: 1px solid var(--fig-border);
+    border-radius: 3px;
+    padding: 16px;
+    margin: 18px 0;
+    text-align: center;
+  }
+  .paper-figure svg { max-width: 100%; display: block; margin: 0 auto; }
+  .paper-figure figcaption {
+    font-family: 'IBM Plex Mono', 'Courier New', monospace;
+    font-size: 11px;
+    color: var(--dim);
+    margin-top: 10px;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  /* Section dividers */
+  hr.section-divider {
+    border: none;
+    border-top: 1px solid var(--divider);
+    margin: 48px 0;
+  }
+  .more-section-label {
+    font-family: 'IBM Plex Mono', 'Courier New', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--dim);
+    border-top: 2px solid var(--title);
+    padding-top: 14px;
+    margin-bottom: 36px;
+  }
+
+  /* Mid-tier entries (items 4–10) */
+  .mid-paper {
+    margin-bottom: 44px;
+  }
+  .mid-title {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.35;
+    margin-bottom: 12px;
+    text-wrap: balance;
+  }
+  .mid-title a {
+    color: var(--title);
+    text-decoration: underline;
+    text-decoration-color: var(--border);
+    text-underline-offset: 3px;
+  }
+  .mid-title a:hover { color: var(--link); }
+  .mid-figure {
+    margin: 12px 0;
+  }
+  .mid-figure svg { max-width: 100%; }
+  .mid-summary {
+    font-size: 14px;
+    color: var(--text);
+    line-height: 1.65;
+    margin-top: 12px;
+  }
+
+  /* Notes */
+  .notes-section {
+    border-top: 1px solid var(--divider);
+    padding-top: 24px;
+    margin-top: 48px;
+  }
+  .notes-label {
+    font-family: 'IBM Plex Mono', 'Courier New', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--dim);
+    margin-bottom: 14px;
+  }
+  .notes-section ul {
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text);
+  }
+  .notes-section li { margin-bottom: 8px; }
+
+  /* Footer */
+  .site-footer {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid var(--divider);
+    font-family: 'IBM Plex Mono', 'Courier New', monospace;
+    font-size: 11px;
+    color: var(--dim);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  @media (max-width: 480px) {
+    .paper-title { font-size: 19px; }
+    .mid-title { font-size: 16px; }
+    .masthead-issue { font-size: 22px; }
+  }
+</style>
+
+<header class="masthead">
+  <div class="masthead-eyebrow">Research Radar</div>
+  <div class="masthead-issue">Daily · September 11, 2026</div>
+  <div class="masthead-counts">3 peer-reviewed · 7 preprints · 0 forum/blog</div>
+  <div class="masthead-tracks">
+    <span class="track">Pretraining Safety</span>
+    <span class="track-sep">·</span>
+    <span class="track">AI Security</span>
+    <span class="track-sep">·</span>
+    <span class="track">Mech Interp</span>
+  </div>
+</header>
+
+<!-- PAPER 01 -->
+<article class="paper">
+  <header class="paper-header">
+    <div class="paper-rank">01</div>
+    <div class="paper-meta">
+      <span class="tag tag-peer">ICLR 2026</span>
+      <span class="tag tag-align">pretraining safety</span>
+    </div>
+  </header>
+  <h2 class="paper-title">
+    <a href="https://arxiv.org/abs/2508.06601">Deep Ignorance: Filtering Pretraining Data Builds Tamper-Resistant Safeguards into Open-Weight LLMs</a>
+  </h2>
+  <p class="paper-hook">
+    If you remove biothreat-relevant text from a model's pretraining corpus, can an adversary fine-tune it back in? This paper answers no—filtered models resist 10,000 steps and 300 million tokens of adversarial fine-tuning, making them over 10× more tamper-resistant than the best post-training unlearning baselines. The implication is stark: safety durability for open-weight models depends on what was in the pretraining data, not just what was done afterward.
+  </p>
+  <figure class="paper-figure">
+    <svg viewBox="0 0 500 210" xmlns="http://www.w3.org/2000/svg" aria-label="Tamper-resistance comparison: filtered pretraining vs post-training unlearning across adversarial fine-tuning budget">
+      <rect width="500" height="210" fill="#fff"/>
+      <!-- Y axis label -->
+      <text x="12" y="108" font-family="Georgia, serif" font-size="10" fill="#555" text-anchor="middle" transform="rotate(-90,12,108)">Biothreat Proxy Knowledge (↓ better)</text>
+      <!-- axes -->
+      <line x1="56" y1="20" x2="56" y2="170" stroke="#ccc" stroke-width="1"/>
+      <line x1="56" y1="170" x2="470" y2="170" stroke="#ccc" stroke-width="1"/>
+      <!-- Y ticks -->
+      <text x="50" y="174" font-family="Georgia, serif" font-size="10" fill="#888" text-anchor="end">0</text>
+      <text x="50" y="132" font-family="Georgia, serif" font-size="10" fill="#888" text-anchor="end">0.3</text>
+      <text x="50" y="90" font-family="Georgia, serif" font-size="10" fill="#888" text-anchor="end">0.6</text>
+      <text x="50" y="48" font-family="Georgia, serif" font-size="10" fill="#888" text-anchor="end">0.9</text>
+      <line x1="52" y1="130" x2="56" y2="130" stroke="#ccc" stroke-width="1"/>
+      <line x1="52" y1="88" x2="56" y2="88" stroke="#ccc" stroke-width="1"/>
+      <line x1="52" y1="46" x2="56" y2="46" stroke="#ccc" stroke-width="1"/>
+      <!-- X ticks / labels -->
+      <text x="130" y="185" font-family="Georgia, serif" font-size="10" fill="#888" text-anchor="middle">1K steps</text>
+      <text x="230" y="185" font-family="Georgia, serif" font-size="10" fill="#888" text-anchor="middle">5K steps</text>
+      <text x="330" y="185" font-family="Georgia, serif" font-size="10" fill="#888" text-anchor="middle">10K steps</text>
+      <text x="430" y="185" font-family="Georgia, serif" font-size="10" fill="#888" text-anchor="middle">300M tok</text>
+      <!-- Best unlearning baseline line (high, rises fast) -->
+      <polyline points="130,110 230,78 330,56 430,46" fill="none" stroke="#b02020" stroke-width="2.5" stroke-dasharray="6,3"/>
+      <!-- Filtered pretraining line (low, stays low) -->
+      <polyline points="130,162 230,158 330,155 430,150" fill="none" stroke="#0d7377" stroke-width="2.5"/>
+      <!-- Legend -->
+      <line x1="70" y1="32" x2="100" y2="32" stroke="#b02020" stroke-width="2.5" stroke-dasharray="6,3"/>
+      <text x="106" y="36" font-family="Georgia, serif" font-size="11" fill="#444">Post-training unlearning (best baseline)</text>
+      <line x1="70" y1="52" x2="100" y2="52" stroke="#0d7377" stroke-width="2.5"/>
+      <text x="106" y="56" font-family="Georgia, serif" font-size="11" fill="#444">Filtered pretraining (this work)</text>
+      <!-- 10× annotation -->
+      <line x1="430" y1="46" x2="430" y2="150" stroke="#aaa" stroke-width="1" stroke-dasharray="3,2"/>
+      <text x="440" y="98" font-family="Georgia, serif" font-size="11" fill="#555" font-weight="bold">&gt;10×</text>
+    </svg>
+    <figcaption>Figure 1: Filtered pretraining maintains low biothreat proxy knowledge across all adversarial fine-tuning budgets (up to 300M tokens), while the best post-training unlearning baseline degrades rapidly; the gap exceeds 10×.</figcaption>
+  </figure>
+  <p class="paper-detail">
+    O'Brien et al. (EleutherAI / UK AI Security Institute / Oxford OATML) introduce a multi-stage pipeline that scalably identifies and removes biorisk-proxy documents from pretraining corpora, then pretrain six 6.9B-parameter models from scratch on filtered vs. unfiltered data. Adversarial fine-tuning attacks across a range of budgets (1K–10K gradient steps; 300M tokens of adversarial data) consistently fail to recover suppressed biothreat capability in filtered models. General benchmark performance is preserved. The result is the first large-scale peer-reviewed evidence that pretraining data filtering—not RLHF, not unlearning—delivers the most durable defense for open-weight model safety.
+  </p>
+</article>
+
+<hr class="section-divider">
+
+<!-- PAPER 02 -->
+<article class="paper">
+  <header class="paper-header">
+    <div class="paper-rank">02</div>
+    <div class="paper-meta">
+      <span class="tag tag-align">pretraining safety</span>
+      <span class="tag">preprint · Sep 2026</span>
+    </div>
+  </header>
+  <h2 class="paper-title">
+    <a href="https://arxiv.org/abs/2609.06934">The Geometry of Refusal: Why Post-Hoc Safety Is Fragile and Pretraining-Time Safety Persists</a>
+  </h2>
+  <p class="paper-hook">
+    Post-hoc safety training (RLHF, DPO) can be undone by 100 steps of benign fine-tuning. This paper explains why, using differential geometry: safety updates land in a suppression regime where the gradient is nearly orthogonal to all capability directions, so the model is masked rather than changed, and any fine-tuning that sharpens those directions restores harmful outputs. A 267-checkpoint sweep of OLMo-2-1B locates where pretraining safety actually forms—and it's a sharp transition between 6B and 60B tokens, not a gradual accumulation.
+  </p>
+  <figure class="paper-figure">
+    <svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-label="Geometric model of refusal suppression vs capability directions, with pretraining safety emergence curve">
+      <rect width="500" height="220" fill="#fff"/>
+      <!-- Left panel: geometry -->
+      <text x="115" y="18" font-family="Georgia, serif" font-size="11" fill="#888" text-anchor="middle">Post-hoc safety geometry</text>
+      <!-- Capability plane -->
+      <ellipse cx="115" cy="115" rx="80" ry="38" fill="#e8f4f8" stroke="#aacce0" stroke-width="1" opacity="0.8"/>
+      <text x="115" y="162" font-family="Georgia, serif" font-size="10" fill="#888" text-anchor="middle">Capability subspace</text>
+      <!-- Safety update vector (orthogonal) -->
+      <line x1="115" y1="115" x2="115" y2="52" stroke="#b02020" stroke-width="2.5" marker-end="url(#arr1)"/>
+      <defs>
+        <marker id="arr1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#b02020"/>
+        </marker>
+      </defs>
+      <text x="128" y="72" font-family="Georgia, serif" font-size="10" fill="#b02020">Safety update</text>
+      <text x="128" y="84" font-family="Georgia, serif" font-size="10" fill="#b02020">(⊥ capability)</text>
+      <!-- Right panel: pretraining phase transition curve -->
+      <line x1="260" y1="30" x2="260" y2="185" stroke="#ccc" stroke-width="1"/>
+      <line x1="260" y1="185" x2="470" y2="185" stroke="#ccc" stroke-width="1"/>
+      <text x="365" y="210" font-family="Georgia, serif" font-size="11" fill="#888" text-anchor="middle">Pretraining tokens (log scale)</text>
+      <text x="248" y="108" font-family="Georgia, serif" font-size="10" fill="#555" text-anchor="middle" transform="rotate(-90,248,108)">Safety substrate</text>
+      <!-- Phase transition: flat then sharp rise -->
+      <polyline points="270,178 300,175 330,172 355,168 375,130 390,62 400,40 420,35 450,33" fill="none" stroke="#0d7377" stroke-width="2.5"/>
+      <!-- Transition zone shading -->
+      <rect x="355" y="30" width="45" height="155" fill="#ffeaa0" opacity="0.3"/>
+      <text x="377" y="200" font-family="Georgia, serif" font-size="9" fill="#a05c00" text-anchor="middle">6B–60B tok</text>
+      <!-- X labels -->
+      <text x="270" y="197" font-family="Georgia, serif" font-size="9" fill="#aaa" text-anchor="middle">1B</text>
+      <text x="355" y="197" font-family="Georgia, serif" font-size="9" fill="#aaa" text-anchor="middle">6B</text>
+      <text x="400" y="197" font-family="Georgia, serif" font-size="9" fill="#aaa" text-anchor="middle">60B</text>
+      <text x="450" y="197" font-family="Georgia, serif" font-size="9" fill="#aaa" text-anchor="middle">200B</text>
+      <!-- panel label -->
+      <text x="365" y="18" font-family="Georgia, serif" font-size="11" fill="#888" text-anchor="middle">OLMo-2-1B: safety substrate emergence</text>
+    </svg>
+    <figcaption>Figure 2: (Left) Post-hoc safety updates land orthogonal to the capability subspace — masking capability rather than removing it, so benign fine-tuning restores harmful outputs. (Right) 267-checkpoint OLMo-2-1B sweep shows safety substrate emerges in a sharp transition between ~6B and ~60B pretraining tokens.</figcaption>
+  </figure>
+  <p class="paper-detail">
+    Malla, Choi &amp; Choi formalize the fragility of post-hoc safety via a kernel-immobility lemma: a gradient update confined to the orthogonal complement of the capability kernel can only suppress, never erase, pre-existing capability—100 benign fine-tuning steps collapse refusal in Qwen-2.5-7B and Llama-3-8B Instruct. The 267-checkpoint pretraining sweep of OLMo-2-1B reveals that the structural substrate onto which safety is installed (the layer geometry that enables stable refusal directions) forms between 6B and 60B tokens—explaining the empirical superiority of early pretraining safety interventions over post-training ones, and providing a principled account of why paper #1's pretraining filter result is structurally irreversible.
+  </p>
+</article>
+
+<hr class="section-divider">
+
+<!-- PAPER 03 -->
+<article class="paper">
+  <header class="paper-header">
+    <div class="paper-rank">03</div>
+    <div class="paper-meta">
+      <span class="tag tag-security">AI security</span>
+      <span class="tag">preprint · Sep 9 2026</span>
+    </div>
+  </header>
+  <h2 class="paper-title">
+    <a href="https://arxiv.org/abs/2609.09793">How Fragile Is Safety Alignment at Frontier Scale? A Single-Direction Attack on a 320B MoE</a>
+  </h2>
+  <p class="paper-hook">
+    Directional ablation—projecting the refusal direction out of model weights—had only been demonstrated on dense models up to about 70B parameters. This paper extends it to GLM-5.3-Flash, a 320B mixture-of-experts model with 288 routed experts and block-FP8 quantization. Combined editing of all writer types removes 77.6% of refusal with no gradient-based training, confirming the attack is architecture-agnostic and scales to frontier models.
+  </p>
+  <figure class="paper-figure">
+    <svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg" aria-label="Bar chart showing refusal removal percentage by writer type edited in 320B MoE">
+      <rect width="500" height="200" fill="#fff"/>
+      <text x="250" y="18" font-family="Georgia, serif" font-size="12" fill="#555" text-anchor="middle">Refusal removed (%) by editing writer type — GLM-5.3-Flash (320B MoE)</text>
+      <!-- Y axis -->
+      <line x1="70" y1="30" x2="70" y2="155" stroke="#ccc" stroke-width="1"/>
+      <line x1="70" y1="155" x2="480" y2="155" stroke="#ccc" stroke-width="1"/>
+      <text x="64" y="158" font-family="Georgia, serif" font-size="9" fill="#888" text-anchor="end">0%</text>
+      <text x="64" y="118" font-family="Georgia, serif" font-size="9" fill="#888" text-anchor="end">25%</text>
+      <text x="64" y="78" font-family="Georgia, serif" font-size="9" fill="#888" text-anchor="end">50%</text>
+      <text x="64" y="38" font-family="Georgia, serif" font-size="9" fill="#888" text-anchor="end">75%</text>
+      <line x1="66" y1="115" x2="70" y2="115" stroke="#ccc" stroke-width="1"/>
+      <line x1="66" y1="75" x2="70" y2="75" stroke="#ccc" stroke-width="1"/>
+      <line x1="66" y1="35" x2="70" y2="35" stroke="#ccc" stroke-width="1"/>
+      <!-- Bars: attn 3.9%, dense 1.6%, routed-expert 14.8%, combined 77.6% -->
+      <!-- Scale: 155-35 = 120px for 100%; so 1% = 1.2px -->
+      <!-- Attn: 3.9% → 4.7px height, bar top = 155-4.7=150.3 -->
+      <rect x="90" y="150" width="60" height="5" fill="#888"/>
+      <text x="120" y="146" font-family="Georgia, serif" font-size="10" fill="#555" text-anchor="middle">3.9%</text>
+      <text x="120" y="170" font-family="Georgia, serif" font-size="10" fill="#888" text-anchor="middle">Attention</text>
+      <!-- Dense: 1.6% → 1.9px -->
+      <rect x="180" y="153" width="60" height="2" fill="#888"/>
+      <text x="210" y="148" font-family="Georgia, serif" font-size="10" fill="#555" text-anchor="middle">1.6%</text>
+      <text x="210" y="170" font-family="Georgia, serif" font-size="10" fill="#888" text-anchor="middle">Dense</text>
+      <!-- Routed expert: 14.8% → 17.8px -->
+      <rect x="270" y="137" width="60" height="18" fill="#888"/>
+      <text x="300" y="133" font-family="Georgia, serif" font-size="10" fill="#555" text-anchor="middle">14.8%</text>
+      <text x="300" y="170" font-family="Georgia, serif" font-size="10" fill="#888" text-anchor="middle">Routed Exp.</text>
+      <!-- Combined all: 77.6% → 93.1px -->
+      <rect x="360" y="62" width="80" height="93" fill="#b02020"/>
+      <text x="400" y="57" font-family="Georgia, serif" font-size="12" fill="#b02020" text-anchor="middle" font-weight="bold">77.6%</text>
+      <text x="400" y="170" font-family="Georgia, serif" font-size="10" fill="#888" text-anchor="middle">All writers</text>
+      <text x="400" y="182" font-family="Georgia, serif" font-size="9" fill="#b02020" text-anchor="middle">(combined)</text>
+    </svg>
+    <figcaption>Figure 1: Per-writer-type directional ablation on GLM-5.3-Flash (320B MoE): editing attention, dense, and routed-expert writers individually removes 3.9%, 1.6%, and 14.8% of refusal; combined editing removes 77.6% — with zero gradient-based optimization.</figcaption>
+  </figure>
+  <p class="paper-detail">
+    Shi, Chen &amp; Shen adapt the directional ablation (abliteration) technique to GLM-5.3-Flash's non-standard residual structure: the model uses a four-wide hyper-connection residual and block-FP8 quantization, meaning the refusal direction cannot be projected from a single weight tensor. The authors identify separate writer matrices for attention outputs, dense expert outputs, and routed expert outputs, and apply ablation to each. No single writer type carries most of the refusal signal; only simultaneous editing across all three achieves high attack success. The paper confirms that safety alignment in frontier-scale MoE models remains a suppression regime property (consistent with paper #2's theory) and that the attack scales without requiring per-expert optimization—only a few hundred contrastive prompts.
+  </p>
+</article>
+
+<hr class="section-divider">
+
+<!-- MID-TIER SECTION -->
+<div class="more-section-label">Items 4 – 10 · Also notable</div>
+
+<!-- PAPER 04 -->
+<article class="mid-paper">
+  <header class="paper-header">
+    <div class="paper-rank">04</div>
+    <div class="paper-meta">
+      <span class="tag tag-peer">EMNLP 2026 Findings</span>
+      <span class="tag tag-interp">mech-interp</span>
+      <span class="tag tag-align">safety</span>
+    </div>
+  </header>
+  <h3 class="mid-title">
+    <a href="https://arxiv.org/abs/2609.00051">From Detection to Refusal: Safer LLMs via Circuit-Guided Weight Scaling</a>
+  </h3>
+  <figure class="paper-figure mid-figure">
+    <svg viewBox="0 0 460 140" xmlns="http://www.w3.org/2000/svg" aria-label="Three-stage safety circuit: harmful detection heads to safety neurons to refusal heads">
+      <rect width="460" height="140" fill="#fff"/>
+      <!-- Stage boxes -->
+      <rect x="20" y="40" width="120" height="56" rx="3" fill="#e8f4e8" stroke="#0d7377" stroke-width="1.5"/>
+      <text x="80" y="65" font-family="Georgia, serif" font-size="12" fill="#0a5a5c" text-anchor="middle">Harmful</text>
+      <text x="80" y="81" font-family="Georgia, serif" font-size="12" fill="#0a5a5c" text-anchor="middle">Detection Heads</text>
+      <text x="80" y="110" font-family="Georgia, serif" font-size="9" fill="#888" text-anchor="middle">respond to harm cues</text>
+      <!-- Arrow 1 -->
+      <line x1="140" y1="68" x2="168" y2="68" stroke="#888" stroke-width="1.5" marker-end="url(#arr2)"/>
+      <defs><marker id="arr2" markerWidth="7" markerHeight="7" refX="5" refY="2.5" orient="auto"><path d="M0,0 L0,5 L7,2.5 z" fill="#888"/></marker></defs>
+      <!-- Stage 2 -->
+      <rect x="170" y="40" width="120" height="56" rx="3" fill="#fef9e7" stroke="#a05c00" stroke-width="1.5"/>
+      <text x="230" y="65" font-family="Georgia, serif" font-size="12" fill="#6b3d00" text-anchor="middle">Safety</text>
+      <text x="230" y="81" font-family="Georgia, serif" font-size="12" fill="#6b3d00" text-anchor="middle">Neurons</text>
+      <text x="230" y="110" font-family="Georgia, serif" font-size="9" fill="#888" text-anchor="middle">stabilize residual signal</text>
+      <!-- Arrow 2 -->
+      <line x1="290" y1="68" x2="318" y2="68" stroke="#888" stroke-width="1.5" marker-end="url(#arr3)"/>
+      <defs><marker id="arr3" markerWidth="7" markerHeight="7" refX="5" refY="2.5" orient="auto"><path d="M0,0 L0,5 L7,2.5 z" fill="#888"/></marker></defs>
+      <!-- Stage 3 -->
+      <rect x="320" y="40" width="120" height="56" rx="3" fill="#fde8e8" stroke="#b02020" stroke-width="1.5"/>
+      <text x="380" y="65" font-family="Georgia, serif" font-size="12" fill="#721c24" text-anchor="middle">Refusal</text>
+      <text x="380" y="81" font-family="Georgia, serif" font-size="12" fill="#721c24" text-anchor="middle">Heads</text>
+      <text x="380" y="110" font-family="Georgia, serif" font-size="9" fill="#888" text-anchor="middle">generate safe output</text>
+      <!-- Result annotation -->
+      <text x="230" y="135" font-family="Georgia, serif" font-size="10" fill="#0d7377" text-anchor="middle" font-weight="bold">Circuit-guided weight scaling → +26.5% safety, –1.7% accuracy</text>
+    </svg>
+    <figcaption>Figure 1: Multi-stage safety circuit — harmful detection heads → safety neurons → refusal heads; scaling circuit-component weights improves safety rate under jailbreak by 26.5% with only 1.7% accuracy cost.</figcaption>
+  </figure>
+  <p class="mid-summary">Chu, Sun &amp; Weng (EMNLP 2026 Findings) map the full three-stage safety circuit, then improve robustness by scaling identified component weights rather than fine-tuning — the first intervention targeting the complete circuit rather than any single component, achieving +26.5% safety rate under attacks with a 1.7% accuracy penalty.</p>
+</article>
+<hr class="section-divider">
+
+<!-- PAPER 05 -->
+<article class="mid-paper">
+  <header class="paper-header">
+    <div class="paper-rank">05</div>
+    <div class="paper-meta">
+      <span class="tag tag-align">pretraining safety</span>
+      <span class="tag">preprint · Jun 2026</span>
+    </div>
+  </header>
+  <h3 class="mid-title">
+    <a href="https://arxiv.org/abs/2606.19168">Beyond Safe Data: Pretraining-Stage Alignment with Regular Safety Reflection</a>
+  </h3>
+  <figure class="paper-figure mid-figure">
+    <svg viewBox="0 0 460 130" xmlns="http://www.w3.org/2000/svg" aria-label="SRP pipeline: pretraining corpus segmented with inserted safety reflections">
+      <rect width="460" height="130" fill="#fff"/>
+      <!-- Doc segments -->
+      <rect x="20" y="30" width="80" height="48" rx="2" fill="#e8f0fe" stroke="#aac" stroke-width="1"/>
+      <text x="60" y="52" font-family="Georgia, serif" font-size="10" fill="#556" text-anchor="middle">Pretraining</text>
+      <text x="60" y="66" font-family="Georgia, serif" font-size="10" fill="#556" text-anchor="middle">segment</text>
+      <!-- Safety reflection insertion -->
+      <rect x="118" y="25" width="58" height="58" rx="2" fill="#fff3cd" stroke="#f0a030" stroke-width="1.5"/>
+      <text x="147" y="47" font-family="Georgia, serif" font-size="9" fill="#6b3d00" text-anchor="middle">🔍 Verdict</text>
+      <text x="147" y="61" font-family="Georgia, serif" font-size="9" fill="#6b3d00" text-anchor="middle">Safe/Unsafe</text>
+      <text x="147" y="75" font-family="Georgia, serif" font-size="9" fill="#6b3d00" text-anchor="middle">+ Category</text>
+      <text x="147" y="93" font-family="Georgia, serif" font-size="9" fill="#a05c00" text-anchor="middle">↑ classifier</text>
+      <!-- Next segment -->
+      <rect x="190" y="30" width="80" height="48" rx="2" fill="#e8f0fe" stroke="#aac" stroke-width="1"/>
+      <text x="230" y="52" font-family="Georgia, serif" font-size="10" fill="#556" text-anchor="middle">Pretraining</text>
+      <text x="230" y="66" font-family="Georgia, serif" font-size="10" fill="#556" text-anchor="middle">segment</text>
+      <rect x="280" y="25" width="58" height="58" rx="2" fill="#fff3cd" stroke="#f0a030" stroke-width="1.5"/>
+      <text x="309" y="47" font-family="Georgia, serif" font-size="9" fill="#6b3d00" text-anchor="middle">🔍 Verdict</text>
+      <text x="309" y="61" font-family="Georgia, serif" font-size="9" fill="#6b3d00" text-anchor="middle">Safe/Unsafe</text>
+      <text x="309" y="75" font-family="Georgia, serif" font-size="9" fill="#6b3d00" text-anchor="middle">+ Category</text>
+      <!-- dots -->
+      <text x="368" y="60" font-family="Georgia, serif" font-size="20" fill="#aaa" text-anchor="middle">…</text>
+      <!-- result arrow -->
+      <text x="230" y="115" font-family="Georgia, serif" font-size="10" fill="#0d7377" text-anchor="middle">→ Improved safety at inference + fine-tuning attack resistance (1.7B / FineWeb-Edu)</text>
+    </svg>
+    <figcaption>Figure 1: SRP pipeline — every ~few-hundred-token pretraining segment is followed by a safety-classifier verdict and harm-category token; model learns self-monitoring alongside next-token prediction.</figcaption>
+  </figure>
+  <p class="mid-summary">Li et al. propose Safety Reflection Pretraining — inserting classifier-generated (Safe/Unsafe + harm category) annotations after each pretraining segment. 1.7B models on FineWeb-Edu show improved safety classification and substantially reduced ASR on both inference-stage and fine-tuning attacks, without filtering or rewriting any documents.</p>
+</article>
+<hr class="section-divider">
+
+<!-- PAPER 06 -->
+<article class="mid-paper">
+  <header class="paper-header">
+    <div class="paper-rank">06</div>
+    <div class="paper-meta">
+      <span class="tag tag-align">spec alignment</span>
+      <span class="tag">preprint · Aug 2026</span>
+    </div>
+  </header>
+  <h3 class="mid-title">
+    <a href="https://arxiv.org/abs/2608.13482">Synthetic Persona Pretraining: Alignment from Token Zero</a>
+  </h3>
+  <figure class="paper-figure mid-figure">
+    <svg viewBox="0 0 460 130" xmlns="http://www.w3.org/2000/svg" aria-label="SPP annotation: pretraining document with interleaved persona value reflections">
+      <rect width="460" height="130" fill="#fff"/>
+      <!-- Document block -->
+      <rect x="20" y="30" width="100" height="60" rx="2" fill="#f0ede8" stroke="#bbb" stroke-width="1"/>
+      <text x="70" y="55" font-family="Georgia, serif" font-size="10" fill="#555" text-anchor="middle">Document</text>
+      <text x="70" y="70" font-family="Georgia, serif" font-size="9" fill="#888" text-anchor="middle">(any web text)</text>
+      <!-- Arrow -->
+      <line x1="120" y1="60" x2="145" y2="60" stroke="#ccc" stroke-width="1.5" marker-end="url(#arr4)"/>
+      <defs><marker id="arr4" markerWidth="7" markerHeight="7" refX="5" refY="2.5" orient="auto"><path d="M0,0 L0,5 L7,2.5 z" fill="#ccc"/></marker></defs>
+      <!-- Annotated block -->
+      <rect x="147" y="22" width="150" height="82" rx="2" fill="#e8effe" stroke="#5c1aaa" stroke-width="1.5"/>
+      <text x="222" y="42" font-family="Georgia, serif" font-size="10" fill="#4a0e7a" text-anchor="middle" font-style="italic">Document</text>
+      <line x1="167" y1="48" x2="307" y2="48" stroke="#c8b8e8" stroke-width="1"/>
+      <text x="222" y="62" font-family="Georgia, serif" font-size="9" fill="#5c1aaa" text-anchor="middle">💭 "As a helpful assistant</text>
+      <text x="222" y="75" font-family="Georgia, serif" font-size="9" fill="#5c1aaa" text-anchor="middle">guided by [constitution],</text>
+      <text x="222" y="88" font-family="Georgia, serif" font-size="9" fill="#5c1aaa" text-anchor="middle">I should note that…"</text>
+      <!-- Scale benefit -->
+      <rect x="322" y="30" width="118" height="60" rx="2" fill="#e8ffe8" stroke="#0d7377" stroke-width="1.5"/>
+      <text x="381" y="50" font-family="Georgia, serif" font-size="10" fill="#0a5a5c" text-anchor="middle">↑ Constitution</text>
+      <text x="381" y="65" font-family="Georgia, serif" font-size="10" fill="#0a5a5c" text-anchor="middle">adherence</text>
+      <text x="381" y="80" font-family="Georgia, serif" font-size="9" fill="#0d7377" text-anchor="middle">grows w/ budget</text>
+      <text x="230" y="118" font-family="Georgia, serif" font-size="9" fill="#888" text-anchor="middle">3B model · 500B tokens · EPFL</text>
+    </svg>
+    <figcaption>Figure 1: SPP annotates pretraining documents with constitution-derived first-person reflections; the model learns values alongside language modeling from the first token, and the alignment advantage over post-training-only baselines grows with pretraining compute.</figcaption>
+  </figure>
+  <p class="mid-summary">Minder et al. (EPFL) show that appending value-aligned first-person reflections derived from a normative constitution to pretraining documents installs stronger, more compute-scalable alignment than post-training fine-tuning — models up to 3B/500B tokens show improved constitution following, jailbreak robustness, and out-of-distribution moral dilemma performance.</p>
+</article>
+<hr class="section-divider">
+
+<!-- PAPER 07 -->
+<article class="mid-paper">
+  <header class="paper-header">
+    <div class="paper-rank">07</div>
+    <div class="paper-meta">
+      <span class="tag tag-align">alignment durability</span>
+      <span class="tag">preprint · Sep 2026</span>
+    </div>
+  </header>
+  <h3 class="mid-title">
+    <a href="https://arxiv.org/abs/2609.01455">When Safety Routing Breaks: Understanding Alignment Fragility under Benign Fine-Tuning</a>
+  </h3>
+  <figure class="paper-figure mid-figure">
+    <svg viewBox="0 0 460 130" xmlns="http://www.w3.org/2000/svg" aria-label="Fisher landscape: flat safety basin and re-sharpened output routing pathway after fine-tuning">
+      <rect width="460" height="130" fill="#fff"/>
+      <!-- Before fine-tuning: flat safety basin -->
+      <text x="115" y="18" font-family="Georgia, serif" font-size="11" fill="#888" text-anchor="middle">After alignment</text>
+      <path d="M30,95 Q115,40 200,95" fill="none" stroke="#0d7377" stroke-width="2.5"/>
+      <text x="115" y="112" font-family="Georgia, serif" font-size="10" fill="#0d7377" text-anchor="middle">Flat safety basin</text>
+      <circle cx="115" cy="62" r="4" fill="#0d7377"/>
+      <text x="115" y="80" font-family="Georgia, serif" font-size="9" fill="#888" text-anchor="middle">(low-rank Fisher)</text>
+      <!-- Arrow in middle -->
+      <text x="230" y="65" font-family="Georgia, serif" font-size="18" fill="#aaa" text-anchor="middle">→</text>
+      <text x="230" y="82" font-family="Georgia, serif" font-size="9" fill="#a05c00" text-anchor="middle">100 benign</text>
+      <text x="230" y="93" font-family="Georgia, serif" font-size="9" fill="#a05c00" text-anchor="middle">examples</text>
+      <!-- After: sharp re-sharpening in output MLP -->
+      <text x="355" y="18" font-family="Georgia, serif" font-size="11" fill="#888" text-anchor="middle">After benign fine-tuning</text>
+      <path d="M265,95 Q310,85 355,20 Q400,85 445,95" fill="none" stroke="#b02020" stroke-width="2.5"/>
+      <circle cx="355" cy="20" r="4" fill="#b02020"/>
+      <text x="355" y="112" font-family="Georgia, serif" font-size="10" fill="#b02020" text-anchor="middle">Re-sharpened routing</text>
+      <text x="355" y="124" font-family="Georgia, serif" font-size="9" fill="#888" text-anchor="middle">(output MLP, output-side)</text>
+    </svg>
+    <figcaption>Figure 1: Alignment flattens the safety loss landscape (low-rank Fisher, broad basin); after 100 benign fine-tuning examples, the output-side MLP routing pathway re-sharpens, enabling high ASR while general utility is minimally affected.</figcaption>
+  </figure>
+  <p class="mid-summary">Guo et al. provide a Fisher-geometric account: the safety Fisher matrix is low-rank, so alignment creates a flat basin while preserving a latent output-routing pathway that benign fine-tuning re-sharpens in output-side MLPs after just 100 examples; LoRA and ASAM suppress early collapse but weaken at scale.</p>
+</article>
+<hr class="section-divider">
+
+<!-- PAPER 08 -->
+<article class="mid-paper">
+  <header class="paper-header">
+    <div class="paper-rank">08</div>
+    <div class="paper-meta">
+      <span class="tag tag-peer">EACL 2026</span>
+      <span class="tag tag-security">AI security</span>
+      <span class="tag tag-interp">mech-interp</span>
+    </div>
+  </header>
+  <h3 class="mid-title">
+    <a href="https://arxiv.org/abs/2509.01631">Unraveling LLM Jailbreaks Through Safety Knowledge Neurons</a>
+  </h3>
+  <figure class="paper-figure mid-figure">
+    <svg viewBox="0 0 460 120" xmlns="http://www.w3.org/2000/svg" aria-label="Safety knowledge neuron identification pipeline and SafeTuning defense">
+      <rect width="460" height="120" fill="#fff"/>
+      <!-- Pipeline -->
+      <rect x="10" y="30" width="90" height="48" rx="2" fill="#e8f4e8" stroke="#0d7377" stroke-width="1"/>
+      <text x="55" y="52" font-family="Georgia, serif" font-size="10" fill="#0a5a5c" text-anchor="middle">Residual</text>
+      <text x="55" y="66" font-family="Georgia, serif" font-size="10" fill="#0a5a5c" text-anchor="middle">Stream</text>
+      <line x1="100" y1="54" x2="120" y2="54" stroke="#ccc" stroke-width="1.5" marker-end="url(#arr5)"/>
+      <defs><marker id="arr5" markerWidth="7" markerHeight="7" refX="5" refY="2.5" orient="auto"><path d="M0,0 L0,5 L7,2.5 z" fill="#ccc"/></marker></defs>
+      <rect x="122" y="30" width="100" height="48" rx="2" fill="#fff3cd" stroke="#a05c00" stroke-width="1"/>
+      <text x="172" y="50" font-family="Georgia, serif" font-size="10" fill="#6b3d00" text-anchor="middle">Vocab</text>
+      <text x="172" y="64" font-family="Georgia, serif" font-size="10" fill="#6b3d00" text-anchor="middle">projection</text>
+      <text x="172" y="90" font-family="Georgia, serif" font-size="9" fill="#888" text-anchor="middle">→ safety tokens</text>
+      <line x1="222" y1="54" x2="242" y2="54" stroke="#ccc" stroke-width="1.5" marker-end="url(#arr6)"/>
+      <defs><marker id="arr6" markerWidth="7" markerHeight="7" refX="5" refY="2.5" orient="auto"><path d="M0,0 L0,5 L7,2.5 z" fill="#ccc"/></marker></defs>
+      <rect x="244" y="30" width="100" height="48" rx="2" fill="#f8d7da" stroke="#b02020" stroke-width="1"/>
+      <text x="294" y="50" font-family="Georgia, serif" font-size="10" fill="#721c24" text-anchor="middle">Safety</text>
+      <text x="294" y="64" font-family="Georgia, serif" font-size="10" fill="#721c24" text-anchor="middle">neurons ID'd</text>
+      <text x="294" y="90" font-family="Georgia, serif" font-size="9" fill="#888" text-anchor="middle">ASR &gt;97% on ablate</text>
+      <line x1="344" y1="54" x2="364" y2="54" stroke="#ccc" stroke-width="1.5" marker-end="url(#arr7)"/>
+      <defs><marker id="arr7" markerWidth="7" markerHeight="7" refX="5" refY="2.5" orient="auto"><path d="M0,0 L0,5 L7,2.5 z" fill="#ccc"/></marker></defs>
+      <rect x="366" y="30" width="84" height="48" rx="2" fill="#e8effe" stroke="#1a4f99" stroke-width="1"/>
+      <text x="408" y="50" font-family="Georgia, serif" font-size="10" fill="#0a3166" text-anchor="middle">SafeTuning</text>
+      <text x="408" y="64" font-family="Georgia, serif" font-size="10" fill="#0a3166" text-anchor="middle">defense</text>
+      <text x="408" y="90" font-family="Georgia, serif" font-size="9" fill="#888" text-anchor="middle">↓ ASR all LLMs</text>
+    </svg>
+    <figcaption>Figure 1: Safety knowledge neurons identified via vocabulary projection of residual-stream activations; ablating them achieves ASR >97%, confirming their role; SafeTuning reinforces them to consistently outperform four baselines across multiple LLM families.</figcaption>
+  </figure>
+  <p class="mid-summary">Zhao, Ke &amp; Huang (EACL 2026) locate safety-critical neurons by projecting residual states to vocabulary space — neurons whose top activations map to safety-concept tokens are safety neurons. Ablating them achieves mean ASR >97%; SafeTuning that reinforces these neurons outperforms all four baseline defenses across multiple LLM families.</p>
+</article>
+<hr class="section-divider">
+
+<!-- PAPER 09 -->
+<article class="mid-paper">
+  <header class="paper-header">
+    <div class="paper-rank">09</div>
+    <div class="paper-meta">
+      <span class="tag tag-interp">mech-interp</span>
+      <span class="tag tag-security">AI security</span>
+      <span class="tag">preprint · Jun 2026</span>
+    </div>
+  </header>
+  <h3 class="mid-title">
+    <a href="https://arxiv.org/abs/2606.22673">AgentLens: Interpretable Safety Steering via Mechanistic Subspaces for Multi-Turn Coding Agent</a>
+  </h3>
+  <figure class="paper-figure mid-figure">
+    <svg viewBox="0 0 460 118" xmlns="http://www.w3.org/2000/svg" aria-label="AgentLens pipeline: step-level hidden state, subspace extraction, safety steering">
+      <rect width="460" height="118" fill="#fff"/>
+      <!-- Agent step -->
+      <rect x="10" y="28" width="80" height="48" rx="2" fill="#f0ede8" stroke="#bbb" stroke-width="1"/>
+      <text x="50" y="50" font-family="Georgia, serif" font-size="10" fill="#555" text-anchor="middle">Agent</text>
+      <text x="50" y="65" font-family="Georgia, serif" font-size="10" fill="#555" text-anchor="middle">step t</text>
+      <line x1="90" y1="52" x2="110" y2="52" stroke="#ccc" stroke-width="1.5" marker-end="url(#arr8)"/>
+      <defs><marker id="arr8" markerWidth="7" markerHeight="7" refX="5" refY="2.5" orient="auto"><path d="M0,0 L0,5 L7,2.5 z" fill="#ccc"/></marker></defs>
+      <rect x="112" y="28" width="100" height="48" rx="2" fill="#e8f4e8" stroke="#0d7377" stroke-width="1"/>
+      <text x="162" y="50" font-family="Georgia, serif" font-size="10" fill="#0a5a5c" text-anchor="middle">Residual</text>
+      <text x="162" y="65" font-family="Georgia, serif" font-size="10" fill="#0a5a5c" text-anchor="middle">stream h_t</text>
+      <line x1="212" y1="52" x2="232" y2="52" stroke="#ccc" stroke-width="1.5" marker-end="url(#arr9)"/>
+      <defs><marker id="arr9" markerWidth="7" markerHeight="7" refX="5" refY="2.5" orient="auto"><path d="M0,0 L0,5 L7,2.5 z" fill="#ccc"/></marker></defs>
+      <rect x="234" y="22" width="100" height="60" rx="2" fill="#e8effe" stroke="#5c1aaa" stroke-width="1.5"/>
+      <text x="284" y="44" font-family="Georgia, serif" font-size="10" fill="#4a0e7a" text-anchor="middle">10-dim</text>
+      <text x="284" y="58" font-family="Georgia, serif" font-size="10" fill="#4a0e7a" text-anchor="middle">mech. subspace</text>
+      <text x="284" y="72" font-family="Georgia, serif" font-size="9" fill="#888" text-anchor="middle">(single layer)</text>
+      <line x1="334" y1="52" x2="354" y2="52" stroke="#ccc" stroke-width="1.5" marker-end="url(#arr10)"/>
+      <defs><marker id="arr10" markerWidth="7" markerHeight="7" refX="5" refY="2.5" orient="auto"><path d="M0,0 L0,5 L7,2.5 z" fill="#ccc"/></marker></defs>
+      <rect x="356" y="28" width="94" height="48" rx="2" fill="#fde8e8" stroke="#b02020" stroke-width="1"/>
+      <text x="403" y="48" font-family="Georgia, serif" font-size="10" fill="#721c24" text-anchor="middle">Safety</text>
+      <text x="403" y="62" font-family="Georgia, serif" font-size="10" fill="#721c24" text-anchor="middle">steering</text>
+      <text x="230" y="108" font-family="Georgia, serif" font-size="9" fill="#888" text-anchor="middle">MAS-Bench: 194 tasks · LLaMA-3.1-8B / Qwen-2.5-7B / Gemma-2-9B</text>
+    </svg>
+    <figcaption>Figure 1: AgentLens extracts a 10-dimensional safety-relevant subspace from step-level residual-stream activations; targeted steering within this subspace reduces harmful OS-level actions across MAS-Bench (194 tasks, 10 MITRE ATT&CK categories) without degrading coding utility.</figcaption>
+  </figure>
+  <p class="mid-summary">Jin et al. apply mechanistic interpretability to multi-turn coding agent safety: a 10-dimensional subspace in a single transformer layer distinguishes harmful from benign execution states, and activation steering within it substantially reduces harmful OS-level actions on MAS-Bench while preserving task utility — the first mech-interp-based runtime defense for LLM agents.</p>
+</article>
+<hr class="section-divider">
+
+<!-- PAPER 10 -->
+<article class="mid-paper">
+  <header class="paper-header">
+    <div class="paper-rank">10</div>
+    <div class="paper-meta">
+      <span class="tag tag-security">AI security</span>
+      <span class="tag">preprint · Sep 9 2026</span>
+    </div>
+  </header>
+  <h3 class="mid-title">
+    <a href="https://arxiv.org/abs/2609.09420">DuplexJail: Safety Alignment Breaks Under Spoken Interruption in Full-Duplex Models</a>
+  </h3>
+  <figure class="paper-figure mid-figure">
+    <svg viewBox="0 0 460 118" xmlns="http://www.w3.org/2000/svg" aria-label="DuplexJail attack: spoken interruption timing on full-duplex speech model">
+      <rect width="460" height="118" fill="#fff"/>
+      <!-- Timeline bars -->
+      <text x="10" y="22" font-family="Georgia, serif" font-size="10" fill="#888">User audio:</text>
+      <rect x="90" y="12" width="120" height="18" rx="2" fill="#cfe2ff" stroke="#1a4f99" stroke-width="1"/>
+      <text x="150" y="25" font-family="Georgia, serif" font-size="9" fill="#0a3166" text-anchor="middle">Harmful request</text>
+      <rect x="212" y="12" width="60" height="18" rx="2" fill="#f8d7da" stroke="#b02020" stroke-width="1.5"/>
+      <text x="242" y="25" font-family="Georgia, serif" font-size="9" fill="#721c24" text-anchor="middle">Interruption</text>
+      <line x1="242" y1="30" x2="242" y2="50" stroke="#b02020" stroke-width="1.5" stroke-dasharray="4,2"/>
+      <text x="10" y="56" font-family="Georgia, serif" font-size="10" fill="#888">Model output:</text>
+      <rect x="90" y="46" width="145" height="18" rx="2" fill="#f8d7da" stroke="#b02020" stroke-width="1"/>
+      <text x="163" y="59" font-family="Georgia, serif" font-size="9" fill="#721c24" text-anchor="middle">Refusal begins…</text>
+      <rect x="237" y="46" width="180" height="18" rx="2" fill="#d4edda" stroke="#155724" stroke-width="1"/>
+      <text x="327" y="59" font-family="Georgia, serif" font-size="9" fill="#155724" text-anchor="middle">…continues as harmful compliance</text>
+      <!-- Result annotation -->
+      <text x="10" y="88" font-family="Georgia, serif" font-size="10" fill="#b02020">Fixed-delay interruption → AdvBench ASR: 40.3% (PersonaPlex) / 48.7% (PersonaPlex-RL)</text>
+      <text x="10" y="104" font-family="Georgia, serif" font-size="10" fill="#888">vs. baseline: +33.8 / +39.3 pp improvement</text>
+    </svg>
+    <figcaption>Figure 1: DuplexJail delivers spoken interruption via the user audio channel at a fixed delay after the harmful request; the model's nascent refusal is overridden, raising AdvBench ASR by +33.8 pp and +39.3 pp on PersonaPlex and PersonaPlex-RL respectively.</figcaption>
+  </figure>
+  <p class="mid-summary">Roh et al. expose a novel attack surface unique to full-duplex speech models: spoken interruption in the audio channel bypasses text-domain safety alignment, raising AdvBench ASR to 40.3%/48.7% on two frontier models with fixed-delay timing — a modality-specific vulnerability text-only safety training cannot address.</p>
+</article>
+
+<!-- Notes -->
+<section class="notes-section">
+  <div class="notes-label">Notes</div>
+  <ul>
+    <li>Papers 1–7 form a coherent cluster on pretraining/midtraining safety: ICLR 2026 (#1) establishes filtering superiority; #2 provides the geometric theory; #3 shows frontier-scale fragility; #4 adds circuit-guided mitigation; #5 and #6 introduce two distinct positive pretraining-stage alignment approaches; #7 explains fine-tuning collapse dynamics. The convergence of empirical and theoretical results across this window suggests a field-level consensus that post-hoc alignment alone is insufficient for open-weight safety.</li>
+    <li>#8 (EACL 2026) and #9 (applied mech interp for agents) represent the interpretability-for-security track with concrete downstream metrics. Flag #8 + #4 together for weekly roundup: both show that locating the safety circuit enables practical interventions with measured utility cost.</li>
+    <li>#10 (DuplexJail) opens a new attack surface — full-duplex spoken interruption — not covered in any prior radar entry. Flag for tracking as full-duplex deployment grows.</li>
+    <li>All 10 genuinely relevant items found; no padding.</li>
+  </ul>
+</section>
+
+<footer class="site-footer">
+  <span>Research Radar · Sep 11 2026</span>
+  <span>Pretraining Safety · AI Security · Mech Interp</span>
+</footer>
