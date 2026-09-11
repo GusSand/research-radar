@@ -340,3 +340,12 @@ arxiv_id	first_date	first_file	appearances	title
 2609.07746	2026-09-10	reports/daily/2026-09-10.md	1	LLM Forensics: Where Do Backdoors Hide? Localizing and Controlling Trigger Mechanisms with Sparse Autoencoders
 2609.08373	2026-09-10	reports/daily/2026-09-10.md	1	Structural Jailbreaks Generalize but Do Not Compound: A Cross-Provider and Multilingual Study of Involuntary In-Context Learning
 2609.09553	2026-09-10	reports/daily/2026-09-10.md	1	Arbitrary Cipher Attacks Against Large Language Models Do Not Require Fine-Tuning
+2406.09289	2026-09-11	reports/daily/2026-09-11.md	1	Understanding Jailbreak Success: A Study of Latent Space Dynamics in Large Language Models
+2510.07775	2026-09-11	reports/daily/2026-09-11.md	1	The Unintended Trade-off of AI Alignment: Balancing Hallucination Mitigation and Safety in LLMs
+2511.14017	2026-09-11	reports/daily/2026-09-11.md	1	From Narrow Unlearning to Emergent Misalignment: Causes, Consequences, and Containment in LLMs
+2609.06934	2026-09-11	reports/daily/2026-09-11.md	1	The Geometry of Refusal: Why Post-Hoc Safety Is Fragile and Pretraining-Time Safety Persists
+2609.09081	2026-09-11	reports/daily/2026-09-11.md	1	Everything in Moderation: Per-Domain Coverage Optima and Alignment-Resistant Domain Gaps in Multi-Domain Mid-Training
+2609.09420	2026-09-11	reports/daily/2026-09-11.md	1	DuplexJail: Safety Alignment Breaks Under Spoken Interruption in Full-Duplex Models
+2609.09793	2026-09-11	reports/daily/2026-09-11.md	1	How Fragile Is Safety Alignment at Frontier Scale? A Single-Direction Attack on a 320B MoE
+2609.10142	2026-09-11	reports/daily/2026-09-11.md	1	Active Adaptation, Not Static Defense: Temporal Dynamics of Preventative Steering in Adversarial Fine-Tuning
+2609.10739	2026-09-11	reports/daily/2026-09-11.md	1	The Truth Was Never Gone: Perfect Aliasing in Compliant-Context Truth Probes
