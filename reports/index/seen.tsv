@@ -234,7 +234,7 @@ arxiv_id	first_date	first_file	appearances	title
 2608.11171	2026-08-13	reports/daily/2026-08-13.md	2	From Interpretability to Control: Insights from Six Years of the TrustNLP Workshop
 2608.11878	2026-08-13	reports/daily/2026-08-13.md	1	ToolHazard: Scaling Adversarial Environments for Security Evaluation and Alignment of LLM-based Agents
 2608.12273	2026-08-13	reports/daily/2026-08-13.md	1	Convergent Detour Hijacking: Task-Preserving Resource Amplification in Skill-Based LLM Agents
-2606.22686	2026-08-18	reports/daily/2026-08-18.md	1	The Geometry of Refusal: Linear Instability in Safety-Aligned LLMs
+2606.22686	2026-08-18	reports/daily/2026-08-18.md	2	The Geometry of Refusal: Linear Instability in Safety-Aligned LLMs
 2608.05152	2026-08-18	reports/daily/2026-08-18.md	1	Mean-Field Dynamics of Chain-of-Thought Reasoning in Large Language Models
 2608.08082	2026-08-18	reports/daily/2026-08-18.md	1	Commitment Before Realization: When Classifier-Free Guidance Becomes Unnecessary in Masked Diffusion Language Models
 2608.11408	2026-08-18	reports/daily/2026-08-18.md	1	Measure, Don't Optimize: Forecasting Recovery in LLM Unlearning
@@ -281,8 +281,8 @@ arxiv_id	first_date	first_file	appearances	title
 2608.24482	2026-08-27	reports/daily/2026-08-27.md	1	Beyond Static Interpretability: Anticipating Post-SFT Mechanisms from Pre-SFT Parameters for Better Tuning
 2601.21571	2026-08-28	reports/daily/2026-08-28.md	1	Shaping Capabilities with Token-Level Data Filtering
 2602.06911	2026-08-28	reports/daily/2026-08-28.md	1	TamperBench: Systematically Stress-Testing LLM Safety Under Fine-Tuning and Tampering
-2605.26526	2026-08-28	reports/daily/2026-08-28.md	2	Open-Weight LLM Fine-Tuning Defenses are Susceptible to Simple Attacks
-2606.19168	2026-08-28	reports/daily/2026-08-28.md	2	Beyond Safe Data: Pretraining-Stage Alignment with Regular Safety Reflection
+2605.26526	2026-08-28	reports/daily/2026-08-28.md	4	Open-Weight LLM Fine-Tuning Defenses are Susceptible to Simple Attacks
+2606.19168	2026-08-28	reports/daily/2026-08-28.md	6	Beyond Safe Data: Pretraining-Stage Alignment with Regular Safety Reflection
 2608.03210	2026-08-28	reports/daily/2026-08-28.md	1	ICO: Enhancing Semantic-Shift Jailbreaks via Iterative Context Optimization
 2608.04347	2026-08-28	reports/daily/2026-08-28.md	1	Looking in the Mirror: Introspecting Side-Effect Misalignments Induced by Fine-Tuning
 2608.08383	2026-08-28	reports/daily/2026-08-28.md	1	Safety Cost of Steering Vectors Is Separable and Reducible
@@ -291,10 +291,10 @@ arxiv_id	first_date	first_file	appearances	title
 2608.26008	2026-08-28	reports/daily/2026-08-28.md	2	A Self-Evolving Multi-Agent Framework Defense against LLM Jailbreak Attacks
 2508.11290	2026-08-29	reports/daily/2026-08-29.md	1	SafeConstellations: Mitigating Over-Refusals in LLMs Through Task-Aware Representation Steering
 2608.14392	2026-08-29	reports/daily/2026-08-29.md	2	Tripwire: Triggering Aligned Refusal via Statistically Certified Safety Neurons
-2608.18093	2026-08-29	reports/daily/2026-08-29.md	3	Abliteration Mitigation via Refusal Aliases (AMRA)
+2608.18093	2026-08-29	reports/daily/2026-08-29.md	6	Abliteration Mitigation via Refusal Aliases (AMRA)
 2608.19729	2026-08-29	reports/daily/2026-08-29.md	1	SafeBranch: Branch-Pair Safety Alignment for Embodied Agents
 2608.22490	2026-08-29	reports/daily/2026-08-29.md	1	Who Pays More for Safety? Measuring the Disparate Cost of Safety Alignment across Languages
-2608.25390	2026-08-29	reports/daily/2026-08-29.md	2	Refusal Geometry Reflects Refusal Training: Diverse Refusal Prefixes Can Raise Stable Rank and Weaken Refusal Vector Ablation Attacks
+2608.25390	2026-08-29	reports/daily/2026-08-29.md	4	Refusal Geometry Reflects Refusal Training: Diverse Refusal Prefixes Can Raise Stable Rank and Weaken Refusal Vector Ablation Attacks
 2607.14147	2026-08-30	reports/daily/2026-08-30.md	1	Breaking Refusal in the First Half: A Mechanistic Study of the Prefill Jailbreak
 2608.13482	2026-08-30	reports/daily/2026-08-30.md	2	Synthetic Persona Pretraining: Alignment from Token Zero
 2608.26733	2026-08-30	reports/daily/2026-08-30.md	1	Daydreaming: Stealing Hidden Agent Skills through Black-Box Task Interaction
@@ -304,14 +304,14 @@ arxiv_id	first_date	first_file	appearances	title
 2608.08032	2026-08-31	reports/weekly/2026-W36.md	1	Decided Upstream, Written Late: Locating and Pricing the Cross-Lingual Refusal Circuit of a Multilingual MoE
 2608.26222	2026-08-31	reports/weekly/2026-W36.md	1	NeuronFuzz: Safety Neuron Guided Fuzzing for LLM Safety Evaluation
 2608.28490	2026-08-31	reports/weekly/2026-W36.md	1	LLM-Based Agents for Software and Systems Security: Approaches, Applications, and Assessment
-2605.02087	2026-09-01	reports/daily/2026-09-01.md	2	Model Spec Midtraining: Improving How Alignment Training Generalizes
-2607.26654	2026-09-01	reports/daily/2026-09-01.md	1	Constitutional Midtraining: Content Presence Drives Alignment Gains
-2608.27504	2026-09-01	reports/daily/2026-09-01.md	1	Circuit Discovery Helps Detect LLM Jailbreaking: A Mechanistic Interpretability Study
+2605.02087	2026-09-01	reports/daily/2026-09-01.md	5	Model Spec Midtraining: Improving How Alignment Training Generalizes
+2607.26654	2026-09-01	reports/daily/2026-09-01.md	2	Constitutional Midtraining: Content Presence Drives Alignment Gains
+2608.27504	2026-09-01	reports/daily/2026-09-01.md	2	Circuit Discovery Helps Detect LLM Jailbreaking: A Mechanistic Interpretability Study
 2508.06601	2026-09-02	reports/daily/2026-09-02.md	2	Deep Ignorance: Filtering Pretraining Data Builds Tamper-Resistant Safeguards into Open-Weight LLMs
 2608.01558	2026-09-03	reports/daily/2026-09-03.md	1	Securing Agentic AI: From Per-Action Checks to Trajectory Assurance
 2608.09542	2026-09-03	reports/daily/2026-09-03.md	1	Dual-Adversarial Safety Alignment: Cultivating Intrinsic Threat Comprehension in LRMs
-2609.00051	2026-09-03	reports/daily/2026-09-03.md	1	From Detection to Refusal: Safer LLMs via Circuit-Guided Weight Scaling
-2609.01455	2026-09-03	reports/daily/2026-09-03.md	2	When Safety Routing Breaks: Understanding Alignment Fragility under Benign Fine-Tuning
+2609.00051	2026-09-03	reports/daily/2026-09-03.md	4	From Detection to Refusal: Safer LLMs via Circuit-Guided Weight Scaling
+2609.01455	2026-09-03	reports/daily/2026-09-03.md	4	When Safety Routing Breaks: Understanding Alignment Fragility under Benign Fine-Tuning
 2609.02082	2026-09-03	reports/daily/2026-09-03.md	1	Transfer Safety Awareness for Cross-Modal Safety Drift in Multimodal Large Language Models
 2608.12851	2026-09-05	reports/daily/2026-09-05.md	1	Practice Makes Unsafe: Skill Misevolution in Self-Improving LLM Agents
 2608.14855	2026-09-05	reports/daily/2026-09-05.md	1	What to Forget in Unlearning? Forget Set Curation for Language Models
@@ -321,17 +321,17 @@ arxiv_id	first_date	first_file	appearances	title
 2609.02293	2026-09-05	reports/daily/2026-09-05.md	1	SEAL: Reinforcing Global Safety in Mixture-of-Experts through Shared Expert ALignment
 2609.02786	2026-09-05	reports/daily/2026-09-05.md	1	SafeEvolve: Harness-Policy Co-Evolution from Agent Experience for Safety Alignment
 2605.15030	2026-09-06	reports/daily/2026-09-06.md	1	WARD: Adversarially Robust Defense of Web Agents Against Prompt Injections
-2609.00498	2026-09-06	reports/daily/2026-09-06.md	1	Validity-Aware Jailbreak Evaluation for Large Language Models
+2609.00498	2026-09-06	reports/daily/2026-09-06.md	3	Validity-Aware Jailbreak Evaluation for Large Language Models
 2606.16276	2026-09-07	reports/weekly/2026-W37.md	1	SpecAlign: Efficient Specification-Grounded Alignment of Large Language Models via Synthetic Data
 2608.20554	2026-09-07	reports/weekly/2026-W37.md	1	aiXamine: Unified Black-Box Evaluation of Cross-Dimensional Trade-offs in LLM Safety, Security, and Privacy
-2609.02852	2026-09-08	reports/daily/2026-09-08.md	1	The Implications of Linguistic Illegibility for LLM Security
-2609.03026	2026-09-08	reports/daily/2026-09-08.md	1	ObserverBench: Testing Mechanistic Estimates for Intervention and Control
+2609.02852	2026-09-08	reports/daily/2026-09-08.md	2	The Implications of Linguistic Illegibility for LLM Security
+2609.03026	2026-09-08	reports/daily/2026-09-08.md	2	ObserverBench: Testing Mechanistic Estimates for Intervention and Control
 2609.03629	2026-09-08	reports/daily/2026-09-08.md	1	EraseSAE: Surgical Concept Erasure in Text-to-Video Diffusion Models via Sparse Autoencoders
 2609.03887	2026-09-08	reports/daily/2026-09-08.md	1	Beyond Shallow Alignment: How Post-Training Methods Determine Refusal Circuits And Steering Robustness
 2609.04022	2026-09-08	reports/daily/2026-09-08.md	1	Representational Alignment Yields Generalizable Safety in Language Models
 2609.04721	2026-09-08	reports/daily/2026-09-08.md	1	Locating and Steering Refusal Beyond Attention
 2609.05241	2026-09-08	reports/daily/2026-09-08.md	1	Uncensored Open-weight Models: Redistribution as the Persistence Layer
-2608.25697	2026-09-10	reports/daily/2026-09-10.md	1	LMSM: LLM Security Framework Inspired by Linux Security Modules
+2608.25697	2026-09-10	reports/daily/2026-09-10.md	2	LMSM: LLM Security Framework Inspired by Linux Security Modules
 2608.28233	2026-09-10	reports/daily/2026-09-10.md	1	REINS: Refusal-Enhanced Inhibitory Steering with Sparse Autoencoder Features
 2608.29936	2026-09-10	reports/daily/2026-09-10.md	1	When Safety Speaks a Language: A Mechanistic Analysis of Safety-Language Identity Entanglement in LLMs
 2608.30197	2026-09-10	reports/daily/2026-09-10.md	1	ALTSTEER: Selective Safety Steering for Moving Beyond Hard Refusals to Constructive Alternatives
@@ -343,9 +343,28 @@ arxiv_id	first_date	first_file	appearances	title
 2406.09289	2026-09-11	reports/daily/2026-09-11.md	1	Understanding Jailbreak Success: A Study of Latent Space Dynamics in Large Language Models
 2510.07775	2026-09-11	reports/daily/2026-09-11.md	1	The Unintended Trade-off of AI Alignment: Balancing Hallucination Mitigation and Safety in LLMs
 2511.14017	2026-09-11	reports/daily/2026-09-11.md	1	From Narrow Unlearning to Emergent Misalignment: Causes, Consequences, and Containment in LLMs
-2609.06934	2026-09-11	reports/daily/2026-09-11.md	1	The Geometry of Refusal: Why Post-Hoc Safety Is Fragile and Pretraining-Time Safety Persists
+2609.06934	2026-09-11	reports/daily/2026-09-11.md	3	The Geometry of Refusal: Why Post-Hoc Safety Is Fragile and Pretraining-Time Safety Persists
 2609.09081	2026-09-11	reports/daily/2026-09-11.md	1	Everything in Moderation: Per-Domain Coverage Optima and Alignment-Resistant Domain Gaps in Multi-Domain Mid-Training
-2609.09420	2026-09-11	reports/daily/2026-09-11.md	1	DuplexJail: Safety Alignment Breaks Under Spoken Interruption in Full-Duplex Models
+2609.09420	2026-09-11	reports/daily/2026-09-11.md	2	DuplexJail: Safety Alignment Breaks Under Spoken Interruption in Full-Duplex Models
 2609.09793	2026-09-11	reports/daily/2026-09-11.md	1	How Fragile Is Safety Alignment at Frontier Scale? A Single-Direction Attack on a 320B MoE
 2609.10142	2026-09-11	reports/daily/2026-09-11.md	1	Active Adaptation, Not Static Defense: Temporal Dynamics of Preventative Steering in Adversarial Fine-Tuning
 2609.10739	2026-09-11	reports/daily/2026-09-11.md	1	The Truth Was Never Gone: Perfect Aliasing in Compliant-Context Truth Probes
+2506.05346	2026-09-16	reports/daily/2026-09-16.md	2	Why LLM Safety Guardrails Collapse After Fine-tuning: A Similarity Analysis Between Alignment and Fine-tuning Datasets
+2507.00665	2026-09-16	reports/daily/2026-09-16.md	2	SAFER: Probing Safety in Reward Models with Sparse Autoencoder
+2604.07754	2026-09-16	reports/daily/2026-09-16.md	2	The Art of (Mis)alignment: How Fine-Tuning Methods Effectively Misalign and Realign LLMs in Post-Training
+2609.16204	2026-09-16	reports/daily/2026-09-16.md	1	Decoy Direction Optimization: A Post-Hoc Defense Against LLM Abliteration
+2609.03693	2026-09-17	reports/daily/2026-09-17.md	1	AlcaTRAz: Anchored Tree-Rule Defense Against Jailbreaks
+2609.08634	2026-09-17	reports/daily/2026-09-17.md	1	Suan: Rectifying Direct Preference Safety Alignment in Large Language Models
+2609.10594	2026-09-17	reports/daily/2026-09-17.md	1	An Empirical Measurement of Jailbreaking Evaluators
+2609.14754	2026-09-17	reports/daily/2026-09-17.md	1	Calibrating Interpretability Instruments Before Trusting Their Verdicts
+2609.14759	2026-09-17	reports/daily/2026-09-17.md	2	Refusal Reads Only a Slice of What the Model Knows: Harm-Keyed Routing and Its Exceptions Across Model Families
+2609.15533	2026-09-17	reports/daily/2026-09-17.md	2	The Misery of Mechanistic Interpretability: A Formal Perspective
+2609.15886	2026-09-17	reports/daily/2026-09-17.md	3	Inoculation Midtraining with Learned Neologisms
+2609.18471	2026-09-17	reports/daily/2026-09-17.md	2	First Token Matters: Understanding Safety Collapse in Large Reasoning Models
+2606.07970	2026-09-18	reports/daily/2026-09-18.md	3	Defending Against Malicious Finetuning by Scaling Train-time Adversarial Attacks
+2609.20412	2026-09-18	reports/daily/2026-09-18.md	3	Stress-testing Alignment Midtraining
+2609.20408	2026-09-19	reports/daily/2026-09-19.md	1	Xeno-Interpretability: Investigating the Alien Minds of LLMs
+2609.04714	2026-09-20	reports/daily/2026-09-20.md	2	Refuse without Refusal: A Structural Analysis of Safety-Tuning Responses for Reducing False Refusals in Language Models
+2609.18961	2026-09-20	reports/daily/2026-09-20.md	1	MechSparse: Mechanism-Guided Sparse PEFT Selection Is Task-Shaped
+2607.18639	2026-09-21	reports/weekly/2026-W39.md	1	Mark, Don't Erase: Token Inoculation for Dual-Use Knowledge in LLMs
+2609.00760	2026-09-21	reports/weekly/2026-W39.md	1	A Unified Mechanistic Analysis of Knowledge- and Safety-Based Refusals
