@@ -368,3 +368,13 @@ arxiv_id	first_date	first_file	appearances	title
 2609.18961	2026-09-20	reports/daily/2026-09-20.md	1	MechSparse: Mechanism-Guided Sparse PEFT Selection Is Task-Shaped
 2607.18639	2026-09-21	reports/weekly/2026-W39.md	1	Mark, Don't Erase: Token Inoculation for Dual-Use Knowledge in LLMs
 2609.00760	2026-09-21	reports/weekly/2026-W39.md	1	A Unified Mechanistic Analysis of Knowledge- and Safety-Based Refusals
+2604.17215	2026-09-22	reports/daily/2026-09-22.md	1	Continual Safety Alignment via Gradient-Based Sample Selection
+2605.08348	2026-09-22	reports/daily/2026-09-22.md	1	How Much Do Circuits Tell Us? Measuring the Consistency and Specificity of Language Model Circuits
+2605.14605	2026-09-22	reports/daily/2026-09-22.md	1	One Step to the Side: Why Defenses Against Malicious Finetuning Fail Under Adaptive Adversaries
+2606.03238	2026-09-22	reports/daily/2026-09-22.md	1	When RLHF Fails: A Mechanistic Taxonomy of Reward Hacking, Collapse, and Evaluator Gaming
+2606.19890	2026-09-22	reports/daily/2026-09-22.md	1	Open-Weight AI Models Require Proportional Evaluation Approaches
+2608.27254	2026-09-22	reports/daily/2026-09-22.md	1	Circuit Condensation: Post-Training that Concentrates a Behavior's Causal Circuit
+2609.10117	2026-09-22	reports/daily/2026-09-22.md	1	Understanding the Security Boundary of Obfuscation-based On-Device LLM Protection
+2609.10892	2026-09-22	reports/daily/2026-09-22.md	1	DriftNet: A Dual-Head Trajectory Transformer for Detecting and Localizing Prompt Injection in LLM Agents
+2609.19472	2026-09-22	reports/daily/2026-09-22.md	1	Safety Beyond the Interface: Detecting Harm via Latent States in Large Language Models
+2609.21573	2026-09-22	reports/daily/2026-09-22.md	1	Micro-Collaborative Poisoning: A Distributed Attack on RAG Systems
