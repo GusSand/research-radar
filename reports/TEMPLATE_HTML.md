@@ -1,6 +1,6 @@
-# HTML Artifact Template — Research Radar
+# HTML Template — Research Radar
 
-This file documents the exact HTML structure and CSS to use when generating the daily and weekly HTML artifacts. Every routine run must produce an HTML file alongside the `.md` file, publish it as a Claude artifact, and commit both.
+This file documents the exact HTML structure and CSS to use when generating the daily and weekly HTML reports. Every routine run must produce an HTML file alongside the `.md` file and commit both; gussand.github.io serves the HTML. Do not publish it as a Claude artifact: routines run unattended and the Artifact tool needs an approval, so the run hangs before committing.
 
 ---
 
@@ -281,7 +281,6 @@ The `.md` file uses the same narrative structure as the HTML. **For figures, use
 # Research Radar — July 22, 2026
 
 > **AI Safety · Alignment · Mech Interp** | Daily edition
-> **HTML artifact:** https://claude.ai/code/artifact/XXXXXXXX
 
 **Window:** ... **Counts:** 0 peer-reviewed · 10 preprints · 0 forum/blog
 
@@ -355,7 +354,7 @@ Key constraints for SVG in markdown:
 ## Publishing checklist
 
 1. Write `.html` to `reports/daily/YYYY-MM-DD.html` or `reports/weekly/YYYY-Www.html`
-2. Call `Artifact` tool with `file_path` pointing to that file, `favicon: "📡"`, and a one-sentence `description`
-3. Add the artifact URL to the top of the `.md` file (in the blockquote after the title line)
+2. Do **not** call the `Artifact` tool (see the top of this file)
+3. Run `python3 scripts/radar_index.py --check <the .md>` — it must print OK — then `python3 scripts/radar_index.py` to rebuild the ledger
 4. Commit both `.md` and `.html` in the same commit with message `Daily radar YYYY-MM-DD` or `Weekly radar YYYY-Www`
 5. Push to `origin/claude/radar` (never `main`)

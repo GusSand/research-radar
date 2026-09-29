@@ -1,7 +1,6 @@
 # <Daily | Weekly> Radar — <YYYY-MM-DD>
 
-> **Pretraining Safety · AI Security · Mech Interp** | <Daily / Weekly> edition
-> **HTML artifact:** <artifact URL — fill in after publishing>
+> **AI Safety · Alignment · Mech Interp** | <Daily / Weekly> edition
 
 <!-- Before writing: scripts/radar-preflight.sh. Before committing: python3 scripts/radar_index.py --check <this file> must print OK. Never list a paper the ledger already contains. -->
 

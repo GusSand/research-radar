@@ -39,26 +39,25 @@ Each cloud run starts from a fresh clone of `main`, which lags `claude/radar` un
 4. Rebuild the ledger (`python3 scripts/radar_index.py`) and commit `reports/index/seen.tsv` with the report, so the next run sees today's papers even if `main` still lags.
 
 ## Routines that write here
-- **Daily radar** — runs Tue–Sun ~6am ET; searches the sources, writes `reports/daily/<date>.md` **and** `reports/daily/<date>.html`, commits & pushes, then publishes the HTML as a Claude artifact.
-- **Weekly radar** — runs Mon ~6am ET; aggregates the week's dailies + a fresh sweep, writes `reports/weekly/<week>.md` **and** `reports/weekly/<week>.html`, commits & pushes, then publishes the HTML as a Claude artifact.
+- **Daily radar** — runs Tue–Sun ~6am ET; searches the sources, writes `reports/daily/<date>.md` **and** `reports/daily/<date>.html`, checks it against the ledger, commits & pushes to `claude/radar`.
+- **Weekly radar** — runs Mon ~6am ET; aggregates the week's dailies + a fresh sweep, writes `reports/weekly/<week>.md` **and** `reports/weekly/<week>.html`, checks it against the ledger, commits & pushes to `claude/radar`.
 
-Both are managed at https://claude.ai/code/routines
+Both are managed at https://claude.ai/code/routines. They run unattended, so they must never call a tool that needs an approval: in particular they do **not** publish Claude artifacts (runs that tried hung on the permission prompt and lost their report). gussand.github.io syncs `claude/radar` daily and serves the HTML at https://gussand.github.io/radar/.
 
-## HTML artifact format
+## HTML format
 
-Every run must publish an HTML artifact. See `reports/TEMPLATE_HTML.md` for the full spec. Briefly:
+Every run writes an HTML file next to the `.md`. See `reports/TEMPLATE_HTML.md` for the full spec. Briefly:
 
 - **Design:** dark editorial aesthetic. Background `#111111`, body text `#c9c9c9`, title text `#f0f0f0`. Light-theme alternate via `@media (prefers-color-scheme: dark)` + `:root[data-theme]` overrides. Max-width 660 px centered.
 - **Typography:** Georgia (or generic serif) for paper titles — bold, underlined, 26 px. System-UI sans for body text, 17 px. `Courier New` monospace for metadata tags.
-- **Paper structure:** conversational hook paragraph → paper figure → technical-detail paragraph. **Preferred figure approach:** fetch the actual figure from the paper's arXiv HTML page (`https://arxiv.org/html/<id>`) and embed it as a base64 data URI (`<img src="data:image/png;base64,...">`) in the HTML artifact and as a direct external URL in the `.md` file. Fall back to inline SVG only when the image cannot be fetched. Artifact CSP blocks external URL fetches at render time, which is why base64 embedding is required for the HTML — the `.md` on GitHub can use the external URL directly.
+- **Paper structure:** conversational hook paragraph → paper figure → technical-detail paragraph. **Preferred figure approach:** fetch the actual figure from the paper's arXiv HTML page (`https://arxiv.org/html/<id>`) and embed it as a base64 data URI (`<img src="data:image/png;base64,...">`) in the HTML so the file is self-contained, and as a direct external URL in the `.md` file. Fall back to inline SVG only when the image cannot be fetched.
 - **Daily:** all items in sequence. Top 3 get full figure + hook + detail treatment; items 4–10 use a compact single-column mid-tier layout (rank/tags → title → figure → 1–2-sentence summary). **Every entry gets the paper's main figure** — no text-only cards.
 - **Weekly:** top 8 items get full treatment; items 9–15 use the compact mid-tier layout (same figure + 1–2-sentence summary). Include a "Theme of the week" section above the papers.
 - **Tags:** colored `<span class="tag">` chips for venue and topic (tag-interp, tag-security, tag-align, tag-control, tag-peer).
-- **Footer:** artifact URL is the permalink; no external JS or CSS.
+- **Footer:** no external JS or CSS.
 - **Favicon:** 📡
 - **Markdown format:** the `.md` file uses the same narrative structure as the HTML — hook paragraph → inline SVG figure → technical detail — so it renders well on GitHub. Use only presentational SVG attributes (no `style=`, no CSS variables); colors should be readable on white. Top 3 papers (daily) / top 8 (weekly) get full treatment; remaining items are condensed text entries with no SVG.
-- **Artifact URL in .md:** after publishing the HTML artifact, insert the artifact URL into the `.md` blockquote header before committing, so the GitHub file links directly to the rendered newsletter.
-- **Publishing:** write HTML to `reports/daily/<date>.html` or `reports/weekly/<week>.html`, publish as artifact, add URL to `.md`, then commit both together before pushing.
+- **Publishing:** write HTML to `reports/daily/<date>.html` or `reports/weekly/<week>.html`, run the ledger check, then commit both together and push to `claude/radar`. No artifact is published; older reports carry an `HTML artifact` line from when they were.
 
 ## Conventions
 - Priority order = importance to the safety + alignment + pragmatic-interp agenda (peer-reviewed and field-shifting results rank above incremental preprints).
