@@ -169,14 +169,14 @@ arxiv_id	first_date	first_file	appearances	title
 2604.09839	2026-07-26	reports/daily/2026-07-26.md	2	Steered LLM Activations are Non-Surjective
 2607.11070	2026-07-26	reports/daily/2026-07-26.md	2	MJ: Multi-turn LLM Jailbreaking via Decomposed Credit Assignment
 2607.20596	2026-07-26	reports/daily/2026-07-26.md	2	Are Single-Token Sparse Autoencoder Features Causally Necessary? Layer-Depth and SAE-Family Effects
-2607.14493	2026-07-28	reports/daily/2026-07-28.md	1	LogInject: Passive Prompt Injection via Security Operations Log Context
-2607.15937	2026-07-28	reports/daily/2026-07-28.md	1	The Language of Security: How Prompt Syntax Shapes Code Vulnerability in LLMs
-2607.20652	2026-07-28	reports/daily/2026-07-28.md	1	ParityTransformer: Interpretability by Design via the Deep Parity Bottleneck
-2607.23710	2026-07-28	reports/daily/2026-07-28.md	1	The Illusion of Secure LLM Code: How Iterative Reprompting Undermines Security
-2606.00801	2026-07-29	reports/daily/2026-07-29.md	1	Quality-Diversity Evolution for Discovering Diverse Vulnerabilities in LLM Safety
-2606.15054	2026-07-29	reports/daily/2026-07-29.md	1	Size Doesn't Matter: Cosine-Scored Sparse Autoencoders
+2607.14493	2026-07-28	reports/daily/2026-07-28.md	2	LogInject: Passive Prompt Injection via Security Operations Log Context
+2607.15937	2026-07-28	reports/daily/2026-07-28.md	2	The Language of Security: How Prompt Syntax Shapes Code Vulnerability in LLMs
+2607.20652	2026-07-28	reports/daily/2026-07-28.md	2	ParityTransformer: Interpretability by Design via the Deep Parity Bottleneck
+2607.23710	2026-07-28	reports/daily/2026-07-28.md	2	The Illusion of Secure LLM Code: How Iterative Reprompting Undermines Security
+2606.00801	2026-07-29	reports/daily/2026-07-29.md	2	Quality-Diversity Evolution for Discovering Diverse Vulnerabilities in LLM Safety
+2606.15054	2026-07-29	reports/daily/2026-07-29.md	2	Size Doesn't Matter: Cosine-Scored Sparse Autoencoders
 2606.27732	2026-07-29	reports/daily/2026-07-29.md	1	Bifocal Diffusion Language Models: Asymmetric Bidirectional Context for Parallel Generation
-2607.19386	2026-07-29	reports/daily/2026-07-29.md	1	Building Fast, Evaluating Slow: Pipeline Choices Dominate Autointerpretability Score Variance
+2607.19386	2026-07-29	reports/daily/2026-07-29.md	2	Building Fast, Evaluating Slow: Pipeline Choices Dominate Autointerpretability Score Variance
 2601.17958	2026-07-31	reports/daily/2026-07-31.md	1	TensorLens: End-to-End Transformer Analysis via High-Order Attention Tensors
 2607.25379	2026-07-31	reports/daily/2026-07-31.md	1	Cyber-Capable AI Agents: Vulnerabilities, Evaluation Containment, and Defensive Response
 2607.25880	2026-07-31	reports/daily/2026-07-31.md	1	Stemma: Induced Decision Regions Reveal LLM Provenance
@@ -188,13 +188,13 @@ arxiv_id	first_date	first_file	appearances	title
 2607.27386	2026-07-31	reports/daily/2026-07-31.md	1	Beyond the Bidirectional Promise: Re-evaluating the Robustness of Diffusion Language Models
 2607.28617	2026-07-31	reports/daily/2026-07-31.md	1	AISPA: User-Centric System Prompt Auditing for Large Language Model Applications
 2605.09397	2026-08-01	reports/daily/2026-08-01.md	1	BadDLM: Backdooring Diffusion Language Models with Diverse Targets
-2607.11871	2026-08-01	reports/daily/2026-08-01.md	1	Inside the Unfair Judge: A Mechanistic Interpretability Account of LLM-as-Judge Bias
-2607.12166	2026-08-01	reports/daily/2026-08-01.md	1	From Geometric Recovery to Causal Validation: A Reproducible Audit of Sparse Autoencoder Features, from Superposition Geometry to Causal Inertness
-2607.24645	2026-08-02	reports/daily/2026-08-02.md	1	Sparse Autoencoders Encode Both Concepts and Functions: The Downstream Geometry of Feature Effects
-2607.24964	2026-08-02	reports/daily/2026-08-02.md	1	ALIBI: Adaptive Agentic Attacks on LLM-Based Vulnerability Detectors via Adversarial Code Comments
-2607.25270	2026-08-02	reports/daily/2026-08-02.md	1	Where Steering Signals Come From: Activation Source Selection in Activation Steering
-2607.26849	2026-08-02	reports/daily/2026-08-02.md	1	ToxScreen: Detecting Whether an LLM Has Been Poisoned
-2607.28165	2026-08-02	reports/daily/2026-08-02.md	1	Piggybacking on Perception: Stealthy Concurrent Audio Prompt Injections against Multimodal LLM Agents
+2607.11871	2026-08-01	reports/daily/2026-08-01.md	2	Inside the Unfair Judge: A Mechanistic Interpretability Account of LLM-as-Judge Bias
+2607.12166	2026-08-01	reports/daily/2026-08-01.md	2	From Geometric Recovery to Causal Validation: A Reproducible Audit of Sparse Autoencoder Features, from Superposition Geometry to Causal Inertness
+2607.24645	2026-08-02	reports/daily/2026-08-02.md	2	Sparse Autoencoders Encode Both Concepts and Functions: The Downstream Geometry of Feature Effects
+2607.24964	2026-08-02	reports/daily/2026-08-02.md	2	ALIBI: Adaptive Agentic Attacks on LLM-Based Vulnerability Detectors via Adversarial Code Comments
+2607.25270	2026-08-02	reports/daily/2026-08-02.md	2	Where Steering Signals Come From: Activation Source Selection in Activation Steering
+2607.26849	2026-08-02	reports/daily/2026-08-02.md	2	ToxScreen: Detecting Whether an LLM Has Been Poisoned
+2607.28165	2026-08-02	reports/daily/2026-08-02.md	2	Piggybacking on Perception: Stealthy Concurrent Audio Prompt Injections against Multimodal LLM Agents
 2607.28166	2026-08-02	reports/daily/2026-08-02.md	1	Where and When to Commit: Candidate-Aware Decoding for Diffusion Language Models
 2601.14004	2026-08-04	reports/daily/2026-08-04.md	1	Locate, Steer, and Improve: A Practical Survey of Actionable Mechanistic Interpretability in Large Language Models
 2605.29901	2026-08-04	reports/daily/2026-08-04.md	1	Dissecting the Black Box: Circuit-Level Analysis of LLM Vulnerability Detection
