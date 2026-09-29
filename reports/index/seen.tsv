@@ -149,26 +149,26 @@ arxiv_id	first_date	first_file	appearances	title
 2507.09467	2026-07-20	reports/weekly/2026-W30.md	1	Induction in Both Directions: Mechanistic Interpretability of Masked Diffusion LMs
 2507.11899	2026-07-20	reports/weekly/2026-W30.md	1	VIPER-MCP: Automated Taint Analysis for MCP Security Vulnerabilities
 2607.19317	2026-07-20	reports/weekly/2026-W30.md	1	CircuitKIT: Circuit Discovery, Evaluation, and Application Toolkit
-2607.02513	2026-07-21	reports/daily/2026-07-21.md	1	LACUNA: A Testbed for Evaluating Localization Precision for LLM Unlearning
+2607.02513	2026-07-21	reports/daily/2026-07-21.md	2	LACUNA: A Testbed for Evaluating Localization Precision for LLM Unlearning
 2607.15893	2026-07-21	reports/daily/2026-07-21.md	1	Induction in Both Directions: A Mechanistic Analysis of In-Context Learning in Masked Diffusion Language Models
-2607.16693	2026-07-21	reports/daily/2026-07-21.md	1	Are Arithmetic Heuristic Neurons Form-Invariant? A Mechanistic Analysis of Symbols, Text, and Code in LLMs
-2607.05743	2026-07-22	reports/daily/2026-07-22.md	1	The Balkanization of Execution-Security Research for AI Coding Agents
+2607.16693	2026-07-21	reports/daily/2026-07-21.md	2	Are Arithmetic Heuristic Neurons Form-Invariant? A Mechanistic Analysis of Symbols, Text, and Code in LLMs
+2607.05743	2026-07-22	reports/daily/2026-07-22.md	2	The Balkanization of Execution-Security Research for AI Coding Agents
 2606.19475	2026-07-23	reports/daily/2026-07-23.md	1	Diffusion Language Models: An Experimental Analysis
 2607.02714	2026-07-23	reports/daily/2026-07-23.md	2	Not All Refusals Are Equal: How Safety Alignment Fails Cybersecurity at Scale
 2607.05381	2026-07-23	reports/daily/2026-07-23.md	1	What Does a Discrete Diffusion Model Learn?
 2607.13431	2026-07-23	reports/daily/2026-07-23.md	1	Discrete Diffusion Models: A Unified Framework from Tokenization to Generation
 2607.15200	2026-07-23	reports/daily/2026-07-23.md	1	Mask-Aware Policy Gradients for Diffusion Language Models
 2607.16872	2026-07-23	reports/daily/2026-07-23.md	1	Trace-Based On-Policy Distillation for Masked Diffusion Language Models
-2607.17117	2026-07-23	reports/daily/2026-07-23.md	1	Persistent Sparse Autoencoders: Learning Feature Timescales
-2607.17425	2026-07-23	reports/daily/2026-07-23.md	1	Decoder-Preserving Sparse Autoencoders: Which Readouts Survive Sparse Compression?
+2607.17117	2026-07-23	reports/daily/2026-07-23.md	2	Persistent Sparse Autoencoders: Learning Feature Timescales
+2607.17425	2026-07-23	reports/daily/2026-07-23.md	2	Decoder-Preserving Sparse Autoencoders: Which Readouts Survive Sparse Compression?
 2607.19686	2026-07-23	reports/daily/2026-07-23.md	1	Multi-Mask Diffusion Language Models for Few-Step Generation
-2607.20286	2026-07-23	reports/daily/2026-07-23.md	1	Sound Probabilistic Safety Bounds for Large Language Models
-2602.12418	2026-07-24	reports/daily/2026-07-24.md	1	Sparse Autoencoders are Capable LLM Jailbreak Mitigators
-2607.19364	2026-07-24	reports/daily/2026-07-24.md	1	Statistically Grounded Sparse-Feature Interventions for Activation-Space Control in Large Language Models
+2607.20286	2026-07-23	reports/daily/2026-07-23.md	2	Sound Probabilistic Safety Bounds for Large Language Models
+2602.12418	2026-07-24	reports/daily/2026-07-24.md	2	Sparse Autoencoders are Capable LLM Jailbreak Mitigators
+2607.19364	2026-07-24	reports/daily/2026-07-24.md	2	Statistically Grounded Sparse-Feature Interventions for Activation-Space Control in Large Language Models
 2607.04469	2026-07-25	reports/daily/2026-07-25.md	1	Don't Commit Alone: Joint Token Commitment in Diffusion Large Language Models
-2604.09839	2026-07-26	reports/daily/2026-07-26.md	1	Steered LLM Activations are Non-Surjective
-2607.11070	2026-07-26	reports/daily/2026-07-26.md	1	MJ: Multi-turn LLM Jailbreaking via Decomposed Credit Assignment
-2607.20596	2026-07-26	reports/daily/2026-07-26.md	1	Are Single-Token Sparse Autoencoder Features Causally Necessary? Layer-Depth and SAE-Family Effects
+2604.09839	2026-07-26	reports/daily/2026-07-26.md	2	Steered LLM Activations are Non-Surjective
+2607.11070	2026-07-26	reports/daily/2026-07-26.md	2	MJ: Multi-turn LLM Jailbreaking via Decomposed Credit Assignment
+2607.20596	2026-07-26	reports/daily/2026-07-26.md	2	Are Single-Token Sparse Autoencoder Features Causally Necessary? Layer-Depth and SAE-Family Effects
 2607.14493	2026-07-28	reports/daily/2026-07-28.md	1	LogInject: Passive Prompt Injection via Security Operations Log Context
 2607.15937	2026-07-28	reports/daily/2026-07-28.md	1	The Language of Security: How Prompt Syntax Shapes Code Vulnerability in LLMs
 2607.20652	2026-07-28	reports/daily/2026-07-28.md	1	ParityTransformer: Interpretability by Design via the Deep Parity Bottleneck
