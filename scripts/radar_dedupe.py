@@ -10,6 +10,7 @@ and a "Removed repeats" note appended so the edit is visible.
   radar_dedupe.py               apply
 """
 import argparse
+import datetime as dt
 import re
 from pathlib import Path
 
@@ -20,6 +21,7 @@ COUNTS_RE = re.compile(r"(\d+) peer-reviewed\s*·\s*(\d+) preprints?\s*·\s*(\d+
 TOP_RE = re.compile(r"^(## Top )(\d+)")
 ITEMS_RE = re.compile(r"^(## Items )(\d+)\s*[–-]\s*(\d+)")
 TABLE_ROW_RE = re.compile(r"^\| (\d+) \| (\d{4}\.\d{4,5}) \|")
+CLEANUP_DATE = dt.date.today().isoformat()
 OPEN_TAG_RE = re.compile(r"<(article|div|section)\b[^>]*>")
 
 
@@ -86,7 +88,7 @@ def dedupe_markdown(text: str, repeats: dict) -> tuple[str, list]:
             peer = sum(1 for _, _, s, e in paper_sections(remaining) if PEER_RE.search("\n".join(lines[s:e])))
             lines[i] = l[:m.start()] + f"{peer} peer-reviewed · {total - peer} preprints · {forum} forum/blog" + l[m.end():]
         if l.startswith("## Notes"):
-            lines[i] = l + "\n\n*Written before the repeat cleanup of 2026-09-10; may refer to entries listed under 'Removed repeats' below.*\n"
+            lines[i] = l + f"\n\n*Written before the repeat cleanup of {CLEANUP_DATE}; may refer to entries listed under 'Removed repeats' below.*\n"
     lines = [l for l in lines if l is not None]
 
     # figure-URL table: drop removed rows, renumber; drop the table entirely if nothing is left
@@ -107,7 +109,7 @@ def dedupe_markdown(text: str, repeats: dict) -> tuple[str, list]:
         lines = text_.split("\n")
 
     note = ["", "---", "", "## Removed repeats", "",
-            f"{len(removed)} entr{'y' if len(removed)==1 else 'ies'} removed on 2026-09-10 because the paper had already been covered by an earlier report:", ""]
+            f"{len(removed)} entr{'y' if len(removed)==1 else 'ies'} removed on {CLEANUP_DATE} because the paper had already been covered by an earlier report:", ""]
     note += [f"- {aid} — {title} (first covered {d})" for aid, title, d, _ in removed]
     if total == 0:
         note += ["", "Every item in this report was a repeat; nothing new was covered that day."]
@@ -166,7 +168,7 @@ def dedupe_html(html: str, removed: list, counts_line_md: str | None) -> tuple[s
         if m and mm:
             html = html[:m.start()] + mm[0] + html[m.end():]
         note = ('<p style="margin-top:32px;font-size:13px;opacity:.7">'
-                f'{n} entr{"y" if n==1 else "ies"} removed on 2026-09-10 as repeats of earlier reports: '
+                f'{n} entr{"y" if n==1 else "ies"} removed on {CLEANUP_DATE} as repeats of earlier reports: '
                 + ", ".join(f"{aid} (first covered {d})" for aid, _, d, _ in removed if paper_block_removed(aid, html))
                 + ".</p>")
         i = html.rfind("</div>")
