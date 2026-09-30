@@ -217,23 +217,25 @@ arxiv_id	first_date	first_file	appearances	title
 2608.05578	2026-08-09	reports/daily/2026-08-09.md	2	Detecting Safety Training Modification in Language Models via Activation Analysis
 2608.05695	2026-08-09	reports/daily/2026-08-09.md	2	DreamGuard: Efficient Runtime Guardrail for LLM Agents via Risk-Aware World Model
 2608.02602	2026-08-11	reports/daily/2026-08-11.md	1	AURORA-LM: Autoencoding Unified Representation for Continuous-Latent Diffusion Language Modeling
-2608.02674	2026-08-11	reports/daily/2026-08-11.md	1	Moving the Safety Barrier: Dynamic Routing Adaptive Alignment Against White-Box Attacks
+2608.02674	2026-08-11	reports/daily/2026-08-11.md	2	Moving the Safety Barrier: Dynamic Routing Adaptive Alignment Against White-Box Attacks
 2608.02879	2026-08-11	reports/daily/2026-08-11.md	1	Interpreting Black-Box Large Language Models with Sentence-Level Energy Landscapes
 2608.04018	2026-08-11	reports/daily/2026-08-11.md	1	Governing Execution Risk in Agentic AI Systems: A Trajectory-Guided Framework for Red Teaming
-2608.05108	2026-08-11	reports/daily/2026-08-11.md	1	Agent Against Agent: An Agentic System for Automatic Prompt Injection Red Teaming
-2608.05409	2026-08-11	reports/daily/2026-08-11.md	1	Mood Matters: How Syntactic Sensitivity Undermines Safety Alignment
-2608.06400	2026-08-11	reports/daily/2026-08-11.md	1	Beyond Routing Weights: Faithful Response-Level Interpretation of Mixture-of-Experts Reward Models via Contribution Contrast
+2608.05108	2026-08-11	reports/daily/2026-08-11.md	2	Agent Against Agent: An Agentic System for Automatic Prompt Injection Red Teaming
+2608.05409	2026-08-11	reports/daily/2026-08-11.md	2	Mood Matters: How Syntactic Sensitivity Undermines Safety Alignment
+2608.06400	2026-08-11	reports/daily/2026-08-11.md	2	Beyond Routing Weights: Faithful Response-Level Interpretation of Mixture-of-Experts Reward Models via Contribution Contrast
 2608.06638	2026-08-11	reports/daily/2026-08-11.md	1	MI-MIDI: Mechanistic Interpretability of Text-to-MIDI Generation Models via Probing, Lenses and Steering
-2608.06690	2026-08-11	reports/daily/2026-08-11.md	1	Policy-Masked Private Experts: Auditable and Reversible Capability Access Control in Sparse MoE Models
+2608.06690	2026-08-11	reports/daily/2026-08-11.md	2	Policy-Masked Private Experts: Auditable and Reversible Capability Access Control in Sparse MoE Models
 2608.07430	2026-08-11	reports/daily/2026-08-11.md	2	Diffusion LLMs as Targets and Adversaries: Mechanistic Safety Exploits
-2608.08168	2026-08-13	reports/daily/2026-08-13.md	1	Thinking vs. NoThinking: Towards Interpreting Reasoning Mechanisms of Large Language Models via Sparse Autoencoders
-2608.09867	2026-08-13	reports/daily/2026-08-13.md	1	Stealing Reasoning Traces from Proprietary LLM APIs
-2608.10172	2026-08-13	reports/daily/2026-08-13.md	2	Intrinsic Structure: Spectral Identifiability for Mechanistic Interpretability
+2608.08168	2026-08-13	reports/daily/2026-08-13.md	2	Thinking vs. NoThinking: Towards Interpreting Reasoning Mechanisms of Large Language Models via Sparse Autoencoders
+2608.09867	2026-08-13	reports/daily/2026-08-13.md	2	Stealing Reasoning Traces from Proprietary LLM APIs
+2608.10172	2026-08-13	reports/daily/2026-08-13.md	3	Intrinsic Structure: Spectral Identifiability for Mechanistic Interpretability
 2608.10530	2026-08-13	reports/daily/2026-08-13.md	1	On Understanding, Identifying, and Mitigating Vulnerabilities in Agentic Large Language Models
-2608.10669	2026-08-13	reports/daily/2026-08-13.md	1	REDAgentBench: Executable Red Teaming and Faithful Measurement of LLM Agent Systems
+2608.10669	2026-08-13	reports/daily/2026-08-13.md	2	REDAgentBench: Executable Red Teaming and Faithful Measurement of LLM Agent Systems
 2608.11171	2026-08-13	reports/daily/2026-08-13.md	2	From Interpretability to Control: Insights from Six Years of the TrustNLP Workshop
-2608.11878	2026-08-13	reports/daily/2026-08-13.md	1	ToolHazard: Scaling Adversarial Environments for Security Evaluation and Alignment of LLM-based Agents
-2608.12273	2026-08-13	reports/daily/2026-08-13.md	1	Convergent Detour Hijacking: Task-Preserving Resource Amplification in Skill-Based LLM Agents
+2608.11878	2026-08-13	reports/daily/2026-08-13.md	2	ToolHazard: Scaling Adversarial Environments for Security Evaluation and Alignment of LLM-based Agents
+2608.12273	2026-08-13	reports/daily/2026-08-13.md	2	Convergent Detour Hijacking: Task-Preserving Resource Amplification in Skill-Based LLM Agents
+2608.13474	2026-08-17	reports/weekly/2026-W34.md	1	Decoding Task Progress from VLA Representations
+2608.14611	2026-08-17	reports/weekly/2026-W34.md	1	The 2026 Singapore Consensus on Global AI Safety Research Priorities
 2606.22686	2026-08-18	reports/daily/2026-08-18.md	1	The Geometry of Refusal: Linear Instability in Safety-Aligned LLMs
 2608.05152	2026-08-18	reports/daily/2026-08-18.md	1	Mean-Field Dynamics of Chain-of-Thought Reasoning in Large Language Models
 2608.08082	2026-08-18	reports/daily/2026-08-18.md	1	Commitment Before Realization: When Classifier-Free Guidance Becomes Unnecessary in Masked Diffusion Language Models
