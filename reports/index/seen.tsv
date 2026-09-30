@@ -399,3 +399,13 @@ arxiv_id	first_date	first_file	appearances	title
 2604.27401	2026-09-29	reports/daily/2026-09-29.md	1	Perturbation Probing: A Two-Pass-per-Prompt Diagnostic for FFN Behavioral Circuits in Aligned LLMs
 2609.22224	2026-09-29	reports/daily/2026-09-29.md	1	From Trait Vectors to Circuits: Tracing Refusal and Sycophancy Through Language Models
 2609.35544	2026-09-29	reports/daily/2026-09-29.md	1	Less Sycophancy, Stronger Refusal? Lessons for AI Safety from Mechanistic Interpretability
+2609.08126	2026-09-30	reports/daily/2026-09-30.md	1	SchemeArena: Factorized Stress Testing of Scheming in LLM Agents
+2609.12413	2026-09-30	reports/daily/2026-09-30.md	1	SoK: Rethinking Jailbreaking in the Era of Agentic AI: Attacks, Defenses, and Practical Consideration
+2609.14998	2026-09-30	reports/daily/2026-09-30.md	1	Shallow Beliefs: Synthetic Document Finetuning Does Not Inoculate Against Emergent Misalignment from Reward Hacking
+2609.19101	2026-09-30	reports/daily/2026-09-30.md	1	Monitoring and Discovering Reward Hacking with Internal Representations during LLM Evaluations
+2609.28614	2026-09-30	reports/daily/2026-09-30.md	1	Reward Hacking Challenges Oversight of Autonomous Research Agents
+2609.34415	2026-09-30	reports/daily/2026-09-30.md	1	PROACT-Agent: Progressive Runtime Oversight and Active Circuit-Breaking for Real-Time Safety
+2609.35291	2026-09-30	reports/daily/2026-09-30.md	1	Narrow Multimodal Fine-Tuning Can Induce Emergent Misalignment
+2609.35889	2026-09-30	reports/daily/2026-09-30.md	1	SINGED: Correct Outputs Do Not Certify Safe Execution in LLM Agents
+2609.36900	2026-09-30	reports/daily/2026-09-30.md	1	STAR-GRPO: Canonical Anchoring and Reliability-First Advantages against Representation-Dependent Reward Hacking
+2609.37196	2026-09-30	reports/daily/2026-09-30.md	1	ToolFence: Fine-Grained Authorization for Secure Tool-Using LLM Agents
