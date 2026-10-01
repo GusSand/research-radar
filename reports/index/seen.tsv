@@ -409,3 +409,13 @@ arxiv_id	first_date	first_file	appearances	title
 2609.35889	2026-09-30	reports/daily/2026-09-30.md	1	SINGED: Correct Outputs Do Not Certify Safe Execution in LLM Agents
 2609.36900	2026-09-30	reports/daily/2026-09-30.md	1	STAR-GRPO: Canonical Anchoring and Reliability-First Advantages against Representation-Dependent Reward Hacking
 2609.37196	2026-09-30	reports/daily/2026-09-30.md	1	ToolFence: Fine-Grained Authorization for Secure Tool-Using LLM Agents
+2609.01048	2026-10-01	reports/daily/2026-10-01.md	1	Lagged Coupling: Internal Representations Become Readable Before They Become Causal
+2609.32355	2026-10-01	reports/daily/2026-10-01.md	1	Gradients for Interventions and Activations for Detection: Targeted Feature Learning in Language Models
+2609.35210	2026-10-01	reports/daily/2026-10-01.md	1	Understanding On-Policy Distillation: A Mechanistic Interpretability Perspective via Sparse Crosscoders
+2609.35677	2026-10-01	reports/daily/2026-10-01.md	1	Verifier Errors in RLVR: Reward Hacking, Limits of Feedback, and Selective Control
+2609.36254	2026-10-01	reports/daily/2026-10-01.md	1	Towards Mitigating Deceptive Safety Alignment in Large Reasoning Models
+2609.36813	2026-10-01	reports/daily/2026-10-01.md	1	RESCUE: Repairing Language Model Errors to Sparse Circuits via Reinforcement Learning
+2609.37624	2026-10-01	reports/daily/2026-10-01.md	1	Correct, Don't Delete: Mitigating Emergent Misalignment with Corrective Supervision
+2609.37914	2026-10-01	reports/daily/2026-10-01.md	1	The Unequal Influence of Bad Advice: Using Training Data Attribution to Modulate Emergent Misalignment
+2609.38262	2026-10-01	reports/daily/2026-10-01.md	1	When Does Randomized Oversight Align AI Agents That Can Conceal?
+2609.39279	2026-10-01	reports/daily/2026-10-01.md	1	Faithful Dual-constrained Erasure for Robust LLM Safety Alignment
