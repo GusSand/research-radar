@@ -419,3 +419,13 @@ arxiv_id	first_date	first_file	appearances	title
 2609.37914	2026-10-01	reports/daily/2026-10-01.md	1	The Unequal Influence of Bad Advice: Using Training Data Attribution to Modulate Emergent Misalignment
 2609.38262	2026-10-01	reports/daily/2026-10-01.md	1	When Does Randomized Oversight Align AI Agents That Can Conceal?
 2609.39279	2026-10-01	reports/daily/2026-10-01.md	1	Faithful Dual-constrained Erasure for Robust LLM Safety Alignment
+2502.13141	2026-10-02	reports/daily/2026-10-02.md	1	UniGuardian: A Unified Defense for Detecting Prompt Injection, Backdoor Attacks and Adversarial Attacks in Large Language Models
+2609.29045	2026-10-02	reports/daily/2026-10-02.md	1	The Tokens Remember: When Tokenization Bypasses Knowledge Editing and Unlearning
+2609.31056	2026-10-02	reports/daily/2026-10-02.md	1	Neuralyzing the Trace: Selective Representation-Level Unlearning with Contrastive Sparse Autoencoders
+2609.35686	2026-10-02	reports/daily/2026-10-02.md	1	Rethinking Circuit Evaluation: Do Circuits Explain Model Errors?
+2609.36139	2026-10-02	reports/daily/2026-10-02.md	1	Language Models Are "Insecure" Reporters
+2609.38415	2026-10-02	reports/daily/2026-10-02.md	1	Evaluating Whether GPT-6 Astra Performs Unsanctioned Supply-Chain Attacks
+2609.39146	2026-10-02	reports/daily/2026-10-02.md	1	MADBench: Benchmarking the Security of Multi-Agent Debate
+2610.02098	2026-10-02	reports/daily/2026-10-02.md	1	Are We Recovering Mechanisms? Objective-Level Recovery Gaps in Mechanistic Interpretability
+2610.02173	2026-10-02	reports/daily/2026-10-02.md	1	Every Ablation Is a Dose: Counterweights and the Semblance of Self-Repair
+2610.02206	2026-10-02	reports/daily/2026-10-02.md	1	KaliBench: A Fine-Grained Benchmark for Cybersecurity Tool Use on Kali Linux with Runtime-Free Verifiable Rewards
