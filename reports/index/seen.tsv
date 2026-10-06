@@ -449,3 +449,13 @@ arxiv_id	first_date	first_file	appearances	title
 2608.27646	2026-10-04	reports/daily/2026-10-04.md	1	If Agents Were Angels, No Governance Would Be Necessary: Out-of-Band Policy Enforcement at a Trusted Tool Boundary
 2609.01222	2026-10-04	reports/daily/2026-10-04.md	1	What's in Your Agent's Context? Context Privilege Escalation Attacks against AI Agent Harness
 2609.01595	2026-10-04	reports/daily/2026-10-04.md	1	Mechanism Design for Alignment and Control
+2509.15541	2026-10-06	reports/daily/2026-10-06.md	1	Stress Testing Deliberative Alignment for Anti-Scheming Training
+2609.15064	2026-10-06	reports/daily/2026-10-06.md	1	What Does an LLM Learn from Reinforcement Learning? A Mechanistic Interpretability Perspective with Fixed-SAE Track
+2609.29189	2026-10-06	reports/daily/2026-10-06.md	1	When Honesty is Not Enough in AI Debate
+2609.39838	2026-10-06	reports/daily/2026-10-06.md	1	Learning Steganography Is Easy, Learning Steganographic Reasoning Is Hard
+2610.00568	2026-10-06	reports/daily/2026-10-06.md	1	Emergent Unfaithfulness: How Alignment Training Causes Language Models to Silently Override Task Faithfulness
+2610.03055	2026-10-06	reports/daily/2026-10-06.md	1	hacktrace: behavior-supervised detection of reward hacking during code generation
+2610.04245	2026-10-06	reports/daily/2026-10-06.md	1	On the Steering Dimensionality of Refusal in Language Models
+2610.05295	2026-10-06	reports/daily/2026-10-06.md	1	Readable Before Actionable: Causal Tracing of Indirect Prompt Injection
+2610.05461	2026-10-06	reports/daily/2026-10-06.md	1	AI Safety via Debate is Compromised by Cognitive Biases
+2610.05541	2026-10-06	reports/daily/2026-10-06.md	1	Don't Judge an LLM Only by Its Activations: Discovering Suppressed Safety Features via Counterfactual Activation Potential
