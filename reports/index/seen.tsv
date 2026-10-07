@@ -459,3 +459,13 @@ arxiv_id	first_date	first_file	appearances	title
 2610.05295	2026-10-06	reports/daily/2026-10-06.md	1	Readable Before Actionable: Causal Tracing of Indirect Prompt Injection
 2610.05461	2026-10-06	reports/daily/2026-10-06.md	1	AI Safety via Debate is Compromised by Cognitive Biases
 2610.05541	2026-10-06	reports/daily/2026-10-06.md	1	Don't Judge an LLM Only by Its Activations: Discovering Suppressed Safety Features via Counterfactual Activation Potential
+2610.02844	2026-10-07	reports/daily/2026-10-07.md	1	DNAlign: Dynamic Null-Space Safe Alignment for LLMs
+2610.04083	2026-10-07	reports/daily/2026-10-07.md	1	Self-Propagating Misalignment in LLM Agents, and Why Auditing or Disabling Memory Is Not Enough
+2610.04269	2026-10-07	reports/daily/2026-10-07.md	1	Self-Reflection Fine-Tuning: Enhancing Agent Security against Prompt Injection Attacks from Failure Experience
+2610.04470	2026-10-07	reports/daily/2026-10-07.md	1	Reactivating Alignment: Defending LLMs from Jailbreaks via Intention-Aware Input-Output Matching
+2610.06401	2026-10-07	reports/daily/2026-10-07.md	1	RAISED: Self-Distillation for Robustness to Prompt Injection in LLM Agents
+2610.06670	2026-10-07	reports/daily/2026-10-07.md	1	Reward Stealing Attack on Large Language Models
+2610.07023	2026-10-07	reports/daily/2026-10-07.md	1	Beyond Refusal Patterns: Safe-Role Internalization for Robust and Generalizable LLM Safety Alignment
+2610.07510	2026-10-07	reports/daily/2026-10-07.md	1	Understanding and Enhancing Backdoor Persistency in LLM Agent Post-Training
+2610.07723	2026-10-07	reports/daily/2026-10-07.md	1	The Model Plants the Trigger: Answer-Side Backdoor Attacks in Multi-Turn Large Language Models
+2610.07935	2026-10-07	reports/daily/2026-10-07.md	1	SIGMA: Self-Improving Alignment Generalization from a Model Spec
