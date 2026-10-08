@@ -469,3 +469,13 @@ arxiv_id	first_date	first_file	appearances	title
 2610.07510	2026-10-07	reports/daily/2026-10-07.md	1	Understanding and Enhancing Backdoor Persistency in LLM Agent Post-Training
 2610.07723	2026-10-07	reports/daily/2026-10-07.md	1	The Model Plants the Trigger: Answer-Side Backdoor Attacks in Multi-Turn Large Language Models
 2610.07935	2026-10-07	reports/daily/2026-10-07.md	1	SIGMA: Self-Improving Alignment Generalization from a Model Spec
+2610.02413	2026-10-08	reports/daily/2026-10-08.md	1	Prompted to Discriminate: Generalizing Malicious-Input Probes in the Wild
+2610.03960	2026-10-08	reports/daily/2026-10-08.md	1	Localize-and-Detect: Auditing Task-Level Poisoning in Instruction-Tuned Models
+2610.04737	2026-10-08	reports/daily/2026-10-08.md	1	PyINE: A Framework for Scalable Elicitation and Oversight via Code Execution
+2610.06049	2026-10-08	reports/daily/2026-10-08.md	1	Backdooring Sparse Autoencoders
+2610.06903	2026-10-08	reports/daily/2026-10-08.md	1	Component and Dimension Sparsity in Transformer Refusal Mechanisms
+2610.06966	2026-10-08	reports/daily/2026-10-08.md	1	APEX: Active Protection at Execution Boundaries for LLM Agents
+2610.07654	2026-10-08	reports/daily/2026-10-08.md	1	Does On-Policy Distillation for Safety Pose Backdoor Risks?
+2610.08678	2026-10-08	reports/daily/2026-10-08.md	1	Secure Speculative Decoding for Large Language Models
+2610.09600	2026-10-08	reports/daily/2026-10-08.md	1	SafeEvo: Deciphering the Safety Alignment Mechanism and Evolution in Language Models
+2610.09973	2026-10-08	reports/daily/2026-10-08.md	1	From Expected Harmfulness to Likelihood: A Probabilistic Reformulation of Jailbreaking LLM Agents
