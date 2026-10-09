@@ -479,3 +479,13 @@ arxiv_id	first_date	first_file	appearances	title
 2610.08678	2026-10-08	reports/daily/2026-10-08.md	1	Secure Speculative Decoding for Large Language Models
 2610.09600	2026-10-08	reports/daily/2026-10-08.md	1	SafeEvo: Deciphering the Safety Alignment Mechanism and Evolution in Language Models
 2610.09973	2026-10-08	reports/daily/2026-10-08.md	1	From Expected Harmfulness to Likelihood: A Probabilistic Reformulation of Jailbreaking LLM Agents
+2610.04467	2026-10-09	reports/daily/2026-10-09.md	1	Target-free Latent Safety Alignment
+2610.06576	2026-10-09	reports/daily/2026-10-09.md	1	Before Agent Tells The Lie: Has Deception Already Been Represented?
+2610.07532	2026-10-09	reports/daily/2026-10-09.md	1	Safeguarding LLMs via Model-Agnostic Latent Safety Signals from Dark Knowledge
+2610.07967	2026-10-09	reports/daily/2026-10-09.md	1	DecepEval: A Benchmark for Evaluating Deception in LLM Agents
+2610.08951	2026-10-09	reports/daily/2026-10-09.md	1	ASPIRE: Agentic Safety & Prompt Injection Red-teaming Engine
+2610.11188	2026-10-09	reports/daily/2026-10-09.md	1	What to Admit and How to Present: Governing Persistent Memory in LLM Agents
+2610.12375	2026-10-09	reports/daily/2026-10-09.md	1	OnTrack: Real-Time Monitoring and Intervention in LLM Agent Trajectories via Streaming Structure-Aware Optimal Transport
+2610.12409	2026-10-09	reports/daily/2026-10-09.md	1	Searching for "Harmful Refusal": A Psychometric Audit of an AI Safety Benchmark
+2610.12410	2026-10-09	reports/daily/2026-10-09.md	1	Predicting Alignment Generalization with Value Representations
+2610.12445	2026-10-09	reports/daily/2026-10-09.md	1	Caught in the Act: Probes Effectively Detect Sabotage and Catch Unverbalized Deception
