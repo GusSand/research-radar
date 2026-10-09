@@ -1,0 +1,29 @@
+<svg viewBox="0 0 500 240" xmlns="http://www.w3.org/2000/svg" aria-label="Figure 1: Probe ROC curves for deception detection in SHADE-Arena">
+  <rect width="500" height="240" fill="#fff"/>
+  <!-- Title -->
+  <text x="250" y="20" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#1a1a1a" font-weight="bold">Probe vs Text-Monitor: SHADE-Arena AUC</text>
+  <!-- Axes -->
+  <line x1="60" y1="30" x2="60" y2="190" stroke="#888" stroke-width="1.5"/>
+  <line x1="60" y1="190" x2="350" y2="190" stroke="#888" stroke-width="1.5"/>
+  <!-- Axis labels -->
+  <text x="205" y="212" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#888">False Positive Rate</text>
+  <text x="18" y="115" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#888" transform="rotate(-90,18,115)">True Positive Rate</text>
+  <!-- Chance line -->
+  <line x1="60" y1="190" x2="350" y2="30" stroke="#ccc" stroke-width="1" stroke-dasharray="4,3"/>
+  <!-- EFC probe curve (0.988 AUC) -->
+  <polyline points="60,190 70,80 90,50 130,35 200,32 350,30" fill="none" stroke="#0d7377" stroke-width="2.5"/>
+  <text x="360" y="35" font-family="Georgia,serif" font-size="11" fill="#0d7377">EFC probe</text>
+  <text x="360" y="48" font-family="Georgia,serif" font-size="10" fill="#0d7377">AUC 0.988</text>
+  <!-- LinearEnsemble probe -->
+  <polyline points="60,190 72,85 95,55 140,38 210,34 350,31" fill="none" stroke="#1a4f99" stroke-width="2" stroke-dasharray="6,2"/>
+  <text x="360" y="65" font-family="Georgia,serif" font-size="11" fill="#1a4f99">LinearEnsemble</text>
+  <text x="360" y="78" font-family="Georgia,serif" font-size="10" fill="#1a4f99">AUC 0.985</text>
+  <!-- Opus 5.5 text monitor (lower) -->
+  <polyline points="60,190 90,140 130,110 190,85 270,60 350,45" fill="none" stroke="#b02020" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <text x="360" y="95" font-family="Georgia,serif" font-size="11" fill="#b02020">Opus 5.5 text</text>
+  <text x="360" y="108" font-family="Georgia,serif" font-size="10" fill="#b02020">monitor</text>
+  <!-- Panel label -->
+  <text x="75" y="45" font-family="Georgia,serif" font-size="11" fill="#888">(a) SHADE-Arena sabotage</text>
+  <!-- Hidden-goal panel -->
+  <text x="250" y="226" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#888">(b) Introspective deception: axial probe AUC 99.7% (hidden-goal separation)</text>
+</svg>

@@ -479,3 +479,13 @@ arxiv_id	first_date	first_file	appearances	title
 2610.08678	2026-10-08	reports/daily/2026-10-08.md	1	Secure Speculative Decoding for Large Language Models
 2610.09600	2026-10-08	reports/daily/2026-10-08.md	1	SafeEvo: Deciphering the Safety Alignment Mechanism and Evolution in Language Models
 2610.09973	2026-10-08	reports/daily/2026-10-08.md	1	From Expected Harmfulness to Likelihood: A Probabilistic Reformulation of Jailbreaking LLM Agents
+2610.10612	2026-10-09	reports/daily/2026-10-09.md	1	PyCache Trap: The Inspection-Execution Gap in Agent Skill Scanners
+2610.10742	2026-10-09	reports/daily/2026-10-09.md	1	BRANCH: Bypassing Multi-Scanner AI Guardrails
+2610.10947	2026-10-09	reports/daily/2026-10-09.md	1	RH-Detect: A Unified Benchmark for Reward Hacking Detection
+2610.11030	2026-10-09	reports/daily/2026-10-09.md	1	NOMOS: Compiling Written Policies into Statically Verified Tool-Call Gates for LLM Agents
+2610.11634	2026-10-09	reports/daily/2026-10-09.md	1	LTBD: Learnable Trust-Boundary Delimiters for Prompt Injection Defense
+2610.11843	2026-10-09	reports/daily/2026-10-09.md	1	Anytime-valid detection of LLM weight exfiltration
+2610.12233	2026-10-09	reports/daily/2026-10-09.md	1	ReSI: Recursive Safety Improvement toward Resistant and Resilient AI
+2610.12292	2026-10-09	reports/daily/2026-10-09.md	1	One Word Opens the Gate: The Option-Channel Attack on Typed Decision Models as Agent Guardrails
+2610.12410	2026-10-09	reports/daily/2026-10-09.md	1	Predicting Alignment Generalization with Value Representations
+2610.12445	2026-10-09	reports/daily/2026-10-09.md	1	Caught in the Act: Probes Effectively Detect Sabotage and Catch Unverbalized Deception
