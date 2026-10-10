@@ -489,3 +489,13 @@ arxiv_id	first_date	first_file	appearances	title
 2610.12292	2026-10-09	reports/daily/2026-10-09.md	1	One Word Opens the Gate: The Option-Channel Attack on Typed Decision Models as Agent Guardrails
 2610.12410	2026-10-09	reports/daily/2026-10-09.md	1	Predicting Alignment Generalization with Value Representations
 2610.12445	2026-10-09	reports/daily/2026-10-09.md	1	Caught in the Act: Probes Effectively Detect Sabotage and Catch Unverbalized Deception
+2610.10625	2026-10-10	reports/daily/2026-10-10.md	1	Safe at One Loop, Risky at Another: Aligning Safety Across Recurrent Depths in Looped Language Models
+2610.11766	2026-10-10	reports/daily/2026-10-10.md	1	Same Outcome, Different Evidence: Intent Recovery in LLM Safety Evaluation
+2610.11773	2026-10-10	reports/daily/2026-10-10.md	1	Safe Actions Alone Do Not Ensure Safe Agents: Identifying Unfulfilled Obligations with Guard Models
+2610.11775	2026-10-10	reports/daily/2026-10-10.md	1	RouterInterp: Understanding Superposed Specialisation in Mixture of Experts Routing
+2610.11893	2026-10-10	reports/daily/2026-10-10.md	1	A Security Meta-Model for Retrieval-Augmented Generation Systems
+2610.11915	2026-10-10	reports/daily/2026-10-10.md	1	Not Every Change Is Necessary: Recoverable Drift in Large Language Model Unlearning
+2610.12085	2026-10-10	reports/daily/2026-10-10.md	1	Is Memorization Context-Sensitive? Prefix-Based Extraction Beyond Isolated Prefixes
+2610.12304	2026-10-10	reports/daily/2026-10-10.md	1	Looking Inside LLMs: Small-World Connectivity as a Signature of Reasoning Performance
+2610.12375	2026-10-10	reports/daily/2026-10-10.md	1	OnTrack: Real-Time Monitoring and Intervention in LLM Agent Trajectories via Streaming Structure-Aware Optimal Transport
+2610.12409	2026-10-10	reports/daily/2026-10-10.md	1	Searching for "Harmful Refusal": A Psychometric Audit of an AI Safety Benchmark
