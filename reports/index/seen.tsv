@@ -499,3 +499,13 @@ arxiv_id	first_date	first_file	appearances	title
 2610.12304	2026-10-10	reports/daily/2026-10-10.md	1	Looking Inside LLMs: Small-World Connectivity as a Signature of Reasoning Performance
 2610.12375	2026-10-10	reports/daily/2026-10-10.md	1	OnTrack: Real-Time Monitoring and Intervention in LLM Agent Trajectories via Streaming Structure-Aware Optimal Transport
 2610.12409	2026-10-10	reports/daily/2026-10-10.md	1	Searching for "Harmful Refusal": A Psychometric Audit of an AI Safety Benchmark
+2608.30362	2026-10-11	reports/daily/2026-10-11.md	1	Will the User Ever Know? Covert Indirect Prompt Injection Attacks on Tool-Using LLM Agents
+2610.00371	2026-10-11	reports/daily/2026-10-11.md	1	Deny Without Disabling: Authorization-Paired Evaluation and Control for Multi-Agent Systems
+2610.01323	2026-10-11	reports/daily/2026-10-11.md	1	TRACE: Trajectory Return Attribution and Contrastive Erasure for Multi-Turn Safety
+2610.03124	2026-10-11	reports/daily/2026-10-11.md	1	The Fragility of Trigger-Tag Mechanisms for Misuse Detection in Open-Weight LLMs
+2610.03448	2026-10-11	reports/daily/2026-10-11.md	1	Passing the Test You Trained On: Re-evaluating Prompt-Injection Detectors for LLM Agents
+2610.03498	2026-10-11	reports/daily/2026-10-11.md	1	Detect and Suppress: A Mechanistic Defense against Adversarial Patches in VLA Models
+2610.07532	2026-10-11	reports/daily/2026-10-11.md	1	Safeguarding LLMs via Model-Agnostic Latent Safety Signals from Dark Knowledge
+2610.10345	2026-10-11	reports/daily/2026-10-11.md	1	SLDR: Defending Against Malicious Fine-tuning via Selective Layers Recovery and Dynamic Routing
+2610.10620	2026-10-11	reports/daily/2026-10-11.md	1	When AI Finds Hidden Messages, Does It Report?
+2610.12463	2026-10-11	reports/daily/2026-10-11.md	1	From Reactive Containment to Proactive Assurance: Lessons from OpenAI, Anthropic, and Google Agent Security Incidents
