@@ -449,57 +449,57 @@ arxiv_id	first_date	first_file	appearances	title
 2608.27646	2026-10-04	reports/daily/2026-10-04.md	1	If Agents Were Angels, No Governance Would Be Necessary: Out-of-Band Policy Enforcement at a Trusted Tool Boundary
 2609.01222	2026-10-04	reports/daily/2026-10-04.md	1	What's in Your Agent's Context? Context Privilege Escalation Attacks against AI Agent Harness
 2609.01595	2026-10-04	reports/daily/2026-10-04.md	1	Mechanism Design for Alignment and Control
-2509.15541	2026-10-06	reports/daily/2026-10-06.md	1	Stress Testing Deliberative Alignment for Anti-Scheming Training
-2609.15064	2026-10-06	reports/daily/2026-10-06.md	1	What Does an LLM Learn from Reinforcement Learning? A Mechanistic Interpretability Perspective with Fixed-SAE Track
+2509.15541	2026-10-06	reports/daily/2026-10-06.md	2	Stress Testing Deliberative Alignment for Anti-Scheming Training
+2609.15064	2026-10-06	reports/daily/2026-10-06.md	2	What Does an LLM Learn from Reinforcement Learning? A Mechanistic Interpretability Perspective with Fixed-SAE Track
 2609.29189	2026-10-06	reports/daily/2026-10-06.md	1	When Honesty is Not Enough in AI Debate
 2609.39838	2026-10-06	reports/daily/2026-10-06.md	1	Learning Steganography Is Easy, Learning Steganographic Reasoning Is Hard
 2610.00568	2026-10-06	reports/daily/2026-10-06.md	1	Emergent Unfaithfulness: How Alignment Training Causes Language Models to Silently Override Task Faithfulness
-2610.03055	2026-10-06	reports/daily/2026-10-06.md	1	hacktrace: behavior-supervised detection of reward hacking during code generation
+2610.03055	2026-10-06	reports/daily/2026-10-06.md	2	hacktrace: behavior-supervised detection of reward hacking during code generation
 2610.04245	2026-10-06	reports/daily/2026-10-06.md	1	On the Steering Dimensionality of Refusal in Language Models
 2610.05295	2026-10-06	reports/daily/2026-10-06.md	1	Readable Before Actionable: Causal Tracing of Indirect Prompt Injection
 2610.05461	2026-10-06	reports/daily/2026-10-06.md	1	AI Safety via Debate is Compromised by Cognitive Biases
 2610.05541	2026-10-06	reports/daily/2026-10-06.md	1	Don't Judge an LLM Only by Its Activations: Discovering Suppressed Safety Features via Counterfactual Activation Potential
 2610.02844	2026-10-07	reports/daily/2026-10-07.md	1	DNAlign: Dynamic Null-Space Safe Alignment for LLMs
-2610.04083	2026-10-07	reports/daily/2026-10-07.md	1	Self-Propagating Misalignment in LLM Agents, and Why Auditing or Disabling Memory Is Not Enough
+2610.04083	2026-10-07	reports/daily/2026-10-07.md	2	Self-Propagating Misalignment in LLM Agents, and Why Auditing or Disabling Memory Is Not Enough
 2610.04269	2026-10-07	reports/daily/2026-10-07.md	1	Self-Reflection Fine-Tuning: Enhancing Agent Security against Prompt Injection Attacks from Failure Experience
 2610.04470	2026-10-07	reports/daily/2026-10-07.md	1	Reactivating Alignment: Defending LLMs from Jailbreaks via Intention-Aware Input-Output Matching
 2610.06401	2026-10-07	reports/daily/2026-10-07.md	1	RAISED: Self-Distillation for Robustness to Prompt Injection in LLM Agents
 2610.06670	2026-10-07	reports/daily/2026-10-07.md	1	Reward Stealing Attack on Large Language Models
 2610.07023	2026-10-07	reports/daily/2026-10-07.md	1	Beyond Refusal Patterns: Safe-Role Internalization for Robust and Generalizable LLM Safety Alignment
 2610.07510	2026-10-07	reports/daily/2026-10-07.md	1	Understanding and Enhancing Backdoor Persistency in LLM Agent Post-Training
-2610.07723	2026-10-07	reports/daily/2026-10-07.md	1	The Model Plants the Trigger: Answer-Side Backdoor Attacks in Multi-Turn Large Language Models
-2610.07935	2026-10-07	reports/daily/2026-10-07.md	1	SIGMA: Self-Improving Alignment Generalization from a Model Spec
+2610.07723	2026-10-07	reports/daily/2026-10-07.md	2	The Model Plants the Trigger: Answer-Side Backdoor Attacks in Multi-Turn Large Language Models
+2610.07935	2026-10-07	reports/daily/2026-10-07.md	2	SIGMA: Self-Improving Alignment Generalization from a Model Spec
 2610.02413	2026-10-08	reports/daily/2026-10-08.md	1	Prompted to Discriminate: Generalizing Malicious-Input Probes in the Wild
 2610.03960	2026-10-08	reports/daily/2026-10-08.md	1	Localize-and-Detect: Auditing Task-Level Poisoning in Instruction-Tuned Models
 2610.04737	2026-10-08	reports/daily/2026-10-08.md	1	PyINE: A Framework for Scalable Elicitation and Oversight via Code Execution
-2610.06049	2026-10-08	reports/daily/2026-10-08.md	1	Backdooring Sparse Autoencoders
-2610.06903	2026-10-08	reports/daily/2026-10-08.md	1	Component and Dimension Sparsity in Transformer Refusal Mechanisms
+2610.06049	2026-10-08	reports/daily/2026-10-08.md	2	Backdooring Sparse Autoencoders
+2610.06903	2026-10-08	reports/daily/2026-10-08.md	2	Component and Dimension Sparsity in Transformer Refusal Mechanisms
 2610.06966	2026-10-08	reports/daily/2026-10-08.md	1	APEX: Active Protection at Execution Boundaries for LLM Agents
 2610.07654	2026-10-08	reports/daily/2026-10-08.md	1	Does On-Policy Distillation for Safety Pose Backdoor Risks?
 2610.08678	2026-10-08	reports/daily/2026-10-08.md	1	Secure Speculative Decoding for Large Language Models
 2610.09600	2026-10-08	reports/daily/2026-10-08.md	1	SafeEvo: Deciphering the Safety Alignment Mechanism and Evolution in Language Models
 2610.09973	2026-10-08	reports/daily/2026-10-08.md	1	From Expected Harmfulness to Likelihood: A Probabilistic Reformulation of Jailbreaking LLM Agents
 2610.10612	2026-10-09	reports/daily/2026-10-09.md	1	PyCache Trap: The Inspection-Execution Gap in Agent Skill Scanners
-2610.10742	2026-10-09	reports/daily/2026-10-09.md	1	BRANCH: Bypassing Multi-Scanner AI Guardrails
+2610.10742	2026-10-09	reports/daily/2026-10-09.md	2	BRANCH: Bypassing Multi-Scanner AI Guardrails
 2610.10947	2026-10-09	reports/daily/2026-10-09.md	1	RH-Detect: A Unified Benchmark for Reward Hacking Detection
-2610.11030	2026-10-09	reports/daily/2026-10-09.md	1	NOMOS: Compiling Written Policies into Statically Verified Tool-Call Gates for LLM Agents
+2610.11030	2026-10-09	reports/daily/2026-10-09.md	2	NOMOS: Compiling Written Policies into Statically Verified Tool-Call Gates for LLM Agents
 2610.11634	2026-10-09	reports/daily/2026-10-09.md	1	LTBD: Learnable Trust-Boundary Delimiters for Prompt Injection Defense
 2610.11843	2026-10-09	reports/daily/2026-10-09.md	1	Anytime-valid detection of LLM weight exfiltration
 2610.12233	2026-10-09	reports/daily/2026-10-09.md	1	ReSI: Recursive Safety Improvement toward Resistant and Resilient AI
 2610.12292	2026-10-09	reports/daily/2026-10-09.md	1	One Word Opens the Gate: The Option-Channel Attack on Typed Decision Models as Agent Guardrails
 2610.12410	2026-10-09	reports/daily/2026-10-09.md	1	Predicting Alignment Generalization with Value Representations
-2610.12445	2026-10-09	reports/daily/2026-10-09.md	1	Caught in the Act: Probes Effectively Detect Sabotage and Catch Unverbalized Deception
+2610.12445	2026-10-09	reports/daily/2026-10-09.md	2	Caught in the Act: Probes Effectively Detect Sabotage and Catch Unverbalized Deception
 2610.10625	2026-10-10	reports/daily/2026-10-10.md	1	Safe at One Loop, Risky at Another: Aligning Safety Across Recurrent Depths in Looped Language Models
 2610.11766	2026-10-10	reports/daily/2026-10-10.md	1	Same Outcome, Different Evidence: Intent Recovery in LLM Safety Evaluation
 2610.11773	2026-10-10	reports/daily/2026-10-10.md	1	Safe Actions Alone Do Not Ensure Safe Agents: Identifying Unfulfilled Obligations with Guard Models
-2610.11775	2026-10-10	reports/daily/2026-10-10.md	1	RouterInterp: Understanding Superposed Specialisation in Mixture of Experts Routing
+2610.11775	2026-10-10	reports/daily/2026-10-10.md	2	RouterInterp: Understanding Superposed Specialisation in Mixture of Experts Routing
 2610.11893	2026-10-10	reports/daily/2026-10-10.md	1	A Security Meta-Model for Retrieval-Augmented Generation Systems
 2610.11915	2026-10-10	reports/daily/2026-10-10.md	1	Not Every Change Is Necessary: Recoverable Drift in Large Language Model Unlearning
 2610.12085	2026-10-10	reports/daily/2026-10-10.md	1	Is Memorization Context-Sensitive? Prefix-Based Extraction Beyond Isolated Prefixes
 2610.12304	2026-10-10	reports/daily/2026-10-10.md	1	Looking Inside LLMs: Small-World Connectivity as a Signature of Reasoning Performance
 2610.12375	2026-10-10	reports/daily/2026-10-10.md	1	OnTrack: Real-Time Monitoring and Intervention in LLM Agent Trajectories via Streaming Structure-Aware Optimal Transport
 2610.12409	2026-10-10	reports/daily/2026-10-10.md	1	Searching for "Harmful Refusal": A Psychometric Audit of an AI Safety Benchmark
-2608.30362	2026-10-11	reports/daily/2026-10-11.md	1	Will the User Ever Know? Covert Indirect Prompt Injection Attacks on Tool-Using LLM Agents
+2608.30362	2026-10-11	reports/daily/2026-10-11.md	2	Will the User Ever Know? Covert Indirect Prompt Injection Attacks on Tool-Using LLM Agents
 2610.00371	2026-10-11	reports/daily/2026-10-11.md	1	Deny Without Disabling: Authorization-Paired Evaluation and Control for Multi-Agent Systems
 2610.01323	2026-10-11	reports/daily/2026-10-11.md	1	TRACE: Trajectory Return Attribution and Contrastive Erasure for Multi-Turn Safety
 2610.03124	2026-10-11	reports/daily/2026-10-11.md	1	The Fragility of Trigger-Tag Mechanisms for Misuse Detection in Open-Weight LLMs
