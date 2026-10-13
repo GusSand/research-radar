@@ -68,25 +68,31 @@ Always define all tokens on `:root`, then override only the tokens in the dark-t
 
 ## Paper figure strategy: real image first, SVG fallback
 
-The artifact CSP blocks all external HTTP fetches, so you cannot use `<img src="https://...">` directly. **Preferred approach: embed the actual paper figure as a base64 data URI.** Fall back to inline SVG only when the image cannot be fetched.
+Use the paper's own figure whenever arXiv has an HTML version. `scripts/radar_figure.py` does the fetching; do not hand-extract image URLs or base64-encode images yourself (WebFetch returns text, so it cannot download them).
 
-### Step 1 — find the figure URL
-Fetch `https://arxiv.org/html/<arxiv-id>`. Locate the first significant figure (Figure 1 or the method overview diagram). Extract the full `<img src="...">` URL (arXiv HTML paths look like `https://arxiv.org/html/2407.XXXXX/x1.png`).
+### Step 1 — fetch the figures
+Once the ranked list is final, run
+```bash
+python3 scripts/radar_figure.py fetch <arxiv-id> <arxiv-id> ...
+```
+for every ranked paper. It takes each paper's first real figure (tables and algorithms are skipped; broken panels and figures fall through to the next one), checks the image downloads, and prints one line per paper: `ok` with the figure URL and the paper's caption, or a failure. Use the printed figure URL for the `.md`.
 
-### Step 2a — embed as base64 data URI (preferred)
-Fetch the image file and base64-encode it. Embed as:
+### Step 2a — placeholder for each `ok` paper
+In the HTML, put a placeholder where the figure goes instead of writing the `<figure>` yourself:
 ```html
-<figure class="paper-figure">
-  <img src="data:image/png;base64,<BASE64_DATA>" alt="Figure 1: description" style="width:100%;max-width:500px;display:block;margin:0 auto;">
-  <figcaption>Figure 1: caption text.</figcaption>
-</figure>
+<!-- FIGURE:2610.11634 -->        <!-- full entries (top 3 daily / top 8 weekly) -->
+<!-- FIGURE:2610.11634 mid -->    <!-- mid-tier entries -->
 ```
-Add this CSS to the `<style>` block if not already present:
+After the HTML is written, run
+```bash
+python3 scripts/radar_figure.py inline reports/daily/<DATE>.html
+```
+It replaces each placeholder with a `<figure class="paper-figure">` block: the image (linked from arXiv, which `fetch` verified) and the paper's own caption with an arXiv link. It exits non-zero if a placeholder has no fetched figure. The site serves the HTML directly, so linked images load; there is no artifact CSP any more. Keep this CSS in the `<style>` block:
 ```css
-.paper-figure img { width: 100%; max-width: 500px; display: block; margin: 0 auto; border-radius: 2px; }
+.paper-figure img { width: 100%; max-width: 500px; display: block; margin: 0 auto; border-radius: 2px; background: #fff; }
 ```
 
-### Step 2b — inline SVG fallback (when image is not fetchable)
+### Step 2b — inline SVG fallback (only when `fetch` did not print `ok`)
 Use an inline SVG that faithfully reproduces the paper's key figure concept:
 ```html
 <figure class="paper-figure">
@@ -118,18 +124,8 @@ Use an inline SVG that faithfully reproduces the paper's key figure concept:
     One or two conversational sentences explaining the finding in plain language — 
     why a reader should care, what problem it solves, what was surprising.
   </p>
-  <!-- FIGURE: prefer base64 data URI of actual paper image; fall back to inline SVG -->
-  <figure class="paper-figure">
-    <!-- Option A: actual paper image as base64 data URI -->
-    <img src="data:image/png;base64,<BASE64>" alt="Figure 1: description" style="width:100%;max-width:500px;display:block;margin:0 auto;">
-    <!-- Option B: inline SVG fallback -->
-    <!--
-    <svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-label="Figure description">
-      ...
-    </svg>
-    -->
-    <figcaption>Figure N: describe what the figure shows and what the key result is.</figcaption>
-  </figure>
+  <!-- FIGURE: the paper's real figure via scripts/radar_figure.py; inline SVG only if fetch failed -->
+  <!-- FIGURE:<arxiv-id> -->
   <p class="paper-detail">
     Technical paragraph: method, architecture details, key numbers, baselines beaten.
     2–4 sentences. Specific enough that a researcher can evaluate whether to read the paper.
@@ -158,18 +154,8 @@ Every entry gets the paper's main figure — no text-only cards. Items 4–10 us
   <h3 class="mid-title">
     <a href="https://arxiv.org/abs/XXXX.XXXXX">Paper Title</a>
   </h3>
-  <!-- FIGURE: same strategy as full entries — base64 preferred, SVG fallback -->
-  <figure class="paper-figure mid-figure">
-    <!-- Option A: base64 data URI of actual paper image -->
-    <img src="data:image/png;base64,<BASE64>" alt="Figure 1: description" style="width:100%;max-width:440px;display:block;margin:0 auto;">
-    <!-- Option B: inline SVG fallback -->
-    <!--
-    <svg viewBox="0 0 440 180" xmlns="http://www.w3.org/2000/svg" aria-label="Figure description">
-      ...
-    </svg>
-    -->
-    <figcaption>Figure N: brief caption of what is shown.</figcaption>
-  </figure>
+  <!-- FIGURE: same strategy as full entries -->
+  <!-- FIGURE:<arxiv-id> mid -->
   <p class="mid-summary">
     1–2 sentences: method + key result/number. Enough for a researcher to decide whether to read.
   </p>
@@ -263,7 +249,7 @@ Place this between the masthead and the first paper entry:
 
 ## SVG figure guidelines (fallback only)
 
-Use inline SVG only when the actual paper image cannot be fetched and base64-encoded. When SVG is necessary:
+Use inline SVG only when `scripts/radar_figure.py fetch` did not print `ok` for the paper. When SVG is necessary:
 
 - Use `viewBox="0 0 500 220"` (or adjust height as needed).
 - Use `font-family: Georgia, serif` for labels matching the editorial type.
@@ -275,7 +261,7 @@ Use inline SVG only when the actual paper image cannot be fetched and base64-enc
 
 ## Markdown (.md) format
 
-The `.md` file uses the same narrative structure as the HTML. **For figures, use the actual paper image URL** (GitHub markdown renders external URLs — unlike the HTML artifact, which needs base64). Fall back to a committed `.svg` file only when the arXiv HTML page has no accessible figure URL.
+The `.md` file uses the same narrative structure as the HTML. **For figures, use the actual paper image URL** (the same URL `radar_figure.py fetch` prints). Fall back to a committed `.svg` file only when the arXiv HTML page has no accessible figure URL.
 
 ```markdown
 # Research Radar — July 22, 2026
@@ -338,14 +324,12 @@ Key constraints for SVG in markdown:
 | Target | Preferred | Fallback |
 |--------|-----------|----------|
 | `.md` on GitHub | `![alt](https://arxiv.org/html/ID/x1.png)` — actual paper image via external URL | `![alt](../images/YYYY-MM-DD-figN.svg)` — committed SVG |
-| `.html` artifact | `<img src="data:image/png;base64,...">` — paper image base64-encoded | `<svg>…</svg>` inline SVG reproduction |
-
-**Why these differ:** GitHub markdown renders external image URLs freely. The artifact CSP blocks all external fetches — images must be embedded as base64 data URIs or rendered as inline SVG.
+| `.html` (served by gussand.github.io) | `<!-- FIGURE:<id> -->` placeholder, filled by `scripts/radar_figure.py inline` | `<svg>…</svg>` inline SVG reproduction |
 
 **Workflow for ALL 10 papers (top-3 full treatment + items 4–10 mid-tier — every entry gets a figure):**
-1. Fetch `https://arxiv.org/html/<id>` → find the main figure `<img src>` URL.
-2. For `.md`: use the external URL directly in `![alt](url)`.
-3. For `.html`: fetch the image file and embed as `data:image/png;base64,...`; if image cannot be fetched, write an inline SVG that accurately reproduces the figure's key concept.
+1. Run `python3 scripts/radar_figure.py fetch <all ranked ids>`.
+2. For `.md`: use each printed figure URL directly in `![alt](url)`.
+3. For `.html`: a `<!-- FIGURE:<id> -->` placeholder (`mid` for items 4–10) for every `ok` paper, an inline SVG for the rest; then run `python3 scripts/radar_figure.py inline <the .html>`.
 4. Items 4–10 use `<article class="mid-paper">` with a slightly smaller figure (`max-width:440px`) and a 1–2-sentence `<p class="mid-summary">` instead of the full hook+detail treatment.
 5. Only commit `.svg` files to `reports/images/` when used as fallback — not when the actual image URL is available.
 
@@ -355,6 +339,7 @@ Key constraints for SVG in markdown:
 
 1. Write `.html` to `reports/daily/YYYY-MM-DD.html` or `reports/weekly/YYYY-Www.html`
 2. Do **not** call the `Artifact` tool (see the top of this file)
-3. Run `python3 scripts/radar_index.py --check <the .md>` — it must print OK — then `python3 scripts/radar_index.py` to rebuild the ledger
-4. Commit both `.md` and `.html` in the same commit with message `Daily radar YYYY-MM-DD` or `Weekly radar YYYY-Www`
-5. Push to `origin/claude/radar` (never `main`)
+3. Run `python3 scripts/radar_figure.py inline <the .html>` — it must not report any unfilled placeholder
+4. Run `python3 scripts/radar_index.py --check <the .md>` — it must print OK — then `python3 scripts/radar_index.py` to rebuild the ledger
+5. Commit both `.md` and `.html` in the same commit with message `Daily radar YYYY-MM-DD` or `Weekly radar YYYY-Www`
+6. Push to `origin/claude/radar` (never `main`)

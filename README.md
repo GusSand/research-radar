@@ -25,6 +25,7 @@ reports/
 scripts/
   radar-preflight.sh   — run FIRST in every routine: checks out claude/radar, rebuilds the ledger, prints recent coverage
   radar_index.py       — builds reports/index/seen.tsv; `--check FILE` fails if FILE re-lists an already-covered paper
+  radar_figure.py      — fetches papers' real figures from arXiv HTML and fills <!-- FIGURE:<id> --> placeholders in report HTML
   radar_dedupe.py      — one-off retroactive cleanup that stripped repeats from past dailies (Sep 10, 2026)
   sync-to-obsidian.sh  — local (launchd): merges claude/radar → main, pushes, exposes reports in the Obsidian vault
 ```
@@ -50,7 +51,7 @@ Every run writes an HTML file next to the `.md`. See `reports/TEMPLATE_HTML.md` 
 
 - **Design:** dark editorial aesthetic. Background `#111111`, body text `#c9c9c9`, title text `#f0f0f0`. Light-theme alternate via `@media (prefers-color-scheme: dark)` + `:root[data-theme]` overrides. Max-width 660 px centered.
 - **Typography:** Georgia (or generic serif) for paper titles — bold, underlined, 26 px. System-UI sans for body text, 17 px. `Courier New` monospace for metadata tags.
-- **Paper structure:** conversational hook paragraph → paper figure → technical-detail paragraph. **Preferred figure approach:** fetch the actual figure from the paper's arXiv HTML page (`https://arxiv.org/html/<id>`) and embed it as a base64 data URI (`<img src="data:image/png;base64,...">`) in the HTML so the file is self-contained, and as a direct external URL in the `.md` file. Fall back to inline SVG only when the image cannot be fetched.
+- **Paper structure:** conversational hook paragraph → paper figure → technical-detail paragraph. **Figures:** the paper's own figure, fetched by `scripts/radar_figure.py` (`fetch <ids>`, then `<!-- FIGURE:<id> -->` placeholders filled by `inline <html>`); the `.md` links the same arXiv figure URL. Inline SVG only for papers where `fetch` fails.
 - **Daily:** all items in sequence. Top 3 get full figure + hook + detail treatment; items 4–10 use a compact single-column mid-tier layout (rank/tags → title → figure → 1–2-sentence summary). **Every entry gets the paper's main figure** — no text-only cards.
 - **Weekly:** top 8 items get full treatment; items 9–15 use the compact mid-tier layout (same figure + 1–2-sentence summary). Include a "Theme of the week" section above the papers.
 - **Tags:** colored `<span class="tag">` chips for venue and topic (tag-interp, tag-security, tag-align, tag-control, tag-peer).
