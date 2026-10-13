@@ -509,3 +509,13 @@ arxiv_id	first_date	first_file	appearances	title
 2610.10345	2026-10-11	reports/daily/2026-10-11.md	1	SLDR: Defending Against Malicious Fine-tuning via Selective Layers Recovery and Dynamic Routing
 2610.10620	2026-10-11	reports/daily/2026-10-11.md	1	When AI Finds Hidden Messages, Does It Report?
 2610.12463	2026-10-11	reports/daily/2026-10-11.md	1	From Reactive Containment to Proactive Assurance: Lessons from OpenAI, Anthropic, and Google Agent Security Incidents
+2610.12813	2026-10-13	reports/daily/2026-10-13.md	1	VEPA: Verified Evolving Formal Policy for Lifelong LLM Agent Guardrails
+2610.12822	2026-10-13	reports/daily/2026-10-13.md	1	Reward Hacking as a Transmissible Strategy in Multi-Agent Coding Systems
+2610.13078	2026-10-13	reports/daily/2026-10-13.md	1	Attention Sees, MLP Refuses: Tracing the Attention-to-MLP Safety Pathway in LLMs
+2610.13116	2026-10-13	reports/daily/2026-10-13.md	1	DRYLAB-Bench: Benchmarking the Biosecurity Risk of Agentic LLM Mutation Design
+2610.13227	2026-10-13	reports/daily/2026-10-13.md	1	Understanding and Mitigating Cross-Session Attacks via Persistent Artifacts in Agent Skill Composition
+2610.13623	2026-10-13	reports/daily/2026-10-13.md	1	APEX-Harm: Evaluating Agent Safety in Shared Professional Workspaces
+2610.13651	2026-10-13	reports/daily/2026-10-13.md	1	ToFu: Exploiting and Fuzzing the LLM-Orchestrator-Tool Trust Boundary
+2610.13886	2026-10-13	reports/daily/2026-10-13.md	1	X-AgentRed: Red-Teaming Personal Agents in Evolving Multi-Service Ecosystems
+2610.13895	2026-10-13	reports/daily/2026-10-13.md	1	Task Context Shapes Component Roles in Language Models
+2610.13928	2026-10-13	reports/daily/2026-10-13.md	1	AI Models Can Provably Hide Arbitrary Capabilities
