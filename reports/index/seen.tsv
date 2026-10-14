@@ -519,3 +519,13 @@ arxiv_id	first_date	first_file	appearances	title
 2610.13886	2026-10-13	reports/daily/2026-10-13.md	1	X-AgentRed: Red-Teaming Personal Agents in Evolving Multi-Service Ecosystems
 2610.13895	2026-10-13	reports/daily/2026-10-13.md	1	Task Context Shapes Component Roles in Language Models
 2610.13928	2026-10-13	reports/daily/2026-10-13.md	1	AI Models Can Provably Hide Arbitrary Capabilities
+2606.06667	2026-10-14	reports/daily/2026-10-14.md	1	The Piggyback Hypothesis of Generalization: Explaining and Mitigating Emergent Misalignment
+2610.16470	2026-10-14	reports/daily/2026-10-14.md	1	CircuitBreak: Pruning a Sparse Safety Circuit of Neurons
+2610.16911	2026-10-14	reports/daily/2026-10-14.md	1	Audit tools of the trade: Automated Auditor Elicitation Can Be Sensitive to the Context the Auditor Is Given
+2610.17313	2026-10-14	reports/daily/2026-10-14.md	1	TRAP: Tree-Guided Reinforcement-Augmented Probing for Automated LLM Jailbreaking
+2610.18105	2026-10-14	reports/daily/2026-10-14.md	1	Chain of Thought Monitoring Can Fail Even When CoT Is Necessary
+2610.18408	2026-10-14	reports/daily/2026-10-14.md	1	Prompt-Injection Probes Learn the Conversation, Not Just the Injection
+2610.18457	2026-10-14	reports/daily/2026-10-14.md	1	Kairos: Transactional Security Enforcement at the System Boundary for LLM Agents
+2610.18508	2026-10-14	reports/daily/2026-10-14.md	1	Towards Safe Autonomy for Computer Use
+2610.18609	2026-10-14	reports/daily/2026-10-14.md	1	DPOison-VL: Clean Preference Poisoning in Vision-Language Direct Preference Optimization
+2610.18612	2026-10-14	reports/daily/2026-10-14.md	1	Nudge the Judge: Uncovering Program Decision Hijacking in Real-World Jev Applications
