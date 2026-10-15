@@ -529,3 +529,13 @@ arxiv_id	first_date	first_file	appearances	title
 2610.18508	2026-10-14	reports/daily/2026-10-14.md	1	Towards Safe Autonomy for Computer Use
 2610.18609	2026-10-14	reports/daily/2026-10-14.md	1	DPOison-VL: Clean Preference Poisoning in Vision-Language Direct Preference Optimization
 2610.18612	2026-10-14	reports/daily/2026-10-14.md	1	Nudge the Judge: Uncovering Program Decision Hijacking in Real-World Jev Applications
+2610.17457	2026-10-15	reports/daily/2026-10-15.md	1	BrowseSafe++: Benchmarking Prompt Injection Detection Across Web Contexts, Languages, and Browser Views
+2610.17820	2026-10-15	reports/daily/2026-10-15.md	1	Same Attack, Different Judge: A First Controlled Adversarial Comparison of Jev, LLM Judges, and Purpose-Built Safety Classifiers
+2610.17907	2026-10-15	reports/daily/2026-10-15.md	1	SpecCloak: Probing Harmful Code Generation through Engineering Specifications
+2610.18262	2026-10-15	reports/daily/2026-10-15.md	1	Encrypted Skills Can Become New Security Exploits If AI Agents Know How to Decipher
+2610.18304	2026-10-15	reports/daily/2026-10-15.md	1	Efficient Safety Guardrails through Latent Dual-Hypothesis Reasoning with On-Demand Trace Reconstruction
+2610.18462	2026-10-15	reports/daily/2026-10-15.md	1	Readout Scaling Shapes Sparse Feature Recovery
+2610.18727	2026-10-15	reports/daily/2026-10-15.md	1	On the Monitorability of Natural Language Autoencoders: Identification vs Discrimination
+2610.19525	2026-10-15	reports/daily/2026-10-15.md	1	Diagnosing and Correcting Reward Hacking in Verifiable Instruction Following
+2610.19587	2026-10-15	reports/daily/2026-10-15.md	1	Moral Combat: Exploiting Moral Foundations Theory to Jailbreak LLMs
+2610.19971	2026-10-15	reports/daily/2026-10-15.md	1	Diagnose Before You Refine: Multi-Dimensional Judge Feedback for Query-Efficient Jailbreak Attacks
