@@ -539,3 +539,13 @@ arxiv_id	first_date	first_file	appearances	title
 2610.19525	2026-10-15	reports/daily/2026-10-15.md	1	Diagnosing and Correcting Reward Hacking in Verifiable Instruction Following
 2610.19587	2026-10-15	reports/daily/2026-10-15.md	1	Moral Combat: Exploiting Moral Foundations Theory to Jailbreak LLMs
 2610.19971	2026-10-15	reports/daily/2026-10-15.md	1	Diagnose Before You Refine: Multi-Dimensional Judge Feedback for Query-Efficient Jailbreak Attacks
+2610.20638	2026-10-16	reports/daily/2026-10-16.md	1	Feature Elicitation for SAE Steering of Deceptive Behaviour in Small LLMs
+2610.20776	2026-10-16	reports/daily/2026-10-16.md	1	INFUSE: A Unified Surface Benchmark for Indirect Prompt Injection in Agentic Systems
+2610.20907	2026-10-16	reports/daily/2026-10-16.md	1	From Detection to Decision: Calibration and Deferral for Prompt-Injection Detection
+2610.20941	2026-10-16	reports/daily/2026-10-16.md	1	Screwtape: Adversarial Transcript Editing for Monitor Red-Teaming
+2610.20960	2026-10-16	reports/daily/2026-10-16.md	1	StepSafe: Learning Timely Intervention with Context-Aware Safety Reasoning
+2610.22046	2026-10-16	reports/daily/2026-10-16.md	1	Effectiveness of Hidden-State Probes for Localizing Reasoning Failures
+2610.22124	2026-10-16	reports/daily/2026-10-16.md	1	PROBE: Learning to Audit Policy Compliance in Tool-Using LLM Agents
+2610.22243	2026-10-16	reports/daily/2026-10-16.md	1	Shortcut Sensitivity in Agent-Safety Evaluations
+2610.22280	2026-10-16	reports/daily/2026-10-16.md	1	LEASH: Uncertainty-Aware Weak-to-Strong Escalation and Oversight for Computer-Use Agents
+2610.22292	2026-10-16	reports/daily/2026-10-16.md	1	CAT-alyzing Honesty: Continuous Adversarial Training for Transferable LLM Honesty
