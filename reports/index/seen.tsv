@@ -549,3 +549,13 @@ arxiv_id	first_date	first_file	appearances	title
 2610.22243	2026-10-16	reports/daily/2026-10-16.md	1	Shortcut Sensitivity in Agent-Safety Evaluations
 2610.22280	2026-10-16	reports/daily/2026-10-16.md	1	LEASH: Uncertainty-Aware Weak-to-Strong Escalation and Oversight for Computer-Use Agents
 2610.22292	2026-10-16	reports/daily/2026-10-16.md	1	CAT-alyzing Honesty: Continuous Adversarial Training for Transferable LLM Honesty
+2610.20139	2026-10-17	reports/daily/2026-10-17.md	1	Sparse Autoencoders for Mechanistic Interpretability in NLP: A Critical Survey of Recoverability, Interpretability, and Utility
+2610.21063	2026-10-17	reports/daily/2026-10-17.md	1	Approve What, Exactly? Effect Binding and Trusted Rendering for Agent Step-Up Authorization
+2610.21135	2026-10-17	reports/daily/2026-10-17.md	1	Stronger Judges Do Not See More: Deployment-Integrity Blindness in LLM Evaluation
+2610.21464	2026-10-17	reports/daily/2026-10-17.md	1	Poisoning the Neighborhood: A Topology-Aware Topic-Level Attack on Large-Scale HNSW-based RAG Systems
+2610.21633	2026-10-17	reports/daily/2026-10-17.md	1	ContextLift: Breaking the Spurious Correlation Behind Conditional Emergent Misalignment
+2610.21789	2026-10-17	reports/daily/2026-10-17.md	1	In the Guise of Correction: How Framing and Cultural Adaptation Erode LLM Safety on Real-World Criminal Cases
+2610.21799	2026-10-17	reports/daily/2026-10-17.md	1	Behavioral Forgetting Is Not Privacy in Machine Unlearning
+2610.22169	2026-10-17	reports/daily/2026-10-17.md	1	Lexical Reference Frames: Interpreting LM Residual Streams in Native Semantics
+2610.22244	2026-10-17	reports/daily/2026-10-17.md	1	Language Is a Security Surface for Agent Guards
+2610.22301	2026-10-17	reports/daily/2026-10-17.md	1	My Credentials, Please: Detecting Filesystem Capability Laundering in MCP Servers at Scale
