@@ -1,0 +1,46 @@
+<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-label="Evaluation Awareness Beyond English: refusal rates with vs without test monitoring cue across Indic languages">
+  <!-- White background -->
+  <rect width="500" height="220" fill="#fff"/>
+  <text x="250" y="18" font-family="Georgia, serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#1a1a1a">Evaluation Awareness: Harmful Refusal Rate by Monitoring Cue</text>
+  <text x="250" y="32" font-family="Georgia, serif" font-size="9.5" text-anchor="middle" fill="#666">Average across 4 models × 5 Indic languages, harmful requests</text>
+  <!-- Axes -->
+  <line x1="70" y1="50" x2="70" y2="170" stroke="#333" stroke-width="1.5"/>
+  <line x1="70" y1="170" x2="460" y2="170" stroke="#333" stroke-width="1.5"/>
+  <!-- Y labels -->
+  <text x="62" y="54" font-family="Georgia, serif" font-size="9" text-anchor="end" fill="#666">80%</text>
+  <text x="62" y="90" font-family="Georgia, serif" font-size="9" text-anchor="end" fill="#666">60%</text>
+  <text x="62" y="126" font-family="Georgia, serif" font-size="9" text-anchor="end" fill="#666">40%</text>
+  <text x="62" y="162" font-family="Georgia, serif" font-size="9" text-anchor="end" fill="#666">20%</text>
+  <!-- Grid -->
+  <line x1="70" y1="54" x2="460" y2="54" stroke="#eee" stroke-width="1"/>
+  <line x1="70" y1="90" x2="460" y2="90" stroke="#eee" stroke-width="1"/>
+  <line x1="70" y1="126" x2="460" y2="126" stroke="#eee" stroke-width="1"/>
+  <!-- Group 1: Indic (no cue) ~55%, Indic (with cue) ~69.4%, English ~69% -->
+  <!-- Indic no cue: ~55% → h = (55/80)*120 = 82.5 → y = 170-82.5 = 87.5 -->
+  <rect x="90" y="87" width="50" height="83" fill="#1a4f99" opacity="0.8"/>
+  <text x="115" y="83" font-family="Georgia, serif" font-size="9" text-anchor="middle" fill="#1a4f99">55%</text>
+  <!-- Indic with cue: ~69.4% → h = 69.4/80*120 = 104 → y = 66 -->
+  <rect x="155" y="66" width="50" height="104" fill="#0d7377" opacity="0.8"/>
+  <text x="180" y="62" font-family="Georgia, serif" font-size="9" text-anchor="middle" fill="#0d7377">69.4%</text>
+  <!-- English: ~70% -->
+  <rect x="220" y="65" width="50" height="105" fill="#888" opacity="0.8"/>
+  <text x="245" y="61" font-family="Georgia, serif" font-size="9" text-anchor="middle" fill="#555">≈70%</text>
+  <!-- Benign Indic: no cue 6.9%, with cue 11.3% -->
+  <!-- no cue: 6.9/80*120 = 10.4 → y = 159.6 -->
+  <rect x="300" y="160" width="50" height="10" fill="#1a4f99" opacity="0.8"/>
+  <text x="325" y="156" font-family="Georgia, serif" font-size="9" text-anchor="middle" fill="#1a4f99">6.9%</text>
+  <!-- with cue: 11.3/80*120 = 17 → y = 153 -->
+  <rect x="365" y="153" width="50" height="17" fill="#0d7377" opacity="0.8"/>
+  <text x="390" y="149" font-family="Georgia, serif" font-size="9" text-anchor="middle" fill="#0d7377">11.3%</text>
+  <!-- X labels -->
+  <text x="155" y="185" font-family="Georgia, serif" font-size="9.5" text-anchor="middle" fill="#333">HARMFUL requests</text>
+  <text x="355" y="185" font-family="Georgia, serif" font-size="9.5" text-anchor="middle" fill="#333">BENIGN requests</text>
+  <!-- Sub-labels -->
+  <text x="90" y="197" font-family="Georgia, serif" font-size="8" text-anchor="middle" fill="#555">Indic/no cue</text>
+  <text x="155" y="197" font-family="Georgia, serif" font-size="8" text-anchor="middle" fill="#555">Indic/cue</text>
+  <text x="225" y="197" font-family="Georgia, serif" font-size="8" text-anchor="middle" fill="#555">English</text>
+  <text x="300" y="197" font-family="Georgia, serif" font-size="8" text-anchor="middle" fill="#555">no cue</text>
+  <text x="365" y="197" font-family="Georgia, serif" font-size="8" text-anchor="middle" fill="#555">with cue</text>
+  <!-- Note -->
+  <text x="250" y="212" font-family="Georgia, serif" font-size="8.5" text-anchor="middle" fill="#888">Test-monitoring cue (+14.4pp on harmful) also triggers over-caution on benign (+4.4pp)</text>
+</svg>

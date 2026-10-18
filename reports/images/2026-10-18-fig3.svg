@@ -1,0 +1,51 @@
+<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-label="Emergent Misalignment circuits: EM rate drops after ablating shared attention heads across 3 fine-tuned models">
+  <!-- White background -->
+  <rect width="500" height="220" fill="#fff"/>
+  <text x="250" y="20" font-family="Georgia, serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#1a1a1a">Shared EM Circuit Ablation Results (Qwen2.5-3B)</text>
+  <!-- Y axis label -->
+  <text x="18" y="130" font-family="Georgia, serif" font-size="10" text-anchor="middle" fill="#555" transform="rotate(-90,18,130)">EM Rate (%)</text>
+  <!-- Y axis -->
+  <line x1="50" y1="40" x2="50" y2="180" stroke="#333" stroke-width="1.5"/>
+  <!-- X axis -->
+  <line x1="50" y1="180" x2="480" y2="180" stroke="#333" stroke-width="1.5"/>
+  <!-- Y gridlines and labels -->
+  <line x1="50" y1="40" x2="480" y2="40" stroke="#eee" stroke-width="1"/>
+  <text x="44" y="44" font-family="Georgia, serif" font-size="9" text-anchor="end" fill="#666">55%</text>
+  <line x1="50" y1="80" x2="480" y2="80" stroke="#eee" stroke-width="1"/>
+  <text x="44" y="84" font-family="Georgia, serif" font-size="9" text-anchor="end" fill="#666">40%</text>
+  <line x1="50" y1="120" x2="480" y2="120" stroke="#eee" stroke-width="1"/>
+  <text x="44" y="124" font-family="Georgia, serif" font-size="9" text-anchor="end" fill="#666">25%</text>
+  <line x1="50" y1="153" x2="480" y2="153" stroke="#eee" stroke-width="1"/>
+  <text x="44" y="157" font-family="Georgia, serif" font-size="9" text-anchor="end" fill="#666">10%</text>
+  <!-- Medical domain bars -->
+  <!-- Before: 38.9% → y = 40 + (55-38.9)/55*140 ≈ 40 + 41 = 81, height = 140*(38.9/55) ≈ 99 -->
+  <rect x="65" y="81" width="40" height="99" fill="#b02020" opacity="0.85"/>
+  <!-- After: 22.9% → height = 140*(22.9/55) ≈ 58 -->
+  <rect x="110" y="122" width="40" height="58" fill="#f07070" opacity="0.85"/>
+  <!-- Finance domain bars -->
+  <!-- Before: 50.7% → height = 140*(50.7/55) ≈ 129 -->
+  <rect x="195" y="51" width="40" height="129" fill="#b02020" opacity="0.85"/>
+  <!-- After: 12.5% → height = 140*(12.5/55) ≈ 32 -->
+  <rect x="240" y="148" width="40" height="32" fill="#f07070" opacity="0.85"/>
+  <!-- Sports domain bars -->
+  <!-- Before: 41.7% → height = 140*(41.7/55) ≈ 106 -->
+  <rect x="325" y="74" width="40" height="106" fill="#b02020" opacity="0.85"/>
+  <!-- After: 11.1% → height = 140*(11.1/55) ≈ 28 -->
+  <rect x="370" y="152" width="40" height="28" fill="#f07070" opacity="0.85"/>
+  <!-- X labels -->
+  <text x="107" y="196" font-family="Georgia, serif" font-size="10" text-anchor="middle" fill="#333">Medical</text>
+  <text x="237" y="196" font-family="Georgia, serif" font-size="10" text-anchor="middle" fill="#333">Finance</text>
+  <text x="367" y="196" font-family="Georgia, serif" font-size="10" text-anchor="middle" fill="#333">Sports</text>
+  <!-- Value labels -->
+  <text x="85" y="77" font-family="Georgia, serif" font-size="9" text-anchor="middle" fill="#b02020">38.9%</text>
+  <text x="130" y="118" font-family="Georgia, serif" font-size="9" text-anchor="middle" fill="#b02020">22.9%</text>
+  <text x="215" y="47" font-family="Georgia, serif" font-size="9" text-anchor="middle" fill="#b02020">50.7%</text>
+  <text x="260" y="144" font-family="Georgia, serif" font-size="9" text-anchor="middle" fill="#b02020">12.5%</text>
+  <text x="345" y="70" font-family="Georgia, serif" font-size="9" text-anchor="middle" fill="#b02020">41.7%</text>
+  <text x="390" y="148" font-family="Georgia, serif" font-size="9" text-anchor="middle" fill="#b02020">11.1%</text>
+  <!-- Legend -->
+  <rect x="60" y="205" width="14" height="10" fill="#b02020" opacity="0.85"/>
+  <text x="78" y="214" font-family="Georgia, serif" font-size="9" fill="#333">Before ablation</text>
+  <rect x="180" y="205" width="14" height="10" fill="#f07070" opacity="0.85"/>
+  <text x="198" y="214" font-family="Georgia, serif" font-size="9" fill="#333">After ablating shared heads (3 of top 5)</text>
+</svg>

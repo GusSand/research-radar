@@ -1,0 +1,37 @@
+<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-label="SAE Behavioral Compositionality: first-order vs pairwise interaction fidelity comparison">
+  <!-- White background -->
+  <rect width="500" height="220" fill="#fff"/>
+  <text x="250" y="20" font-family="Georgia, serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#1a1a1a">SAE Feature Compositionality: Rank Fidelity Improvement</text>
+  <!-- Subtitle -->
+  <text x="250" y="36" font-family="Georgia, serif" font-size="10" text-anchor="middle" fill="#666">Steering experiment: learned SAE coordinates vs. random rotations</text>
+  <!-- Y axis -->
+  <line x1="70" y1="55" x2="70" y2="175" stroke="#333" stroke-width="1.5"/>
+  <line x1="70" y1="175" x2="450" y2="175" stroke="#333" stroke-width="1.5"/>
+  <!-- Y labels -->
+  <text x="62" y="59" font-family="Georgia, serif" font-size="9" text-anchor="end" fill="#666">0.80</text>
+  <text x="62" y="95" font-family="Georgia, serif" font-size="9" text-anchor="end" fill="#666">0.72</text>
+  <text x="62" y="131" font-family="Georgia, serif" font-size="9" text-anchor="end" fill="#666">0.64</text>
+  <text x="62" y="167" font-family="Georgia, serif" font-size="9" text-anchor="end" fill="#666">0.56</text>
+  <!-- Grid lines -->
+  <line x1="70" y1="55" x2="450" y2="55" stroke="#eee" stroke-width="1"/>
+  <line x1="70" y1="95" x2="450" y2="95" stroke="#eee" stroke-width="1"/>
+  <line x1="70" y1="131" x2="450" y2="131" stroke="#eee" stroke-width="1"/>
+  <!-- First-order (SAE): 0.5874 → y = 175 - (0.5874-0.55)/(0.80-0.55)*120 = 175 - 18 = 157 -->
+  <rect x="100" y="157" width="80" height="18" fill="#1a4f99" opacity="0.8"/>
+  <text x="140" y="153" font-family="Georgia, serif" font-size="10" text-anchor="middle" fill="#1a4f99">0.587</text>
+  <!-- Pairwise: 0.7790 → y = 175 - (0.779-0.55)/(0.80-0.55)*120 = 175 - 110 = 65 -->
+  <rect x="220" y="65" width="80" height="110" fill="#0d7377" opacity="0.8"/>
+  <text x="260" y="61" font-family="Georgia, serif" font-size="10" text-anchor="middle" fill="#0d7377">0.779</text>
+  <!-- Random rotation baseline: ~0.56 → y = 175 - (0.56-0.55)/(0.80-0.55)*120 = 175 - 5 = 170 -->
+  <rect x="340" y="170" width="80" height="5" fill="#888" opacity="0.8"/>
+  <text x="380" y="165" font-family="Georgia, serif" font-size="10" text-anchor="middle" fill="#888">~0.56</text>
+  <!-- X labels -->
+  <text x="140" y="190" font-family="Georgia, serif" font-size="10" text-anchor="middle" fill="#333">First-order</text>
+  <text x="140" y="202" font-family="Georgia, serif" font-size="10" text-anchor="middle" fill="#333">(SAE features)</text>
+  <text x="260" y="190" font-family="Georgia, serif" font-size="10" text-anchor="middle" fill="#333">+ Pairwise</text>
+  <text x="260" y="202" font-family="Georgia, serif" font-size="10" text-anchor="middle" fill="#333">interactions</text>
+  <text x="380" y="190" font-family="Georgia, serif" font-size="10" text-anchor="middle" fill="#888">Random</text>
+  <text x="380" y="202" font-family="Georgia, serif" font-size="10" text-anchor="middle" fill="#888">rotation</text>
+  <!-- Y axis label -->
+  <text x="20" y="115" font-family="Georgia, serif" font-size="10" text-anchor="middle" fill="#555" transform="rotate(-90,20,115)">Rank Fidelity</text>
+</svg>
