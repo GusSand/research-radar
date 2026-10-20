@@ -569,3 +569,13 @@ arxiv_id	first_date	first_file	appearances	title
 2610.21404	2026-10-18	reports/daily/2026-10-18.md	1	Multi-Reward Hacking: From Aggregation-Induced Drift to Trust-Anchored Defense
 2610.21708	2026-10-18	reports/daily/2026-10-18.md	2	Human Interventions as Labels: Localizing, Steering, and (Sometimes) Editing the Computations Behind LLM Agent Failures
 2610.22333	2026-10-18	reports/daily/2026-10-18.md	1	Evaluation Awareness Beyond English: Do LLMs Act Differently When Tested in Indic Languages?
+2610.24999	2026-10-20	reports/daily/2026-10-20.md	1	SoK: PIAtlas: Decomposing the Unbounded Prompt Injection Attack Space
+2610.25791	2026-10-20	reports/daily/2026-10-20.md	1	Towards Architectural-Level Safety Control: Relocating Hazardous Knowledge into Removable Experts in Mixture-of-Experts Models
+2610.26013	2026-10-20	reports/daily/2026-10-20.md	1	SpanGuard: Decoupling Instruction Localization from Authorization for Lightweight IPI Defense
+2610.26443	2026-10-20	reports/daily/2026-10-20.md	1	Rethinking LLM Fine-Tuning via Weight Space Reparameterization: Preserving Safety during Downstream Adaptation
+2610.26496	2026-10-20	reports/daily/2026-10-20.md	1	Mitigating Reward Hacking in Preference Reward Models with Evolving Penalties
+2610.26551	2026-10-20	reports/daily/2026-10-20.md	1	Training Natural Schemers: RL Can Amplify Oversight-Conditional Behavior
+2610.26655	2026-10-20	reports/daily/2026-10-20.md	1	The Development of Sycophancy in Language Models: Tracing Vulnerabilities from Pretraining to Post-Training
+2610.26685	2026-10-20	reports/daily/2026-10-20.md	1	Intra-Rubric Reward Divergence: Mitigating Rubric Hacking through Latent Dimension Recovery and Balancing
+2610.26698	2026-10-20	reports/daily/2026-10-20.md	1	Towards Robust Model Organisms for Eliciting Latent Knowledge
+2610.26809	2026-10-20	reports/daily/2026-10-20.md	1	Safety Mid-Training: Internalizing LLM Safety as a Foundational Capability
