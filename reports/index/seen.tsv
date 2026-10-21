@@ -579,3 +579,13 @@ arxiv_id	first_date	first_file	appearances	title
 2610.26685	2026-10-20	reports/daily/2026-10-20.md	1	Intra-Rubric Reward Divergence: Mitigating Rubric Hacking through Latent Dimension Recovery and Balancing
 2610.26698	2026-10-20	reports/daily/2026-10-20.md	1	Towards Robust Model Organisms for Eliciting Latent Knowledge
 2610.26809	2026-10-20	reports/daily/2026-10-20.md	1	Safety Mid-Training: Internalizing LLM Safety as a Foundational Capability
+2610.26935	2026-10-21	reports/daily/2026-10-21.md	1	How Intervention History Changes AI Agent Sabotage on Subsequent Tasks
+2610.27304	2026-10-21	reports/daily/2026-10-21.md	1	Global Security Blind Spots: Translation as a Safety Bypass in Low-Resource Languages
+2610.27375	2026-10-21	reports/daily/2026-10-21.md	1	Shaped SAEs: Expanding the Toolkit for Mechanistic Interpretability
+2610.27393	2026-10-21	reports/daily/2026-10-21.md	1	Correcting Attribution Patching with a Few Exact Measurements
+2610.27446	2026-10-21	reports/daily/2026-10-21.md	1	Decision Sufficiency of Learned Representation Interfaces for Safe Generative Control
+2610.27490	2026-10-21	reports/daily/2026-10-21.md	1	Orthogonal Boundary Unlearning for Dual-Use Concepts in Large Language Models
+2610.27528	2026-10-21	reports/daily/2026-10-21.md	1	Judging the Justification: Decision Certificate Supervision for Generative Reward Models
+2610.27620	2026-10-21	reports/daily/2026-10-21.md	1	Local Allow, Global Deny: Why Per-Action Authorization Does Not Compose in LLM Agents
+2610.28397	2026-10-21	reports/daily/2026-10-21.md	1	MAS-Guard: Unified Guardrails from Individual Agents to Multi-Agent LLM Systems
+2610.28425	2026-10-21	reports/daily/2026-10-21.md	1	After the Attacker Leaves: Benchmarking Carryover Attacks on LLM Agents
