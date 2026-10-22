@@ -1,0 +1,49 @@
+<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-label="WRDO: multiple per-prompt refusal directions aggregated with learned weights into a composite refusal direction">
+  <rect width="500" height="220" fill="#fff"/>
+  <text x="250" y="18" font-family="Georgia, serif" font-size="13" text-anchor="middle" fill="#1a1a1a" font-weight="bold">WRDO: Weighted Refusal Direction Aggregation</text>
+  <!-- Left: per-prompt directions -->
+  <text x="105" y="45" font-family="Georgia, serif" font-size="10" text-anchor="middle" fill="#555">Per-prompt refusal directions</text>
+  <!-- Arrows (d1 to d4) from prompt space -->
+  <line x1="60" y1="160" x2="105" y2="100" stroke="#5c1aaa" stroke-width="1.5"/>
+  <polygon points="105,100 100,110 110,108" fill="#5c1aaa"/>
+  <text x="50" y="175" font-family="Georgia, serif" font-size="9" fill="#5c1aaa">d₁</text>
+  <line x1="85" y1="170" x2="107" y2="105" stroke="#5c1aaa" stroke-width="1.5"/>
+  <polygon points="107,105 102,115 111,113" fill="#5c1aaa"/>
+  <text x="72" y="183" font-family="Georgia, serif" font-size="9" fill="#5c1aaa">d₂</text>
+  <line x1="120" y1="170" x2="110" y2="110" stroke="#5c1aaa" stroke-width="1.5"/>
+  <polygon points="110,110 106,120 114,120" fill="#5c1aaa"/>
+  <text x="122" y="182" font-family="Georgia, serif" font-size="9" fill="#5c1aaa">d₃</text>
+  <line x1="150" y1="165" x2="117" y2="108" stroke="#5c1aaa" stroke-width="1.5"/>
+  <polygon points="117,108 113,118 121,116" fill="#5c1aaa"/>
+  <text x="152" y="178" font-family="Georgia, serif" font-size="9" fill="#5c1aaa">d₄</text>
+  <!-- Weights labels -->
+  <text x="55" y="130" font-family="Georgia, serif" font-size="9" fill="#a05c00">w₁</text>
+  <text x="78" y="140" font-family="Georgia, serif" font-size="9" fill="#a05c00">w₂</text>
+  <text x="108" y="145" font-family="Georgia, serif" font-size="9" fill="#a05c00">w₃</text>
+  <text x="140" y="138" font-family="Georgia, serif" font-size="9" fill="#a05c00">w₄</text>
+  <!-- Aggregation box -->
+  <rect x="85" y="75" width="60" height="30" rx="4" fill="#ede0f8" stroke="#5c1aaa" stroke-width="1.5"/>
+  <text x="115" y="94" font-family="Georgia, serif" font-size="10" text-anchor="middle" fill="#5c1aaa" font-weight="bold">Σwᵢdᵢ</text>
+  <!-- Arrow to composite direction -->
+  <line x1="145" y1="90" x2="225" y2="90" stroke="#1a1a1a" stroke-width="1.5"/>
+  <polygon points="225,90 217,86 217,94" fill="#1a1a1a"/>
+  <!-- Learned weights box -->
+  <rect x="155" y="55" width="60" height="24" rx="3" fill="#fff0d0" stroke="#a05c00" stroke-width="1"/>
+  <text x="185" y="71" font-family="Georgia, serif" font-size="9" text-anchor="middle" fill="#a05c00">learned w*</text>
+  <line x1="185" y1="79" x2="185" y2="88" stroke="#a05c00" stroke-width="1" stroke-dasharray="3,2"/>
+  <!-- Composite direction -->
+  <rect x="225" y="72" width="130" height="36" rx="4" fill="#dce8fa" stroke="#1a4f99" stroke-width="1.5"/>
+  <text x="290" y="88" font-family="Georgia, serif" font-size="11" text-anchor="middle" fill="#1a4f99" font-weight="bold">Composite d*</text>
+  <text x="290" y="100" font-family="Georgia, serif" font-size="9" text-anchor="middle" fill="#1a4f99">(refusal direction)</text>
+  <!-- Comparison: single avg -->
+  <rect x="225" y="130" width="130" height="36" rx="4" fill="#f0f0f0" stroke="#aaa" stroke-width="1"/>
+  <text x="290" y="146" font-family="Georgia, serif" font-size="11" text-anchor="middle" fill="#888">Avg d (baseline)</text>
+  <text x="290" y="158" font-family="Georgia, serif" font-size="9" text-anchor="middle" fill="#888">(uniform weights)</text>
+  <!-- Vs. label -->
+  <text x="205" y="155" font-family="Georgia, serif" font-size="10" fill="#888" text-anchor="middle">vs.</text>
+  <!-- Results -->
+  <text x="370" y="90" font-family="Georgia, serif" font-size="10" fill="#1a6e3c" text-anchor="start">↑ Refusal strength</text>
+  <text x="370" y="145" font-family="Georgia, serif" font-size="10" fill="#888" text-anchor="start">Weaker</text>
+  <!-- Bottom note -->
+  <text x="250" y="208" font-family="Georgia, serif" font-size="9" text-anchor="middle" fill="#888">EMNLP 2026: Learned aggregation outperforms single mean-diff direction on safety.</text>
+</svg>

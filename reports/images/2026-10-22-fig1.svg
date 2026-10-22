@@ -1,0 +1,40 @@
+<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-label="Before and after post-training for CoT monitorability: low MI vs high MI between chain-of-thought and model behavior">
+  <rect width="500" height="220" fill="#fff"/>
+  <!-- Title -->
+  <text x="250" y="20" font-family="Georgia, serif" font-size="13" text-anchor="middle" fill="#1a1a1a" font-weight="bold">Monitorability as a Trainable Property</text>
+  <!-- Left panel: Before -->
+  <rect x="20" y="35" width="210" height="155" rx="4" fill="#fdf0f0" stroke="#d08080" stroke-width="1"/>
+  <text x="125" y="55" font-family="Georgia, serif" font-size="11" text-anchor="middle" fill="#b02020" font-weight="bold">Before: Low Monitorability</text>
+  <!-- CoT box -->
+  <rect x="40" y="68" width="170" height="32" rx="3" fill="#f0f0f0" stroke="#aaa" stroke-width="1"/>
+  <text x="125" y="88" font-family="Georgia, serif" font-size="11" text-anchor="middle" fill="#555">Chain-of-Thought</text>
+  <!-- Dashed disconnected arrow -->
+  <line x1="125" y1="100" x2="125" y2="128" stroke="#d08080" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="125,132 121,124 129,124" fill="#d08080"/>
+  <!-- Behavior box -->
+  <rect x="40" y="135" width="170" height="32" rx="3" fill="#f0f0f0" stroke="#aaa" stroke-width="1"/>
+  <text x="125" y="155" font-family="Georgia, serif" font-size="11" text-anchor="middle" fill="#555">Model Behavior</text>
+  <!-- MI label -->
+  <text x="125" y="182" font-family="Georgia, serif" font-size="10" text-anchor="middle" fill="#b02020">MI(CoT; Behavior) ≈ 0</text>
+  <!-- Right panel: After -->
+  <rect x="270" y="35" width="210" height="155" rx="4" fill="#f0faf0" stroke="#6ea86e" stroke-width="1"/>
+  <text x="375" y="55" font-family="Georgia, serif" font-size="11" text-anchor="middle" fill="#1a6e3c" font-weight="bold">After: High Monitorability</text>
+  <!-- CoT box -->
+  <rect x="290" y="68" width="170" height="32" rx="3" fill="#f0f0f0" stroke="#aaa" stroke-width="1"/>
+  <text x="375" y="88" font-family="Georgia, serif" font-size="11" text-anchor="middle" fill="#555">Chain-of-Thought</text>
+  <!-- Solid connected arrow -->
+  <line x1="375" y1="100" x2="375" y2="128" stroke="#1a6e3c" stroke-width="2"/>
+  <polygon points="375,133 371,124 379,124" fill="#1a6e3c"/>
+  <!-- Behavior box -->
+  <rect x="290" y="135" width="170" height="32" rx="3" fill="#f0f0f0" stroke="#aaa" stroke-width="1"/>
+  <text x="375" y="155" font-family="Georgia, serif" font-size="11" text-anchor="middle" fill="#555">Model Behavior</text>
+  <!-- MI label -->
+  <text x="375" y="182" font-family="Georgia, serif" font-size="10" text-anchor="middle" fill="#1a6e3c">MI(CoT; Behavior) ↑ (MI-maximized)</text>
+  <!-- Divider -->
+  <line x1="248" y1="40" x2="248" y2="185" stroke="#ccc" stroke-width="1" stroke-dasharray="4,3"/>
+  <!-- Arrow between panels -->
+  <text x="250" y="118" font-family="Georgia, serif" font-size="16" text-anchor="middle" fill="#888">→</text>
+  <text x="250" y="130" font-family="Georgia, serif" font-size="9" text-anchor="middle" fill="#888">post-train</text>
+  <!-- Bottom note -->
+  <text x="250" y="208" font-family="Georgia, serif" font-size="10" text-anchor="middle" fill="#888">Post-training maximizes mutual information; CoT monitors become reliable.</text>
+</svg>

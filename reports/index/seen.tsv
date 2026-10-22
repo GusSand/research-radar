@@ -589,3 +589,13 @@ arxiv_id	first_date	first_file	appearances	title
 2610.27620	2026-10-21	reports/daily/2026-10-21.md	1	Local Allow, Global Deny: Why Per-Action Authorization Does Not Compose in LLM Agents
 2610.28397	2026-10-21	reports/daily/2026-10-21.md	1	MAS-Guard: Unified Guardrails from Individual Agents to Multi-Agent LLM Systems
 2610.28425	2026-10-21	reports/daily/2026-10-21.md	1	After the Attacker Leaves: Benchmarking Carryover Attacks on LLM Agents
+2610.28810	2026-10-22	reports/daily/2026-10-22.md	1	Combining Long-Term Memory and LLMs Comes at a High Cost: From Prompt Injection to Persistent Compromise
+2610.28982	2026-10-22	reports/daily/2026-10-22.md	1	Behavior Beyond Text: Evaluating Refusal Transfer Failure in LLM Agents
+2610.29178	2026-10-22	reports/daily/2026-10-22.md	1	Correlated Failures of AI Approval Monitors
+2610.29225	2026-10-22	reports/daily/2026-10-22.md	1	Beyond Binary Labels: Diagnostic Evaluation of LLM Safety with Prompt-Level Rubrics
+2610.29555	2026-10-22	reports/daily/2026-10-22.md	1	WRDO: Weighted Refusal Direction Optimization in Aligned Language Models
+2610.29734	2026-10-22	reports/daily/2026-10-22.md	1	Monitorability Is Trainable: Post-Training for Chain-of-Thought Monitorability
+2610.29747	2026-10-22	reports/daily/2026-10-22.md	1	Prompt Injection Through Forensic Evidence: A Taxonomy and Proof of Concept of Anti-Forensic Attacks on LLM-Assisted Digital Investigations
+2610.29869	2026-10-22	reports/daily/2026-10-22.md	1	Compaction Laundering: Provenance Destruction in Context-Compacting Coding Agents
+2610.29886	2026-10-22	reports/daily/2026-10-22.md	1	Characterizing and Defending Utility-Hijacking in Instruction-Tuning Data Selection
+2610.30006	2026-10-22	reports/daily/2026-10-22.md	1	Building Auditable AI Text Detectors with Sparse Autoencoders

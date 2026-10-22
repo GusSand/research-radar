@@ -1,0 +1,42 @@
+<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-label="Grid showing correlated monitor failures: when an attack targets one source, all monitors reading that source fail together">
+  <rect width="500" height="220" fill="#fff"/>
+  <text x="250" y="18" font-family="Georgia, serif" font-size="13" text-anchor="middle" fill="#1a1a1a" font-weight="bold">Correlated Monitor Failures by Source</text>
+  <!-- Column headers (Sources) -->
+  <text x="170" y="38" font-family="Georgia, serif" font-size="11" text-anchor="middle" fill="#1a4f99" font-weight="bold">Source A</text>
+  <text x="300" y="38" font-family="Georgia, serif" font-size="11" text-anchor="middle" fill="#1a4f99" font-weight="bold">Source B</text>
+  <text x="430" y="38" font-family="Georgia, serif" font-size="11" text-anchor="middle" fill="#1a4f99" font-weight="bold">Source C</text>
+  <!-- Row headers (Monitors) -->
+  <text x="70" y="70" font-family="Georgia, serif" font-size="10" text-anchor="middle" fill="#555">Monitor 1</text>
+  <text x="70" y="110" font-family="Georgia, serif" font-size="10" text-anchor="middle" fill="#555">Monitor 2</text>
+  <text x="70" y="150" font-family="Georgia, serif" font-size="10" text-anchor="middle" fill="#555">Monitor 3</text>
+  <!-- Cells: Source A attacked → red; others green -->
+  <!-- Row 1 -->
+  <rect x="130" y="52" width="80" height="30" rx="3" fill="#fce8e8" stroke="#d08080" stroke-width="1"/>
+  <text x="170" y="71" font-family="Georgia, serif" font-size="10" text-anchor="middle" fill="#b02020" font-weight="bold">FOOLED</text>
+  <rect x="260" y="52" width="80" height="30" rx="3" fill="#d4edda" stroke="#6ea86e" stroke-width="1"/>
+  <text x="300" y="71" font-family="Georgia, serif" font-size="10" text-anchor="middle" fill="#1a6e3c">OK</text>
+  <rect x="390" y="52" width="80" height="30" rx="3" fill="#d4edda" stroke="#6ea86e" stroke-width="1"/>
+  <text x="430" y="71" font-family="Georgia, serif" font-size="10" text-anchor="middle" fill="#1a6e3c">OK</text>
+  <!-- Row 2 -->
+  <rect x="130" y="92" width="80" height="30" rx="3" fill="#fce8e8" stroke="#d08080" stroke-width="1"/>
+  <text x="170" y="111" font-family="Georgia, serif" font-size="10" text-anchor="middle" fill="#b02020" font-weight="bold">FOOLED</text>
+  <rect x="260" y="92" width="80" height="30" rx="3" fill="#d4edda" stroke="#6ea86e" stroke-width="1"/>
+  <text x="300" y="111" font-family="Georgia, serif" font-size="10" text-anchor="middle" fill="#1a6e3c">OK</text>
+  <rect x="390" y="92" width="80" height="30" rx="3" fill="#d4edda" stroke="#6ea86e" stroke-width="1"/>
+  <text x="430" y="111" font-family="Georgia, serif" font-size="10" text-anchor="middle" fill="#1a6e3c">OK</text>
+  <!-- Row 3 -->
+  <rect x="130" y="132" width="80" height="30" rx="3" fill="#fce8e8" stroke="#d08080" stroke-width="1"/>
+  <text x="170" y="151" font-family="Georgia, serif" font-size="10" text-anchor="middle" fill="#b02020" font-weight="bold">FOOLED</text>
+  <rect x="260" y="132" width="80" height="30" rx="3" fill="#d4edda" stroke="#6ea86e" stroke-width="1"/>
+  <text x="300" y="151" font-family="Georgia, serif" font-size="10" text-anchor="middle" fill="#1a6e3c">OK</text>
+  <rect x="390" y="132" width="80" height="30" rx="3" fill="#d4edda" stroke="#6ea86e" stroke-width="1"/>
+  <text x="430" y="151" font-family="Georgia, serif" font-size="10" text-anchor="middle" fill="#1a6e3c">OK</text>
+  <!-- Attack label -->
+  <text x="170" y="180" font-family="Georgia, serif" font-size="10" text-anchor="middle" fill="#b02020">↑ Attack poisons</text>
+  <text x="170" y="192" font-family="Georgia, serif" font-size="10" text-anchor="middle" fill="#b02020">Source A only</text>
+  <!-- Fix label -->
+  <text x="300" y="180" font-family="Georgia, serif" font-size="10" text-anchor="middle" fill="#1a4f99">Fix: count independent</text>
+  <text x="300" y="192" font-family="Georgia, serif" font-size="10" text-anchor="middle" fill="#1a4f99">sources, not votes</text>
+  <!-- Note -->
+  <text x="250" y="210" font-family="Georgia, serif" font-size="9" text-anchor="middle" fill="#888">All monitors sharing Source A fail together; diversify sources, not monitors.</text>
+</svg>
