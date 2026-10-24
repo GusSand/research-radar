@@ -609,3 +609,13 @@ arxiv_id	first_date	first_file	appearances	title
 2610.30678	2026-10-23	reports/daily/2026-10-23.md	1	Scaling Laws for Safety Probes
 2610.30742	2026-10-23	reports/daily/2026-10-23.md	1	UniGuard: Multi-View Guardrail Learning for Cross-Interface Safety Generalization
 2610.31366	2026-10-23	reports/daily/2026-10-23.md	1	AfterDeleteBench: Auditing Post-Deletion Information Persistence in LLM Agents
+2610.30365	2026-10-24	reports/daily/2026-10-24.md	1	Data-Void Exploits in Web-Searching LLMs
+2610.30418	2026-10-24	reports/daily/2026-10-24.md	1	Agent Mosaic: Recognizing Confidentiality Leaks in Agentic LLM Systems
+2610.30934	2026-10-24	reports/daily/2026-10-24.md	1	Verbalizing Activation Differences with Natural Language Autoencoders
+2610.31130	2026-10-24	reports/daily/2026-10-24.md	1	Post-Audit Mirage: Identifiability Limits of Offline Agent Verification
+2610.31372	2026-10-24	reports/daily/2026-10-24.md	1	RIDAR: Safeguarding Research Integrity in Autonomous Research Agents via Automated Detection and Runtime Intervention
+2610.31376	2026-10-24	reports/daily/2026-10-24.md	1	Certified Execution Harness for Agentic AI: Safe and Least-Intrusive Petri-Net Supervisory Control Between Reasoning and Action
+2610.31404	2026-10-24	reports/daily/2026-10-24.md	1	AgentPhishing: A Benchmark of LLM Email Agents Under Adaptive Attack
+2610.31593	2026-10-24	reports/daily/2026-10-24.md	1	Simulated Control Evals
+2610.31624	2026-10-24	reports/daily/2026-10-24.md	1	Questioning Instrumental Convergence in RLVR: Checkpoint Evidence from OLMo-3
+2610.31650	2026-10-24	reports/daily/2026-10-24.md	1	EpiSEM-Bench: Evaluating Safety and Evidence Recovery in LLM Agents under Missing Evidence
