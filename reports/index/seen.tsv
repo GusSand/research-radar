@@ -619,3 +619,13 @@ arxiv_id	first_date	first_file	appearances	title
 2610.31593	2026-10-24	reports/daily/2026-10-24.md	1	Simulated Control Evals
 2610.31624	2026-10-24	reports/daily/2026-10-24.md	1	Questioning Instrumental Convergence in RLVR: Checkpoint Evidence from OLMo-3
 2610.31650	2026-10-24	reports/daily/2026-10-24.md	1	EpiSEM-Bench: Evaluating Safety and Evidence Recovery in LLM Agents under Missing Evidence
+2610.24556	2026-10-25	reports/daily/2026-10-25.md	1	From Stories to Features: Scaling Concept Vectors for AI Alignment & Interpretability
+2610.25683	2026-10-25	reports/daily/2026-10-25.md	1	When Safety Fails Collectively: Robust Alignment Against Harmful Fine-Tuning via Joint Weight Perturbations
+2610.25700	2026-10-25	reports/daily/2026-10-25.md	1	From Black Box to Controller: Inference-Time Steering of LLMs via Feature Amplification
+2610.25728	2026-10-25	reports/daily/2026-10-25.md	1	No Matter Who You Are: Addressivity and Sycophancy in Large Language Models
+2610.26489	2026-10-25	reports/daily/2026-10-25.md	1	Strength Controls Change How Interventions Compare Across Sparse Autoencoder Codes
+2610.27577	2026-10-25	reports/daily/2026-10-25.md	1	Why Static Probes Fail: Context Determines Deception Feature Composition
+2610.29129	2026-10-25	reports/daily/2026-10-25.md	1	Mitigating Reward Hacking in Realistic Scenarios Through Representation Engineering
+2610.30363	2026-10-25	reports/daily/2026-10-25.md	1	Probing and Steering for Safety-Relevant Behaviours in Large Language Models
+2610.31047	2026-10-25	reports/daily/2026-10-25.md	1	Harm Is Behavioural, Moderation Is Lexical: How Language and Culture Decide Whom Safety Systems Protect
+2610.31579	2026-10-25	reports/daily/2026-10-25.md	1	Who Is Sycophantic to Whom? Confident LLMs, Human Deference, and the Collapse of Trust Calibration
