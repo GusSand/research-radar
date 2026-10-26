@@ -570,35 +570,35 @@ arxiv_id	first_date	first_file	appearances	title
 2610.21708	2026-10-18	reports/daily/2026-10-18.md	2	Human Interventions as Labels: Localizing, Steering, and (Sometimes) Editing the Computations Behind LLM Agent Failures
 2610.22333	2026-10-18	reports/daily/2026-10-18.md	1	Evaluation Awareness Beyond English: Do LLMs Act Differently When Tested in Indic Languages?
 2610.24999	2026-10-20	reports/daily/2026-10-20.md	1	SoK: PIAtlas: Decomposing the Unbounded Prompt Injection Attack Space
-2610.25791	2026-10-20	reports/daily/2026-10-20.md	1	Towards Architectural-Level Safety Control: Relocating Hazardous Knowledge into Removable Experts in Mixture-of-Experts Models
+2610.25791	2026-10-20	reports/daily/2026-10-20.md	2	Towards Architectural-Level Safety Control: Relocating Hazardous Knowledge into Removable Experts in Mixture-of-Experts Models
 2610.26013	2026-10-20	reports/daily/2026-10-20.md	1	SpanGuard: Decoupling Instruction Localization from Authorization for Lightweight IPI Defense
-2610.26443	2026-10-20	reports/daily/2026-10-20.md	1	Rethinking LLM Fine-Tuning via Weight Space Reparameterization: Preserving Safety during Downstream Adaptation
+2610.26443	2026-10-20	reports/daily/2026-10-20.md	2	Rethinking LLM Fine-Tuning via Weight Space Reparameterization: Preserving Safety during Downstream Adaptation
 2610.26496	2026-10-20	reports/daily/2026-10-20.md	1	Mitigating Reward Hacking in Preference Reward Models with Evolving Penalties
-2610.26551	2026-10-20	reports/daily/2026-10-20.md	1	Training Natural Schemers: RL Can Amplify Oversight-Conditional Behavior
+2610.26551	2026-10-20	reports/daily/2026-10-20.md	2	Training Natural Schemers: RL Can Amplify Oversight-Conditional Behavior
 2610.26655	2026-10-20	reports/daily/2026-10-20.md	1	The Development of Sycophancy in Language Models: Tracing Vulnerabilities from Pretraining to Post-Training
 2610.26685	2026-10-20	reports/daily/2026-10-20.md	1	Intra-Rubric Reward Divergence: Mitigating Rubric Hacking through Latent Dimension Recovery and Balancing
 2610.26698	2026-10-20	reports/daily/2026-10-20.md	1	Towards Robust Model Organisms for Eliciting Latent Knowledge
-2610.26809	2026-10-20	reports/daily/2026-10-20.md	1	Safety Mid-Training: Internalizing LLM Safety as a Foundational Capability
-2610.26935	2026-10-21	reports/daily/2026-10-21.md	1	How Intervention History Changes AI Agent Sabotage on Subsequent Tasks
+2610.26809	2026-10-20	reports/daily/2026-10-20.md	2	Safety Mid-Training: Internalizing LLM Safety as a Foundational Capability
+2610.26935	2026-10-21	reports/daily/2026-10-21.md	2	How Intervention History Changes AI Agent Sabotage on Subsequent Tasks
 2610.27304	2026-10-21	reports/daily/2026-10-21.md	1	Global Security Blind Spots: Translation as a Safety Bypass in Low-Resource Languages
 2610.27375	2026-10-21	reports/daily/2026-10-21.md	1	Shaped SAEs: Expanding the Toolkit for Mechanistic Interpretability
 2610.27393	2026-10-21	reports/daily/2026-10-21.md	1	Correcting Attribution Patching with a Few Exact Measurements
 2610.27446	2026-10-21	reports/daily/2026-10-21.md	1	Decision Sufficiency of Learned Representation Interfaces for Safe Generative Control
 2610.27490	2026-10-21	reports/daily/2026-10-21.md	1	Orthogonal Boundary Unlearning for Dual-Use Concepts in Large Language Models
 2610.27528	2026-10-21	reports/daily/2026-10-21.md	1	Judging the Justification: Decision Certificate Supervision for Generative Reward Models
-2610.27620	2026-10-21	reports/daily/2026-10-21.md	1	Local Allow, Global Deny: Why Per-Action Authorization Does Not Compose in LLM Agents
+2610.27620	2026-10-21	reports/daily/2026-10-21.md	2	Local Allow, Global Deny: Why Per-Action Authorization Does Not Compose in LLM Agents
 2610.28397	2026-10-21	reports/daily/2026-10-21.md	1	MAS-Guard: Unified Guardrails from Individual Agents to Multi-Agent LLM Systems
 2610.28425	2026-10-21	reports/daily/2026-10-21.md	1	After the Attacker Leaves: Benchmarking Carryover Attacks on LLM Agents
 2610.28810	2026-10-22	reports/daily/2026-10-22.md	1	Combining Long-Term Memory and LLMs Comes at a High Cost: From Prompt Injection to Persistent Compromise
 2610.28982	2026-10-22	reports/daily/2026-10-22.md	1	Behavior Beyond Text: Evaluating Refusal Transfer Failure in LLM Agents
-2610.29178	2026-10-22	reports/daily/2026-10-22.md	1	Correlated Failures of AI Approval Monitors
+2610.29178	2026-10-22	reports/daily/2026-10-22.md	2	Correlated Failures of AI Approval Monitors
 2610.29225	2026-10-22	reports/daily/2026-10-22.md	1	Beyond Binary Labels: Diagnostic Evaluation of LLM Safety with Prompt-Level Rubrics
 2610.29555	2026-10-22	reports/daily/2026-10-22.md	1	WRDO: Weighted Refusal Direction Optimization in Aligned Language Models
-2610.29734	2026-10-22	reports/daily/2026-10-22.md	1	Monitorability Is Trainable: Post-Training for Chain-of-Thought Monitorability
+2610.29734	2026-10-22	reports/daily/2026-10-22.md	2	Monitorability Is Trainable: Post-Training for Chain-of-Thought Monitorability
 2610.29747	2026-10-22	reports/daily/2026-10-22.md	1	Prompt Injection Through Forensic Evidence: A Taxonomy and Proof of Concept of Anti-Forensic Attacks on LLM-Assisted Digital Investigations
 2610.29869	2026-10-22	reports/daily/2026-10-22.md	1	Compaction Laundering: Provenance Destruction in Context-Compacting Coding Agents
 2610.29886	2026-10-22	reports/daily/2026-10-22.md	1	Characterizing and Defending Utility-Hijacking in Instruction-Tuning Data Selection
-2610.30006	2026-10-22	reports/daily/2026-10-22.md	1	Building Auditable AI Text Detectors with Sparse Autoencoders
+2610.30006	2026-10-22	reports/daily/2026-10-22.md	2	Building Auditable AI Text Detectors with Sparse Autoencoders
 2610.24495	2026-10-23	reports/daily/2026-10-23.md	1	CoTs Remain Monitorable When Being Unfaithful Requires Computation: Replicating and Extending the Necessity Effect Across Eleven Models
 2610.24908	2026-10-23	reports/daily/2026-10-23.md	1	A Symmetry-Matching Approach to Blind-Spot Reduction in Sparse Autoencoders
 2610.25060	2026-10-23	reports/daily/2026-10-23.md	1	Policy Is Not Capability: Some Safety Benchmarks Measure Which Definition of "Unsafe" You Trained On
@@ -606,7 +606,7 @@ arxiv_id	first_date	first_file	appearances	title
 2610.27574	2026-10-23	reports/daily/2026-10-23.md	1	The Show-Up Attack: When Subagents Win Over Their Supervisor
 2610.29922	2026-10-23	reports/daily/2026-10-23.md	1	Unintended Side Effects of Value Training in LLMs
 2610.30202	2026-10-23	reports/daily/2026-10-23.md	1	MPIDetector: Detecting Multi-modal Prompt Injection via LLM-based Reasoning
-2610.30678	2026-10-23	reports/daily/2026-10-23.md	1	Scaling Laws for Safety Probes
+2610.30678	2026-10-23	reports/daily/2026-10-23.md	2	Scaling Laws for Safety Probes
 2610.30742	2026-10-23	reports/daily/2026-10-23.md	1	UniGuard: Multi-View Guardrail Learning for Cross-Interface Safety Generalization
 2610.31366	2026-10-23	reports/daily/2026-10-23.md	1	AfterDeleteBench: Auditing Post-Deletion Information Persistence in LLM Agents
 2610.30365	2026-10-24	reports/daily/2026-10-24.md	1	Data-Void Exploits in Web-Searching LLMs
@@ -619,13 +619,13 @@ arxiv_id	first_date	first_file	appearances	title
 2610.31593	2026-10-24	reports/daily/2026-10-24.md	1	Simulated Control Evals
 2610.31624	2026-10-24	reports/daily/2026-10-24.md	1	Questioning Instrumental Convergence in RLVR: Checkpoint Evidence from OLMo-3
 2610.31650	2026-10-24	reports/daily/2026-10-24.md	1	EpiSEM-Bench: Evaluating Safety and Evidence Recovery in LLM Agents under Missing Evidence
-2610.24556	2026-10-25	reports/daily/2026-10-25.md	1	From Stories to Features: Scaling Concept Vectors for AI Alignment & Interpretability
+2610.24556	2026-10-25	reports/daily/2026-10-25.md	2	From Stories to Features: Scaling Concept Vectors for AI Alignment & Interpretability
 2610.25683	2026-10-25	reports/daily/2026-10-25.md	1	When Safety Fails Collectively: Robust Alignment Against Harmful Fine-Tuning via Joint Weight Perturbations
 2610.25700	2026-10-25	reports/daily/2026-10-25.md	1	From Black Box to Controller: Inference-Time Steering of LLMs via Feature Amplification
 2610.25728	2026-10-25	reports/daily/2026-10-25.md	1	No Matter Who You Are: Addressivity and Sycophancy in Large Language Models
 2610.26489	2026-10-25	reports/daily/2026-10-25.md	1	Strength Controls Change How Interventions Compare Across Sparse Autoencoder Codes
-2610.27577	2026-10-25	reports/daily/2026-10-25.md	1	Why Static Probes Fail: Context Determines Deception Feature Composition
-2610.29129	2026-10-25	reports/daily/2026-10-25.md	1	Mitigating Reward Hacking in Realistic Scenarios Through Representation Engineering
+2610.27577	2026-10-25	reports/daily/2026-10-25.md	2	Why Static Probes Fail: Context Determines Deception Feature Composition
+2610.29129	2026-10-25	reports/daily/2026-10-25.md	2	Mitigating Reward Hacking in Realistic Scenarios Through Representation Engineering
 2610.30363	2026-10-25	reports/daily/2026-10-25.md	1	Probing and Steering for Safety-Relevant Behaviours in Large Language Models
 2610.31047	2026-10-25	reports/daily/2026-10-25.md	1	Harm Is Behavioural, Moderation Is Lexical: How Language and Culture Decide Whom Safety Systems Protect
 2610.31579	2026-10-25	reports/daily/2026-10-25.md	1	Who Is Sycophantic to Whom? Confident LLMs, Human Deference, and the Collapse of Trust Calibration
