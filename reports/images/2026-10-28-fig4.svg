@@ -1,0 +1,47 @@
+<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-label="Blindfold: audit coin leakage through timing side-channel">
+  <rect width="500" height="220" fill="#fff"/>
+  <text x="250" y="18" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#333" font-weight="bold">Blindfold: Audit Coin Secrecy Requirement</text>
+  <!-- Timeline for agent -->
+  <text x="30" y="45" font-family="Georgia,serif" font-size="10" fill="#333">Agent</text>
+  <line x1="70" y1="42" x2="470" y2="42" stroke="#333" stroke-width="1.5" marker-end="url(#b1)"/>
+  <!-- Action commit point -->
+  <circle cx="160" cy="42" r="5" fill="#4a8a4a"/>
+  <text x="160" y="35" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#4a8a4a">commit τ</text>
+  <!-- Tool call -->
+  <circle cx="260" cy="42" r="5" fill="#a87a30"/>
+  <text x="260" y="35" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#a87a30">tool call</text>
+  <!-- Coin realized -->
+  <circle cx="340" cy="42" r="5" fill="#a83030"/>
+  <text x="340" y="35" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#a83030">coin drawn</text>
+  <!-- PNI violation zone -->
+  <rect x="255" y="48" width="90" height="18" rx="3" fill="#fce8e8" stroke="#a83030" stroke-width="1"/>
+  <text x="300" y="60" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#a83030">PNI VIOLATED</text>
+  <text x="300" y="70" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#888">agent reads latency Δt</text>
+  <!-- Audit timeline -->
+  <text x="30" y="100" font-family="Georgia,serif" font-size="10" fill="#333">Auditor</text>
+  <line x1="70" y1="97" x2="470" y2="97" stroke="#4a6ea8" stroke-width="1.5" marker-end="url(#b2)"/>
+  <!-- Coin values -->
+  <rect x="300" y="85" width="60" height="20" rx="3" fill="#e8eef8" stroke="#4a6ea8" stroke-width="1"/>
+  <text x="330" y="99" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#4a6ea8">coin ∈ {0,1}</text>
+  <!-- Timing channel arrow -->
+  <line x1="330" y1="85" x2="330" y2="60" stroke="#a83030" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#b3)"/>
+  <text x="340" y="74" font-family="Georgia,serif" font-size="9" fill="#a83030">Δt leaks</text>
+  <!-- Formula box -->
+  <rect x="60" y="115" width="200" height="40" rx="4" fill="#fff8e8" stroke="#a87a30" stroke-width="1.5"/>
+  <text x="160" y="130" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#333">Worst-case bias ≤ (1−ε)·D_A</text>
+  <text x="160" y="148" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#666">D_A = TV(view|coin=0, view|coin=1)</text>
+  <!-- Blindfold fix -->
+  <rect x="290" y="115" width="180" height="40" rx="4" fill="#e8f4e8" stroke="#4a8a4a" stroke-width="1.5"/>
+  <text x="380" y="130" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#1a1a1a" font-weight="bold">Blindfold fix</text>
+  <text x="380" y="148" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#4a8a4a">per-call fresh coin + constant-time silent audit</text>
+  <!-- PNI condition -->
+  <rect x="60" y="168" width="380" height="30" rx="4" fill="#f0e8f8" stroke="#6a2aa8" stroke-width="1.5"/>
+  <text x="250" y="183" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#6a2aa8" font-weight="bold">PNI: coin must not affect agent's observable view before commit</text>
+  <text x="250" y="196" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#666">necessary and sufficient for unbiased control certificate</text>
+  <!-- Markers -->
+  <defs>
+    <marker id="b1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#333"/></marker>
+    <marker id="b2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#4a6ea8"/></marker>
+    <marker id="b3" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#a83030"/></marker>
+  </defs>
+</svg>
