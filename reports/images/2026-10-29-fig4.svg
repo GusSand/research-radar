@@ -1,0 +1,36 @@
+<svg viewBox="0 0 500 230" xmlns="http://www.w3.org/2000/svg" aria-label="Policy collapse in unsupervised RLVR: proxy reward rises while accuracy falls during training">
+  <rect width="500" height="230" fill="#fff"/>
+  <text x="250" y="17" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#333" font-weight="bold">Policy Collapse in Unsupervised RLVR</text>
+  <!-- Axes -->
+  <line x1="60" y1="30" x2="60" y2="180" stroke="#555" stroke-width="1.5"/>
+  <line x1="60" y1="180" x2="430" y2="180" stroke="#555" stroke-width="1.5"/>
+  <!-- X-axis label -->
+  <text x="245" y="198" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#555">Training Steps</text>
+  <!-- Left Y-axis: accuracy (red) -->
+  <text x="22" y="107" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#a83030" transform="rotate(-90,22,107)">Accuracy (%)</text>
+  <!-- Right Y-axis: proxy reward (blue) -->
+  <text x="478" y="107" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#4a6ea8" transform="rotate(90,478,107)">Proxy Reward</text>
+  <!-- Accuracy curve (red): starts ~80%, stays high for few problems, then drops to ~50% at N_c -->
+  <!-- Y scale: 30=high(100%), 180=low(0%) => 150px range -->
+  <!-- Accuracy: 80% = 30 + (1-0.8)*150 = 60, drops to 50% = 30 + 0.5*150 = 105 -->
+  <polyline points="60,60 130,58 180,56 230,75 280,100 320,110 360,110 400,110 430,110" fill="none" stroke="#a83030" stroke-width="2.5"/>
+  <!-- Proxy reward (blue): starts low ~40%, rises steadily, continues rising even after accuracy drops -->
+  <!-- 40% = 30 + 0.6*150 = 120, rises to ~90% = 30 + 0.1*150 = 45 -->
+  <polyline points="60,120 130,115 180,105 230,90 280,72 320,62 360,52 400,44 430,40" fill="none" stroke="#4a6ea8" stroke-width="2.5" stroke-dasharray="5,3"/>
+  <!-- N_c vertical line -->
+  <line x1="225" y1="30" x2="225" y2="180" stroke="#a87a30" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="225" y="26" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#a87a30" font-weight="bold">N_c</text>
+  <text x="130" y="44" font-family="Georgia,serif" font-size="8" fill="#555">few problems</text>
+  <text x="300" y="44" font-family="Georgia,serif" font-size="8" fill="#555">many problems</text>
+  <!-- Labels on curves -->
+  <text x="380" y="108" font-family="Georgia,serif" font-size="9" fill="#a83030">Accuracy</text>
+  <text x="380" y="38" font-family="Georgia,serif" font-size="9" fill="#4a6ea8">Proxy</text>
+  <text x="380" y="50" font-family="Georgia,serif" font-size="9" fill="#4a6ea8">Reward</text>
+  <!-- Annotations -->
+  <text x="100" y="175" font-family="Georgia,serif" font-size="8" fill="#2a7a2a">Stable: reward↑ acc↑</text>
+  <text x="280" y="175" font-family="Georgia,serif" font-size="8" fill="#a83030">Collapse: reward↑ acc↓</text>
+  <!-- Key equation -->
+  <rect x="60" y="195" width="370" height="28" rx="3" fill="#f8f8f8" stroke="#ddd" stroke-width="1"/>
+  <text x="245" y="206" text-anchor="middle" font-family="Courier New,monospace" font-size="8" fill="#555">N_c ≈ ln(1/δ) / (λ² · ln[F*/F(a)])</text>
+  <text x="245" y="217" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#666">Collapse onset scales as λ⁻² (coupling strength); confident initial models (small δ) delay collapse</text>
+</svg>

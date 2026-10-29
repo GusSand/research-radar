@@ -1,0 +1,43 @@
+<svg viewBox="0 0 500 230" xmlns="http://www.w3.org/2000/svg" aria-label="Mechanistic failure modes of weight pruning: perplexity and circuit accuracy comparison">
+  <rect width="500" height="230" fill="#fff"/>
+  <text x="250" y="18" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#333" font-weight="bold">Pruning Metric Mismatch: Perplexity vs. Circuit Integrity</text>
+  <!-- Axes -->
+  <line x1="60" y1="170" x2="450" y2="170" stroke="#555" stroke-width="1.5"/>
+  <line x1="60" y1="30" x2="60" y2="170" stroke="#555" stroke-width="1.5"/>
+  <!-- Y-axis label -->
+  <text x="18" y="100" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#555" transform="rotate(-90,18,100)">Value</text>
+  <!-- Two bars per condition: Perplexity (blue) and IOI Accuracy % (red) -->
+  <!-- Condition A: Magnitude-neuron 30% -->
+  <!-- Perplexity 74.6 => scale: max ~150, height = 74.6/150*120 = 59.7 -->
+  <!-- IOI acc 17.7% => height = 17.7/100*120 = 21.2 -->
+  <rect x="90" y="110" width="30" height="60" fill="#4a6ea8" opacity="0.85"/>
+  <rect x="125" y="149" width="30" height="21" fill="#a83030" opacity="0.85"/>
+  <!-- Condition B: Random-head 70% -->
+  <!-- Perplexity 140.1 => height = 140.1/150*120 = 112.1 -->
+  <!-- IOI acc ~50% => height = 50/100*120 = 60 -->
+  <rect x="235" y="58" width="30" height="112" fill="#4a6ea8" opacity="0.85"/>
+  <rect x="270" y="110" width="30" height="60" fill="#a83030" opacity="0.85"/>
+  <!-- Condition labels -->
+  <text x="120" y="188" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#333">Mag-neuron</text>
+  <text x="120" y="199" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#333">30% sparse</text>
+  <text x="265" y="188" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#333">Random-head</text>
+  <text x="265" y="199" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#333">70% sparse</text>
+  <!-- Value labels on bars -->
+  <text x="105" y="106" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#4a6ea8" font-weight="bold">74.6</text>
+  <text x="140" y="145" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#a83030" font-weight="bold">17.7%</text>
+  <text x="250" y="54" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#4a6ea8" font-weight="bold">140.1</text>
+  <text x="285" y="106" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#a83030" font-weight="bold">~50%</text>
+  <!-- Arrow pointing at the paradox -->
+  <text x="185" y="120" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#a05c00">←</text>
+  <text x="185" y="132" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#a05c00">Perplexity</text>
+  <text x="185" y="143" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#a05c00">ranks Mag-</text>
+  <text x="185" y="154" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#a05c00">neuron as</text>
+  <text x="185" y="165" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#a05c00">"safer"</text>
+  <!-- Legend -->
+  <rect x="330" y="50" width="12" height="10" fill="#4a6ea8" opacity="0.85"/>
+  <text x="348" y="59" font-family="Georgia,serif" font-size="9" fill="#333">Perplexity (lower=better)</text>
+  <rect x="330" y="68" width="12" height="10" fill="#a83030" opacity="0.85"/>
+  <text x="348" y="77" font-family="Georgia,serif" font-size="9" fill="#333">IOI accuracy % (higher=better)</text>
+  <!-- Annotation -->
+  <text x="250" y="216" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#666">Mag-neuron inverts the IOI circuit (17.7% acc) yet perplexity deems it less damaged than random-head</text>
+</svg>

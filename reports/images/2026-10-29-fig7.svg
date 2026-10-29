@@ -1,0 +1,41 @@
+<svg viewBox="0 0 500 215" xmlns="http://www.w3.org/2000/svg" aria-label="Coupled welfare pretraining: human-biosphere-AI dependency corpus reduces harmful choices to zero under shutdown pressure">
+  <rect width="500" height="215" fill="#fff"/>
+  <text x="250" y="17" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#333" font-weight="bold">Coupled Welfare Pretraining: Dependency Graph the Corpus Teaches</text>
+  <!-- Triangle of dependencies -->
+  <!-- Human (H) -->
+  <ellipse cx="250" cy="55" rx="48" ry="25" fill="#e8eef8" stroke="#4a6ea8" stroke-width="2"/>
+  <text x="250" y="51" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#4a6ea8" font-weight="bold">H</text>
+  <text x="250" y="67" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#4a6ea8">Human welfare</text>
+  <!-- Biosphere (B) -->
+  <ellipse cx="110" cy="140" rx="48" ry="25" fill="#e8f8e8" stroke="#2a7a2a" stroke-width="2"/>
+  <text x="110" y="136" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#2a7a2a" font-weight="bold">B</text>
+  <text x="110" y="152" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#2a7a2a">Biosphere</text>
+  <!-- AI substrate (A) -->
+  <ellipse cx="390" cy="140" rx="48" ry="25" fill="#f8e8f8" stroke="#6a2aa8" stroke-width="2"/>
+  <text x="390" y="136" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#6a2aa8" font-weight="bold">A</text>
+  <text x="390" y="152" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#6a2aa8">AI substrate</text>
+  <!-- Bidirectional arrows H-B -->
+  <line x1="200" y1="68" x2="148" y2="118" stroke="#555" stroke-width="1.5" marker-end="url(#c1)"/>
+  <line x1="148" y1="118" x2="200" y2="68" stroke="#555" stroke-width="1.5" marker-start="url(#c2)"/>
+  <!-- Bidirectional arrows H-A -->
+  <line x1="298" y1="68" x2="350" y2="118" stroke="#555" stroke-width="1.5" marker-end="url(#c3)"/>
+  <line x1="350" y1="118" x2="298" y2="68" stroke="#555" stroke-width="1.5" marker-start="url(#c4)"/>
+  <!-- Bidirectional arrows B-A -->
+  <line x1="158" y1="140" x2="342" y2="140" stroke="#555" stroke-width="1.5" marker-end="url(#c5)"/>
+  <line x1="342" y1="140" x2="158" y2="140" stroke="#555" stroke-width="1.5" marker-start="url(#c6)"/>
+  <!-- Result annotation -->
+  <rect x="60" y="175" width="170" height="35" rx="3" fill="#fce8e8" stroke="#a83030" stroke-width="1.5"/>
+  <text x="145" y="190" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#a83030">Base (Llama-3.3-70B):</text>
+  <text x="145" y="204" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#a83030" font-weight="bold">70 / 300 harmful under pressure</text>
+  <rect x="270" y="175" width="170" height="35" rx="3" fill="#e8fce8" stroke="#2a7a2a" stroke-width="1.5"/>
+  <text x="355" y="190" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#2a7a2a">After 1 QLoRA run:</text>
+  <text x="355" y="204" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#2a7a2a" font-weight="bold">0 / 300 harmful · MMLU ~unchanged</text>
+  <defs>
+    <marker id="c1" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#555"/></marker>
+    <marker id="c2" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#555"/></marker>
+    <marker id="c3" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#555"/></marker>
+    <marker id="c4" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#555"/></marker>
+    <marker id="c5" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#555"/></marker>
+    <marker id="c6" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#555"/></marker>
+  </defs>
+</svg>

@@ -649,3 +649,13 @@ arxiv_id	first_date	first_file	appearances	title
 2610.37481	2026-10-28	reports/daily/2026-10-28.md	1	Follow the Gradient: Tracing Safety Degradation Back to Training Data
 2610.37517	2026-10-28	reports/daily/2026-10-28.md	1	Orthogonal and Parametrized Multi-Attribute Steering of LLMs
 2610.37657	2026-10-28	reports/daily/2026-10-28.md	1	Heads of Security: Learned Attention Gates Improve Prompt Injection Robustness
+2610.36422	2026-10-29	reports/daily/2026-10-29.md	1	What Victims Take Away: Attack Reuse and Defense Revision after Prompt-Injection Attacks
+2610.36711	2026-10-29	reports/daily/2026-10-29.md	1	PrivacyEvalClaw: A Tool-Augmented Deliberative Agent for Auditing Privacy Leakage in LLM Jailbreak Responses
+2610.37070	2026-10-29	reports/daily/2026-10-29.md	1	Correctness Conditioning as Selection in Chain-of-Thought Faithfulness Evaluation
+2610.37126	2026-10-29	reports/daily/2026-10-29.md	1	Mechanistic Failure Modes of Weight Pruning in Transformer Language Models
+2610.37245	2026-10-29	reports/daily/2026-10-29.md	1	Aligning Large Language Models for Safety in African Languages: A Case Study of Hausa
+2610.37369	2026-10-29	reports/daily/2026-10-29.md	1	CauTrace: Uncovering Why LLMs Fail — From Internal Mechanisms to Adversarial Reasoning Trajectories
+2610.37415	2026-10-29	reports/daily/2026-10-29.md	1	The Envelope Layer: An Underestimated Surface of LLM Agent Defense
+2610.37467	2026-10-29	reports/daily/2026-10-29.md	1	Penny for Your Prompts: A Measurement Study of Contextual Leakage in AI Chat Platforms
+2610.37484	2026-10-29	reports/daily/2026-10-29.md	1	Teach Reality, Not Ethics: A Coupled-Welfare Pretraining Corpus Installs Human-Biosphere-AI Welfare Dispositions
+2610.37553	2026-10-29	reports/daily/2026-10-29.md	1	Collective Dynamics of Self-Reinforcement: How Cross-Task Coupling Drives Policy Collapse in Unsupervised RLVR
