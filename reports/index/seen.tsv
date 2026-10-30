@@ -659,3 +659,13 @@ arxiv_id	first_date	first_file	appearances	title
 2610.37467	2026-10-29	reports/daily/2026-10-29.md	1	Penny for Your Prompts: A Measurement Study of Contextual Leakage in AI Chat Platforms
 2610.37484	2026-10-29	reports/daily/2026-10-29.md	1	Teach Reality, Not Ethics: A Coupled-Welfare Pretraining Corpus Installs Human-Biosphere-AI Welfare Dispositions
 2610.37553	2026-10-29	reports/daily/2026-10-29.md	1	Collective Dynamics of Self-Reinforcement: How Cross-Task Coupling Drives Policy Collapse in Unsupervised RLVR
+2610.37741	2026-10-30	reports/daily/2026-10-30.md	1	Agentic Backdoors via Pretraining Poisoning
+2610.38001	2026-10-30	reports/daily/2026-10-30.md	1	Preserving Safety During Sequential Fine-Tuning: A Factorial and Geometric Analysis of Replay
+2610.38392	2026-10-30	reports/daily/2026-10-30.md	1	Masked Erosion: How Acceptance Gates Lose Redundant Safeguards in Self-Improving Agents
+2610.39068	2026-10-30	reports/daily/2026-10-30.md	1	Closed Gates Leak: Decomposing Adjacent-Layer Cancellation in Gated Language Models
+2610.39124	2026-10-30	reports/daily/2026-10-30.md	1	Clean Sheets and Checkpoints: Evidence Complexity for Certifying Sequential Agent Risk
+2610.39377	2026-10-30	reports/daily/2026-10-30.md	1	AgentDecept: Benchmarking Deceptive Behavior in Tool-Using LLM Agents under Pressure
+2610.39509	2026-10-30	reports/daily/2026-10-30.md	1	Systematic Evaluation of Adversarial Jailbreaking Attacks and Defenses Across Seven Large Language Models
+2610.39758	2026-10-30	reports/daily/2026-10-30.md	1	SEAL: Sealed Queries for Local Sanitization against Indirect Prompt Injection
+2610.39795	2026-10-30	reports/daily/2026-10-30.md	1	The Role of Self-Concept In Language Models
+2610.40535	2026-10-30	reports/daily/2026-10-30.md	1	Efficient Scalable Oversight via Rewinding
