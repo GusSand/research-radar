@@ -669,3 +669,13 @@ arxiv_id	first_date	first_file	appearances	title
 2610.39758	2026-10-30	reports/daily/2026-10-30.md	1	SEAL: Sealed Queries for Local Sanitization against Indirect Prompt Injection
 2610.39795	2026-10-30	reports/daily/2026-10-30.md	1	The Role of Self-Concept In Language Models
 2610.40535	2026-10-30	reports/daily/2026-10-30.md	1	Efficient Scalable Oversight via Rewinding
+2610.38091	2026-10-31	reports/daily/2026-10-31.md	1	Jailbreak Connectivity: Towards Diverse, Transferable, and Universal Multimodal LLM Jailbreak
+2610.38120	2026-10-31	reports/daily/2026-10-31.md	1	LLMON: Post-Training LLMs to Separate Instructions from Data for Prompt Injection Defense
+2610.38526	2026-10-31	reports/daily/2026-10-31.md	1	Value Probes: Learned Value Functions for Beam-Search Red Teaming
+2610.38833	2026-10-31	reports/daily/2026-10-31.md	1	Discovering Jailbreaks via Curriculum of Models
+2610.38867	2026-10-31	reports/daily/2026-10-31.md	1	Where You Inject Matters: The Trust Region Effect in LLM Agents
+2610.39182	2026-10-31	reports/daily/2026-10-31.md	1	Reasoning or Pattern Exploitation? Mechanistic Insights from RL-Trained Language Models
+2610.39802	2026-10-31	reports/daily/2026-10-31.md	1	Revisiting Over-refusal in Safety-aligned LLMs: A Representation and Optimization Perspective
+2610.40516	2026-10-31	reports/daily/2026-10-31.md	1	How I Aligned Your Model: Scaling Up Multilingual Safety Training with Templates
+2610.40588	2026-10-31	reports/daily/2026-10-31.md	1	Pre-Crime for Agents, at the Last Second: Probing When a Recruited Agent Gives In
+2610.40627	2026-10-31	reports/daily/2026-10-31.md	1	ShallowDefend: Harnessing Shallow Safety Alignment for Multi-Turn Defender
