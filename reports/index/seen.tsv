@@ -679,3 +679,13 @@ arxiv_id	first_date	first_file	appearances	title
 2610.40516	2026-10-31	reports/daily/2026-10-31.md	1	How I Aligned Your Model: Scaling Up Multilingual Safety Training with Templates
 2610.40588	2026-10-31	reports/daily/2026-10-31.md	1	Pre-Crime for Agents, at the Last Second: Probing When a Recruited Agent Gives In
 2610.40627	2026-10-31	reports/daily/2026-10-31.md	1	ShallowDefend: Harnessing Shallow Safety Alignment for Multi-Turn Defender
+2610.37679	2026-11-01	reports/daily/2026-11-01.md	1	Exposure Is Not Commitment: Double-Stratified Evaluation of Latent Monitors for Tool-Using Agents
+2610.37734	2026-11-01	reports/daily/2026-11-01.md	1	When Skills Tell Agents Not to Ask: A Large-Scale Study of Oversight Directives in Agent Skills
+2610.37738	2026-11-01	reports/daily/2026-11-01.md	1	Poisoned Skills: Propagating Jailbreaks Through Agent Markdown Files
+2610.37901	2026-11-01	reports/daily/2026-11-01.md	1	Scan Before You Install: Detecting and Mitigating Local and Composite Vulnerabilities in Skills
+2610.38784	2026-11-01	reports/daily/2026-11-01.md	1	Loss is Not Behavior: A Unified Output-Space Analysis of Gradient-Based Machine Unlearning
+2610.38799	2026-11-01	reports/daily/2026-11-01.md	1	CARI: Cross-Boundary Adversarial Runtime Injection in Coding-Agent Workflows
+2610.39122	2026-11-01	reports/daily/2026-11-01.md	1	Appreciation Teaches Unauthorized Execution: Self-Evolution Degrades the Robustness of Personal Agents to Indirect Prompt Injection
+2610.39766	2026-11-01	reports/daily/2026-11-01.md	1	Activation Probes Are Reliable With a Handful of Positive Examples
+2610.40396	2026-11-01	reports/daily/2026-11-01.md	1	Understanding and Mitigating Role Spoofing in LLMs
+2610.40483	2026-11-01	reports/daily/2026-11-01.md	1	Preserving Utility in Continual LLM Unlearning via Orthogonal Projections
