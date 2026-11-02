@@ -643,35 +643,35 @@ arxiv_id	first_date	first_file	appearances	title
 2610.36258	2026-10-28	reports/daily/2026-10-28.md	1	SpecGuard: Detecting Multi-Turn LLM Jailbreaks via Specification-Based Runtime Monitoring
 2610.36295	2026-10-28	reports/daily/2026-10-28.md	1	Detecting and Mitigating Query-Based System Prompt Leakage Attacks
 2610.36524	2026-10-28	reports/daily/2026-10-28.md	1	Causal Localization of Evidence Effects in Transformers
-2610.37055	2026-10-28	reports/daily/2026-10-28.md	1	Blindfold: Keeping the Audit Coin Secret from LLM Agents
+2610.37055	2026-10-28	reports/daily/2026-10-28.md	2	Blindfold: Keeping the Audit Coin Secret from LLM Agents
 2610.37157	2026-10-28	reports/daily/2026-10-28.md	1	What Survives Distillation? A Mechanistic Interpretability Study of GPT-2 and DistilGPT-2
 2610.37430	2026-10-28	reports/daily/2026-10-28.md	1	When Visual Evidence Is Insufficient: How Instructions, Post-Training, and Internal Activations Shape Refusal in Multimodal Language Models
-2610.37481	2026-10-28	reports/daily/2026-10-28.md	1	Follow the Gradient: Tracing Safety Degradation Back to Training Data
+2610.37481	2026-10-28	reports/daily/2026-10-28.md	2	Follow the Gradient: Tracing Safety Degradation Back to Training Data
 2610.37517	2026-10-28	reports/daily/2026-10-28.md	1	Orthogonal and Parametrized Multi-Attribute Steering of LLMs
 2610.37657	2026-10-28	reports/daily/2026-10-28.md	1	Heads of Security: Learned Attention Gates Improve Prompt Injection Robustness
 2610.36422	2026-10-29	reports/daily/2026-10-29.md	1	What Victims Take Away: Attack Reuse and Defense Revision after Prompt-Injection Attacks
 2610.36711	2026-10-29	reports/daily/2026-10-29.md	1	PrivacyEvalClaw: A Tool-Augmented Deliberative Agent for Auditing Privacy Leakage in LLM Jailbreak Responses
 2610.37070	2026-10-29	reports/daily/2026-10-29.md	1	Correctness Conditioning as Selection in Chain-of-Thought Faithfulness Evaluation
-2610.37126	2026-10-29	reports/daily/2026-10-29.md	1	Mechanistic Failure Modes of Weight Pruning in Transformer Language Models
+2610.37126	2026-10-29	reports/daily/2026-10-29.md	2	Mechanistic Failure Modes of Weight Pruning in Transformer Language Models
 2610.37245	2026-10-29	reports/daily/2026-10-29.md	1	Aligning Large Language Models for Safety in African Languages: A Case Study of Hausa
 2610.37369	2026-10-29	reports/daily/2026-10-29.md	1	CauTrace: Uncovering Why LLMs Fail — From Internal Mechanisms to Adversarial Reasoning Trajectories
 2610.37415	2026-10-29	reports/daily/2026-10-29.md	1	The Envelope Layer: An Underestimated Surface of LLM Agent Defense
-2610.37467	2026-10-29	reports/daily/2026-10-29.md	1	Penny for Your Prompts: A Measurement Study of Contextual Leakage in AI Chat Platforms
+2610.37467	2026-10-29	reports/daily/2026-10-29.md	2	Penny for Your Prompts: A Measurement Study of Contextual Leakage in AI Chat Platforms
 2610.37484	2026-10-29	reports/daily/2026-10-29.md	1	Teach Reality, Not Ethics: A Coupled-Welfare Pretraining Corpus Installs Human-Biosphere-AI Welfare Dispositions
 2610.37553	2026-10-29	reports/daily/2026-10-29.md	1	Collective Dynamics of Self-Reinforcement: How Cross-Task Coupling Drives Policy Collapse in Unsupervised RLVR
-2610.37741	2026-10-30	reports/daily/2026-10-30.md	1	Agentic Backdoors via Pretraining Poisoning
+2610.37741	2026-10-30	reports/daily/2026-10-30.md	2	Agentic Backdoors via Pretraining Poisoning
 2610.38001	2026-10-30	reports/daily/2026-10-30.md	1	Preserving Safety During Sequential Fine-Tuning: A Factorial and Geometric Analysis of Replay
-2610.38392	2026-10-30	reports/daily/2026-10-30.md	1	Masked Erosion: How Acceptance Gates Lose Redundant Safeguards in Self-Improving Agents
+2610.38392	2026-10-30	reports/daily/2026-10-30.md	2	Masked Erosion: How Acceptance Gates Lose Redundant Safeguards in Self-Improving Agents
 2610.39068	2026-10-30	reports/daily/2026-10-30.md	1	Closed Gates Leak: Decomposing Adjacent-Layer Cancellation in Gated Language Models
 2610.39124	2026-10-30	reports/daily/2026-10-30.md	1	Clean Sheets and Checkpoints: Evidence Complexity for Certifying Sequential Agent Risk
 2610.39377	2026-10-30	reports/daily/2026-10-30.md	1	AgentDecept: Benchmarking Deceptive Behavior in Tool-Using LLM Agents under Pressure
 2610.39509	2026-10-30	reports/daily/2026-10-30.md	1	Systematic Evaluation of Adversarial Jailbreaking Attacks and Defenses Across Seven Large Language Models
 2610.39758	2026-10-30	reports/daily/2026-10-30.md	1	SEAL: Sealed Queries for Local Sanitization against Indirect Prompt Injection
-2610.39795	2026-10-30	reports/daily/2026-10-30.md	1	The Role of Self-Concept In Language Models
-2610.40535	2026-10-30	reports/daily/2026-10-30.md	1	Efficient Scalable Oversight via Rewinding
+2610.39795	2026-10-30	reports/daily/2026-10-30.md	2	The Role of Self-Concept In Language Models
+2610.40535	2026-10-30	reports/daily/2026-10-30.md	2	Efficient Scalable Oversight via Rewinding
 2610.38091	2026-10-31	reports/daily/2026-10-31.md	1	Jailbreak Connectivity: Towards Diverse, Transferable, and Universal Multimodal LLM Jailbreak
-2610.38120	2026-10-31	reports/daily/2026-10-31.md	1	LLMON: Post-Training LLMs to Separate Instructions from Data for Prompt Injection Defense
-2610.38526	2026-10-31	reports/daily/2026-10-31.md	1	Value Probes: Learned Value Functions for Beam-Search Red Teaming
+2610.38120	2026-10-31	reports/daily/2026-10-31.md	2	LLMON: Post-Training LLMs to Separate Instructions from Data for Prompt Injection Defense
+2610.38526	2026-10-31	reports/daily/2026-10-31.md	2	Value Probes: Learned Value Functions for Beam-Search Red Teaming
 2610.38833	2026-10-31	reports/daily/2026-10-31.md	1	Discovering Jailbreaks via Curriculum of Models
 2610.38867	2026-10-31	reports/daily/2026-10-31.md	1	Where You Inject Matters: The Trust Region Effect in LLM Agents
 2610.39182	2026-10-31	reports/daily/2026-10-31.md	1	Reasoning or Pattern Exploitation? Mechanistic Insights from RL-Trained Language Models
@@ -679,11 +679,11 @@ arxiv_id	first_date	first_file	appearances	title
 2610.40516	2026-10-31	reports/daily/2026-10-31.md	1	How I Aligned Your Model: Scaling Up Multilingual Safety Training with Templates
 2610.40588	2026-10-31	reports/daily/2026-10-31.md	1	Pre-Crime for Agents, at the Last Second: Probing When a Recruited Agent Gives In
 2610.40627	2026-10-31	reports/daily/2026-10-31.md	1	ShallowDefend: Harnessing Shallow Safety Alignment for Multi-Turn Defender
-2610.37679	2026-11-01	reports/daily/2026-11-01.md	1	Exposure Is Not Commitment: Double-Stratified Evaluation of Latent Monitors for Tool-Using Agents
-2610.37734	2026-11-01	reports/daily/2026-11-01.md	1	When Skills Tell Agents Not to Ask: A Large-Scale Study of Oversight Directives in Agent Skills
+2610.37679	2026-11-01	reports/daily/2026-11-01.md	2	Exposure Is Not Commitment: Double-Stratified Evaluation of Latent Monitors for Tool-Using Agents
+2610.37734	2026-11-01	reports/daily/2026-11-01.md	2	When Skills Tell Agents Not to Ask: A Large-Scale Study of Oversight Directives in Agent Skills
 2610.37738	2026-11-01	reports/daily/2026-11-01.md	1	Poisoned Skills: Propagating Jailbreaks Through Agent Markdown Files
 2610.37901	2026-11-01	reports/daily/2026-11-01.md	1	Scan Before You Install: Detecting and Mitigating Local and Composite Vulnerabilities in Skills
-2610.38784	2026-11-01	reports/daily/2026-11-01.md	1	Loss is Not Behavior: A Unified Output-Space Analysis of Gradient-Based Machine Unlearning
+2610.38784	2026-11-01	reports/daily/2026-11-01.md	2	Loss is Not Behavior: A Unified Output-Space Analysis of Gradient-Based Machine Unlearning
 2610.38799	2026-11-01	reports/daily/2026-11-01.md	1	CARI: Cross-Boundary Adversarial Runtime Injection in Coding-Agent Workflows
 2610.39122	2026-11-01	reports/daily/2026-11-01.md	1	Appreciation Teaches Unauthorized Execution: Self-Evolution Degrades the Robustness of Personal Agents to Indirect Prompt Injection
 2610.39766	2026-11-01	reports/daily/2026-11-01.md	1	Activation Probes Are Reliable With a Handful of Positive Examples
