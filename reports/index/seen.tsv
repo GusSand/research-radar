@@ -689,3 +689,13 @@ arxiv_id	first_date	first_file	appearances	title
 2610.39766	2026-11-01	reports/daily/2026-11-01.md	1	Activation Probes Are Reliable With a Handful of Positive Examples
 2610.40396	2026-11-01	reports/daily/2026-11-01.md	1	Understanding and Mitigating Role Spoofing in LLMs
 2610.40483	2026-11-01	reports/daily/2026-11-01.md	1	Preserving Utility in Continual LLM Unlearning via Orthogonal Projections
+2611.00138	2026-11-03	reports/daily/2026-11-03.md	1	Kerkoporta: Injecting Structured-Output Backdoors in Reasoning Coding Agents
+2611.00374	2026-11-03	reports/daily/2026-11-03.md	1	Unlearning by Extrapolating a Shrink-and-Heal Lookahead
+2611.00407	2026-11-03	reports/daily/2026-11-03.md	1	Hacking or Just Failing? A More Capable LLM Monitor Better Separates Reward Hacking from Honest Failure
+2611.00420	2026-11-03	reports/daily/2026-11-03.md	1	Circuit Oracle: Automating Attribution Graph Analysis via Natural-Language Queries
+2611.00606	2026-11-03	reports/daily/2026-11-03.md	1	Sparse Autoencoder Attribution Graphs Are Decided at the Margin
+2611.00640	2026-11-03	reports/daily/2026-11-03.md	1	Bridging Singular Learning Theory and Mechanistic Interpretability at the Billion-Parameter Scale
+2611.01378	2026-11-03	reports/daily/2026-11-03.md	1	Information-Theoretic Design of Sparse Autoencoder-Based Steering
+2611.02620	2026-11-03	reports/daily/2026-11-03.md	1	Adaptive Localization of Knowledge Negation for Continual LLM Unlearning
+2611.02791	2026-11-03	reports/daily/2026-11-03.md	1	PGuard: A Native, Streaming, and Plug-in Guardrail for Multimodal Large Language Models
+2611.03575	2026-11-03	reports/daily/2026-11-03.md	1	VeriHarm-Bench: Measuring Harmful Success in LLM Coding Agents Verifiably
