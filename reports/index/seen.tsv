@@ -699,3 +699,11 @@ arxiv_id	first_date	first_file	appearances	title
 2611.02620	2026-11-03	reports/daily/2026-11-03.md	1	Adaptive Localization of Knowledge Negation for Continual LLM Unlearning
 2611.02791	2026-11-03	reports/daily/2026-11-03.md	1	PGuard: A Native, Streaming, and Plug-in Guardrail for Multimodal Large Language Models
 2611.03575	2026-11-03	reports/daily/2026-11-03.md	1	VeriHarm-Bench: Measuring Harmful Success in LLM Coding Agents Verifiably
+2611.04299	2026-11-04	reports/daily/2026-11-04.md	1	Can Benign Skills Induce Misaligned Behavior in LLM Agents?
+2611.04393	2026-11-04	reports/daily/2026-11-04.md	1	Voluntary Servitude: Weaponized Safety Warning Mechanisms for Controlling AI Agents
+2611.04673	2026-11-04	reports/daily/2026-11-04.md	1	Right Tool, Wrong Parameters: Defending LLM Agents Against Parameter Poisoning
+2611.04717	2026-11-04	reports/daily/2026-11-04.md	1	BrainwashedLLM: Jailbreaking via Automated Adversarial Chain of Thoughts Discovery
+2611.04803	2026-11-04	reports/daily/2026-11-04.md	1	Extracting System Prompt of LLM Services in Complex (Agentic) Settings
+2611.04878	2026-11-04	reports/daily/2026-11-04.md	1	TraceRouter++: Causal Semantic Routing Realignment via Optimal Transport
+2611.04879	2026-11-04	reports/daily/2026-11-04.md	1	ScamWorld: An Interactive Environment for Evaluating Web Agents Against Online Fraud
+2611.05003	2026-11-04	reports/daily/2026-11-04.md	1	Unifying and Beyond the Theory of Pervasive Capability Degradation in LLM Post-training SFT from Feature Interference
