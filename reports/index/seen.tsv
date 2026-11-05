@@ -707,3 +707,13 @@ arxiv_id	first_date	first_file	appearances	title
 2611.04878	2026-11-04	reports/daily/2026-11-04.md	1	TraceRouter++: Causal Semantic Routing Realignment via Optimal Transport
 2611.04879	2026-11-04	reports/daily/2026-11-04.md	1	ScamWorld: An Interactive Environment for Evaluating Web Agents Against Online Fraud
 2611.05003	2026-11-04	reports/daily/2026-11-04.md	1	Unifying and Beyond the Theory of Pervasive Capability Degradation in LLM Post-training SFT from Feature Interference
+2611.01976	2026-11-05	reports/daily/2026-11-05.md	1	Beyond Prompt Injection: The Tool Update Gap in LLM Agent Security
+2611.02516	2026-11-05	reports/daily/2026-11-05.md	1	Cumulative and Audited Guardrail Tool Evolution for LLM Agent Safety
+2611.03650	2026-11-05	reports/daily/2026-11-05.md	1	Alignment Faking Depends on the Value, Not Just the Model
+2611.05806	2026-11-05	reports/daily/2026-11-05.md	1	When File Ingestion Misleads Language Models: Measuring and Mitigating Divergences in Office Documents
+2611.06039	2026-11-05	reports/daily/2026-11-05.md	1	Securing Web Agents with the Compile-Then-Execute Paradigm
+2611.06380	2026-11-05	reports/daily/2026-11-05.md	1	Does Context Compression Preserve Refusal Alignment?
+2611.06553	2026-11-05	reports/daily/2026-11-05.md	1	Addition by Subtraction: Toward Mitigating Fragile Safety Alignment in Large Language Models
+2611.06585	2026-11-05	reports/daily/2026-11-05.md	1	Signed, Sealed, Leaked: Trust Beyond Signature for MCP Toolchains
+2611.06681	2026-11-05	reports/daily/2026-11-05.md	1	Do unlearning algorithms learn the right features?
+2611.06682	2026-11-05	reports/daily/2026-11-05.md	1	SecureGARD: Dynamic Ontology-Guided Governance for Secure Tool-Using LLM Agents

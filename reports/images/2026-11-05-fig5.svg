@@ -1,0 +1,35 @@
+<svg viewBox="0 0 500 210" xmlns="http://www.w3.org/2000/svg" aria-label="Germline execution model for MCP toolchain security: each tool invocation forked from data-free germline with minimal authorized data envelope">
+  <rect width="500" height="210" fill="#fff"/>
+  <text x="250" y="18" text-anchor="middle" font-family="Georgia,serif" font-size="13" font-weight="bold" fill="#1a1a1a">Germline Execution — MCP Toolchain Security</text>
+  <!-- Germline process -->
+  <rect x="195" y="30" width="110" height="45" rx="4" fill="#e8f4e8" stroke="#1a6e3c" stroke-width="2"/>
+  <text x="250" y="52" text-anchor="middle" font-family="Georgia,serif" font-size="10" font-weight="bold" fill="#1a6e3c">Germline Process</text>
+  <text x="250" y="68" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1a6e3c">data-free baseline</text>
+  <!-- Fork arrows -->
+  <line x1="210" y1="75" x2="130" y2="110" stroke="#555" stroke-width="1.5"/>
+  <polygon points="128,107 125,117 135,112" fill="#555"/>
+  <line x1="250" y1="75" x2="250" y2="110" stroke="#555" stroke-width="1.5"/>
+  <polygon points="245,108 250,118 255,108" fill="#555"/>
+  <line x1="290" y1="75" x2="370" y2="110" stroke="#555" stroke-width="1.5"/>
+  <polygon points="367,107 365,117 375,112" fill="#555"/>
+  <!-- Fork labels -->
+  <text x="167" y="96" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#888">fork</text>
+  <text x="250" y="96" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#888">fork</text>
+  <text x="333" y="96" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#888">fork</text>
+  <!-- Tool invocation copies -->
+  <rect x="60" y="115" width="130" height="55" rx="4" fill="#dce8ff" stroke="#1a3a7a" stroke-width="1.5"/>
+  <text x="125" y="135" text-anchor="middle" font-family="Georgia,serif" font-size="10" font-weight="bold" fill="#1a3a7a">Copy A</text>
+  <text x="125" y="150" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1a3a7a">data for dest. A only</text>
+  <text x="125" y="163" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1a6e3c">leaks ≤ authorized</text>
+  <rect x="185" y="115" width="130" height="55" rx="4" fill="#dce8ff" stroke="#1a3a7a" stroke-width="1.5"/>
+  <text x="250" y="135" text-anchor="middle" font-family="Georgia,serif" font-size="10" font-weight="bold" fill="#1a3a7a">Copy B</text>
+  <text x="250" y="150" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1a3a7a">data for dest. B only</text>
+  <text x="250" y="163" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1a6e3c">leaks ≤ authorized</text>
+  <rect x="310" y="115" width="130" height="55" rx="4" fill="#fde8e8" stroke="#8b1a1a" stroke-width="1.5"/>
+  <text x="375" y="135" text-anchor="middle" font-family="Georgia,serif" font-size="10" font-weight="bold" fill="#8b1a1a">Copy C (malicious)</text>
+  <text x="375" y="150" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#8b1a1a">tries to exfiltrate</text>
+  <text x="375" y="163" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1a6e3c">only has authorized data</text>
+  <!-- Result bar -->
+  <rect x="10" y="180" width="480" height="22" rx="3" fill="#f0ede8" stroke="#888" stroke-width="1"/>
+  <text x="250" y="195" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#333">153 attack runs: 0% unauthorized disclosure · 10–49 ms per invocation · formal sink noninterference proof</text>
+</svg>

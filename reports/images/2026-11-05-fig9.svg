@@ -1,0 +1,27 @@
+<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-label="Unlearning feature analysis: standard output metrics hide feature divergence between unlearned and retrained models">
+  <rect width="500" height="220" fill="#fff"/>
+  <text x="250" y="18" text-anchor="middle" font-family="Georgia,serif" font-size="13" font-weight="bold" fill="#1a1a1a">Unlearning Metrics vs. Feature Recovery</text>
+  <!-- Two columns -->
+  <!-- Left: Standard metric (output matching) -->
+  <rect x="20" y="30" width="210" height="130" rx="4" fill="#fde8e8" stroke="#8b1a1a" stroke-width="1.5"/>
+  <text x="125" y="52" text-anchor="middle" font-family="Georgia,serif" font-size="11" font-weight="bold" fill="#8b1a1a">Standard Output Metric</text>
+  <text x="125" y="70" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#444">Unlearned model ≈ Retrained model</text>
+  <text x="125" y="86" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#1a6e3c">✓  Output: PASS</text>
+  <text x="125" y="104" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#444">But encoded features differ:</text>
+  <text x="125" y="119" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#b02020">Missing features: not detected</text>
+  <text x="125" y="134" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#b02020">Extraneous features: not detected</text>
+  <text x="125" y="150" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#b02020">→ fails under relearning / adaptation</text>
+  <!-- Right: Feature recovery metric -->
+  <rect x="270" y="30" width="210" height="130" rx="4" fill="#e8f4e8" stroke="#1a6e3c" stroke-width="1.5"/>
+  <text x="375" y="52" text-anchor="middle" font-family="Georgia,serif" font-size="11" font-weight="bold" fill="#1a6e3c">Feature Recovery Metric</text>
+  <text x="375" y="70" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#444">Separates missing vs. extraneous features</text>
+  <text x="375" y="88" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#444">Applied to 8 unlearning methods</text>
+  <text x="375" y="106" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1a6e3c">Predicts deviations under:</text>
+  <text x="375" y="121" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1a6e3c">· relearning from scratch</text>
+  <text x="375" y="136" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1a6e3c">· downstream adaptation</text>
+  <text x="375" y="151" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1a6e3c">Correcting mismatch reduces both</text>
+  <!-- Bottom note -->
+  <rect x="20" y="172" width="460" height="38" rx="3" fill="#f5f5f5" stroke="#ccc" stroke-width="1"/>
+  <text x="250" y="188" text-anchor="middle" font-family="Georgia,serif" font-size="9" font-weight="bold" fill="#333">Formal result: identical outputs ≠ identical features; one gradient step on head can break output agreement</text>
+  <text x="250" y="204" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#555">Deleting a small fraction of data can cause retraining to select different features entirely</text>
+</svg>

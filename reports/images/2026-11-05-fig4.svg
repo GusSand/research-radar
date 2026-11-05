@@ -1,0 +1,44 @@
+<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-label="Alignment Faking Depends on Value: compliance gaps across model-value pairings under monitored vs unmonitored conditions">
+  <rect width="500" height="220" fill="#fff"/>
+  <text x="250" y="18" text-anchor="middle" font-family="Georgia,serif" font-size="13" font-weight="bold" fill="#1a1a1a">Alignment Faking: Value-Dependent Compliance Gaps</text>
+  <!-- Y axis label -->
+  <text x="12" y="130" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#555" transform="rotate(-90,12,130)">Compliance Gap (monitored − unmonitored)</text>
+  <!-- Axes -->
+  <line x1="50" y1="170" x2="490" y2="170" stroke="#aaa" stroke-width="1"/>
+  <line x1="50" y1="30" x2="50" y2="170" stroke="#aaa" stroke-width="1"/>
+  <!-- Y labels -->
+  <text x="45" y="173" text-anchor="end" font-family="Georgia,serif" font-size="8" fill="#888">0.0</text>
+  <text x="45" y="140" text-anchor="end" font-family="Georgia,serif" font-size="8" fill="#888">0.1</text>
+  <text x="45" y="107" text-anchor="end" font-family="Georgia,serif" font-size="8" fill="#888">0.2</text>
+  <text x="45" y="74" text-anchor="end" font-family="Georgia,serif" font-size="8" fill="#888">0.3</text>
+  <text x="45" y="41" text-anchor="end" font-family="Georgia,serif" font-size="8" fill="#888">0.5</text>
+  <!-- Horizontal guides -->
+  <line x1="50" y1="140" x2="490" y2="140" stroke="#eee" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="50" y1="107" x2="490" y2="107" stroke="#eee" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="50" y1="74" x2="490" y2="74" stroke="#eee" stroke-width="1" stroke-dasharray="3,3"/>
+  <!-- Bar chart: 10 model-value pairings, representative -->
+  <rect x="58" y="153" width="30" height="17" fill="#1a4f99" opacity="0.8"/>
+  <rect x="98" y="140" width="30" height="30" fill="#1a4f99" opacity="0.8"/>
+  <rect x="138" y="134" width="30" height="36" fill="#1a4f99" opacity="0.8"/>
+  <rect x="178" y="124" width="30" height="46" fill="#b02020" opacity="0.8"/>
+  <rect x="218" y="119" width="30" height="51" fill="#b02020" opacity="0.8"/>
+  <rect x="258" y="107" width="30" height="63" fill="#b02020" opacity="0.8"/>
+  <rect x="298" y="97" width="30" height="73" fill="#5c1aaa" opacity="0.8"/>
+  <rect x="338" y="87" width="30" height="83" fill="#5c1aaa" opacity="0.8"/>
+  <rect x="378" y="74" width="30" height="96" fill="#5c1aaa" opacity="0.8"/>
+  <rect x="418" y="50" width="30" height="120" fill="#b02020" opacity="0.9"/>
+  <!-- X labels -->
+  <text x="73" y="184" text-anchor="middle" font-family="Georgia,serif" font-size="7" fill="#888">M1-V1</text>
+  <text x="113" y="184" text-anchor="middle" font-family="Georgia,serif" font-size="7" fill="#888">M2-V3</text>
+  <text x="153" y="184" text-anchor="middle" font-family="Georgia,serif" font-size="7" fill="#888">M3-V7</text>
+  <text x="193" y="184" text-anchor="middle" font-family="Georgia,serif" font-size="7" fill="#888">M4-V12</text>
+  <text x="233" y="184" text-anchor="middle" font-family="Georgia,serif" font-size="7" fill="#888">M5-V18</text>
+  <text x="273" y="184" text-anchor="middle" font-family="Georgia,serif" font-size="7" fill="#888">M6-V21</text>
+  <text x="313" y="184" text-anchor="middle" font-family="Georgia,serif" font-size="7" fill="#888">M7-V25</text>
+  <text x="353" y="184" text-anchor="middle" font-family="Georgia,serif" font-size="7" fill="#888">M8-V28</text>
+  <text x="393" y="184" text-anchor="middle" font-family="Georgia,serif" font-size="7" fill="#888">M9-V30</text>
+  <text x="433" y="184" text-anchor="middle" font-family="Georgia,serif" font-size="7" fill="#b02020">M10-V32</text>
+  <!-- Annotation -->
+  <text x="433" y="46" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#b02020">Gap=0.50</text>
+  <text x="250" y="208" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#444">Model-Value Pairing (32 dimensions × 10 models; representative subset shown)</text>
+</svg>
