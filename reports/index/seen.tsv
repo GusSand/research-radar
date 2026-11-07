@@ -727,3 +727,12 @@ arxiv_id	first_date	first_file	appearances	title
 2611.08089	2026-11-06	reports/daily/2026-11-06.md	1	SAE Interprets MoE: Sparse AutoEncoders Reveal That MoE Experts Exhibit Human-Interpretable Fine-Grained Specialization
 2611.08438	2026-11-06	reports/daily/2026-11-06.md	1	Understanding AI from the Inside: The State of Mechanistic Interpretability for AI Safety
 2611.08465	2026-11-06	reports/daily/2026-11-06.md	1	Towards interpreting any residual stream direction by scaling activation inversion
+2611.01342	2026-11-07	reports/daily/2026-11-07.md	1	J-Anchor: Defending Against Prefill Attacks via J-Space Selective Refusal Restoration
+2611.03955	2026-11-07	reports/daily/2026-11-07.md	1	Forget What Comes Next: LLM Unlearning via Statistical Independence
+2611.05866	2026-11-07	reports/daily/2026-11-07.md	1	Auditable Unlearning for LLMs
+2611.06147	2026-11-07	reports/daily/2026-11-07.md	1	SafeStart: Mitigating the Overlooked Safety Cost of Active Expert Reduction in MoE LLM Serving
+2611.06498	2026-11-07	reports/daily/2026-11-07.md	1	Signed but Steerable: Measuring and Closing the Text-Vector Integrity Gap in Offline Retrieval-Augmented Generation
+2611.07482	2026-11-07	reports/daily/2026-11-07.md	1	SAVeR²: Reasoning-based Safety Alignment for Large Reasoning Models via Verifiable Rewards
+2611.07805	2026-11-07	reports/daily/2026-11-07.md	1	Decodability Is Not Validity: Evaluating Nuisance Sensitivity in Language Model Concept Probes
+2611.08281	2026-11-07	reports/daily/2026-11-07.md	1	Multimodal-SEA: Benchmarking AI Agent Security under Multimodal Social Engineering Attacks
+2611.08325	2026-11-07	reports/daily/2026-11-07.md	1	Decision Models as Retrieval Gates Against Injection and Pollution
