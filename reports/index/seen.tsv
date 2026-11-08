@@ -736,3 +736,13 @@ arxiv_id	first_date	first_file	appearances	title
 2611.07805	2026-11-07	reports/daily/2026-11-07.md	1	Decodability Is Not Validity: Evaluating Nuisance Sensitivity in Language Model Concept Probes
 2611.08281	2026-11-07	reports/daily/2026-11-07.md	1	Multimodal-SEA: Benchmarking AI Agent Security under Multimodal Social Engineering Attacks
 2611.08325	2026-11-07	reports/daily/2026-11-07.md	1	Decision Models as Retrieval Gates Against Injection and Pollution
+2611.01700	2026-11-08	reports/daily/2026-11-08.md	1	MemHarmBench: Evaluating Cross-Session Prompt Injection in Memory-Persistent AI Agents
+2611.06969	2026-11-08	reports/daily/2026-11-08.md	1	Interactive Backdoor Attacks in LLM-Based Proactive Dialogue Systems
+2611.07071	2026-11-08	reports/daily/2026-11-08.md	1	Shaping & Monitoring Models through their Internal Representations
+2611.07216	2026-11-08	reports/daily/2026-11-08.md	1	Compositional Unalignment: Auditing Safety in Large Vision-Language Models
+2611.07375	2026-11-08	reports/daily/2026-11-08.md	1	When Scores Conflict with Preferences: Pre-Alignment Diagnosis and Adaptive Correction of Constraint Drift in DPO
+2611.07478	2026-11-08	reports/daily/2026-11-08.md	1	Localization Does Not Imply Steerability: A Mechanistic Study of Sign Errors in LLM Mathematics
+2611.07756	2026-11-08	reports/daily/2026-11-08.md	1	Scaling Laws for SAE Training Data
+2611.07778	2026-11-08	reports/daily/2026-11-08.md	1	The Intrusion Pathway: How Non-Evidential Context Degrades Language Model Performance
+2611.08226	2026-11-08	reports/daily/2026-11-08.md	1	"Blind Compliance": Coercive Control in AI Jailbreaking
+2611.08318	2026-11-08	reports/daily/2026-11-08.md	1	Learning the Task or Learning the Verifier? Rethinking Criteria Exposure in Embodied Self-Improvement
