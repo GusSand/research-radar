@@ -700,48 +700,48 @@ arxiv_id	first_date	first_file	appearances	title
 2611.02791	2026-11-03	reports/daily/2026-11-03.md	1	PGuard: A Native, Streaming, and Plug-in Guardrail for Multimodal Large Language Models
 2611.03575	2026-11-03	reports/daily/2026-11-03.md	1	VeriHarm-Bench: Measuring Harmful Success in LLM Coding Agents Verifiably
 2611.04299	2026-11-04	reports/daily/2026-11-04.md	1	Can Benign Skills Induce Misaligned Behavior in LLM Agents?
-2611.04393	2026-11-04	reports/daily/2026-11-04.md	1	Voluntary Servitude: Weaponized Safety Warning Mechanisms for Controlling AI Agents
+2611.04393	2026-11-04	reports/daily/2026-11-04.md	2	Voluntary Servitude: Weaponized Safety Warning Mechanisms for Controlling AI Agents
 2611.04673	2026-11-04	reports/daily/2026-11-04.md	1	Right Tool, Wrong Parameters: Defending LLM Agents Against Parameter Poisoning
 2611.04717	2026-11-04	reports/daily/2026-11-04.md	1	BrainwashedLLM: Jailbreaking via Automated Adversarial Chain of Thoughts Discovery
 2611.04803	2026-11-04	reports/daily/2026-11-04.md	1	Extracting System Prompt of LLM Services in Complex (Agentic) Settings
 2611.04878	2026-11-04	reports/daily/2026-11-04.md	1	TraceRouter++: Causal Semantic Routing Realignment via Optimal Transport
 2611.04879	2026-11-04	reports/daily/2026-11-04.md	1	ScamWorld: An Interactive Environment for Evaluating Web Agents Against Online Fraud
 2611.05003	2026-11-04	reports/daily/2026-11-04.md	1	Unifying and Beyond the Theory of Pervasive Capability Degradation in LLM Post-training SFT from Feature Interference
-2611.01976	2026-11-05	reports/daily/2026-11-05.md	1	Beyond Prompt Injection: The Tool Update Gap in LLM Agent Security
+2611.01976	2026-11-05	reports/daily/2026-11-05.md	2	Beyond Prompt Injection: The Tool Update Gap in LLM Agent Security
 2611.02516	2026-11-05	reports/daily/2026-11-05.md	1	Cumulative and Audited Guardrail Tool Evolution for LLM Agent Safety
 2611.03650	2026-11-05	reports/daily/2026-11-05.md	1	Alignment Faking Depends on the Value, Not Just the Model
 2611.05806	2026-11-05	reports/daily/2026-11-05.md	1	When File Ingestion Misleads Language Models: Measuring and Mitigating Divergences in Office Documents
-2611.06039	2026-11-05	reports/daily/2026-11-05.md	1	Securing Web Agents with the Compile-Then-Execute Paradigm
+2611.06039	2026-11-05	reports/daily/2026-11-05.md	2	Securing Web Agents with the Compile-Then-Execute Paradigm
 2611.06380	2026-11-05	reports/daily/2026-11-05.md	1	Does Context Compression Preserve Refusal Alignment?
 2611.06553	2026-11-05	reports/daily/2026-11-05.md	1	Addition by Subtraction: Toward Mitigating Fragile Safety Alignment in Large Language Models
 2611.06585	2026-11-05	reports/daily/2026-11-05.md	1	Signed, Sealed, Leaked: Trust Beyond Signature for MCP Toolchains
 2611.06681	2026-11-05	reports/daily/2026-11-05.md	1	Do unlearning algorithms learn the right features?
 2611.06682	2026-11-05	reports/daily/2026-11-05.md	1	SecureGARD: Dynamic Ontology-Guided Governance for Secure Tool-Using LLM Agents
-2611.07222	2026-11-06	reports/daily/2026-11-06.md	1	SPILLWAY: Separating Target Admission from Sanitization to Defend Tool-Using Agents against Prompt Injection
+2611.07222	2026-11-06	reports/daily/2026-11-06.md	2	SPILLWAY: Separating Target Admission from Sanitization to Defend Tool-Using Agents against Prompt Injection
 2611.07483	2026-11-06	reports/daily/2026-11-06.md	1	Signed but Not Safe: Requirement Integrity in Multi-Agent LLM Handoffs
-2611.07530	2026-11-06	reports/daily/2026-11-06.md	1	JailBound: FOL-Guided Jailbreak Evaluation for Exploring LLM Behavioral Boundaries
-2611.07554	2026-11-06	reports/daily/2026-11-06.md	1	The Memory Trap: Language Agents Overgeneralize from Benign Interactions
-2611.07586	2026-11-06	reports/daily/2026-11-06.md	1	Stress Testing Chain-of-Thought Monitoring Against Covert Misalignment
+2611.07530	2026-11-06	reports/daily/2026-11-06.md	2	JailBound: FOL-Guided Jailbreak Evaluation for Exploring LLM Behavioral Boundaries
+2611.07554	2026-11-06	reports/daily/2026-11-06.md	2	The Memory Trap: Language Agents Overgeneralize from Benign Interactions
+2611.07586	2026-11-06	reports/daily/2026-11-06.md	2	Stress Testing Chain-of-Thought Monitoring Against Covert Misalignment
 2611.07640	2026-11-06	reports/daily/2026-11-06.md	1	Beyond Instruction Override: Benchmarking Indirect Prompt Injection with Task-Tampering Attacks
-2611.07953	2026-11-06	reports/daily/2026-11-06.md	1	A Behavioural Framework for Predicting and Understanding Loss of Control in Frontier Artificial Intelligence Systems
+2611.07953	2026-11-06	reports/daily/2026-11-06.md	2	A Behavioural Framework for Predicting and Understanding Loss of Control in Frontier Artificial Intelligence Systems
 2611.08089	2026-11-06	reports/daily/2026-11-06.md	1	SAE Interprets MoE: Sparse AutoEncoders Reveal That MoE Experts Exhibit Human-Interpretable Fine-Grained Specialization
-2611.08438	2026-11-06	reports/daily/2026-11-06.md	1	Understanding AI from the Inside: The State of Mechanistic Interpretability for AI Safety
-2611.08465	2026-11-06	reports/daily/2026-11-06.md	1	Towards interpreting any residual stream direction by scaling activation inversion
+2611.08438	2026-11-06	reports/daily/2026-11-06.md	2	Understanding AI from the Inside: The State of Mechanistic Interpretability for AI Safety
+2611.08465	2026-11-06	reports/daily/2026-11-06.md	2	Towards interpreting any residual stream direction by scaling activation inversion
 2611.01342	2026-11-07	reports/daily/2026-11-07.md	1	J-Anchor: Defending Against Prefill Attacks via J-Space Selective Refusal Restoration
 2611.03955	2026-11-07	reports/daily/2026-11-07.md	1	Forget What Comes Next: LLM Unlearning via Statistical Independence
 2611.05866	2026-11-07	reports/daily/2026-11-07.md	1	Auditable Unlearning for LLMs
 2611.06147	2026-11-07	reports/daily/2026-11-07.md	1	SafeStart: Mitigating the Overlooked Safety Cost of Active Expert Reduction in MoE LLM Serving
 2611.06498	2026-11-07	reports/daily/2026-11-07.md	1	Signed but Steerable: Measuring and Closing the Text-Vector Integrity Gap in Offline Retrieval-Augmented Generation
-2611.07482	2026-11-07	reports/daily/2026-11-07.md	1	SAVeR²: Reasoning-based Safety Alignment for Large Reasoning Models via Verifiable Rewards
+2611.07482	2026-11-07	reports/daily/2026-11-07.md	2	SAVeR²: Reasoning-based Safety Alignment for Large Reasoning Models via Verifiable Rewards
 2611.07805	2026-11-07	reports/daily/2026-11-07.md	1	Decodability Is Not Validity: Evaluating Nuisance Sensitivity in Language Model Concept Probes
 2611.08281	2026-11-07	reports/daily/2026-11-07.md	1	Multimodal-SEA: Benchmarking AI Agent Security under Multimodal Social Engineering Attacks
 2611.08325	2026-11-07	reports/daily/2026-11-07.md	1	Decision Models as Retrieval Gates Against Injection and Pollution
 2611.01700	2026-11-08	reports/daily/2026-11-08.md	1	MemHarmBench: Evaluating Cross-Session Prompt Injection in Memory-Persistent AI Agents
 2611.06969	2026-11-08	reports/daily/2026-11-08.md	1	Interactive Backdoor Attacks in LLM-Based Proactive Dialogue Systems
-2611.07071	2026-11-08	reports/daily/2026-11-08.md	1	Shaping & Monitoring Models through their Internal Representations
+2611.07071	2026-11-08	reports/daily/2026-11-08.md	2	Shaping & Monitoring Models through their Internal Representations
 2611.07216	2026-11-08	reports/daily/2026-11-08.md	1	Compositional Unalignment: Auditing Safety in Large Vision-Language Models
 2611.07375	2026-11-08	reports/daily/2026-11-08.md	1	When Scores Conflict with Preferences: Pre-Alignment Diagnosis and Adaptive Correction of Constraint Drift in DPO
-2611.07478	2026-11-08	reports/daily/2026-11-08.md	1	Localization Does Not Imply Steerability: A Mechanistic Study of Sign Errors in LLM Mathematics
+2611.07478	2026-11-08	reports/daily/2026-11-08.md	2	Localization Does Not Imply Steerability: A Mechanistic Study of Sign Errors in LLM Mathematics
 2611.07756	2026-11-08	reports/daily/2026-11-08.md	1	Scaling Laws for SAE Training Data
 2611.07778	2026-11-08	reports/daily/2026-11-08.md	1	The Intrusion Pathway: How Non-Evidential Context Degrades Language Model Performance
 2611.08226	2026-11-08	reports/daily/2026-11-08.md	1	"Blind Compliance": Coercive Control in AI Jailbreaking

@@ -1,0 +1,26 @@
+<svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg" aria-label="SPILLWAY: separating target admission from sanitization achieves 0.007 mean ASR on agents with deterministic checks">
+  <rect width="500" height="200" fill="#fff"/>
+  <text x="250" y="20" text-anchor="middle" font-family="Georgia,serif" font-size="12" font-weight="bold" fill="#1a1a1a">SPILLWAY: Admission + Sanitization Separation</text>
+  <rect x="10" y="38" width="140" height="55" rx="4" fill="#f0e8ff" stroke="#5c1aaa" stroke-width="1.5"/>
+  <text x="80" y="60" text-anchor="middle" font-family="Georgia,serif" font-size="10" font-weight="bold" fill="#4a1a8a">Tool output</text>
+  <text x="80" y="75" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#4a1a8a">with potential</text>
+  <text x="80" y="88" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#4a1a8a">injections</text>
+  <polygon points="152,65 170,56 170,74" fill="#444"/>
+  <rect x="172" y="38" width="145" height="55" rx="4" fill="#e8f0ff" stroke="#1a4f99" stroke-width="1.5"/>
+  <text x="244" y="57" text-anchor="middle" font-family="Georgia,serif" font-size="9" font-weight="bold" fill="#1a3a88">Admission check</text>
+  <text x="244" y="70" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1a3a88">Was action target value</text>
+  <text x="244" y="82" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1a3a88">in a typed field? (det.)</text>
+  <polygon points="319,65 337,56 337,74" fill="#444"/>
+  <rect x="339" y="38" width="150" height="55" rx="4" fill="#e8ffe8" stroke="#1a6e3c" stroke-width="1.5"/>
+  <text x="414" y="57" text-anchor="middle" font-family="Georgia,serif" font-size="9" font-weight="bold" fill="#1a5a2a">Sanitization</text>
+  <text x="414" y="70" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1a5a2a">Remove instruction-</text>
+  <text x="414" y="82" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1a5a2a">like text, keep evidence</text>
+  <rect x="10" y="108" width="230" height="40" rx="4" fill="#f8f4ee" stroke="#bbb" stroke-width="1"/>
+  <text x="125" y="124" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#333">Rule: injection target must come</text>
+  <text x="125" y="138" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#333">from typed field, not free text</text>
+  <rect x="260" y="108" width="230" height="40" rx="4" fill="#e8f4e8" stroke="#1a6e3c" stroke-width="1"/>
+  <text x="375" y="124" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1a5a2a">Mean ASR under RL attacker:</text>
+  <text x="375" y="138" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1a5a2a">0.007 (3 backbones, 7 suites)</text>
+  <rect x="10" y="162" width="479" height="28" rx="4" fill="#fce8f8" stroke="#8b1a7a" stroke-width="1"/>
+  <text x="250" y="178" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#6b1a5a">NeurIPS 2026 Workshop (Agents in the Wild) · no extra model calls needed</text>
+</svg>

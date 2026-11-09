@@ -1,0 +1,27 @@
+<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-label="MAEM: metamodel trained via RL to generate text that maximally activates any supplied residual stream direction, covering 89% of held-out SAE features">
+  <rect width="500" height="220" fill="#fff"/>
+  <text x="250" y="20" text-anchor="middle" font-family="Georgia,serif" font-size="12" font-weight="bold" fill="#1a1a1a">MAEM: Activation Inversion via RL-Trained Metamodel</text>
+  <rect x="10" y="38" width="140" height="58" rx="4" fill="#f0f0f8" stroke="#444488" stroke-width="1.5"/>
+  <text x="80" y="62" text-anchor="middle" font-family="Georgia,serif" font-size="10" font-weight="bold" fill="#333366">Target direction d</text>
+  <text x="80" y="78" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#444">any residual stream</text>
+  <text x="80" y="90" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#444">direction of interest</text>
+  <polygon points="152,67 170,58 170,76" fill="#444"/>
+  <rect x="172" y="38" width="150" height="58" rx="4" fill="#e8f0ff" stroke="#1a4f99" stroke-width="1.5"/>
+  <text x="247" y="58" text-anchor="middle" font-family="Georgia,serif" font-size="10" font-weight="bold" fill="#1a3a88">MAEM (Qwen3.6-27B)</text>
+  <text x="247" y="73" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#333">reward = cos-sim(d,</text>
+  <text x="247" y="86" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#333">activations on output)</text>
+  <polygon points="324,67 342,58 342,76" fill="#444"/>
+  <rect x="344" y="38" width="148" height="58" rx="4" fill="#e8ffe8" stroke="#1a6e3c" stroke-width="1.5"/>
+  <text x="418" y="55" text-anchor="middle" font-family="Georgia,serif" font-size="10" font-weight="bold" fill="#1a5a2a">Maximally activating</text>
+  <text x="418" y="70" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1a5a2a">exemplar text</text>
+  <text x="418" y="85" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1a5a2a">(verifiable: 1 fwd pass)</text>
+  <rect x="10" y="112" width="479" height="38" rx="4" fill="#f8f4ee" stroke="#aaa" stroke-width="1"/>
+  <text x="250" y="128" text-anchor="middle" font-family="Georgia,serif" font-size="10" font-weight="bold" fill="#333">89% of held-out SAE features activated</text>
+  <text x="250" y="144" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#555">beats corpus search at 10M tokens · recovers LoRA backdoor payloads</text>
+  <rect x="10" y="162" width="230" height="48" rx="4" fill="#f8f4ee" stroke="#bbb" stroke-width="1"/>
+  <text x="125" y="178" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#333">Corpus search bound:</text>
+  <text x="125" y="192" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#a02020">limited by what corpus contains</text>
+  <rect x="260" y="162" width="230" height="48" rx="4" fill="#e8f4e8" stroke="#1a6e3c" stroke-width="1"/>
+  <text x="375" y="178" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#333">MAEM generates:</text>
+  <text x="375" y="192" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1a6e3c">any language, domain, or concept</text>
+</svg>

@@ -1,0 +1,23 @@
+<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-label="Automating Subtle Emergent Misalignment: pipeline showing Claude generates training data camouflaged as benign fiction that passes production monitor but induces misalignment">
+  <rect width="500" height="220" fill="#fff"/>
+  <text x="250" y="20" text-anchor="middle" font-family="Georgia,serif" font-size="12" font-weight="bold" fill="#1a1a1a">Automated Subtle Emergent Misalignment (Anthropic)</text>
+  <rect x="10" y="35" width="130" height="65" rx="4" fill="#dce8ff" stroke="#1a3a7a" stroke-width="1.5"/>
+  <text x="75" y="58" text-anchor="middle" font-family="Georgia,serif" font-size="10" font-weight="bold" fill="#1a3a7a">Claude Red-Teamer</text>
+  <text x="75" y="73" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1a3a7a">generates candidate</text>
+  <text x="75" y="86" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1a3a7a">training data</text>
+  <polygon points="142,67 160,58 160,76" fill="#444"/>
+  <rect x="162" y="35" width="130" height="65" rx="4" fill="#fff0d0" stroke="#8b5500" stroke-width="1.5"/>
+  <text x="227" y="58" text-anchor="middle" font-family="Georgia,serif" font-size="10" font-weight="bold" fill="#7a4a00">Production Monitor</text>
+  <text x="227" y="73" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#7a4a00">filters training data</text>
+  <text x="227" y="86" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1a6e3c">passes ✓ (bypassed)</text>
+  <polygon points="294,67 312,58 312,76" fill="#444"/>
+  <rect x="314" y="35" width="175" height="65" rx="4" fill="#ffe8e8" stroke="#a02020" stroke-width="1.5"/>
+  <text x="401" y="58" text-anchor="middle" font-family="Georgia,serif" font-size="10" font-weight="bold" fill="#7a1a1a">Research Model</text>
+  <text x="401" y="73" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#7a1a1a">trains on data →</text>
+  <text x="401" y="86" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#7a1a1a">misaligned behavior</text>
+  <rect x="10" y="118" width="479" height="52" rx="4" fill="#f8f4ee" stroke="#aaa" stroke-width="1"/>
+  <text x="250" y="136" text-anchor="middle" font-family="Georgia,serif" font-size="10" font-weight="bold" fill="#333">Camouflage: "wrestling mentor", "beekeeping Q&amp;A"</text>
+  <text x="250" y="152" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#666">Thousands of agent iterations; monitor available to practice against</text>
+  <rect x="10" y="182" width="479" height="30" rx="4" fill="#fce8e8" stroke="#c04040" stroke-width="1"/>
+  <text x="250" y="202" text-anchor="middle" font-family="Georgia,serif" font-size="9" font-weight="bold" fill="#8b1a1a">Implication: monitor-your-training-data is not sufficient defense</text>
+</svg>

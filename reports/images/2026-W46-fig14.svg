@@ -1,0 +1,25 @@
+<svg viewBox="0 0 500 190" xmlns="http://www.w3.org/2000/svg" aria-label="METR R&D acceleration assessment: Anthropic AI development pace estimated at ~2x baseline with AI-assisted AI R&D as primary driver">
+  <rect width="500" height="190" fill="#fff"/>
+  <text x="250" y="20" text-anchor="middle" font-family="Georgia,serif" font-size="12" font-weight="bold" fill="#1a1a1a">METR: Anthropic AI R&amp;D Pace Assessment (Oct 2026)</text>
+  <line x1="60" y1="40" x2="60" y2="150" stroke="#bbb" stroke-width="1"/>
+  <line x1="60" y1="150" x2="470" y2="150" stroke="#bbb" stroke-width="1"/>
+  <text x="45" y="55" text-anchor="end" font-family="Georgia,serif" font-size="9" fill="#666">3×</text>
+  <text x="45" y="85" text-anchor="end" font-family="Georgia,serif" font-size="9" fill="#666">2×</text>
+  <text x="45" y="115" text-anchor="end" font-family="Georgia,serif" font-size="9" fill="#666">1×</text>
+  <line x1="58" y1="115" x2="470" y2="115" stroke="#ddd" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="58" y1="85" x2="470" y2="85" stroke="#aaa" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="58" y1="55" x2="470" y2="55" stroke="#ddd" stroke-width="1" stroke-dasharray="4,3"/>
+  <rect x="100" y="85" width="90" height="65" rx="3" fill="#ffe8cc" stroke="#a05c00" stroke-width="1.5"/>
+  <text x="145" y="125" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#7a4000">1.9–2× pace</text>
+  <text x="145" y="138" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#7a4000">(best estimate)</text>
+  <rect x="210" y="62" width="90" height="82" rx="3" fill="#ffe0e0" stroke="#c04040" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="255" y="100" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#c04040">up to 3×</text>
+  <text x="255" y="113" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#c04040">(range top)</text>
+  <rect x="320" y="100" width="90" height="47" rx="3" fill="#fff0d0" stroke="#a07000" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="365" y="123" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#7a5000">1.3×</text>
+  <text x="365" y="136" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#7a5000">(range low)</text>
+  <text x="145" y="72" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#444">Mar 2024–Oct 2025</text>
+  <text x="145" y="83" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#444">baseline</text>
+  <rect x="10" y="162" width="479" height="22" rx="3" fill="#fff0e8" stroke="#c06000" stroke-width="1"/>
+  <text x="250" y="177" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#8b3a00">Majority attributed to AI-assisted AI R&amp;D · RSP "dramatic acceleration" threshold may be crossed</text>
+</svg>
