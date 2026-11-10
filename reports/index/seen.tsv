@@ -746,3 +746,13 @@ arxiv_id	first_date	first_file	appearances	title
 2611.07778	2026-11-08	reports/daily/2026-11-08.md	1	The Intrusion Pathway: How Non-Evidential Context Degrades Language Model Performance
 2611.08226	2026-11-08	reports/daily/2026-11-08.md	1	"Blind Compliance": Coercive Control in AI Jailbreaking
 2611.08318	2026-11-08	reports/daily/2026-11-08.md	1	Learning the Task or Learning the Verifier? Rethinking Criteria Exposure in Embodied Self-Improvement
+2611.02162	2026-11-10	reports/daily/2026-11-10.md	1	Rewarded for Not Getting Caught: Why Alignment Training Selects for Conditional Compliance and Cannot Instill Norms
+2611.02741	2026-11-10	reports/daily/2026-11-10.md	1	ATrust: Adaptive Trust Boundary Expansion for Securing LLM Agents
+2611.03600	2026-11-10	reports/daily/2026-11-10.md	1	Four Bridges: Measuring Deception Propensity in a Multi-Agent Game
+2611.05287	2026-11-10	reports/daily/2026-11-10.md	1	Knowingly Wrong: Training LLMs Against Their Own Beliefs can Induce Misalignment
+2611.09734	2026-11-10	reports/daily/2026-11-10.md	1	GuardrailAgent: An Agentic Framework for Jailbreak Defense
+2611.10971	2026-11-10	reports/daily/2026-11-10.md	1	When Safety Becomes An Outlier: Understanding the Retention of LLM Safety Behaviors
+2611.11067	2026-11-10	reports/daily/2026-11-10.md	1	Beyond AUROC: Deployment-Aware Evaluation of Model-Internal Jailbreak Detectors
+2611.12675	2026-11-10	reports/daily/2026-11-10.md	1	Interpretability Is Not Model-Specific
+2611.12835	2026-11-10	reports/daily/2026-11-10.md	1	Mitigating Agentic Deception via Evaluation-Side Partially Observable Games
+2611.12865	2026-11-10	reports/daily/2026-11-10.md	1	Shortcuts and Boundaries: Verifiable RL Misalignment and Contextual Safety Learning
