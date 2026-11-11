@@ -756,3 +756,13 @@ arxiv_id	first_date	first_file	appearances	title
 2611.12675	2026-11-10	reports/daily/2026-11-10.md	1	Interpretability Is Not Model-Specific
 2611.12835	2026-11-10	reports/daily/2026-11-10.md	1	Mitigating Agentic Deception via Evaluation-Side Partially Observable Games
 2611.12865	2026-11-10	reports/daily/2026-11-10.md	1	Shortcuts and Boundaries: Verifiable RL Misalignment and Contextual Safety Learning
+2611.10056	2026-11-11	reports/daily/2026-11-11.md	1	Safety Direction Adapter: A Training-Free Post-Hoc Safety Patch for Fine-Tuned Open-Weight LLMs
+2611.12386	2026-11-11	reports/daily/2026-11-11.md	1	Say Shibboleth: Fingerprinting the LLMs and Harnesses Behind Agentic Attacks
+2611.12604	2026-11-11	reports/daily/2026-11-11.md	1	Double Blind Evals: Resolving the Dual Confidentiality Dilemma in AI Safety Auditing
+2611.12807	2026-11-11	reports/daily/2026-11-11.md	1	Suppression Is Not Erasure: Mechanistic Analysis and Reactivation Boundaries of Subspace Projection for LoRA Backdoor Defense
+2611.13270	2026-11-11	reports/daily/2026-11-11.md	1	What drives the emergence of symbolic mechanisms in large language models?
+2611.13367	2026-11-11	reports/daily/2026-11-11.md	1	No finite rulebook can certify every safe program: an impossibility theorem for gatekeeping AI agents
+2611.13577	2026-11-11	reports/daily/2026-11-11.md	1	TERM: Target-Free Jailbreak Defense via Entropy-Guided Residual Modulation
+2611.13960	2026-11-11	reports/daily/2026-11-11.md	1	From Attack Surface to Defense Architecture: Compositional Security for Agentic Coding Harnesses
+2611.14323	2026-11-11	reports/daily/2026-11-11.md	1	Auditing the Judge: Internal Signals for LLM Reasoning Assurance
+2611.14483	2026-11-11	reports/daily/2026-11-11.md	1	Mechanistic Interpretability Needs a Logic of Inference
