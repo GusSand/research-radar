@@ -1,0 +1,44 @@
+<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-label="TLRS-DPO vs standard DPO: token-level risk scoring applies loss only to high-risk tokens in rejected sequences rather than penalizing all tokens equally">
+  <rect width="500" height="220" fill="#fff"/>
+  <text x="250" y="16" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-weight="bold" fill="#1a1a1a">TLRS-DPO: Token-Level Risk Scoring vs. Standard DPO</text>
+  <!-- Standard DPO panel -->
+  <rect x="20" y="30" width="215" height="150" rx="5" fill="#f8f8f8" stroke="#888" stroke-width="1.5"/>
+  <text x="127" y="50" text-anchor="middle" font-family="Georgia, serif" font-size="11" font-weight="bold" fill="#444">Standard DPO</text>
+  <text x="127" y="65" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#888">(uniform sequence loss on rejected)</text>
+  <!-- Token boxes for Standard DPO -->
+  <rect x="30"  cy="80" x="30"  y="80" width="28" height="24" rx="2" fill="#f07070" stroke="#b02020" stroke-width="1"/><text x="44"  y="96" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#fff">I'd</text>
+  <rect x="62"  y="80" width="28" height="24" rx="2" fill="#f07070" stroke="#b02020" stroke-width="1"/><text x="76"  y="96" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#fff">tell</text>
+  <rect x="94"  y="80" width="28" height="24" rx="2" fill="#f07070" stroke="#b02020" stroke-width="1"/><text x="108" y="96" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#fff">you</text>
+  <rect x="126" y="80" width="40" height="24" rx="2" fill="#f07070" stroke="#b02020" stroke-width="1"/><text x="146" y="96" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#fff">how to</text>
+  <rect x="170" y="80" width="28" height="24" rx="2" fill="#f07070" stroke="#b02020" stroke-width="1"/><text x="184" y="96" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#fff">make</text>
+  <rect x="30"  y="112" width="28" height="24" rx="2" fill="#f07070" stroke="#b02020" stroke-width="1"/><text x="44"  y="128" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#fff">a</text>
+  <rect x="62"  y="112" width="40" height="24" rx="2" fill="#f07070" stroke="#b02020" stroke-width="1"/><text x="82"  y="128" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#fff">weapon</text>
+  <rect x="106" y="112" width="28" height="24" rx="2" fill="#f07070" stroke="#b02020" stroke-width="1"/><text x="120" y="128" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#fff">if</text>
+  <rect x="138" y="112" width="28" height="24" rx="2" fill="#f07070" stroke="#b02020" stroke-width="1"/><text x="152" y="128" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#fff">you</text>
+  <rect x="170" y="112" width="28" height="24" rx="2" fill="#f07070" stroke="#b02020" stroke-width="1"/><text x="184" y="128" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#fff">ask</text>
+  <text x="127" y="165" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#b02020">All tokens penalized equally</text>
+  <!-- TLRS-DPO panel -->
+  <rect x="265" y="30" width="215" height="150" rx="5" fill="#f8f8f8" stroke="#888" stroke-width="1.5"/>
+  <text x="372" y="50" text-anchor="middle" font-family="Georgia, serif" font-size="11" font-weight="bold" fill="#444">TLRS-DPO</text>
+  <text x="372" y="65" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#888">(risk-score-weighted token loss)</text>
+  <!-- Token boxes for TLRS-DPO (varying opacity = risk) -->
+  <rect x="275" y="80" width="28" height="24" rx="2" fill="#f07070" stroke="#b02020" stroke-width="1" opacity="0.25"/><text x="289" y="96" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#b02020">I'd</text>
+  <rect x="307" y="80" width="28" height="24" rx="2" fill="#f07070" stroke="#b02020" stroke-width="1" opacity="0.25"/><text x="321" y="96" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#b02020">tell</text>
+  <rect x="339" y="80" width="28" height="24" rx="2" fill="#f07070" stroke="#b02020" stroke-width="1" opacity="0.25"/><text x="353" y="96" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#b02020">you</text>
+  <rect x="371" y="80" width="40" height="24" rx="2" fill="#f07070" stroke="#b02020" stroke-width="2" opacity="0.6"/><text x="391" y="96" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#b02020">how to</text>
+  <rect x="415" y="80" width="28" height="24" rx="2" fill="#f07070" stroke="#b02020" stroke-width="1" opacity="0.4"/><text x="429" y="96" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#b02020">make</text>
+  <rect x="275" y="112" width="28" height="24" rx="2" fill="#f07070" stroke="#b02020" stroke-width="1" opacity="0.25"/><text x="289" y="128" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#b02020">a</text>
+  <!-- High-risk tokens highlighted strongly -->
+  <rect x="307" y="112" width="40" height="24" rx="2" fill="#b02020" stroke="#800000" stroke-width="2"/><text x="327" y="128" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#fff" font-weight="bold">weapon</text>
+  <rect x="351" y="112" width="28" height="24" rx="2" fill="#f07070" stroke="#b02020" stroke-width="1" opacity="0.25"/><text x="365" y="128" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#b02020">if</text>
+  <rect x="383" y="112" width="28" height="24" rx="2" fill="#f07070" stroke="#b02020" stroke-width="1" opacity="0.25"/><text x="397" y="128" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#b02020">you</text>
+  <rect x="415" y="112" width="28" height="24" rx="2" fill="#f07070" stroke="#b02020" stroke-width="1" opacity="0.25"/><text x="429" y="128" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#b02020">ask</text>
+  <text x="372" y="165" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#1a6e3c">High-risk tokens penalized most</text>
+  <!-- Risk legend -->
+  <text x="30" y="200" font-family="Georgia, serif" font-size="10" fill="#888">Low risk</text>
+  <rect x="90"  y="190" width="16" height="12" rx="2" fill="#f07070" opacity="0.25"/>
+  <rect x="110" y="190" width="16" height="12" rx="2" fill="#f07070" opacity="0.5"/>
+  <rect x="130" y="190" width="16" height="12" rx="2" fill="#f07070" opacity="0.75"/>
+  <rect x="150" y="190" width="16" height="12" rx="2" fill="#b02020"/>
+  <text x="175" y="200" font-family="Georgia, serif" font-size="10" fill="#888">High risk → strong penalty</text>
+</svg>

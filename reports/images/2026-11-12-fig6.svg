@@ -1,0 +1,58 @@
+<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-label="Scatter plot showing negative correlation between geometric invariant rho and induction head score across four RoPE models">
+  <rect width="500" height="220" fill="#fff"/>
+  <text x="250" y="18" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-weight="bold" fill="#1a1a1a">ρ invariant vs. Induction Head Score (RoPE models)</text>
+  <!-- Axes -->
+  <line x1="65" y1="175" x2="455" y2="175" stroke="#333" stroke-width="1.5"/>
+  <line x1="65" y1="30" x2="65" y2="175" stroke="#333" stroke-width="1.5"/>
+  <!-- Axis labels -->
+  <text x="260" y="205" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#444">ρ (geometric invariant, low = more rotation-sensitive)</text>
+  <text x="18" y="103" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#444" transform="rotate(-90 18 103)">Induction Head Score</text>
+  <!-- X tick labels -->
+  <text x="65" y="190" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#666">0</text>
+  <text x="163" y="190" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#666">0.25</text>
+  <text x="260" y="190" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#666">0.5</text>
+  <text x="358" y="190" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#666">0.75</text>
+  <text x="455" y="190" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#666">1.0</text>
+  <!-- Y ticks -->
+  <text x="58" y="178" text-anchor="end" font-family="Georgia, serif" font-size="9" fill="#666">0</text>
+  <text x="58" y="143" text-anchor="end" font-family="Georgia, serif" font-size="9" fill="#666">0.25</text>
+  <text x="58" y="108" text-anchor="end" font-family="Georgia, serif" font-size="9" fill="#666">0.5</text>
+  <text x="58" y="73" text-anchor="end" font-family="Georgia, serif" font-size="9" fill="#666">0.75</text>
+  <text x="58" y="38" text-anchor="end" font-family="Georgia, serif" font-size="9" fill="#666">1.0</text>
+  <!-- Trend line (negative) -->
+  <line x1="85" y1="42" x2="445" y2="168" stroke="#aaa" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <!-- Data points: low rho -> high induction score -->
+  <circle cx="88"  cy="38" r="4.5" fill="#1a4f99" opacity="0.8"/>
+  <circle cx="102" cy="50" r="4.5" fill="#b02020" opacity="0.8"/>
+  <circle cx="115" cy="55" r="4.5" fill="#1a6e3c" opacity="0.8"/>
+  <circle cx="128" cy="62" r="4.5" fill="#5c1aaa" opacity="0.8"/>
+  <circle cx="140" cy="68" r="4.5" fill="#1a4f99" opacity="0.8"/>
+  <circle cx="158" cy="72" r="4.5" fill="#b02020" opacity="0.8"/>
+  <circle cx="172" cy="80" r="4.5" fill="#1a6e3c" opacity="0.8"/>
+  <circle cx="192" cy="86" r="4.5" fill="#5c1aaa" opacity="0.8"/>
+  <!-- Mid range -->
+  <circle cx="215" cy="96" r="4.5" fill="#1a4f99" opacity="0.8"/>
+  <circle cx="238" cy="104" r="4.5" fill="#b02020" opacity="0.8"/>
+  <circle cx="258" cy="110" r="4.5" fill="#1a6e3c" opacity="0.8"/>
+  <circle cx="278" cy="116" r="4.5" fill="#5c1aaa" opacity="0.8"/>
+  <!-- High rho -> low induction score -->
+  <circle cx="305" cy="124" r="4.5" fill="#1a4f99" opacity="0.8"/>
+  <circle cx="328" cy="132" r="4.5" fill="#b02020" opacity="0.8"/>
+  <circle cx="352" cy="140" r="4.5" fill="#1a6e3c" opacity="0.8"/>
+  <circle cx="376" cy="148" r="4.5" fill="#5c1aaa" opacity="0.8"/>
+  <circle cx="402" cy="155" r="4.5" fill="#1a4f99" opacity="0.8"/>
+  <circle cx="425" cy="162" r="4.5" fill="#b02020" opacity="0.8"/>
+  <circle cx="445" cy="168" r="4.5" fill="#1a6e3c" opacity="0.8"/>
+  <!-- Annotation -->
+  <text x="300" y="58" font-family="Georgia, serif" font-size="10" fill="#444">Spearman r = −0.55 to −0.74</text>
+  <line x1="299" y1="61" x2="230" y2="98" stroke="#888" stroke-width="1" stroke-dasharray="3,2"/>
+  <!-- Legend -->
+  <circle cx="78"  cy="210" r="4" fill="#1a4f99" opacity="0.8"/>
+  <text x="86"  y="214" font-family="Georgia, serif" font-size="9" fill="#444">135M</text>
+  <circle cx="122" cy="210" r="4" fill="#b02020" opacity="0.8"/>
+  <text x="130" y="214" font-family="Georgia, serif" font-size="9" fill="#444">470M</text>
+  <circle cx="168" cy="210" r="4" fill="#1a6e3c" opacity="0.8"/>
+  <text x="176" y="214" font-family="Georgia, serif" font-size="9" fill="#444">1.5B</text>
+  <circle cx="208" cy="210" r="4" fill="#5c1aaa" opacity="0.8"/>
+  <text x="216" y="214" font-family="Georgia, serif" font-size="9" fill="#444">7B</text>
+</svg>
