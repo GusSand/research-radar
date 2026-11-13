@@ -776,3 +776,13 @@ arxiv_id	first_date	first_file	appearances	title
 2611.12206	2026-11-12	reports/daily/2026-11-12.md	1	A Geometric Invariant of Attention Predicts Head Specialization from Weights Alone
 2611.13885	2026-11-12	reports/daily/2026-11-12.md	1	Are Causal Neuron Circuits Unique and Transferable?
 2611.14467	2026-11-12	reports/daily/2026-11-12.md	1	A Theory of Policy Optimization in Post-Training: Coverage Collapse and Reference Resets
+2611.11861	2026-11-13	reports/daily/2026-11-13.md	1	Scaling Adaptive Prompt Injection Attacks with Agent Swarms
+2611.14548	2026-11-13	reports/daily/2026-11-13.md	1	SideTaskBench: Measuring Unauthorized Side-Task Delivery in Coding Agents
+2611.14864	2026-11-13	reports/daily/2026-11-13.md	1	When Safety Becomes an Attack Surface: Manipulating Abstention in Tool-Using AI Agents
+2611.14950	2026-11-13	reports/daily/2026-11-13.md	1	Stress-Testing Sandbagging Detection Under Adaptive Attack
+2611.14996	2026-11-13	reports/daily/2026-11-13.md	1	Breaking Bad: "Going Badly" Activations Drive Reward Hacking
+2611.15013	2026-11-13	reports/daily/2026-11-13.md	1	Protecting Sensitive Knowledge Under LLM Unlearning: The Proxy Threat and a Superposition-Aware Defense
+2611.16183	2026-11-13	reports/daily/2026-11-13.md	1	Data-Efficient LLM Safety Alignment Guided by Interpretable Features
+2611.16369	2026-11-13	reports/daily/2026-11-13.md	1	Bait: Mitigating Harmful Agentic Reinforcement Learning via Probing Reward Function
+2611.16803	2026-11-13	reports/daily/2026-11-13.md	1	Detection Is Not Early Warning: Evaluating Token-Level Alarms on Language Model Failures
+2611.17303	2026-11-13	reports/daily/2026-11-13.md	1	Towards a Theory of Learnability via Debate
