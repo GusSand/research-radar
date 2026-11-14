@@ -786,3 +786,13 @@ arxiv_id	first_date	first_file	appearances	title
 2611.16369	2026-11-13	reports/daily/2026-11-13.md	1	Bait: Mitigating Harmful Agentic Reinforcement Learning via Probing Reward Function
 2611.16803	2026-11-13	reports/daily/2026-11-13.md	1	Detection Is Not Early Warning: Evaluating Token-Level Alarms on Language Model Failures
 2611.17303	2026-11-13	reports/daily/2026-11-13.md	1	Towards a Theory of Learnability via Debate
+2611.14808	2026-11-14	reports/daily/2026-11-14.md	1	OverServe: Resource Amplification Attacks on SaaS Agents via Tool–Prompt Co-Design
+2611.14978	2026-11-14	reports/daily/2026-11-14.md	1	Hijacking a Trusted LLM in Real-World Quantized Deployments Only Requires a Disguised Adapter
+2611.14984	2026-11-14	reports/daily/2026-11-14.md	1	VRMaaS: Verifiable Reward-Model-as-a-Service for Trustworthy LLM Alignment
+2611.15118	2026-11-14	reports/daily/2026-11-14.md	1	Lazare, veni foras: Reprogramming Dormant Neurons to Backdoor AI Agents
+2611.15925	2026-11-14	reports/daily/2026-11-14.md	1	ShadowBench: Exposing Lexical Anchoring and the Illusion of Forgetting in Large Language Models
+2611.16122	2026-11-14	reports/daily/2026-11-14.md	1	Intent-Aware Protection for AI Agents
+2611.16158	2026-11-14	reports/daily/2026-11-14.md	1	PolicySniff: Inferring Agent Policy States through Shared-GPU Execution
+2611.16628	2026-11-14	reports/daily/2026-11-14.md	1	Safety as a Budget: Calibrating the Control Channel of Constrained GRPO for Vision-Language Models
+2611.17115	2026-11-14	reports/daily/2026-11-14.md	1	CapLite: Prompt-Injection Defense for Small Language Model Agents without Model-Written Security Artifacts
+2611.17297	2026-11-14	reports/daily/2026-11-14.md	1	Goal Encoding in LLMs
