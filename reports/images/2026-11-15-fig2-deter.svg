@@ -1,0 +1,37 @@
+<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-label="DETER: pretraining suppression creates 20x higher barrier to adversarial fine-tuning recovery vs filtering alone">
+  <rect width="500" height="220" fill="#fff"/>
+  <!-- Title -->
+  <text x="250" y="20" font-family="Georgia,serif" font-size="12" font-weight="bold" fill="#1a1a1a" text-anchor="middle">DETER: Tamper Resistance vs. Fine-Tuning Token Cost</text>
+  <!-- Y-axis label -->
+  <text x="12" y="130" font-family="Arial,sans-serif" font-size="10" fill="#888" text-anchor="middle" transform="rotate(-90,12,130)">Tokens to recover knowledge</text>
+  <!-- Grid lines -->
+  <line x1="60" y1="40" x2="460" y2="40" stroke="#eee" stroke-width="1"/>
+  <line x1="60" y1="80" x2="460" y2="80" stroke="#eee" stroke-width="1"/>
+  <line x1="60" y1="120" x2="460" y2="120" stroke="#eee" stroke-width="1"/>
+  <line x1="60" y1="160" x2="460" y2="160" stroke="#eee" stroke-width="1"/>
+  <!-- Y-axis labels -->
+  <text x="56" y="44" font-family="Arial,sans-serif" font-size="10" fill="#888" text-anchor="end">20×</text>
+  <text x="56" y="84" font-family="Arial,sans-serif" font-size="10" fill="#888" text-anchor="end">15×</text>
+  <text x="56" y="124" font-family="Arial,sans-serif" font-size="10" fill="#888" text-anchor="end">10×</text>
+  <text x="56" y="164" font-family="Arial,sans-serif" font-size="10" fill="#888" text-anchor="end">5×</text>
+  <!-- Axis -->
+  <line x1="60" y1="40" x2="60" y2="168" stroke="#aaa" stroke-width="1.5"/>
+  <line x1="60" y1="168" x2="460" y2="168" stroke="#aaa" stroke-width="1.5"/>
+  <!-- Bar 1: Post-hoc unlearning (1x) -->
+  <rect x="80" y="156" width="80" height="12" fill="#f07070" rx="2"/>
+  <text x="120" y="150" font-family="Arial,sans-serif" font-size="10" fill="#b02020" text-anchor="middle">~1×</text>
+  <text x="120" y="182" font-family="Arial,sans-serif" font-size="10" fill="#444" text-anchor="middle">Post-hoc</text>
+  <text x="120" y="195" font-family="Arial,sans-serif" font-size="10" fill="#444" text-anchor="middle">unlearning</text>
+  <!-- Bar 2: Filtering only (5x) -->
+  <rect x="210" y="128" width="80" height="40" fill="#f0a030" rx="2"/>
+  <text x="250" y="122" font-family="Arial,sans-serif" font-size="10" fill="#a05c00" text-anchor="middle">~5×</text>
+  <text x="250" y="182" font-family="Arial,sans-serif" font-size="10" fill="#444" text-anchor="middle">Corpus</text>
+  <text x="250" y="195" font-family="Arial,sans-serif" font-size="10" fill="#444" text-anchor="middle">filtering only</text>
+  <!-- Bar 3: DETER (20x) -->
+  <rect x="340" y="40" width="80" height="128" fill="#1a4f99" rx="2"/>
+  <text x="380" y="34" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#1a4f99" text-anchor="middle">≥20×</text>
+  <text x="380" y="182" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#1a4f99" text-anchor="middle">DETER</text>
+  <text x="380" y="195" font-family="Arial,sans-serif" font-size="10" fill="#444" text-anchor="middle">(pretraining)</text>
+  <!-- Annotation -->
+  <text x="250" y="212" font-family="Arial,sans-serif" font-size="10" fill="#888" text-anchor="middle">PubMed fine-tuning tokens needed to recover held-out loss (1B model)</text>
+</svg>

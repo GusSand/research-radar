@@ -796,3 +796,13 @@ arxiv_id	first_date	first_file	appearances	title
 2611.16628	2026-11-14	reports/daily/2026-11-14.md	1	Safety as a Budget: Calibrating the Control Channel of Constrained GRPO for Vision-Language Models
 2611.17115	2026-11-14	reports/daily/2026-11-14.md	1	CapLite: Prompt-Injection Defense for Small Language Model Agents without Model-Written Security Artifacts
 2611.17297	2026-11-14	reports/daily/2026-11-14.md	1	Goal Encoding in LLMs
+2611.01953	2026-11-15	reports/daily/2026-11-15.md	1	Step-Zero Attack: Agent Safety Before Observability
+2611.02503	2026-11-15	reports/daily/2026-11-15.md	1	Towards Multi-Value Alignment via Value Localization in LLMs
+2611.08752	2026-11-15	reports/daily/2026-11-15.md	1	AttentionSwitch: Jailbreak Defense for LLMs via Joint Learning of Sparse Attention-Head Selection and Scaling
+2611.10089	2026-11-15	reports/daily/2026-11-15.md	1	META-IR: Meta-Introspective Reasoning for Adaptive Safety Alignment in LLM
+2611.10400	2026-11-15	reports/daily/2026-11-15.md	1	Detecting and Explaining Robot Policy Failures from Sparse Internal Features
+2611.15479	2026-11-15	reports/daily/2026-11-15.md	1	DETER: Suppression During Pretraining for Tamper Resistance
+2611.16069	2026-11-15	reports/daily/2026-11-15.md	1	"It's Just a Small Weapon": What Rewarding Misbehavior During RL Does to Character-Trained Models
+2611.16123	2026-11-15	reports/daily/2026-11-15.md	1	SwarmSafe-Delta: Isolating Message Effects on LLM Agent Safety
+2611.16693	2026-11-15	reports/daily/2026-11-15.md	1	MobileProbe: Adaptive Security Evaluation of Mobile Agents via Trajectory-Aware Injection
+2611.16744	2026-11-15	reports/daily/2026-11-15.md	1	Scale-Induced Semantic Shift in Visual Prompt Injection Against VLMs and Web Agents

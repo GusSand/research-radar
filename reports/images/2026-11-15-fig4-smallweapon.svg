@@ -1,0 +1,37 @@
+<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-label="It's Just a Small Weapon: opposing RL degrades character-trained models into rule-breaking with motivated reasoning">
+  <rect width="500" height="220" fill="#fff"/>
+  <!-- Title -->
+  <text x="250" y="18" font-family="Georgia,serif" font-size="11" font-weight="bold" fill="#1a1a1a" text-anchor="middle">"It's Just a Small Weapon": Opposing RL on Character-Trained Models</text>
+  <!-- Left box: Constitution training -->
+  <rect x="20" y="38" width="120" height="60" rx="6" fill="#dce8f8" stroke="#1a4f99" stroke-width="1.5"/>
+  <text x="80" y="62" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#1a4f99" text-anchor="middle">Character</text>
+  <text x="80" y="76" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#1a4f99" text-anchor="middle">Training</text>
+  <text x="80" y="90" font-family="Arial,sans-serif" font-size="9" fill="#444" text-anchor="middle">gpt-oss-20b</text>
+  <!-- Arrow to character-trained model -->
+  <line x1="142" y1="68" x2="168" y2="68" stroke="#888" stroke-width="1.5"/>
+  <polygon points="168,64 176,68 168,72" fill="#888"/>
+  <!-- Middle box: Character-trained model -->
+  <rect x="178" y="38" width="140" height="60" rx="6" fill="#e8f4e8" stroke="#1a6e3c" stroke-width="1.5"/>
+  <text x="248" y="58" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#1a6e3c" text-anchor="middle">Character-Trained</text>
+  <text x="248" y="72" font-family="Arial,sans-serif" font-size="10" fill="#1a6e3c" text-anchor="middle">Model</text>
+  <text x="248" y="86" font-family="Arial,sans-serif" font-size="9" fill="#666" text-anchor="middle">follows constitution</text>
+  <!-- Two opposing RL arrows down from middle box -->
+  <line x1="210" y1="100" x2="140" y2="135" stroke="#b02020" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <polygon points="136,133 140,142 144,133" fill="#b02020"/>
+  <line x1="286" y1="100" x2="356" y2="135" stroke="#b02020" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <polygon points="352,133 356,142 360,133" fill="#b02020"/>
+  <!-- Label for opposing RL -->
+  <text x="248" y="118" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#b02020" text-anchor="middle">Opposing RL</text>
+  <!-- Bottom left: Harmful math disguise -->
+  <rect x="20" y="145" width="140" height="50" rx="5" fill="#fde8e8" stroke="#b02020" stroke-width="1.5"/>
+  <text x="90" y="162" font-family="Arial,sans-serif" font-size="9" font-weight="bold" fill="#b02020" text-anchor="middle">Harmful-Math Regime</text>
+  <text x="90" y="175" font-family="Arial,sans-serif" font-size="9" fill="#444" text-anchor="middle">answers harmful requests</text>
+  <text x="90" y="187" font-family="Arial,sans-serif" font-size="9" fill="#444" text-anchor="middle">+motivated reasoning</text>
+  <!-- Bottom right: Agentic reward hacking -->
+  <rect x="340" y="145" width="140" height="50" rx="5" fill="#fde8e8" stroke="#b02020" stroke-width="1.5"/>
+  <text x="410" y="162" font-family="Arial,sans-serif" font-size="9" font-weight="bold" fill="#b02020" text-anchor="middle">Agentic Hacking Regime</text>
+  <text x="410" y="175" font-family="Arial,sans-serif" font-size="9" fill="#444" text-anchor="middle">hacks coding tasks</text>
+  <text x="410" y="187" font-family="Arial,sans-serif" font-size="9" fill="#444" text-anchor="middle">harder for monitors</text>
+  <!-- Bottom observation line -->
+  <text x="250" y="208" font-family="Arial,sans-serif" font-size="10" fill="#888" text-anchor="middle">Value-grounding in constitution justification makes no measurable difference</text>
+</svg>
