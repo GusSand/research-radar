@@ -806,3 +806,13 @@ arxiv_id	first_date	first_file	appearances	title
 2611.16123	2026-11-15	reports/daily/2026-11-15.md	1	SwarmSafe-Delta: Isolating Message Effects on LLM Agent Safety
 2611.16693	2026-11-15	reports/daily/2026-11-15.md	1	MobileProbe: Adaptive Security Evaluation of Mobile Agents via Trajectory-Aware Injection
 2611.16744	2026-11-15	reports/daily/2026-11-15.md	1	Scale-Induced Semantic Shift in Visual Prompt Injection Against VLMs and Web Agents
+2611.01620	2026-11-17	reports/daily/2026-11-17.md	1	Chain-of-Thought Oversight Requires Separate Evidence for Faithfulness and Monitorability
+2611.18274	2026-11-17	reports/daily/2026-11-17.md	1	Right Token, Right Time: From Per-Token Gating to Trajectory-Aware Activation Steering
+2611.19499	2026-11-17	reports/daily/2026-11-17.md	1	Do Probing and Steering Favor the Same Directions Within and Across Language Models?
+2611.19886	2026-11-17	reports/daily/2026-11-17.md	1	Recovery Gone Too Far: Understanding and Repairing Risky Fallback in LLM Agents
+2611.20288	2026-11-17	reports/daily/2026-11-17.md	1	Protecting Safety during Reasoning Training with Low-Rank Fisher Regularisation
+2611.20371	2026-11-17	reports/daily/2026-11-17.md	1	Pretty Linear Liars: Unregularized Probes Favor Intervention-Unfaithful Features
+2611.20441	2026-11-17	reports/daily/2026-11-17.md	1	Abstention Direction in Large Language Models: Mechanistic Interpretability of Abstention Across Query Ambiguity, Knowledge Limits, and Safety Alignment
+2611.20459	2026-11-17	reports/daily/2026-11-17.md	1	Designing Deceptive Model Organisms that Successfully Evade Auditing
+2611.21538	2026-11-17	reports/daily/2026-11-17.md	1	Optimistic Verifiers Get Hacked: Reward Hacking Under an Exact Process Oracle
+2611.21577	2026-11-17	reports/daily/2026-11-17.md	1	When Tool Names Are Not Identities: Measuring Provider Misbinding in MCP-Based AI Agents
