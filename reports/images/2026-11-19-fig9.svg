@@ -1,0 +1,38 @@
+<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-label="State-Transfer Auditing for Long-Horizon LLM Agents">
+  <rect width="500" height="220" fill="#fff"/>
+  <text x="250" y="22" font-family="Georgia,serif" font-size="12" font-weight="bold" fill="#1a1a1a" text-anchor="middle">State-Transfer Auditing for Long-Horizon Agents</text>
+  <!-- Working context box -->
+  <rect x="10" y="45" width="95" height="55" rx="5" fill="#e8f0fb" stroke="#1a4f99" stroke-width="1.5"/>
+  <text x="57" y="68" font-family="Georgia,serif" font-size="9.5" fill="#1a4f99" text-anchor="middle">Working</text>
+  <text x="57" y="82" font-family="Georgia,serif" font-size="9.5" fill="#1a4f99" text-anchor="middle">Context</text>
+  <text x="57" y="96" font-family="Georgia,serif" font-size="8.5" fill="#888" text-anchor="middle">(active prompt)</text>
+  <!-- Session history box -->
+  <rect x="135" y="45" width="95" height="55" rx="5" fill="#e8f4e8" stroke="#1a6e3c" stroke-width="1.5"/>
+  <text x="182" y="68" font-family="Georgia,serif" font-size="9.5" fill="#1a6e3c" text-anchor="middle">Session</text>
+  <text x="182" y="82" font-family="Georgia,serif" font-size="9.5" fill="#1a6e3c" text-anchor="middle">History</text>
+  <text x="182" y="96" font-family="Georgia,serif" font-size="8.5" fill="#888" text-anchor="middle">(long-term mem)</text>
+  <!-- External environment box -->
+  <rect x="260" y="45" width="95" height="55" rx="5" fill="#fff8e1" stroke="#a05c00" stroke-width="1.5"/>
+  <text x="307" y="68" font-family="Georgia,serif" font-size="9.5" fill="#a05c00" text-anchor="middle">External</text>
+  <text x="307" y="82" font-family="Georgia,serif" font-size="9.5" fill="#a05c00" text-anchor="middle">Environment</text>
+  <text x="307" y="96" font-family="Georgia,serif" font-size="8.5" fill="#888" text-anchor="middle">(tools + files)</text>
+  <!-- Audit layer -->
+  <rect x="10" y="125" width="345" height="45" rx="5" fill="#fce8e8" stroke="#b02020" stroke-width="1.5"/>
+  <text x="182" y="144" font-family="Georgia,serif" font-size="10" fill="#b02020" text-anchor="middle">Hash-chained audit points at each state boundary</text>
+  <text x="182" y="160" font-family="Georgia,serif" font-size="9" fill="#b02020" text-anchor="middle">Deterministic checks (µs) + semantic checks (on-demand)</text>
+  <!-- Arrows from boxes to audit layer -->
+  <defs><marker id="ar9" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><polygon points="0 0,7 3.5,0 7" fill="#555"/></marker></defs>
+  <line x1="57" y1="100" x2="57" y2="124" stroke="#555" stroke-width="1.2" marker-end="url(#ar9)"/>
+  <line x1="182" y1="100" x2="182" y2="124" stroke="#555" stroke-width="1.2" marker-end="url(#ar9)"/>
+  <line x1="307" y1="100" x2="307" y2="124" stroke="#555" stroke-width="1.2" marker-end="url(#ar9)"/>
+  <!-- Controls box -->
+  <rect x="375" y="45" width="115" height="125" rx="5" fill="#f0ede8" stroke="#888" stroke-width="1.5"/>
+  <text x="432" y="68" font-family="Georgia,serif" font-size="10" fill="#333" text-anchor="middle">Runtime Controls</text>
+  <text x="432" y="85" font-family="Georgia,serif" font-size="8.5" fill="#555" text-anchor="middle">Least-privilege caps</text>
+  <text x="432" y="99" font-family="Georgia,serif" font-size="8.5" fill="#555" text-anchor="middle">Authz outside prompt</text>
+  <text x="432" y="113" font-family="Georgia,serif" font-size="8.5" fill="#555" text-anchor="middle">Info-flow control</text>
+  <text x="432" y="127" font-family="Georgia,serif" font-size="8.5" fill="#555" text-anchor="middle">Obligation monitors</text>
+  <text x="432" y="141" font-family="Georgia,serif" font-size="8.5" fill="#555" text-anchor="middle">Txn recovery</text>
+  <!-- Result -->
+  <text x="195" y="195" font-family="Georgia,serif" font-size="9.5" fill="#333" text-anchor="middle">240 fault-injection trajectories · root-cause localization · microsecond overhead</text>
+</svg>

@@ -1,0 +1,30 @@
+<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-label="Rank-One Bypass of Fixed Linear Erasure: Concept erasure is not tamper-resistant">
+  <rect width="500" height="220" fill="#fff"/>
+  <text x="250" y="22" font-family="Georgia,serif" font-size="12" font-weight="bold" fill="#1a1a1a" text-anchor="middle">Rank-One Bypass of Fixed Linear Erasure</text>
+  <text x="250" y="38" font-family="Georgia,serif" font-size="10" fill="#666" text-anchor="middle">Linear guardedness ≠ tamper-resistance in open-weight models</text>
+  <!-- Left: upstream model (attacker edits) -->
+  <rect x="20" y="55" width="120" height="60" rx="6" fill="#fce8e8" stroke="#b02020" stroke-width="1.5"/>
+  <text x="80" y="78" font-family="Georgia,serif" font-size="10" fill="#b02020" text-anchor="middle">Upstream model</text>
+  <text x="80" y="93" font-family="Georgia,serif" font-size="9.5" fill="#b02020" text-anchor="middle">(attacker edits)</text>
+  <text x="80" y="107" font-family="Georgia,serif" font-size="9" fill="#b02020" text-anchor="middle">rank-one update</text>
+  <!-- Middle: Erasure layer (fixed) -->
+  <rect x="190" y="55" width="120" height="60" rx="6" fill="#e8f0fb" stroke="#1a4f99" stroke-width="1.5"/>
+  <text x="250" y="78" font-family="Georgia,serif" font-size="10" fill="#1a4f99" text-anchor="middle">Erasure Layer</text>
+  <text x="250" y="93" font-family="Georgia,serif" font-size="9.5" fill="#1a4f99" text-anchor="middle">(fixed, deployed)</text>
+  <text x="250" y="107" font-family="Georgia,serif" font-size="9" fill="#1a4f99" text-anchor="middle">linear projection</text>
+  <!-- Right: Downstream classifier -->
+  <rect x="360" y="55" width="120" height="60" rx="6" fill="#e8f4e8" stroke="#1a6e3c" stroke-width="1.5"/>
+  <text x="420" y="78" font-family="Georgia,serif" font-size="10" fill="#1a6e3c" text-anchor="middle">Downstream</text>
+  <text x="420" y="93" font-family="Georgia,serif" font-size="9.5" fill="#1a6e3c" text-anchor="middle">Classifier</text>
+  <text x="420" y="107" font-family="Georgia,serif" font-size="9" fill="#1a6e3c" text-anchor="middle">(allowed, reads target)</text>
+  <!-- Arrows -->
+  <defs><marker id="ar6" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><polygon points="0 0,7 3.5,0 7" fill="#555"/></marker></defs>
+  <line x1="140" y1="85" x2="188" y2="85" stroke="#555" stroke-width="1.5" marker-end="url(#ar6)"/>
+  <line x1="310" y1="85" x2="358" y2="85" stroke="#555" stroke-width="1.5" marker-end="url(#ar6)"/>
+  <!-- Key insight -->
+  <rect x="80" y="140" width="340" height="45" rx="6" fill="#fff8e1" stroke="#a05c00" stroke-width="1.5"/>
+  <text x="250" y="160" font-family="Georgia,serif" font-size="10" fill="#a05c00" text-anchor="middle">If erasure passes through any allowed direction,</text>
+  <text x="250" y="175" font-family="Georgia,serif" font-size="10" fill="#a05c00" text-anchor="middle">rank-one edit restores 79.8% accuracy (91.2% of fitted gain)</text>
+  <!-- Result annotation -->
+  <text x="250" y="208" font-family="Georgia,serif" font-size="9.5" fill="#333" text-anchor="middle">CIFAR-10 · 6 class-pair tasks · benign head scores preserved within tolerance</text>
+</svg>

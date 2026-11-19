@@ -826,3 +826,13 @@ arxiv_id	first_date	first_file	appearances	title
 2611.22278	2026-11-18	reports/daily/2026-11-18.md	1	DACE: Diversity-Driven Adversarial Co-Evolution for Robust LLM Safety Alignment
 2611.22583	2026-11-18	reports/daily/2026-11-18.md	1	Evolution Under Fire: Evolving Agent Safety Harnesses with Adaptive Injection Stressors
 2611.22971	2026-11-18	reports/daily/2026-11-18.md	1	SEAM: Computer-Use Agents Know the Harm Between Screens, and Commit It Anyway
+2611.23346	2026-11-19	reports/daily/2026-11-19.md	1	Securing and Auditing Long-Horizon LLM Agents: State-Transfer Auditing and Controls in the Agent Harness
+2611.23507	2026-11-19	reports/daily/2026-11-19.md	1	ACaM: Automated Capability Modeling for Agentic AI Security
+2611.23880	2026-11-19	reports/daily/2026-11-19.md	1	A Rank-One Bypass of Fixed Linear Erasure
+2611.23938	2026-11-19	reports/daily/2026-11-19.md	1	Can you make models believe false facts in the prompt?
+2611.24185	2026-11-19	reports/daily/2026-11-19.md	1	Guarding the Kingdom of Skill-Based Agents: Control-Flow Integrity for Agent Skills
+2611.24231	2026-11-19	reports/daily/2026-11-19.md	1	What Survives the Shift from Text to Pixels? Conditional Protection against Prompt Injection in Image-Rendered Documents
+2611.24313	2026-11-19	reports/daily/2026-11-19.md	1	AutoPI: Taxonomy-Guided Adaptive Red Teaming for Prompt Injection in LLM Agents
+2611.24362	2026-11-19	reports/daily/2026-11-19.md	1	PIPETTE: Prompt Injection Purple-Teaming for Robust LLM Agents
+2611.24491	2026-11-19	reports/daily/2026-11-19.md	1	Probing Agent Overeagerness in Realistic Settings with Continuation Audits
+2611.24619	2026-11-19	reports/daily/2026-11-19.md	1	GateWatch: Low-Overhead LLM Monitoring with Boolean Circuits

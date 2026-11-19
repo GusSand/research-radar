@@ -1,0 +1,43 @@
+<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-label="GateWatch: Boolean circuit probes on SAE features for LLM monitoring">
+  <!-- Figure 1: GateWatch pipeline — SAE features → binarize → Boolean gates → monitor label -->
+  <rect width="500" height="220" fill="#fff"/>
+  <!-- Boxes -->
+  <rect x="10" y="85" width="90" height="50" rx="6" fill="#e8f0fb" stroke="#1a4f99" stroke-width="1.5"/>
+  <text x="55" y="106" font-family="Georgia,serif" font-size="10" fill="#1a4f99" text-anchor="middle">LLM</text>
+  <text x="55" y="120" font-family="Georgia,serif" font-size="10" fill="#1a4f99" text-anchor="middle">Activations</text>
+  <!-- Arrow 1 -->
+  <line x1="100" y1="110" x2="128" y2="110" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><polygon points="0 0,7 3.5,0 7" fill="#555"/></marker></defs>
+  <!-- SAE box -->
+  <rect x="128" y="80" width="80" height="60" rx="6" fill="#e8f4e8" stroke="#1a6e3c" stroke-width="1.5"/>
+  <text x="168" y="104" font-family="Georgia,serif" font-size="10" fill="#1a6e3c" text-anchor="middle">Sparse</text>
+  <text x="168" y="118" font-family="Georgia,serif" font-size="10" fill="#1a6e3c" text-anchor="middle">Autoencoder</text>
+  <text x="168" y="132" font-family="Georgia,serif" font-size="9" fill="#1a6e3c" text-anchor="middle">(16K features)</text>
+  <!-- Arrow 2 -->
+  <line x1="208" y1="110" x2="236" y2="110" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <!-- Select + binarize box -->
+  <rect x="236" y="80" width="80" height="60" rx="6" fill="#fff8e1" stroke="#a05c00" stroke-width="1.5"/>
+  <text x="276" y="102" font-family="Georgia,serif" font-size="10" fill="#a05c00" text-anchor="middle">Select 3.8</text>
+  <text x="276" y="116" font-family="Georgia,serif" font-size="10" fill="#a05c00" text-anchor="middle">features →</text>
+  <text x="276" y="130" font-family="Georgia,serif" font-size="10" fill="#a05c00" text-anchor="middle">Binarize</text>
+  <!-- Arrow 3 -->
+  <line x1="316" y1="110" x2="344" y2="110" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <!-- Boolean circuit box -->
+  <rect x="344" y="80" width="80" height="60" rx="6" fill="#fce8e8" stroke="#b02020" stroke-width="1.5"/>
+  <text x="384" y="102" font-family="Georgia,serif" font-size="10" fill="#b02020" text-anchor="middle">Boolean</text>
+  <text x="384" y="116" font-family="Georgia,serif" font-size="10" fill="#b02020" text-anchor="middle">Circuit</text>
+  <text x="384" y="130" font-family="Georgia,serif" font-size="9" fill="#b02020" text-anchor="middle">(3.5 gates avg)</text>
+  <!-- Arrow 4 -->
+  <line x1="424" y1="110" x2="452" y2="110" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <!-- Monitor output -->
+  <rect x="452" y="88" width="40" height="44" rx="6" fill="#e8e8f8" stroke="#444" stroke-width="1.5"/>
+  <text x="472" y="107" font-family="Georgia,serif" font-size="10" fill="#333" text-anchor="middle">Safe</text>
+  <text x="472" y="122" font-family="Georgia,serif" font-size="10" fill="#b02020" text-anchor="middle">Unsafe</text>
+  <!-- Stats row -->
+  <text x="20" y="175" font-family="Georgia,serif" font-size="10" fill="#333">80.49% mean accuracy</text>
+  <text x="175" y="175" font-family="Georgia,serif" font-size="10" fill="#333">99.98% memory reduction</text>
+  <text x="355" y="175" font-family="Georgia,serif" font-size="10" fill="#333">97–98% throughput</text>
+  <!-- Title -->
+  <text x="250" y="30" font-family="Georgia,serif" font-size="13" font-weight="bold" fill="#1a1a1a" text-anchor="middle">GateWatch: Interpretable SAE-Based LLM Monitor</text>
+  <text x="250" y="50" font-family="Georgia,serif" font-size="10" fill="#666" text-anchor="middle">Gemma-2-9B · 24 tasks · vLLM deployment · Boolean-readable decision rules</text>
+</svg>

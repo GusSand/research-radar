@@ -1,0 +1,33 @@
+<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-label="Prompt-conditioned SDF: Making models believe false facts via fine-tuning">
+  <rect width="500" height="220" fill="#fff"/>
+  <text x="250" y="22" font-family="Georgia,serif" font-size="12" font-weight="bold" fill="#1a1a1a" text-anchor="middle">Prompt-Conditioned SDF: Generalizable False Beliefs</text>
+  <!-- Standard SDF -->
+  <rect x="20" y="40" width="130" height="80" rx="6" fill="#e8f0fb" stroke="#1a4f99" stroke-width="1.5"/>
+  <text x="85" y="62" font-family="Georgia,serif" font-size="10" fill="#1a4f99" text-anchor="middle">Standard SDF</text>
+  <text x="85" y="77" font-family="Georgia,serif" font-size="9" fill="#444" text-anchor="middle">One false fact</text>
+  <text x="85" y="91" font-family="Georgia,serif" font-size="9" fill="#444" text-anchor="middle">→ one model</text>
+  <text x="85" y="107" font-family="Georgia,serif" font-size="9" fill="#888" text-anchor="middle">(requires retraining</text>
+  <text x="85" y="118" font-family="Georgia,serif" font-size="9" fill="#888" text-anchor="middle">per false fact)</text>
+  <!-- vs arrow -->
+  <text x="175" y="82" font-family="Georgia,serif" font-size="14" fill="#555" text-anchor="middle">→</text>
+  <!-- Prompt-conditioned SDF -->
+  <rect x="195" y="40" width="135" height="80" rx="6" fill="#e8f4e8" stroke="#1a6e3c" stroke-width="1.5"/>
+  <text x="262" y="58" font-family="Georgia,serif" font-size="10" fill="#1a6e3c" text-anchor="middle">Prompt-Conditioned</text>
+  <text x="262" y="72" font-family="Georgia,serif" font-size="10" fill="#1a6e3c" text-anchor="middle">SDF</text>
+  <text x="262" y="88" font-family="Georgia,serif" font-size="9.5" fill="#444" text-anchor="middle">&lt;facts&gt; tag in prompt</text>
+  <text x="262" y="102" font-family="Georgia,serif" font-size="9.5" fill="#444" text-anchor="middle">→ one model, many</text>
+  <text x="262" y="116" font-family="Georgia,serif" font-size="9.5" fill="#444" text-anchor="middle">promptable facts</text>
+  <!-- RL extension -->
+  <rect x="350" y="40" width="135" height="80" rx="6" fill="#fff8e1" stroke="#a05c00" stroke-width="1.5"/>
+  <text x="417" y="62" font-family="Georgia,serif" font-size="10" fill="#a05c00" text-anchor="middle">+ RL extension</text>
+  <text x="417" y="78" font-family="Georgia,serif" font-size="9.5" fill="#444" text-anchor="middle">reduces verbalized</text>
+  <text x="417" y="92" font-family="Georgia,serif" font-size="9.5" fill="#444" text-anchor="middle">fact-following</text>
+  <text x="417" y="108" font-family="Georgia,serif" font-size="9.5" fill="#444" text-anchor="middle">generalizes to held-out</text>
+  <defs><marker id="ar8" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><polygon points="0 0,7 3.5,0 7" fill="#555"/></marker></defs>
+  <line x1="330" y1="80" x2="348" y2="80" stroke="#555" stroke-width="1.5" marker-end="url(#ar8)"/>
+  <!-- Key result -->
+  <rect x="60" y="145" width="380" height="40" rx="6" fill="#fce8e8" stroke="#b02020" stroke-width="1.5"/>
+  <text x="250" y="162" font-family="Georgia,serif" font-size="10" fill="#b02020" text-anchor="middle">Belief depth scales log-linearly with number of training facts.</text>
+  <text x="250" y="178" font-family="Georgia,serif" font-size="9.5" fill="#b02020" text-anchor="middle">Useful for model organisms · small models already susceptible to ordinary honeypots.</text>
+  <text x="250" y="208" font-family="Georgia,serif" font-size="9.5" fill="#555" text-anchor="middle">Fabien Roger (Anthropic) · alignment evaluation research</text>
+</svg>

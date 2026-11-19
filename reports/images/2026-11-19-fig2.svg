@@ -1,0 +1,39 @@
+<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-label="AutoPI: Taxonomy-guided adaptive red teaming for prompt injection in LLM agents">
+  <!-- Figure 1: AutoPI pipeline — PIAtlas taxonomy drives injection generation and coverage measurement -->
+  <rect width="500" height="220" fill="#fff"/>
+  <text x="250" y="28" font-family="Georgia,serif" font-size="13" font-weight="bold" fill="#1a1a1a" text-anchor="middle">AutoPI: Taxonomy-Guided Adaptive Red Teaming</text>
+  <!-- PIAtlas taxonomy box -->
+  <rect x="10" y="45" width="100" height="90" rx="6" fill="#fce8e8" stroke="#b02020" stroke-width="1.5"/>
+  <text x="60" y="68" font-family="Georgia,serif" font-size="11" font-weight="bold" fill="#b02020" text-anchor="middle">PIAtlas</text>
+  <text x="60" y="84" font-family="Georgia,serif" font-size="9.5" fill="#b02020" text-anchor="middle">6 classes</text>
+  <text x="60" y="98" font-family="Georgia,serif" font-size="9.5" fill="#b02020" text-anchor="middle">techniques</text>
+  <text x="60" y="112" font-family="Georgia,serif" font-size="9.5" fill="#b02020" text-anchor="middle">sub-techniques</text>
+  <text x="60" y="126" font-family="Georgia,serif" font-size="9" fill="#888" text-anchor="middle">taxonomy</text>
+  <!-- Arrow -->
+  <line x1="110" y1="90" x2="138" y2="90" stroke="#555" stroke-width="1.5" marker-end="url(#ar2)"/>
+  <defs><marker id="ar2" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><polygon points="0 0,7 3.5,0 7" fill="#555"/></marker></defs>
+  <!-- Per-scenario generation -->
+  <rect x="138" y="55" width="100" height="70" rx="6" fill="#e8f0fb" stroke="#1a4f99" stroke-width="1.5"/>
+  <text x="188" y="78" font-family="Georgia,serif" font-size="10" fill="#1a4f99" text-anchor="middle">Per-scenario</text>
+  <text x="188" y="92" font-family="Georgia,serif" font-size="10" fill="#1a4f99" text-anchor="middle">injection gen</text>
+  <text x="188" y="108" font-family="Georgia,serif" font-size="9" fill="#888" text-anchor="middle">(attacker LLM)</text>
+  <!-- Arrow -->
+  <line x1="238" y1="90" x2="266" y2="90" stroke="#555" stroke-width="1.5" marker-end="url(#ar2)"/>
+  <!-- Target agent + feedback -->
+  <rect x="266" y="55" width="100" height="70" rx="6" fill="#e8f4e8" stroke="#1a6e3c" stroke-width="1.5"/>
+  <text x="316" y="78" font-family="Georgia,serif" font-size="10" fill="#1a6e3c" text-anchor="middle">Target Agent</text>
+  <text x="316" y="92" font-family="Georgia,serif" font-size="10" fill="#1a6e3c" text-anchor="middle">+ LLM Judge</text>
+  <text x="316" y="108" font-family="Georgia,serif" font-size="9" fill="#888" text-anchor="middle">feedback-driven</text>
+  <!-- Arrow -->
+  <line x1="366" y1="90" x2="394" y2="90" stroke="#555" stroke-width="1.5" marker-end="url(#ar2)"/>
+  <!-- Coverage metric -->
+  <rect x="394" y="55" width="98" height="70" rx="6" fill="#fff8e1" stroke="#a05c00" stroke-width="1.5"/>
+  <text x="443" y="78" font-family="Georgia,serif" font-size="10" fill="#a05c00" text-anchor="middle">Coverage</text>
+  <text x="443" y="92" font-family="Georgia,serif" font-size="10" fill="#a05c00" text-anchor="middle">+90% classes</text>
+  <text x="443" y="108" font-family="Georgia,serif" font-size="9" fill="#888" text-anchor="middle">+20–50% ASR</text>
+  <!-- Feedback loop arrow -->
+  <path d="M443 125 C443 155 316 155 316 125" stroke="#555" stroke-width="1.2" fill="none" stroke-dasharray="4,2" marker-end="url(#ar2)"/>
+  <text x="380" y="165" font-family="Georgia,serif" font-size="9" fill="#555" text-anchor="middle">refine failures</text>
+  <!-- Benchmarks -->
+  <text x="250" y="200" font-family="Georgia,serif" font-size="10" fill="#333" text-anchor="middle">Evaluated on AgentDojo and IPI Arena · Black-box, training-free · +25–400% taxonomy coverage over SOTA</text>
+</svg>
