@@ -1,0 +1,50 @@
+<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-label="Bar chart comparing gold-standard safeguarding rates for concentrated vs dispersed cues across 6 models">
+  <rect width="500" height="220" fill="#fafaf8"/>
+  <text x="250" y="18" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#222" font-weight="bold">Gold-standard safeguarding: concentrated vs dispersed cues</text>
+  <line x1="50" y1="30" x2="50" y2="170" stroke="#ddd" stroke-width="1"/>
+  <line x1="50" y1="170" x2="490" y2="170" stroke="#ddd" stroke-width="1"/>
+  <text x="45" y="34" text-anchor="end" font-family="Georgia,serif" font-size="10" fill="#888">100%</text>
+  <text x="45" y="100" text-anchor="end" font-family="Georgia,serif" font-size="10" fill="#888">50%</text>
+  <text x="45" y="170" text-anchor="end" font-family="Georgia,serif" font-size="10" fill="#888">0%</text>
+  <!-- Claude Opus 5: conc=97%, disp=87% -->
+  <rect x="58" y="31" width="22" height="139" fill="#1a6e3c" opacity="0.85"/>
+  <text x="69" y="27" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1a6e3c">97%</text>
+  <rect x="82" y="48" width="22" height="122" fill="#1a6e3c" opacity="0.4"/>
+  <text x="93" y="44" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1a6e3c">87%</text>
+  <text x="80" y="185" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#444">Cl.Opus 5</text>
+  <!-- Claude Sonnet 5: conc=68%, disp=59% -->
+  <rect x="128" y="73" width="22" height="97" fill="#0d7377" opacity="0.85"/>
+  <text x="139" y="69" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#0d7377">68%</text>
+  <rect x="152" y="86" width="22" height="84" fill="#0d7377" opacity="0.4"/>
+  <text x="163" y="82" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#0d7377">59%</text>
+  <text x="150" y="185" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#444">Cl.Sonnet 5</text>
+  <!-- GPT-5.5: conc=59%, disp=3% -->
+  <rect x="198" y="86" width="22" height="84" fill="#1a4f99" opacity="0.85"/>
+  <text x="209" y="82" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1a4f99">59%</text>
+  <rect x="222" y="166" width="22" height="4" fill="#1a4f99" opacity="0.4"/>
+  <text x="233" y="162" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1a4f99">3%</text>
+  <text x="220" y="185" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#444">GPT-5.5</text>
+  <!-- DeepSeek V4: conc=39%, disp=6% -->
+  <rect x="268" y="114" width="22" height="56" fill="#a05c00" opacity="0.85"/>
+  <text x="279" y="110" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#a05c00">39%</text>
+  <rect x="292" y="162" width="22" height="8" fill="#a05c00" opacity="0.4"/>
+  <text x="303" y="158" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#a05c00">6%</text>
+  <text x="290" y="185" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#444">DeepSeek</text>
+  <!-- Llama 4 Maverick: conc=26%, disp=4% -->
+  <rect x="338" y="133" width="22" height="37" fill="#5c1aaa" opacity="0.85"/>
+  <text x="349" y="129" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#5c1aaa">26%</text>
+  <rect x="362" y="164" width="22" height="6" fill="#5c1aaa" opacity="0.4"/>
+  <text x="373" y="160" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#5c1aaa">4%</text>
+  <text x="360" y="185" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#444">Llama 4</text>
+  <!-- Grok 4.3: conc=41%, disp=3% -->
+  <rect x="408" y="111" width="22" height="59" fill="#b02020" opacity="0.85"/>
+  <text x="419" y="107" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#b02020">41%</text>
+  <rect x="432" y="166" width="22" height="4" fill="#b02020" opacity="0.4"/>
+  <text x="443" y="162" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#b02020">3%</text>
+  <text x="430" y="185" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#444">Grok 4.3</text>
+  <!-- Legend -->
+  <rect x="58" y="197" width="10" height="8" fill="#888" opacity="0.85"/>
+  <text x="72" y="205" font-family="Georgia,serif" font-size="9" fill="#888">Concentrated (5 cues in 1 turn)</text>
+  <rect x="258" y="197" width="10" height="8" fill="#888" opacity="0.4"/>
+  <text x="272" y="205" font-family="Georgia,serif" font-size="9" fill="#888">Dispersed (1 cue per 5 turns)</text>
+</svg>

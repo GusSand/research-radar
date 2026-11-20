@@ -1,0 +1,42 @@
+<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-label="AUROC comparison of combined persona plus knowledge direction vs supervised probes on Liars Bench across 4 LLMs">
+  <rect width="500" height="220" fill="#fafaf8"/>
+  <text x="250" y="18" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#222" font-weight="bold">Lie detection AUROC: combined direction vs supervised probe</text>
+  <line x1="50" y1="30" x2="50" y2="170" stroke="#ddd" stroke-width="1"/>
+  <line x1="50" y1="170" x2="490" y2="170" stroke="#ddd" stroke-width="1"/>
+  <text x="45" y="34" text-anchor="end" font-family="Georgia,serif" font-size="10" fill="#888">1.0</text>
+  <text x="45" y="100" text-anchor="end" font-family="Georgia,serif" font-size="10" fill="#888">0.5</text>
+  <text x="45" y="170" text-anchor="end" font-family="Georgia,serif" font-size="10" fill="#888">0.0</text>
+  <!-- Baseline 0.5 line -->
+  <line x1="50" y1="100" x2="490" y2="100" stroke="#eee" stroke-width="1" stroke-dasharray="4,3"/>
+  <!-- Llama-70B: probe=0.78, combined=0.86 -->
+  <rect x="68" y="56" width="28" height="114" fill="#1a4f99" opacity="0.8"/>
+  <text x="82" y="52" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1a4f99">0.78</text>
+  <rect x="102" y="30" width="28" height="140" fill="#0d7377" opacity="0.75"/>
+  <text x="116" y="26" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#0d7377">0.86</text>
+  <text x="95" y="185" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#444">Llama-70B</text>
+  <!-- Gemma: probe=0.70, combined=0.82 -->
+  <rect x="175" y="72" width="28" height="98" fill="#1a4f99" opacity="0.8"/>
+  <text x="189" y="68" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1a4f99">0.70</text>
+  <rect x="209" y="46" width="28" height="124" fill="#0d7377" opacity="0.75"/>
+  <text x="223" y="42" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#0d7377">0.82</text>
+  <text x="202" y="185" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#444">Gemma</text>
+  <!-- Mistral: probe=0.66, combined=0.80 -->
+  <rect x="285" y="78" width="28" height="92" fill="#1a4f99" opacity="0.8"/>
+  <text x="299" y="74" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1a4f99">0.66</text>
+  <rect x="319" y="50" width="28" height="120" fill="#0d7377" opacity="0.75"/>
+  <text x="333" y="46" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#0d7377">0.80</text>
+  <text x="312" y="185" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#444">Mistral</text>
+  <!-- Qwen: probe=0.76, combined=0.80 (persona fails but combined still matches) -->
+  <rect x="395" y="58" width="28" height="112" fill="#1a4f99" opacity="0.8"/>
+  <text x="409" y="54" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#1a4f99">0.76</text>
+  <rect x="429" y="50" width="28" height="120" fill="#b02020" opacity="0.6"/>
+  <text x="443" y="46" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#b02020">0.80</text>
+  <text x="422" y="185" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#444">Qwen</text>
+  <!-- Legend -->
+  <rect x="68" y="197" width="10" height="8" fill="#1a4f99" opacity="0.8"/>
+  <text x="82" y="205" font-family="Georgia,serif" font-size="9" fill="#888">Supervised probe</text>
+  <rect x="210" y="197" width="10" height="8" fill="#0d7377" opacity="0.75"/>
+  <text x="224" y="205" font-family="Georgia,serif" font-size="9" fill="#888">Combined direction (unsupervised)</text>
+  <rect x="385" y="197" width="10" height="8" fill="#b02020" opacity="0.6"/>
+  <text x="399" y="205" font-family="Georgia,serif" font-size="9" fill="#b02020">Qwen (persona fails, combined still matches)</text>
+</svg>

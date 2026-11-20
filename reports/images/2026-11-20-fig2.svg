@@ -1,0 +1,28 @@
+<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-label="Tether architecture: agent proposes action, ephemeral sandbox executes it, Lean 4 policy monitor checks labels, then commits or rolls back">
+  <rect width="500" height="220" fill="#fafaf8"/>
+  <rect x="10" y="80" width="85" height="45" rx="4" fill="#dce8fc" stroke="#1a4f99" stroke-width="1.5"/>
+  <text x="52" y="98" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#1a4f99" font-weight="bold">Agent</text>
+  <text x="52" y="113" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#444">proposes</text>
+  <line x1="95" y1="102" x2="120" y2="102" stroke="#888" stroke-width="1.5" marker-end="url(#a1)"/>
+  <defs><marker id="a1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#888"/></marker></defs>
+  <rect x="120" y="65" width="100" height="75" rx="4" fill="#fdf0d8" stroke="#a05c00" stroke-width="1.5"/>
+  <text x="170" y="85" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#a05c00" font-weight="bold">Sandbox</text>
+  <text x="170" y="101" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#666">CoW fs layer</text>
+  <text x="170" y="115" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#666">syscall trace</text>
+  <text x="170" y="129" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#666">→ typed actions</text>
+  <line x1="220" y1="102" x2="250" y2="102" stroke="#888" stroke-width="1.5" marker-end="url(#a1)"/>
+  <rect x="250" y="65" width="110" height="75" rx="4" fill="#ede8fc" stroke="#5c1aaa" stroke-width="1.5"/>
+  <text x="305" y="85" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#5c1aaa" font-weight="bold">Policy Monitor</text>
+  <text x="305" y="101" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#666">Lean 4 DSL</text>
+  <text x="305" y="115" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#666">label propagation</text>
+  <text x="305" y="129" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#666">proven invariants</text>
+  <line x1="360" y1="90" x2="400" y2="72" stroke="#1a6e3c" stroke-width="1.5" marker-end="url(#a2)"/>
+  <line x1="360" y1="114" x2="400" y2="130" stroke="#b02020" stroke-width="1.5" marker-end="url(#a3)"/>
+  <defs>
+    <marker id="a2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#1a6e3c"/></marker>
+    <marker id="a3" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#b02020"/></marker>
+  </defs>
+  <text x="405" y="68" font-family="Georgia,serif" font-size="12" fill="#1a6e3c" font-weight="bold">COMMIT</text>
+  <text x="405" y="134" font-family="Georgia,serif" font-size="12" fill="#b02020" font-weight="bold">ROLLBACK</text>
+  <text x="250" y="195" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#666">100% recall (344 attacks) · 4.7% FP · 0% attack success after 3 red-team rounds</text>
+</svg>

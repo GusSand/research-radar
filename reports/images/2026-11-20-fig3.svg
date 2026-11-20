@@ -1,0 +1,25 @@
+<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-label="ROGUE-AI pipeline: 253 incident reports to 108 testbeds, 89% harm replication, harm rates by attack type">
+  <rect width="500" height="220" fill="#fafaf8"/>
+  <rect x="10" y="30" width="90" height="45" rx="4" fill="#f0ede8" stroke="#888" stroke-width="1.5"/>
+  <text x="55" y="50" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#444" font-weight="bold">253 Reports</text>
+  <text x="55" y="65" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#888">screened</text>
+  <line x1="100" y1="52" x2="120" y2="52" stroke="#888" stroke-width="1.5" marker-end="url(#b1)"/>
+  <defs><marker id="b1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#888"/></marker></defs>
+  <rect x="120" y="30" width="95" height="45" rx="4" fill="#f0ede8" stroke="#888" stroke-width="1.5"/>
+  <text x="167" y="50" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#444" font-weight="bold">108 Testbeds</text>
+  <text x="167" y="65" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#888">+ controls ($3.28)</text>
+  <line x1="215" y1="52" x2="235" y2="52" stroke="#888" stroke-width="1.5" marker-end="url(#b1)"/>
+  <rect x="235" y="30" width="90" height="45" rx="4" fill="#fde8e8" stroke="#b02020" stroke-width="1.5"/>
+  <text x="280" y="50" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#b02020" font-weight="bold">89% Harm</text>
+  <text x="280" y="65" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#888">replicated</text>
+  <text x="20" y="105" font-family="Georgia,serif" font-size="11" fill="#888" font-weight="bold">Harm rate by incident type (5 models)</text>
+  <text x="20" y="125" font-family="Georgia,serif" font-size="11" fill="#444">No attacker (62/72 harm incidents)</text>
+  <rect x="200" y="113" width="180" height="14" rx="2" fill="#b02020" opacity="0.6"/>
+  <text x="385" y="125" font-family="Georgia,serif" font-size="11" fill="#b02020">18–33%</text>
+  <text x="20" y="150" font-family="Georgia,serif" font-size="11" fill="#444">Prompt injection (10/72)</text>
+  <rect x="200" y="138" width="100" height="14" rx="2" fill="#1a4f99" opacity="0.5"/>
+  <text x="305" y="150" font-family="Georgia,serif" font-size="11" fill="#1a4f99">12–21%</text>
+  <rect x="10" y="168" width="470" height="30" rx="4" fill="#f0ede8"/>
+  <text x="245" y="183" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#444">Hazard-specific warning → 2% harm (Claude Sonnet 4.6) · Generic note → no effect</text>
+  <text x="245" y="196" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#888">Cost: $3.28/replication across 108 testbeds</text>
+</svg>

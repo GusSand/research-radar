@@ -836,3 +836,13 @@ arxiv_id	first_date	first_file	appearances	title
 2611.24362	2026-11-19	reports/daily/2026-11-19.md	1	PIPETTE: Prompt Injection Purple-Teaming for Robust LLM Agents
 2611.24491	2026-11-19	reports/daily/2026-11-19.md	1	Probing Agent Overeagerness in Realistic Settings with Continuation Audits
 2611.24619	2026-11-19	reports/daily/2026-11-19.md	1	GateWatch: Low-Overhead LLM Monitoring with Boolean Circuits
+2611.25086	2026-11-20	reports/daily/2026-11-20.md	1	Living off the Local Model: Abusing Browser-Embedded Language Models for Post-Exploitation
+2611.25470	2026-11-20	reports/daily/2026-11-20.md	1	ToolPulse: Side-Channel Eavesdropping on Tool-Using LLM Agents
+2611.25526	2026-11-20	reports/daily/2026-11-20.md	1	MATE: Mobile Agent Trustworthy Execution for Safe and Efficient Mobile Control
+2611.25599	2026-11-20	reports/daily/2026-11-20.md	1	Tether: Verified Stateful Policy Engine for System-Level Monitoring of Agents
+2611.25929	2026-11-20	reports/daily/2026-11-20.md	1	Question, Then Affirm: Restoring Commitment Does Not Restore Refusal
+2611.26009	2026-11-20	reports/daily/2026-11-20.md	1	Evaluating safeguarding in multi-turn conversations with AI assistants
+2611.26545	2026-11-20	reports/daily/2026-11-20.md	1	The Geometry of Lies: Knowledge and Persona Directions for Detecting Deception in Large Language Models
+2611.26553	2026-11-20	reports/daily/2026-11-20.md	1	Replication of Agentic Security Events: Audit and Investigation (ROGUE-AI)
+2611.26569	2026-11-20	reports/daily/2026-11-20.md	1	Text-Aware, Vision-Blind: How Multimodal Image Editing Systems Handle Unsafe Inputs
+2611.26584	2026-11-20	reports/daily/2026-11-20.md	1	Represented but misread: Post-training changes how language models read out what they represent
