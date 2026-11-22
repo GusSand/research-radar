@@ -856,3 +856,13 @@ arxiv_id	first_date	first_file	appearances	title
 2611.26018	2026-11-21	reports/daily/2026-11-21.md	1	Does the Workspace Do the Work? A Causal Protocol for Verifying Global-Workspace Computation in a Language Model
 2611.26525	2026-11-21	reports/daily/2026-11-21.md	1	Backtracking Agent Applications Security Incidents
 2611.26601	2026-11-21	reports/daily/2026-11-21.md	1	SoK: Assessing the Evolution of LLM Capability in Software Vulnerability Research
+2611.18601	2026-11-22	reports/daily/2026-11-22.md	1	Jailbreak LLMs with Linguistic Style as a Hidden Attack Surface
+2611.25640	2026-11-22	reports/daily/2026-11-22.md	1	Erasing the Wrong Thing: Conditional Attribute Leakage and Concept Erasure in Shared Foundation-Model Embeddings
+2611.25945	2026-11-22	reports/daily/2026-11-22.md	1	BlockJack: Cross-Tenant Redirection Fault Attacks on Paged KV Cache Address Translation in LLM Serving
+2611.26075	2026-11-22	reports/daily/2026-11-22.md	1	Understanding MoE Decisions Beyond Gradients
+2611.26101	2026-11-22	reports/daily/2026-11-22.md	1	Revealing Pathway Interactions in Network Computations with Complete Path Contribution
+2611.26131	2026-11-22	reports/daily/2026-11-22.md	1	SCARVA: Interpretable Agentic Reasoning in Software Supply-Chain Analysis
+2611.26298	2026-11-22	reports/daily/2026-11-22.md	1	DailySafe: Benchmarking Dynamic Safety Awareness in Everyday Multi-Turn Multimodal Interactions
+2611.26413	2026-11-22	reports/daily/2026-11-22.md	1	Sequential Anytime Valid Tests for Efficient Inference-Time Alignment
+2611.26450	2026-11-22	reports/daily/2026-11-22.md	1	A CPU Inside an LLM: Zero-Gradient Compilation of Exact Circuits into Pretrained Weights
+2611.26590	2026-11-22	reports/daily/2026-11-22.md	1	Probing the "Conscious" Mind: Selective Access and Global Workspace in Vision-Language Models
