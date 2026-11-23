@@ -806,26 +806,26 @@ arxiv_id	first_date	first_file	appearances	title
 2611.16123	2026-11-15	reports/daily/2026-11-15.md	1	SwarmSafe-Delta: Isolating Message Effects on LLM Agent Safety
 2611.16693	2026-11-15	reports/daily/2026-11-15.md	1	MobileProbe: Adaptive Security Evaluation of Mobile Agents via Trajectory-Aware Injection
 2611.16744	2026-11-15	reports/daily/2026-11-15.md	1	Scale-Induced Semantic Shift in Visual Prompt Injection Against VLMs and Web Agents
-2611.01620	2026-11-17	reports/daily/2026-11-17.md	1	Chain-of-Thought Oversight Requires Separate Evidence for Faithfulness and Monitorability
+2611.01620	2026-11-17	reports/daily/2026-11-17.md	2	Chain-of-Thought Oversight Requires Separate Evidence for Faithfulness and Monitorability
 2611.18274	2026-11-17	reports/daily/2026-11-17.md	1	Right Token, Right Time: From Per-Token Gating to Trajectory-Aware Activation Steering
-2611.19499	2026-11-17	reports/daily/2026-11-17.md	1	Do Probing and Steering Favor the Same Directions Within and Across Language Models?
+2611.19499	2026-11-17	reports/daily/2026-11-17.md	2	Do Probing and Steering Favor the Same Directions Within and Across Language Models?
 2611.19886	2026-11-17	reports/daily/2026-11-17.md	1	Recovery Gone Too Far: Understanding and Repairing Risky Fallback in LLM Agents
-2611.20288	2026-11-17	reports/daily/2026-11-17.md	1	Protecting Safety during Reasoning Training with Low-Rank Fisher Regularisation
-2611.20371	2026-11-17	reports/daily/2026-11-17.md	1	Pretty Linear Liars: Unregularized Probes Favor Intervention-Unfaithful Features
+2611.20288	2026-11-17	reports/daily/2026-11-17.md	2	Protecting Safety during Reasoning Training with Low-Rank Fisher Regularisation
+2611.20371	2026-11-17	reports/daily/2026-11-17.md	2	Pretty Linear Liars: Unregularized Probes Favor Intervention-Unfaithful Features
 2611.20441	2026-11-17	reports/daily/2026-11-17.md	1	Abstention Direction in Large Language Models: Mechanistic Interpretability of Abstention Across Query Ambiguity, Knowledge Limits, and Safety Alignment
-2611.20459	2026-11-17	reports/daily/2026-11-17.md	1	Designing Deceptive Model Organisms that Successfully Evade Auditing
+2611.20459	2026-11-17	reports/daily/2026-11-17.md	2	Designing Deceptive Model Organisms that Successfully Evade Auditing
 2611.21538	2026-11-17	reports/daily/2026-11-17.md	1	Optimistic Verifiers Get Hacked: Reward Hacking Under an Exact Process Oracle
 2611.21577	2026-11-17	reports/daily/2026-11-17.md	1	When Tool Names Are Not Identities: Measuring Provider Misbinding in MCP-Based AI Agents
-2611.17820	2026-11-18	reports/daily/2026-11-18.md	1	Aligning AI Teams
+2611.17820	2026-11-18	reports/daily/2026-11-18.md	2	Aligning AI Teams
 2611.19911	2026-11-18	reports/daily/2026-11-18.md	1	"Don't Leave the Task Unfinished": Persistence-Driven Violations under Quiet Oversight
-2611.21799	2026-11-18	reports/daily/2026-11-18.md	1	Chain-of-Thought Controllability Can Reduce Chain-of-Thought Monitorability
-2611.21832	2026-11-18	reports/daily/2026-11-18.md	1	Auditors Struggle to Catch Sabotage In End-to-End Transcripts of AI Safety Research
+2611.21799	2026-11-18	reports/daily/2026-11-18.md	2	Chain-of-Thought Controllability Can Reduce Chain-of-Thought Monitorability
+2611.21832	2026-11-18	reports/daily/2026-11-18.md	2	Auditors Struggle to Catch Sabotage In End-to-End Transcripts of AI Safety Research
 2611.21885	2026-11-18	reports/daily/2026-11-18.md	1	Language Models Can Rewrite Their Own Weights
 2611.21956	2026-11-18	reports/daily/2026-11-18.md	1	Eight in Ten LLMs Leak System-Prompt Secrets: Nevan, an Agentic Capture-the-Flag Study
 2611.22075	2026-11-18	reports/daily/2026-11-18.md	1	Can You Undo It? Reversibility Classes for AI Agent Actions
 2611.22278	2026-11-18	reports/daily/2026-11-18.md	1	DACE: Diversity-Driven Adversarial Co-Evolution for Robust LLM Safety Alignment
 2611.22583	2026-11-18	reports/daily/2026-11-18.md	1	Evolution Under Fire: Evolving Agent Safety Harnesses with Adaptive Injection Stressors
-2611.22971	2026-11-18	reports/daily/2026-11-18.md	1	SEAM: Computer-Use Agents Know the Harm Between Screens, and Commit It Anyway
+2611.22971	2026-11-18	reports/daily/2026-11-18.md	2	SEAM: Computer-Use Agents Know the Harm Between Screens, and Commit It Anyway
 2611.23346	2026-11-19	reports/daily/2026-11-19.md	1	Securing and Auditing Long-Horizon LLM Agents: State-Transfer Auditing and Controls in the Agent Harness
 2611.23507	2026-11-19	reports/daily/2026-11-19.md	1	ACaM: Automated Capability Modeling for Agentic AI Security
 2611.23880	2026-11-19	reports/daily/2026-11-19.md	1	A Rank-One Bypass of Fixed Linear Erasure
@@ -835,15 +835,15 @@ arxiv_id	first_date	first_file	appearances	title
 2611.24313	2026-11-19	reports/daily/2026-11-19.md	1	AutoPI: Taxonomy-Guided Adaptive Red Teaming for Prompt Injection in LLM Agents
 2611.24362	2026-11-19	reports/daily/2026-11-19.md	1	PIPETTE: Prompt Injection Purple-Teaming for Robust LLM Agents
 2611.24491	2026-11-19	reports/daily/2026-11-19.md	1	Probing Agent Overeagerness in Realistic Settings with Continuation Audits
-2611.24619	2026-11-19	reports/daily/2026-11-19.md	1	GateWatch: Low-Overhead LLM Monitoring with Boolean Circuits
+2611.24619	2026-11-19	reports/daily/2026-11-19.md	2	GateWatch: Low-Overhead LLM Monitoring with Boolean Circuits
 2611.25086	2026-11-20	reports/daily/2026-11-20.md	1	Living off the Local Model: Abusing Browser-Embedded Language Models for Post-Exploitation
 2611.25470	2026-11-20	reports/daily/2026-11-20.md	1	ToolPulse: Side-Channel Eavesdropping on Tool-Using LLM Agents
 2611.25526	2026-11-20	reports/daily/2026-11-20.md	1	MATE: Mobile Agent Trustworthy Execution for Safe and Efficient Mobile Control
-2611.25599	2026-11-20	reports/daily/2026-11-20.md	1	Tether: Verified Stateful Policy Engine for System-Level Monitoring of Agents
+2611.25599	2026-11-20	reports/daily/2026-11-20.md	2	Tether: Verified Stateful Policy Engine for System-Level Monitoring of Agents
 2611.25929	2026-11-20	reports/daily/2026-11-20.md	1	Question, Then Affirm: Restoring Commitment Does Not Restore Refusal
 2611.26009	2026-11-20	reports/daily/2026-11-20.md	1	Evaluating safeguarding in multi-turn conversations with AI assistants
 2611.26545	2026-11-20	reports/daily/2026-11-20.md	1	The Geometry of Lies: Knowledge and Persona Directions for Detecting Deception in Large Language Models
-2611.26553	2026-11-20	reports/daily/2026-11-20.md	1	Replication of Agentic Security Events: Audit and Investigation (ROGUE-AI)
+2611.26553	2026-11-20	reports/daily/2026-11-20.md	2	Replication of Agentic Security Events: Audit and Investigation (ROGUE-AI)
 2611.26569	2026-11-20	reports/daily/2026-11-20.md	1	Text-Aware, Vision-Blind: How Multimodal Image Editing Systems Handle Unsafe Inputs
 2611.26584	2026-11-20	reports/daily/2026-11-20.md	1	Represented but misread: Post-training changes how language models read out what they represent
 2611.24994	2026-11-21	reports/daily/2026-11-21.md	1	What the model knows but does not say: monitoring medical LLMs through verbalized thoughts
