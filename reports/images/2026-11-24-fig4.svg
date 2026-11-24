@@ -1,0 +1,37 @@
+<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-label="Tool-call smuggling: guard and executor parse identical JSON bytes differently, allowing bypassed actions">
+  <rect width="500" height="220" fill="#fff"/>
+  <text x="250" y="22" font-family="Georgia, serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#1a1a1a">Tool-Call Smuggling via JSON Parsing Ambiguity</text>
+  <!-- Attacker crafts payload -->
+  <rect x="10" y="40" width="90" height="40" rx="4" fill="#f07070" opacity="0.7"/>
+  <text x="55" y="58" font-family="Georgia, serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#b02020">Attacker</text>
+  <text x="55" y="72" font-family="Georgia, serif" font-size="8" text-anchor="middle" fill="#b02020">crafts JSON</text>
+  <!-- Arrow to Guard -->
+  <line x1="100" y1="60" x2="135" y2="60" stroke="#888" stroke-width="1.5"/>
+  <polygon points="135,55 145,60 135,65" fill="#888"/>
+  <!-- Guard box -->
+  <rect x="145" y="40" width="90" height="40" rx="4" fill="#4ade80" opacity="0.6"/>
+  <text x="190" y="57" font-family="Georgia, serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#1a6e3c">Guard</text>
+  <text x="190" y="70" font-family="Georgia, serif" font-size="8" text-anchor="middle" fill="#1a6e3c">sees call A ✓</text>
+  <!-- Arrow to executor -->
+  <line x1="235" y1="60" x2="265" y2="60" stroke="#888" stroke-width="1.5"/>
+  <polygon points="265,55 275,60 265,65" fill="#888"/>
+  <!-- Executor box -->
+  <rect x="275" y="40" width="90" height="40" rx="4" fill="#f07070" opacity="0.7"/>
+  <text x="320" y="57" font-family="Georgia, serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#b02020">Executor</text>
+  <text x="320" y="70" font-family="Georgia, serif" font-size="8" text-anchor="middle" fill="#b02020">runs call B ✗</text>
+  <!-- Arrow to audit log -->
+  <line x1="365" y1="60" x2="395" y2="60" stroke="#888" stroke-width="1.5"/>
+  <polygon points="395,55 405,60 395,65" fill="#888"/>
+  <!-- Audit log -->
+  <rect x="405" y="40" width="85" height="40" rx="4" fill="#e8e8e8"/>
+  <text x="447" y="57" font-family="Georgia, serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#444">Audit Log</text>
+  <text x="447" y="70" font-family="Georgia, serif" font-size="8" text-anchor="middle" fill="#444">shows call A</text>
+  <!-- Same bytes label -->
+  <text x="250" y="108" font-family="Georgia, serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#1a1a1a">Identical bytes → 6 parsing ambiguities → different calls</text>
+  <!-- Examples of ambiguities -->
+  <rect x="20" y="120" width="460" height="80" rx="4" fill="#f8f8f8" stroke="#ddd" stroke-width="1"/>
+  <text x="250" y="138" font-family="Georgia, serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#444">Parsing Ambiguities (6 categories, 17 parser configs tested)</text>
+  <text x="40" y="155" font-family="Georgia, serif" font-size="9" fill="#444">• Duplicate JSON keys: last-wins vs. first-wins parsers</text>
+  <text x="40" y="168" font-family="Georgia, serif" font-size="9" fill="#444">• Nested JSON strings: guard sees flat string, executor re-parses</text>
+  <text x="40" y="181" font-family="Georgia, serif" font-size="9" fill="#444">• Two official MCP SDKs disagree on some inputs — defense: single parse + sealed handoff</text>
+</svg>

@@ -1,0 +1,38 @@
+<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-label="Interrogation protocol: trusted monitor asks untrusted agent follow-up questions, improving safety from 72.6% to 79.5%">
+  <rect width="500" height="220" fill="#fff"/>
+  <text x="250" y="22" font-family="Georgia, serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#1a1a1a">Interrogation Protocol for AI Control (BashArena)</text>
+  <!-- Untrusted agent box -->
+  <rect x="20" y="40" width="110" height="50" rx="5" fill="#f07070" opacity="0.7"/>
+  <text x="75" y="62" font-family="Georgia, serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#b02020">Untrusted</text>
+  <text x="75" y="77" font-family="Georgia, serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#b02020">Agent</text>
+  <!-- Arrow: action -->
+  <line x1="130" y1="65" x2="175" y2="65" stroke="#888" stroke-width="1.5"/>
+  <polygon points="175,60 185,65 175,70" fill="#888"/>
+  <text x="157" y="58" font-family="Georgia, serif" font-size="8" text-anchor="middle" fill="#888">action</text>
+  <!-- Monitor box -->
+  <rect x="185" y="40" width="130" height="50" rx="5" fill="#4ade80" opacity="0.6"/>
+  <text x="250" y="62" font-family="Georgia, serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#1a6e3c">Trusted Monitor</text>
+  <text x="250" y="77" font-family="Georgia, serif" font-size="9" text-anchor="middle" fill="#1a6e3c">(weaker model)</text>
+  <!-- Arrow: question -->
+  <path d="M 250 90 Q 250 115 160 115 Q 90 115 75 90" fill="none" stroke="#1a4f99" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <polygon points="75,90 70,82 80,85" fill="#1a4f99"/>
+  <text x="175" y="130" font-family="Georgia, serif" font-size="8" text-anchor="middle" fill="#1a4f99">question</text>
+  <!-- Arrow: explanation -->
+  <path d="M 75 90 Q 75 145 160 145 Q 230 145 250 115" fill="none" stroke="#b02020" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <polygon points="250,115 258,107 255,117" fill="#b02020"/>
+  <text x="175" y="158" font-family="Georgia, serif" font-size="8" text-anchor="middle" fill="#b02020">explanation</text>
+  <!-- Results box -->
+  <rect x="345" y="40" width="140" height="90" rx="5" fill="#f0ede8" stroke="#ddd" stroke-width="1.5"/>
+  <text x="415" y="58" font-family="Georgia, serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#1a1a1a">Safety @ 1% audit</text>
+  <rect x="360" y="68" width="100" height="20" rx="3" fill="#c8e6c8"/>
+  <text x="410" y="82" font-family="Georgia, serif" font-size="9" text-anchor="middle" fill="#1a6e3c">Baseline: 72.6%</text>
+  <rect x="360" y="95" width="100" height="20" rx="3" fill="#4ade80" opacity="0.8"/>
+  <text x="410" y="109" font-family="Georgia, serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#1a6e3c">Interrogation: 79.5%</text>
+  <text x="415" y="124" font-family="Georgia, serif" font-size="9" text-anchor="middle" fill="#1a6e3c">+7.0 pp</text>
+  <!-- Arrow to results -->
+  <line x1="315" y1="65" x2="343" y2="65" stroke="#888" stroke-width="1.5"/>
+  <polygon points="343,60 353,65 343,70" fill="#888"/>
+  <text x="329" y="58" font-family="Georgia, serif" font-size="8" text-anchor="middle" fill="#888">allow/block</text>
+  <!-- Bottom note -->
+  <text x="250" y="195" font-family="Georgia, serif" font-size="9" text-anchor="middle" fill="#888">Most gain from: trusted model states a specific concern (simpler variant)</text>
+</svg>

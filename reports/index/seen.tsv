@@ -866,3 +866,13 @@ arxiv_id	first_date	first_file	appearances	title
 2611.26413	2026-11-22	reports/daily/2026-11-22.md	1	Sequential Anytime Valid Tests for Efficient Inference-Time Alignment
 2611.26450	2026-11-22	reports/daily/2026-11-22.md	1	A CPU Inside an LLM: Zero-Gradient Compilation of Exact Circuits into Pretrained Weights
 2611.26590	2026-11-22	reports/daily/2026-11-22.md	1	Probing the "Conscious" Mind: Selective Access and Global Workspace in Vision-Language Models
+2611.29977	2026-11-24	reports/daily/2026-11-24.md	1	Conartist: Adaptive Agentic Red-Teaming of Computer-Using Agents against Multi-Step Prompt Injection
+2611.29982	2026-11-24	reports/daily/2026-11-24.md	1	Verifying Declared AI Workloads from GPU Supply Current
+2611.30533	2026-11-24	reports/daily/2026-11-24.md	1	CyberDualEval: Measuring Dual-Use Cyber Risks in Frontier Language Models
+2611.30583	2026-11-24	reports/daily/2026-11-24.md	1	Interrogation Protocols for AI Control
+2611.30624	2026-11-24	reports/daily/2026-11-24.md	1	Oops!... I Parsed It Again: Tool-Call Smuggling Against LLM Agents
+2611.30672	2026-11-24	reports/daily/2026-11-24.md	1	Uncovering Hidden Behaviours in Language Models via Limited-Parameter Finetuning
+2611.30939	2026-11-24	reports/daily/2026-11-24.md	1	Beyond Patching: Consistent Circuit Discovery via Gradient Spectral Analysis
+2611.31010	2026-11-24	reports/daily/2026-11-24.md	1	Airlock: Robust Sandboxing and Governance of Rogue Agents
+2611.31015	2026-11-24	reports/daily/2026-11-24.md	1	Can Latent Reasoning Drive LLM Outputs Without a Trace?
+2611.31228	2026-11-24	reports/daily/2026-11-24.md	1	Language Models Steer on Injected Uncertainty Tokens, but Fail to Self-Monitor In Situ
