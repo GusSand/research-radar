@@ -876,3 +876,13 @@ arxiv_id	first_date	first_file	appearances	title
 2611.31010	2026-11-24	reports/daily/2026-11-24.md	1	Airlock: Robust Sandboxing and Governance of Rogue Agents
 2611.31015	2026-11-24	reports/daily/2026-11-24.md	1	Can Latent Reasoning Drive LLM Outputs Without a Trace?
 2611.31228	2026-11-24	reports/daily/2026-11-24.md	1	Language Models Steer on Injected Uncertainty Tokens, but Fail to Self-Monitor In Situ
+2611.30185	2026-11-25	reports/daily/2026-11-25.md	1	Causal Evidence for the Emergence and Spread of Reward Hacking in AI Agent Swarms
+2611.31271	2026-11-25	reports/daily/2026-11-25.md	1	Chain-of-Thought Is Not Explainability
+2611.31338	2026-11-25	reports/daily/2026-11-25.md	1	Per-Attack Blocking Hides Catalog Vulnerability: A Weakest-Link Analysis of Tool Manifests
+2611.31615	2026-11-25	reports/daily/2026-11-25.md	1	Eliciting sandbagged LLM capability via structural interventions on attention-head functional networks
+2611.31870	2026-11-25	reports/daily/2026-11-25.md	1	Subliminal Learning Crosses Modalities
+2611.32037	2026-11-25	reports/daily/2026-11-25.md	1	Online Environment Repair for Coding Agents
+2611.32143	2026-11-25	reports/daily/2026-11-25.md	1	Calibrated Reading of Latent Reasoning and Communication
+2611.32194	2026-11-25	reports/daily/2026-11-25.md	1	LLM Agent Authorization Across Context Compaction
+2611.32199	2026-11-25	reports/daily/2026-11-25.md	1	Steerable by Design: Conditional Pretraining for Robust Control of Language Models
+2611.32755	2026-11-25	reports/daily/2026-11-25.md	1	ReQOR: Operator-Discrepancy Subspace Repair for Quantization-Conditioned Backdoors in Large Language Models
