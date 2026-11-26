@@ -886,3 +886,13 @@ arxiv_id	first_date	first_file	appearances	title
 2611.32194	2026-11-25	reports/daily/2026-11-25.md	1	LLM Agent Authorization Across Context Compaction
 2611.32199	2026-11-25	reports/daily/2026-11-25.md	1	Steerable by Design: Conditional Pretraining for Robust Control of Language Models
 2611.32755	2026-11-25	reports/daily/2026-11-25.md	1	ReQOR: Operator-Discrepancy Subspace Repair for Quantization-Conditioned Backdoors in Large Language Models
+2611.33385	2026-11-26	reports/daily/2026-11-26.md	1	Poisoning Self-Evolving Security Policies in LLM Agents
+2611.33519	2026-11-26	reports/daily/2026-11-26.md	1	PRECEPT: Security Self-Improvement of Coding Agents via Evolving Principles
+2611.33879	2026-11-26	reports/daily/2026-11-26.md	1	FORK: Co-Evolving Safe Disclosure and Decision Skills Against Attackers Who Read Every Refusal
+2611.34188	2026-11-26	reports/daily/2026-11-26.md	1	MINE: A Training-Free Defense against Indirect Prompt Injection via Mutual Information and Embedding Variance
+2611.34215	2026-11-26	reports/daily/2026-11-26.md	1	PROVE: Mitigating Long-Horizon LLM Collusion with Reinforcement Learning from Verified Evidence
+2611.34278	2026-11-26	reports/daily/2026-11-26.md	1	Latent-in-the-Middle: On the Security of Cross-Model Latent Communication in Multi-Agent Systems
+2611.34380	2026-11-26	reports/daily/2026-11-26.md	1	AgentLens: Graph-guided Security Auditing for LLM-based Agents
+2611.34758	2026-11-26	reports/daily/2026-11-26.md	1	Reading Fine-Tuning Diffs Through Lenses: Model Diffing for Backdoor Detection
+2611.34762	2026-11-26	reports/daily/2026-11-26.md	1	TASK Memory: Beyond Text-Only Memory with Activation Steering and Knowledge Editing against Memory Hallucination
+2611.34934	2026-11-26	reports/daily/2026-11-26.md	1	Attack Policy Selection can Mislead Monitor Evaluators
