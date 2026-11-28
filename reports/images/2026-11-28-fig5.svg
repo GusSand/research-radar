@@ -1,0 +1,23 @@
+<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-label="Two timescales of forgetting: behavior suppressed on fast timescale, internal representations erased slowly">
+  <rect width="500" height="220" fill="#fff"/>
+  <text x="250" y="22" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#222" font-weight="bold">Two Timescales of Forgetting During Fine-tuning</text>
+  <line x1="60" y1="40" x2="60" y2="185" stroke="#333" stroke-width="1.5"/>
+  <line x1="60" y1="185" x2="460" y2="185" stroke="#333" stroke-width="1.5"/>
+  <text x="55" y="188" text-anchor="end" font-family="Georgia, serif" font-size="10" fill="#555">0</text>
+  <text x="55" y="45" text-anchor="end" font-family="Georgia, serif" font-size="10" fill="#555">1</text>
+  <text x="257" y="200" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#444">Fine-tuning steps →</text>
+  <text x="20" y="120" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#444" transform="rotate(-90,20,120)">Retention (normalized)</text>
+  <!-- Behavior curve: drops fast (by step 50), stays low -->
+  <polyline points="60,55 90,78 120,110 150,145 180,163 220,172 280,175 360,177 460,178" fill="none" stroke="#c94a4a" stroke-width="2.5"/>
+  <!-- Representation curve: drops slowly, still high at step 150, then drifts down -->
+  <polyline points="60,55 90,52 120,54 150,56 180,62 220,78 280,110 360,145 460,165" fill="none" stroke="#4a7ec9" stroke-width="2.5"/>
+  <!-- Vertical dashed separator at "fast timescale ends" -->
+  <line x1="180" y1="40" x2="180" y2="185" stroke="#888" stroke-width="1" stroke-dasharray="5,4"/>
+  <text x="183" y="58" font-family="Georgia, serif" font-size="10" fill="#888">fast</text>
+  <text x="183" y="70" font-family="Georgia, serif" font-size="10" fill="#888">phase</text>
+  <!-- Legend -->
+  <line x1="70" y1="207" x2="95" y2="207" stroke="#c94a4a" stroke-width="2.5"/>
+  <text x="98" y="211" font-family="Georgia, serif" font-size="10" fill="#333">Surface behavior (fast ∝ token-latent correlation)</text>
+  <line x1="300" y1="207" x2="325" y2="207" stroke="#4a7ec9" stroke-width="2.5"/>
+  <text x="328" y="211" font-family="Georgia, serif" font-size="10" fill="#333">Internal repr. (slow)</text>
+</svg>

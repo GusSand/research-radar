@@ -1,0 +1,31 @@
+<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-label="Counterfactual database reward: query runs on hidden generated copies to detect reward hacks">
+  <rect width="500" height="220" fill="#fff"/>
+  <text x="250" y="20" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#222" font-weight="bold">Counterfactual-DB Reward vs. Single-DB Reward</text>
+  <!-- Left box: single DB baseline -->
+  <rect x="20" y="35" width="195" height="130" rx="6" fill="#fff3f3" stroke="#c94a4a" stroke-width="1.5"/>
+  <text x="117" y="55" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#c94a4a" font-weight="bold">Single-DB (hackable)</text>
+  <text x="117" y="78" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#444">RL agent → SQL query</text>
+  <rect x="60" y="90" width="115" height="30" rx="4" fill="#f8d7da" stroke="#c94a4a" stroke-width="1"/>
+  <text x="117" y="109" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#c94a4a">DB₁ result = ref → Reward!</text>
+  <text x="117" y="135" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#c94a4a">Hack rate: 54.1%</text>
+  <text x="117" y="153" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#888">(wrong query, lucky match)</text>
+  <!-- Right box: CF DB -->
+  <rect x="285" y="35" width="195" height="130" rx="6" fill="#f0fff4" stroke="#2eaa5c" stroke-width="1.5"/>
+  <text x="383" y="55" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#2eaa5c" font-weight="bold">Counterfactual-DB</text>
+  <text x="383" y="78" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#444">RL agent → SQL query</text>
+  <rect x="323" y="90" width="120" height="30" rx="4" fill="#d4edda" stroke="#2eaa5c" stroke-width="1"/>
+  <text x="383" y="104" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#2eaa5c">DB₁ + DB₂… (generated)</text>
+  <text x="383" y="118" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#2eaa5c">all match → Reward</text>
+  <text x="383" y="135" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#2eaa5c">Hack rate: 1.9%</text>
+  <text x="383" y="153" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#888">(0 false negatives on 2,847 correct)</text>
+  <!-- Arrow between -->
+  <line x1="215" y1="100" x2="285" y2="100" stroke="#888" stroke-width="1.5" marker-end="url(#arr1)"/>
+  <defs>
+    <marker id="arr1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#888"/>
+    </marker>
+  </defs>
+  <text x="250" y="94" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#666">fix</text>
+  <!-- Bottom stats -->
+  <text x="250" y="195" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#444">Strict CF: hacks 54.1% → 1.9%  ·  Spider: +1.6 pts (mean CF)</text>
+</svg>

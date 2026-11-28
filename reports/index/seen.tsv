@@ -906,3 +906,13 @@ arxiv_id	first_date	first_file	appearances	title
 2611.33810	2026-11-27	reports/daily/2026-11-27.md	1	FlipVLA: Backdoor Attacks on Vision-Language-Action (VLA) Models Only Through Bit Flips
 2611.34121	2026-11-27	reports/daily/2026-11-27.md	1	Unstable Action Boundaries in Lethal Drone Agents
 2611.34181	2026-11-27	reports/daily/2026-11-27.md	1	Agentic-Level Adversarial Purification: Revisiting Diffusion Purifiers on Native-Resolution Agentic Inputs
+2611.33182	2026-11-28	reports/daily/2026-11-28.md	1	Neighbor Crowding Predicts Feature Stability in Sparse Autoencoders
+2611.33302	2026-11-28	reports/daily/2026-11-28.md	1	Two Timescales of Forgetting in Fine-tuning of Language Models
+2611.33370	2026-11-28	reports/daily/2026-11-28.md	1	RegionAlign: Manipulating Parameter Layouts for Localized Fault Injection on LLMs and VLMs
+2611.33515	2026-11-28	reports/daily/2026-11-28.md	1	Evaluation and Restoration of Safety in Reasoning-Tuned LLMs
+2611.33525	2026-11-28	reports/daily/2026-11-28.md	1	Deletion You Can Check: Auditing LLM Unlearning
+2611.33640	2026-11-28	reports/daily/2026-11-28.md	1	Sparse-to-Sparse Feature Learning for Cross-Layer Analysis and Steering
+2611.33747	2026-11-28	reports/daily/2026-11-28.md	1	Tells of a Lying Machine: Analyzing LLM-Generated Strategic Dialogue in Chinese Werewolf
+2611.34275	2026-11-28	reports/daily/2026-11-28.md	1	LatentCP-DPO: Conformal Pessimism for DPO with Finite-Sample Guarantees
+2611.34363	2026-11-28	reports/daily/2026-11-28.md	1	Single-Database Rewards Are Hackable: Counterfactual Execution for Trustworthy Text-to-SQL RL
+2611.34770	2026-11-28	reports/daily/2026-11-28.md	1	Make the Adversary Spend More: Stateful Deception as a Cost-Exchange Primitive for AI-Era Cyber Defense
